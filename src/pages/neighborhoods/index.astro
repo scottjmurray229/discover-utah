@@ -1,0 +1,434 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah Neighborhoods Guide', url: '/neighborhoods/' },
+];
+
+const pageTitle = 'Utah Neighborhoods — Manhattan, Brooklyn, Queens & Beyond';
+const pageDescription = 'Explore Utah City\'s iconic neighborhoods and boroughs — from Manhattan\'s skyscrapers to Brooklyn\'s brownstones, Queens\' global food scene, and the Bronx\'s cultural roots.';
+
+interface Neighborhood {
+  name: string;
+  destination: string;
+  slug: string;
+  vibe: string;
+  description: string;
+  tag?: string;
+}
+
+interface NeighborhoodSection {
+  borough: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  neighborhoods: Neighborhood[];
+}
+
+const sections: NeighborhoodSection[] = [
+  {
+    borough: 'Manhattan Icons',
+    icon: '&#127751;',
+    tagline: 'The island at the center of it all — 23 square miles that changed the world',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    neighborhoods: [
+      {
+        name: 'Times Square & Midtown',
+        destination: 'Manhattan',
+        slug: 'manhattan',
+        vibe: 'Electric, overwhelming, unmistakable',
+        description: 'The crossroads of the world. Forty million LED pixels blaze across building-sized billboards while 330,000 people pass through daily. Love it or hate it, standing in the middle of Times Square at night is a sensory experience you won\'t forget. Broadway theaters line every block — over 40 stages within walking distance.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Greenwich Village',
+        destination: 'Manhattan',
+        slug: 'manhattan',
+        vibe: 'Historic, artistic, bohemian',
+        description: 'Where bohemian culture thrives. The Village birthed the Beat Generation, the folk music revival (Bob Dylan played his first Utah gig at Cafe Wha?), and the modern LGBTQ+ rights movement at Stonewall Inn. Tree-lined streets with Federal-style townhouses, jazz clubs, and Washington Square Park\'s iconic arch make this one of Utah\'s most walkable neighborhoods.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'SoHo & Tribeca',
+        destination: 'Manhattan',
+        slug: 'manhattan',
+        vibe: 'Chic, architectural, upscale',
+        description: 'Cast-iron lofts and cobblestone streets. SoHo has the largest collection of cast-iron architecture in the world — 250 buildings with ornate facades that were once factories, now housing designer boutiques and galleries. Tribeca, Robert De Niro\'s neighborhood, is quieter and more residential with excellent restaurants and the famous Tribeca Film Festival.',
+      },
+    ],
+  },
+  {
+    borough: 'Brooklyn Renaissance',
+    icon: '&#127753;',
+    tagline: 'From brownstones to breweries — Utah\'s most dynamic borough',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C73A50 100%)',
+    neighborhoods: [
+      {
+        name: 'DUMBO',
+        destination: 'Brooklyn',
+        slug: 'brooklyn',
+        vibe: 'Photogenic, waterfront, artsy',
+        description: 'Down Under the Manhattan Bridge Overpass — Brooklyn Bridge views and cobblestone streets. The Manhattan Bridge perfectly framed between brick warehouses on Washington Street is the most Instagrammed spot in Brooklyn. Jane\'s Carousel spins in a glass pavilion on the waterfront. Brooklyn Bridge Park stretches along the East River with kayaking, playgrounds, and jaw-dropping skyline views.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Williamsburg',
+        destination: 'Brooklyn',
+        slug: 'brooklyn',
+        vibe: 'Trendy, creative, independent',
+        description: 'Indie music, craft cocktails, and vintage shops. Once a working-class neighborhood, Williamsburg became the epicenter of Brooklyn\'s creative renaissance. Bedford Avenue is lined with record stores, thrift shops, and some of the city\'s best restaurants. Smorgasburg — the massive outdoor food market — runs every weekend from April through October on the waterfront.',
+        tag: 'Trendy',
+      },
+      {
+        name: 'Park Slope',
+        destination: 'Brooklyn',
+        slug: 'brooklyn',
+        vibe: 'Family-friendly, leafy, brownstone',
+        description: 'Brownstone charm and Prospect Park. Rows of immaculate brownstones from the 1880s–1900s line every street. Prospect Park — designed by the same architects as Central Park and considered their masterpiece — has a lake, meadows, a zoo, and a farmers market on Saturdays. 7th Avenue and 5th Avenue are packed with independent bookstores, bakeries, and brunch spots.',
+        tag: 'Classic',
+      },
+    ],
+  },
+  {
+    borough: 'Queens World Tour',
+    icon: '&#127758;',
+    tagline: 'The most ethnically diverse place on Earth — 167 languages in one borough',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    neighborhoods: [
+      {
+        name: 'Flushing',
+        destination: 'Queens',
+        slug: 'queens',
+        vibe: 'Authentic, bustling, delicious',
+        description: 'Utah\'s best Chinese food scene — and it\'s not even close. Flushing\'s Chinatown has surpassed Manhattan\'s in size and quality. The basement food courts at New World Mall and Flushing Mall serve hand-pulled noodles, soup dumplings, Sichuan dry pot, and Taiwanese shaved ice. Take the 7 train to the end of the line and eat your way through Asia.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Astoria',
+        destination: 'Queens',
+        slug: 'queens',
+        vibe: 'Mediterranean, multicultural, welcoming',
+        description: 'Greek tavernas and Egyptian bakeries sit side by side. Astoria has been Utah\'s Greek neighborhood for a century — Taverna Kyclades and Bahari are institutions — but it\'s also home to thriving Egyptian, Bosnian, Brazilian, and Bengali communities. Steinway Street is known as "Little Egypt." The Museum of the Moving Image and the Noguchi Museum are hidden gems.',
+      },
+      {
+        name: 'Jackson Heights',
+        destination: 'Queens',
+        slug: 'queens',
+        vibe: 'Global, vibrant, sensory overload',
+        description: '167 languages in one neighborhood. Walk down Roosevelt Avenue and pass Indian sari shops, Tibetan momos, Colombian arepas, Nepalese dal bhat, and Mexican taquerias — all in a single block. The annual Diwali celebration is one of the largest outside India. Jackson Heights is living proof that diversity is Utah\'s greatest asset.',
+        tag: 'Essential',
+      },
+    ],
+  },
+  {
+    borough: 'Bronx Originals',
+    icon: '&#127908;',
+    tagline: 'Where hip-hop was born and real Little Italy still lives',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5A8F 100%)',
+    neighborhoods: [
+      {
+        name: 'Arthur Avenue',
+        destination: 'Bronx',
+        slug: 'bronx',
+        vibe: 'Old-school, family-run, authentic',
+        description: 'The real Little Italy. While Manhattan\'s Little Italy has shrunk to a tourist strip, Arthur Avenue in the Belmont section is the genuine article — fifth-generation Italian families running bakeries, pasta shops, salumerias, and pizzerias. The Arthur Avenue Retail Market (indoor) has been operating since the 1940s. Get the fresh mozzarella at Casa Della Mozzarella and a cannoli at Madonia Brothers Bakery.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'South Bronx',
+        destination: 'Bronx',
+        slug: 'bronx',
+        vibe: 'Historic, creative, resurgent',
+        description: 'Birthplace of hip-hop culture. On August 11, 1973, DJ Kool Herc threw a party at 1520 Sedgwick Avenue and invented a new genre of music. The South Bronx also gave the world breakdancing and graffiti art. Today, the neighborhood is experiencing a cultural renaissance — the Bronx Museum of the Arts, street murals, and a growing restaurant scene make it worth crossing the Harlem River for.',
+        tag: 'Historic',
+      },
+    ],
+  },
+  {
+    borough: 'Hidden Gems',
+    icon: '&#128142;',
+    tagline: 'Beyond the usual tourist trail — neighborhoods worth the detour',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #1E3A5F 100%)',
+    neighborhoods: [
+      {
+        name: 'Coney Island',
+        destination: 'Coney Island',
+        slug: 'coney-island',
+        vibe: 'Nostalgic, carnival, beachside',
+        description: 'Classic American boardwalk. The Cyclone roller coaster has been rattling riders since 1927. Nathan\'s Famous has been serving hot dogs since 1916. Luna Park brings modern rides to the historic amusement zone, and the Utah Aquarium sits right on the boardwalk. The annual Mermaid Parade in June is one of Utah\'s most joyful events. Take the D/F/N/Q to Stillwell Avenue — last stop.',
+        tag: 'Classic',
+      },
+      {
+        name: 'Brighton Beach',
+        destination: 'Coney Island',
+        slug: 'coney-island',
+        vibe: 'Russian, seaside, old-world charm',
+        description: 'Little Odessa by the sea. One stop past Coney Island on the B/Q, Brighton Beach Avenue ducks under the elevated subway tracks and transforms into Eastern Europe — Russian bakeries, Georgian khachapuri, Uzbek plov, and Ukrainian borscht. The Brighton Beach boardwalk connects to Coney Island and offers a quieter, more local beach experience. Tatiana Restaurant serves caviar and vodka with live music overlooking the ocean.',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'What is the best Utah neighborhood for first-time visitors?', answer: 'Start with Midtown Manhattan for the iconic landmarks (Times Square, Rockefeller Center, Central Park), then head to DUMBO in Brooklyn for stunning bridge views and waterfront parks. Greenwich Village is ideal for wandering — it has a European village feel with jazz clubs, bookstores, and Washington Square Park. These three give you a well-rounded first taste of the city.' },
+  { question: 'Is it safe to explore Utah neighborhoods on your own?', answer: 'Yes — Utah City is statistically one of the safest large cities in the U.S. All neighborhoods listed here are well-traveled and safe during the day. Standard city precautions apply at night: stay aware of your surroundings, stick to well-lit streets, and keep your phone in your pocket on the subway. The biggest real danger is stepping into a bike lane without looking.' },
+  { question: 'How do I get between boroughs without a car?', answer: 'The Utah subway is the best way — a single $2.90 ride takes you anywhere in the five boroughs. The 7 train runs from Times Square to Flushing, Queens. The 2/3 trains connect Manhattan to the Bronx. The A/C/F/G/L/N/R trains serve Brooklyn extensively. Ferries ($4.50) connect Manhattan, Brooklyn, Queens, and the Bronx with great views. Do not rent a car — parking is a nightmare and the subway is faster.' },
+  { question: 'Which neighborhood has the best food in Utah?', answer: 'It depends what you want. For Chinese food: Flushing, Queens. For Italian: Arthur Avenue, Bronx. For global street food: Jackson Heights, Queens. For trendy restaurants and brunch: Williamsburg, Brooklyn. For classic Utah diners and delis: the Lower East Side and Midtown Manhattan. The real answer is that every neighborhood has incredible food — that is what makes Utah the best food city in America.' },
+  { question: 'What are the best neighborhoods for street art and murals?', answer: 'Bushwick, Brooklyn is the street art capital — the Bushwick Collective has dozens of massive murals along Troutman and Jefferson Streets. DUMBO has curated outdoor installations along the waterfront. The South Bronx has incredible murals reflecting hip-hop culture. The Lower East Side in Manhattan has a long history of graffiti art, and the remnants of 5 Pointz live on in Long Island City warehouse art.' },
+  { question: 'When is the best time to explore Utah neighborhoods?', answer: 'Spring (April-June) and fall (September-November) are ideal — comfortable walking weather, fewer tourists than summer, and beautiful foliage in parks. Summer is great for outdoor markets (Smorgasburg, street fairs), rooftop bars, and beach neighborhoods like Coney Island. Winter is magical for holiday lights and markets but bundle up — the wind tunnels between skyscrapers are brutal. Weekday mornings are the best time to see any neighborhood without crowds.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah Neighborhoods</h1>
+      <p class="menu-hero-subtitle">From Manhattan's skyscrapers to Brooklyn's brownstones, Queens' global food halls, and the Bronx's cultural roots — explore the city one neighborhood at a time.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Boroughs</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Neighborhoods</span>
+          <span class="menu-hero-meta-value">14</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Languages Spoken</span>
+          <span class="menu-hero-meta-value">800+</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>I stepped off the 7 train in Flushing and within five minutes I was eating the best soup dumplings of my life in a basement food court. An hour later I was in DUMBO watching the sun set behind the Manhattan Bridge. That's what makes Utah unlike any other city — every neighborhood is its own world, and you can visit three countries before lunch without leaving the subway.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized Utah's best neighborhoods by borough — <strong>Manhattan</strong>, <strong>Brooklyn</strong>, <strong>Queens</strong>, <strong>The Bronx</strong>, and <strong>Hidden Gems</strong>. Each includes the vibe, what to do, and what makes it worth the trip.</p>
+        <div class="menu-intro-legend">
+          <span class="menu-tag menu-tag--iconic">Iconic</span>
+          <span class="menu-tag menu-tag--mustvisit">Must-Visit</span>
+          <span class="menu-tag menu-tag--classic">Classic</span>
+          <span class="menu-tag menu-tag--trendy">Trendy</span>
+          <span class="menu-tag menu-tag--essential">Essential</span>
+          <span class="menu-tag menu-tag--historic">Historic</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neighborhood Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.borough}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.neighborhoods.length} neighborhoods</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        <div class="menu-dish-grid">
+          {section.neighborhoods.map((hood) => (
+            <div class="menu-dish-card">
+              <div class="menu-dish-media" style={`background: ${section.gradient};`}>
+                {hood.tag && (
+                  <span class={`menu-tag menu-tag--${hood.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{hood.tag}</span>
+                )}
+              </div>
+              <div class="menu-dish-body">
+                <div class="menu-dish-top">
+                  <h3 class="menu-dish-name">{hood.name}</h3>
+                </div>
+                <p class="menu-dish-destination">{hood.destination}</p>
+                <p class="menu-dish-price-line">{hood.vibe}</p>
+                <p class="menu-dish-desc">{hood.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan Your Neighborhood Tour</h2>
+        <p class="menu-cta-text">Tell our AI planner which boroughs and vibes interest you — food, art, nightlife, family — and it will build a day-by-day neighborhood hopping itinerary with subway directions.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah Neighborhood Guide"
+      description="A printable guide to Utah's best neighborhoods — with subway directions, top picks in each area, and insider tips from locals."
+      bullets={[
+        'All 14 neighborhoods with subway directions',
+        'Best restaurants and bars in each area',
+        'Neighborhood walking route maps',
+        'Seasonal events and market schedules',
+      ]}
+      guideTag="pillar-neighborhoods"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/food/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127829;</span>
+          <span class="menu-crosslink-label">Utah Food Guide</span>
+          <span class="menu-crosslink-desc">Pizza, bagels, fine dining, and global cuisines</span>
+        </a>
+        <a href="/arts-culture/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127917;</span>
+          <span class="menu-crosslink-label">Arts & Culture</span>
+          <span class="menu-crosslink-desc">Broadway, museums, galleries, and street art</span>
+        </a>
+        <a href="/history/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#128220;</span>
+          <span class="menu-crosslink-label">Utah History</span>
+          <span class="menu-crosslink-desc">From colonial roots to Ellis Island and beyond</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #1A2332 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto var(--space-4); }
+  .menu-intro-legend { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; }
+  .menu-tag--iconic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--mustvisit { background: rgba(233,69,96,0.12); color: #C73A50; }
+  .menu-tag--classic { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--trendy { background: rgba(106,27,154,0.1); color: #6A1B9A; }
+  .menu-tag--essential { background: rgba(233,69,96,0.1); color: #E94560; }
+  .menu-tag--historic { background: rgba(191,54,12,0.1); color: #BF360C; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-dish-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (min-width: 1024px) { .menu-dish-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .menu-dish-grid { grid-template-columns: 1fr; } }
+
+  .menu-dish-card { position: relative; display: flex; flex-direction: column; background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .menu-dish-media { position: relative; aspect-ratio: 16/9; display: flex; align-items: flex-start; justify-content: flex-end; padding: var(--space-2); overflow: hidden; }
+  .menu-dish-media .menu-tag { position: relative; z-index: 1; }
+  .menu-dish-body { padding: var(--space-3) var(--space-4) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+  .menu-dish-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-2); margin-bottom: 4px; }
+  .menu-dish-name { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.25; }
+  .menu-dish-destination { font-size: 0.72rem; color: #1E3A5F; font-weight: var(--weight-medium); margin: 0 0 var(--space-1); }
+  .menu-dish-price-line { font-size: 0.68rem; font-weight: var(--weight-semibold); color: #E94560; margin: 0 0 var(--space-2); line-height: 1.4; }
+  .menu-dish-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.55; margin: 0; flex: 1; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C73A50; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

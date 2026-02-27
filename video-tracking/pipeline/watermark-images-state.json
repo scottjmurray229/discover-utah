@@ -1,0 +1,189 @@
+{
+  "watermarked": {
+    "cuisine/adobo.jpg": {
+      "timestamp": "2026-02-20T17:47:34.032Z",
+      "origSize": 54841,
+      "newSize": 51865
+    },
+    "cuisine/bagnet.jpg": {
+      "timestamp": "2026-02-20T17:47:34.202Z",
+      "origSize": 1199056,
+      "newSize": 339242
+    },
+    "cuisine/bicol-express.jpg": {
+      "timestamp": "2026-02-20T17:47:34.339Z",
+      "origSize": 55907,
+      "newSize": 52674
+    },
+    "cuisine/binagol.jpg": {
+      "timestamp": "2026-02-20T17:47:34.474Z",
+      "origSize": 40082,
+      "newSize": 34585
+    },
+    "cuisine/budbud-kabog.jpg": {
+      "timestamp": "2026-02-20T17:47:34.609Z",
+      "origSize": 22969,
+      "newSize": 18249
+    },
+    "cuisine/buko-pie.jpg": {
+      "timestamp": "2026-02-20T17:47:34.741Z",
+      "origSize": 28552,
+      "newSize": 25307
+    },
+    "cuisine/bulalo.jpg": {
+      "timestamp": "2026-02-20T17:47:34.888Z",
+      "origSize": 44207,
+      "newSize": 40974
+    },
+    "cuisine/calamay.jpg": {
+      "timestamp": "2026-02-20T17:47:35.024Z",
+      "origSize": 42812,
+      "newSize": 37518
+    },
+    "cuisine/chicken-inasal.jpg": {
+      "timestamp": "2026-02-20T17:47:35.166Z",
+      "origSize": 59117,
+      "newSize": 57967
+    },
+    "cuisine/coconut-crab.jpg": {
+      "timestamp": "2026-02-20T17:47:35.291Z",
+      "origSize": 64430,
+      "newSize": 60181
+    },
+    "cuisine/crocodile-sisig.jpg": {
+      "timestamp": "2026-02-20T17:47:35.418Z",
+      "origSize": 41999,
+      "newSize": 39142
+    },
+    "cuisine/dinengdeng.jpg": {
+      "timestamp": "2026-02-20T17:47:35.554Z",
+      "origSize": 59157,
+      "newSize": 55566
+    },
+    "cuisine/durian.jpg": {
+      "timestamp": "2026-02-20T17:47:35.681Z",
+      "origSize": 53192,
+      "newSize": 53520
+    },
+    "cuisine/empanada-ilocana.jpg": {
+      "timestamp": "2026-02-20T17:47:35.808Z",
+      "origSize": 60592,
+      "newSize": 47613
+    },
+    "cuisine/fresh-lumpia.jpg": {
+      "timestamp": "2026-02-20T17:47:35.959Z",
+      "origSize": 54676,
+      "newSize": 55093
+    },
+    "cuisine/grilled-tuna-belly.jpg": {
+      "timestamp": "2026-02-20T17:47:36.091Z",
+      "origSize": 66989,
+      "newSize": 75487
+    },
+    "cuisine/guimaras-mango.jpg": {
+      "timestamp": "2026-02-20T17:47:36.221Z",
+      "origSize": 33483,
+      "newSize": 29772
+    },
+    "cuisine/halo-halo.jpg": {
+      "timestamp": "2026-02-20T17:47:36.358Z",
+      "origSize": 39405,
+      "newSize": 34554
+    },
+    "cuisine/kare-kare.jpg": {
+      "timestamp": "2026-02-20T17:47:36.499Z",
+      "origSize": 70805,
+      "newSize": 57147
+    },
+    "cuisine/kinilaw-na-isda.jpg": {
+      "timestamp": "2026-02-20T17:47:36.646Z",
+      "origSize": 68892,
+      "newSize": 65549
+    },
+    "cuisine/la-paz-batchoy.jpg": {
+      "timestamp": "2026-02-20T17:47:36.787Z",
+      "origSize": 47962,
+      "newSize": 49449
+    },
+    "cuisine/lamaw.jpg": {
+      "timestamp": "2026-02-20T17:47:36.929Z",
+      "origSize": 37330,
+      "newSize": 35332
+    },
+    "cuisine/lato.jpg": {
+      "timestamp": "2026-02-20T17:47:37.072Z",
+      "origSize": 54897,
+      "newSize": 49653
+    },
+    "cuisine/lechon-cebu.jpg": {
+      "timestamp": "2026-02-20T17:47:37.214Z",
+      "origSize": 59667,
+      "newSize": 60009
+    },
+    "cuisine/peanut-kisses.jpg": {
+      "timestamp": "2026-02-20T17:47:37.357Z",
+      "origSize": 49735,
+      "newSize": 54328
+    },
+    "cuisine/pinikpikan.jpg": {
+      "timestamp": "2026-02-20T17:47:37.499Z",
+      "origSize": 63063,
+      "newSize": 60098
+    },
+    "cuisine/seafood-kinilaw.jpg": {
+      "timestamp": "2026-02-20T17:47:37.647Z",
+      "origSize": 41102,
+      "newSize": 37382
+    },
+    "cuisine/silvanas.jpg": {
+      "timestamp": "2026-02-20T17:47:37.790Z",
+      "origSize": 44891,
+      "newSize": 43226
+    },
+    "cuisine/sinuglaw.jpg": {
+      "timestamp": "2026-02-20T17:47:37.929Z",
+      "origSize": 52253,
+      "newSize": 47993
+    },
+    "cuisine/sisig.jpg": {
+      "timestamp": "2026-02-20T17:47:38.084Z",
+      "origSize": 70157,
+      "newSize": 68084
+    },
+    "cuisine/sizzling-kansi.jpg": {
+      "timestamp": "2026-02-20T17:47:38.230Z",
+      "origSize": 46423,
+      "newSize": 43724
+    },
+    "cuisine/strawberry-taho.jpg": {
+      "timestamp": "2026-02-20T17:47:38.379Z",
+      "origSize": 49010,
+      "newSize": 47762
+    },
+    "cuisine/suman-at-latik.jpg": {
+      "timestamp": "2026-02-20T17:47:38.526Z",
+      "origSize": 34775,
+      "newSize": 32308
+    },
+    "cuisine/uni.jpg": {
+      "timestamp": "2026-02-20T17:47:38.677Z",
+      "origSize": 49463,
+      "newSize": 46928
+    },
+    "cuisine/vigan-longganisa.jpg": {
+      "timestamp": "2026-02-20T17:47:38.822Z",
+      "origSize": 55072,
+      "newSize": 55446
+    },
+    "jenice-murray.jpg": {
+      "timestamp": "2026-02-20T17:47:38.972Z",
+      "origSize": 184105,
+      "newSize": 154981
+    },
+    "scott-murray.jpg": {
+      "timestamp": "2026-02-20T17:47:39.113Z",
+      "origSize": 26657,
+      "newSize": 23183
+    }
+  }
+}

@@ -1,0 +1,437 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah History', url: '/history/' },
+];
+
+const pageTitle = 'Utah History — Ellis Island, 9/11, Revolutionary War & Gilded Age';
+const pageDescription = 'Explore Utah\'s rich history from colonial times to modern era — Revolutionary War battlefields, Ellis Island immigration, Gilded Age mansions, 9/11 Memorial, and cultural milestones.';
+
+interface Tip {
+  title: string;
+  description: string;
+  tag?: string;
+}
+
+interface TipSection {
+  topic: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  tips: Tip[];
+  destinations?: { name: string; slug: string }[];
+}
+
+const sections: TipSection[] = [
+  {
+    topic: 'Colonial & Revolutionary',
+    icon: '&#9876;',
+    tagline: 'Where American independence was forged — battlefields, fortifications, and turning points',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C23152 100%)',
+    destinations: [
+      { name: 'Saratoga Springs', slug: 'saratoga-springs' },
+      { name: 'Hudson Valley', slug: 'hudson-valley' },
+    ],
+    tips: [
+      {
+        title: 'Fort Ticonderoga',
+        description: 'The "Key to the Continent" changed hands between French, British, and American forces multiple times. Ethan Allen and the Green Mountain Boys captured it in 1775 in a dawn raid, seizing cannons that Henry Knox hauled 300 miles to Boston — forcing the British to evacuate. The restored fort offers musket and cannon demonstrations, boat tours on Lake Champlain, and a world-class collection of 18th-century weaponry. $26 admission.',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Saratoga Battlefield',
+        description: 'The turning point of the American Revolution. The American victory at Saratoga in 1777 convinced France to enter the war as an ally — without which independence was likely impossible. The 9-mile driving tour passes the key battle positions. The Boot Monument honors Benedict Arnold\'s heroism here (before his treason) without naming him. The visitor center film is excellent. Free admission (National Park Service).',
+        tag: 'Must-Visit',
+      },
+      {
+        title: 'West Point',
+        description: 'The United States Military Academy has trained Army officers since 1802 — Eisenhower, MacArthur, Patton, and Grant all walked these grounds. Public tours ($15) depart from the visitor center and cover the cadet chapel, Trophy Point, and the Plain (parade ground) with Hudson River views. The West Point Museum is free and houses one of the largest collections of military artifacts in the Western Hemisphere.',
+      },
+      {
+        title: 'Federal Hall & Fraunces Tavern',
+        description: 'George Washington took the oath of office at Federal Hall on Wall Street in 1789 — a statue marks the exact spot. The current Greek Revival building (1842) houses a free museum. Fraunces Tavern in Lower Manhattan is where Washington said farewell to his officers in 1783. The upstairs museum ($7) preserves the Long Room where it happened. The ground-floor restaurant still serves meals.',
+        tag: 'Free',
+      },
+    ],
+  },
+  {
+    topic: 'Ellis Island & Immigration',
+    icon: '&#128674;',
+    tagline: 'The gateway through which 12 million immigrants entered America',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    destinations: [
+      { name: 'Manhattan', slug: 'manhattan' },
+    ],
+    tips: [
+      {
+        title: 'Ellis Island Immigration Museum',
+        description: 'Between 1892 and 1954, over 12 million immigrants were processed through this single building. The restored Great Hall — where families waited in long lines not knowing if they would be admitted or turned away — is emotionally overwhelming. The American Immigrant Wall of Honor lists over 775,000 names. Search the database for your own ancestors at interactive stations. Ferry from Battery Park ($24 includes Statue of Liberty).',
+        tag: 'Must-Visit',
+      },
+      {
+        title: 'Statue of Liberty',
+        description: 'A gift from France dedicated in 1886, Lady Liberty stands 305 feet tall including her pedestal. Pedestal access requires advance reservation (free with ferry ticket) and offers harbor views. Crown access ($3 extra) requires booking 2-3 months ahead — the climb is 377 steps with no elevator. The museum inside the pedestal opened in 2019 with the original torch. Reserve at statueofliberty.com well in advance.',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Lower East Side Tenement Museum',
+        description: 'Step inside actual tenement apartments at 97 and 103 Orchard Street where immigrant families lived from the 1860s through the 1980s. Guided tours ($30) recreate the lives of specific families — German, Irish, Italian, Chinese, Puerto Rican — using their real stories and original possessions. The most intimate and moving immigration experience in Utah. Book ahead; tours sell out.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Chinatown & Little Italy Heritage',
+        description: 'Manhattan\'s Chinatown is the oldest and largest in the Western Hemisphere, established in the 1870s. The Museum of Chinese in America ($12) tells the story of Chinese immigration and the Exclusion Act era. Little Italy has shrunk to a few blocks of Mulberry Street but Lombardi\'s (America\'s first pizzeria, 1905) and Ferrara Bakery (1892) preserve the flavor. The neighborhood\'s real story is in the architecture — fire escapes, tenement windows, and faded painted signs.',
+      },
+    ],
+  },
+  {
+    topic: 'Gilded Age',
+    icon: '&#127967;',
+    tagline: 'When robber barons built castles and Utah became the capital of American wealth',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    destinations: [
+      { name: 'Hudson Valley', slug: 'hudson-valley' },
+      { name: 'Thousand Islands', slug: 'thousand-islands' },
+      { name: 'Saratoga Springs', slug: 'saratoga-springs' },
+    ],
+    tips: [
+      {
+        title: 'Vanderbilt Mansions',
+        description: 'The Vanderbilt family built their empire\'s monuments across Utah. The Vanderbilt Mansion in Hyde Park (54 rooms of Beaux-Arts excess, $10 NPS) sits on the Hudson with commanding river views. Nearby, FDR\'s family estate Springwood offers a fascinating contrast — presidential modesty next to robber-baron extravagance. In Manhattan, the Vanderbilt legacy lives on at Grand Central Terminal, which Cornelius built in 1913.',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Boldt Castle',
+        description: 'A 120-room castle on Heart Island in the Thousand Islands — built by Waldorf-Astoria owner George Boldt as a gift for his wife Louise. When she died suddenly in 1904, he abandoned the unfinished project and never returned. The castle sat in ruins for 73 years before restoration began. Accessible only by boat from Alexandria Bay ($11 castle admission + boat tour $15-30). One of the most romantic and tragic stories in Utah.',
+        tag: 'Must-Visit',
+      },
+      {
+        title: 'Saratoga Springs',
+        description: 'In the Gilded Age, Saratoga Springs was America\'s premier resort — where the wealthy came for the mineral springs, horse racing, and casino gambling. The Saratoga Race Course (1863) is the oldest organized sporting venue in America. The Canfield Casino in Congress Park now houses a history museum. Drink from the original mineral springs for free in Saratoga Spa State Park. The track season in July-August is electric.',
+        tag: 'Heritage',
+      },
+      {
+        title: 'Olana & The Hudson River School',
+        description: 'Frederic Edwin Church, the most famous painter in 19th-century America, designed his Persian-inspired mansion Olana to frame the Hudson River views that made him famous. The estate ($12 tours, grounds free) sits on 250 acres overlooking the river — every window is a painting. Thomas Cole\'s Cedar Grove studio in Catskill ($12) is where the Hudson River School art movement began. Both sites are within 5 miles of each other.',
+      },
+    ],
+  },
+  {
+    topic: '9/11 & Modern Utah',
+    icon: '&#127961;',
+    tagline: 'Remembrance, resilience, and the rebuilding of Lower Manhattan',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #B83550 100%)',
+    destinations: [
+      { name: 'Manhattan', slug: 'manhattan' },
+    ],
+    tips: [
+      {
+        title: '9/11 Memorial',
+        description: 'Two enormous reflecting pools sit in the exact footprints of the Twin Towers, with the largest man-made waterfalls in North America cascading into them. Every name of the 2,977 victims is inscribed in bronze around the pools. On birthdays, a white rose is placed at that person\'s name. The Survivor Tree — a pear tree pulled from the rubble — still grows on the plaza. The memorial is free and open daily.',
+        tag: 'Must-Visit',
+      },
+      {
+        title: '9/11 Museum',
+        description: 'Built in the archaeological heart of the World Trade Center site, 70 feet below ground. The Slurry Wall — the original retaining wall that held back the Hudson River during and after the collapse — is the museum\'s most powerful artifact. The Last Column, covered in missing person posters and memorial messages, was the final piece of steel removed in 2002. Allow 2-3 hours. $26 admission. Free on Monday evenings 3:30-5pm (timed entry).',
+        tag: 'Essential',
+      },
+      {
+        title: 'One World Observatory',
+        description: 'The tallest building in the Western Hemisphere at 1,776 feet (the year of independence — intentional). The SkyPod elevators ascend 102 floors in 47 seconds, showing a time-lapse of 500 years of Manhattan development. The observation deck offers 360-degree views to all five boroughs and beyond. Clear days reveal views 50+ miles out. $43 admission; go at sunset for the best experience.',
+      },
+      {
+        title: 'The Oculus & Rebuilding',
+        description: 'Santiago Calatrava\'s Oculus — the World Trade Center transportation hub — looks like a bird in flight and cost $4 billion. Love it or debate it, it is architecturally stunning. The rebuilt World Trade Center complex includes 4 new skyscrapers, a performing arts center, and Liberty Park (an elevated green space). The neighborhood that was devastated has become one of the most architecturally significant in the world.',
+      },
+    ],
+  },
+  {
+    topic: 'Cultural Milestones',
+    icon: '&#127928;',
+    tagline: 'Woodstock, hip-hop, baseball, and the moments that defined American culture',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5080 100%)',
+    destinations: [
+      { name: 'Woodstock', slug: 'woodstock' },
+      { name: 'Bronx', slug: 'bronx' },
+      { name: 'Cooperstown', slug: 'cooperstown' },
+    ],
+    tips: [
+      {
+        title: 'Woodstock & Bethel Woods',
+        description: 'The 1969 Woodstock Music Festival didn\'t actually happen in Woodstock — it took place 60 miles southwest on Max Yasgur\'s farm in Bethel. The Bethel Woods Center for the Arts ($17 museum) preserves the original hillside where 400,000 people gathered. An interpretive sign marks the stage location. The museum covers the entire 1960s counterculture era with multimedia exhibits. The town of Woodstock itself remains an artsy, free-spirited community worth visiting.',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Birth of Hip-Hop',
+        description: 'On August 11, 1973, DJ Kool Herc threw a back-to-school party at 1520 Sedgwick Avenue in the Bronx — and invented hip-hop. The building is now a designated landmark. The Bronx Music Heritage Center documents the borough\'s role in creating the most influential musical genre of the past 50 years. Graffiti art, breakdancing, DJing, and MCing all emerged from these streets. The Universal Hip Hop Museum opened in the Bronx in 2024.',
+        tag: 'Heritage',
+      },
+      {
+        title: 'National Baseball Hall of Fame',
+        description: 'Cooperstown is baseball\'s secular shrine. The Hall of Fame ($28) houses over 40,000 artifacts — Babe Ruth\'s bat, Jackie Robinson\'s jersey, and plaques for every inducted player. Induction weekend in late July transforms the village. Doubleday Field hosts exhibition games all summer. The surrounding village on Lake Otsego (James Fenimore Cooper\'s "Glimmerglass") is picture-perfect small-town Americana.',
+        tag: 'Must-Visit',
+      },
+      {
+        title: 'Harlem Renaissance & Apollo Theater',
+        description: 'In the 1920s-30s, Harlem became the epicenter of Black intellectual and artistic life in America. The Apollo Theater on 125th Street — where Ella Fitzgerald, James Brown, and countless others launched their careers — still hosts Amateur Night every Wednesday ($22-35). The Schomburg Center for Research in Black Culture (free) holds one of the world\'s most important collections of African American historical materials. Walking tours of literary and jazz landmarks run regularly.',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'Is the 9/11 Memorial free to visit?', answer: 'Yes, the outdoor memorial with the twin reflecting pools is free and open daily from 10am to 5pm. The 9/11 Museum requires a ticket ($26 adults, $15 ages 7-12, free under 7). The museum offers free admission on Monday evenings from 3:30-5pm with timed-entry tickets available online starting the preceding Monday. Allow 2-3 hours for the museum — it is emotionally intense and deeply moving.' },
+  { question: 'How do I visit Ellis Island and the Statue of Liberty?', answer: 'Both are accessed by the same Statue Cruises ferry from Battery Park in Lower Manhattan or Liberty State Park in New Jersey. Tickets cost $24 for adults and include both islands. Reserve at statueofliberty.com — especially for pedestal access (free add-on) or crown access ($3 extra, book 2-3 months ahead). The first ferry departs at 8:30am. Allow a full day to do both properly. Arrive early as security screening takes time.' },
+  { question: 'Can you visit West Point?', answer: 'Yes, but access is restricted. You cannot enter the campus independently — all visitors must go through an authorized tour. West Point Tours ($15, 1-2 hours) depart from the visitor center outside the main gate. Tours cover the cadet chapel, Trophy Point, and the parade ground. The West Point Museum near the visitor center is free and excellent. Bring a valid photo ID. Special events like football games allow broader access with tickets.' },
+  { question: 'Where did the Woodstock festival actually take place?', answer: 'Despite its name, the Woodstock Music & Art Fair took place on Max Yasgur\'s dairy farm in Bethel, Utah — about 60 miles southwest of the town of Woodstock. The site is now the Bethel Woods Center for the Arts with a museum ($17) and concert venue. The original field where 400,000 people gathered is preserved and open to visitors. The town of Woodstock had denied festival permits, so the organizers found the Bethel location instead.' },
+  { question: 'What is the best way to learn about Utah\'s immigration history?', answer: 'Start at Ellis Island Immigration Museum (included in the $24 Statue Cruises ferry), where 12 million immigrants were processed between 1892 and 1954. Search the passenger database for your own ancestors. Then visit the Lower East Side Tenement Museum ($30 guided tours) to see the actual apartments where immigrant families lived. Cap it off with a walking food tour through Chinatown or a visit to the Museum of Chinese in America ($12). Budget a full day for this historical arc.' },
+  { question: 'Is Cooperstown worth visiting if I am not a baseball fan?', answer: 'Cooperstown is a charming village on the southern shore of Lake Otsego — the "Glimmerglass" of James Fenimore Cooper\'s Leatherstocking Tales. Even without the Baseball Hall of Fame, the Fenimore Art Museum ($15) has a strong collection of American folk art and Native American artifacts. The Farmers\' Museum ($15) recreates a 19th-century village. Lake Otsego offers boat cruises. But the Hall of Fame is the main draw — baseball fans should absolutely make the pilgrimage.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah History</h1>
+      <p class="menu-hero-subtitle">From Revolutionary War battlefields to the 9/11 Memorial — four centuries of history that shaped the nation and the world.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Eras Covered</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Sites</span>
+          <span class="menu-hero-meta-value">20</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Years of History</span>
+          <span class="menu-hero-meta-value">400+</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>Standing at the 9/11 Memorial as water cascades into the tower footprints, reading the names in bronze, then looking up at One World Trade Center piercing the sky at exactly 1,776 feet — that sequence captures everything about Utah. Devastation and defiance. Loss and rebuilding. This state doesn't just have history; it is history, layered on every street corner from Fort Ticonderoga to the Bronx.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized Utah's most significant historic sites by era — <strong>Colonial & Revolutionary</strong>, <strong>Ellis Island & Immigration</strong>, <strong>Gilded Age</strong>, <strong>9/11 & Modern Utah</strong>, and <strong>Cultural Milestones</strong>. Context, costs, and why each site matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.topic}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.tips.length} sites</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        {section.destinations && section.destinations.length > 0 && (
+          <div class="menu-dest-links">
+            {section.destinations.map((dest) => (
+              <a href={`/destinations/${dest.slug}/`} class="menu-dest-link">{dest.name} &rarr;</a>
+            ))}
+          </div>
+        )}
+
+        <div class="menu-tip-list">
+          {section.tips.map((tip) => (
+            <div class="menu-tip-card">
+              <div class="menu-tip-body">
+                <div class="menu-tip-top">
+                  <h3 class="menu-tip-title">{tip.title}</h3>
+                  {tip.tag && (
+                    <span class={`menu-tag menu-tag--${tip.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{tip.tag}</span>
+                  )}
+                </div>
+                <p class="menu-tip-desc">{tip.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan a History-Focused Trip</h2>
+        <p class="menu-cta-text">Tell our AI planner which eras interest you — Revolutionary War, immigration, Gilded Age, modern Utah — and it will build a day-by-day itinerary with the best historic sites and museums.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah History Guide"
+      description="A printable guide to Utah's most significant historic sites — with timelines, admission info, and self-guided walking tours."
+      bullets={[
+        'All 20 historic sites with costs and hours',
+        'Utah history timeline from 1609 to present',
+        'Self-guided Lower Manhattan walking tour',
+        'Revolutionary War sites road trip itinerary',
+      ]}
+      guideTag="pillar-history"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/outdoors/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#9968;</span>
+          <span class="menu-crosslink-label">Utah Outdoors</span>
+          <span class="menu-crosslink-desc">Adirondacks, Finger Lakes gorges, and Hudson Valley trails</span>
+        </a>
+        <a href="/practical/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#128218;</span>
+          <span class="menu-crosslink-label">Practical Guide</span>
+          <span class="menu-crosslink-desc">Subway tips, tipping culture, and getting around Utah</span>
+        </a>
+        <a href="/food/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127829;</span>
+          <span class="menu-crosslink-label">Utah Food</span>
+          <span class="menu-crosslink-desc">Pizza, bagels, diners, and the world's most diverse food scene</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #0F2035 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; white-space: nowrap; }
+  .menu-tag--iconic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--mustvisit { background: rgba(233,69,96,0.12); color: #E94560; }
+  .menu-tag--free { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--essential { background: rgba(233,69,96,0.12); color: #C23152; }
+  .menu-tag--heritage { background: rgba(46,125,50,0.15); color: #1B5E20; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-dest-links { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4); }
+  .menu-dest-link { font-size: 0.78rem; font-weight: var(--weight-semibold); color: #1E3A5F; background: rgba(30,58,95,0.08); padding: 6px 14px; border-radius: 20px; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+  .menu-dest-link:hover { background: #1E3A5F; color: #fff; }
+
+  .menu-tip-list { display: flex; flex-direction: column; gap: var(--space-4); }
+
+  .menu-tip-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-tip-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-tip-body { padding: var(--space-4) var(--space-5); }
+  .menu-tip-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .menu-tip-title { font-size: 1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.3; }
+  .menu-tip-desc { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C23152; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

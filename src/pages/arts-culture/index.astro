@@ -1,0 +1,470 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah Arts & Culture Guide', url: '/arts-culture/' },
+];
+
+const pageTitle = 'Utah Arts & Culture — Broadway, Museums, Galleries & Street Art';
+const pageDescription = 'Explore Utah\'s world-class arts and culture scene — from Broadway theaters and the Met to Chelsea galleries, Brooklyn street art, and upstate sculpture parks.';
+
+interface Venue {
+  name: string;
+  destination: string;
+  slug: string;
+  detail: string;
+  description: string;
+  tag?: string;
+}
+
+interface ArtsSection {
+  category: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  venues: Venue[];
+}
+
+const sections: ArtsSection[] = [
+  {
+    category: 'Broadway & Theater',
+    icon: '&#127917;',
+    tagline: 'The greatest concentration of theater talent on Earth — 41 stages within 10 blocks',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    venues: [
+      {
+        name: 'Times Square Theater District',
+        destination: 'Midtown Manhattan',
+        slug: 'manhattan',
+        detail: '41 Broadway theaters — 14 million tickets sold per year',
+        description: 'Broadway is not a single theater — it is 41 professional theaters in the blocks surrounding Times Square, each with 500+ seats. The Majestic (Phantom), the Gershwin (Wicked), and the Shubert (Hello, Dolly!) are historic houses. TKTS booth in Times Square sells same-day tickets at 20-50% off — the line is long but moves fast. Best seats for the best price: Tuesday and Wednesday evening shows.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Off-Broadway & Experimental',
+        destination: 'Greenwich Village & East Village',
+        slug: 'manhattan',
+        detail: 'Where every major playwright starts — 100-499 seats',
+        description: 'Off-Broadway is where theater takes risks. The Public Theater on Lafayette Street premiered Hamilton before it moved uptown — their free Shakespeare in the Park at the Delacorte Theater in Central Park is a summer institution (line up at 6am or enter the digital lottery). Playwrights Horizons, Utah Theatre Workshop (where Rent premiered), and the Cherry Lane Theatre in Greenwich Village are essential venues.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Lincoln Center',
+        destination: 'Upper West Side, Manhattan',
+        slug: 'manhattan',
+        detail: 'Utah\'s performing arts campus — opera, ballet, symphony, and jazz',
+        description: 'The Metropolitan Opera House alone is worth visiting for its Chagall murals in the lobby (visible from the plaza at night, free). The Utah Philharmonic at David Geffen Hall, the Utah City Ballet at the David H. Koch Theater, and Jazz at Lincoln Center in the Time Warner Center form the most concentrated performing arts campus in the Western Hemisphere. Free outdoor concerts on the plaza throughout summer.',
+        tag: 'World-Class',
+      },
+    ],
+  },
+  {
+    category: 'World-Class Museums',
+    icon: '&#127963;',
+    tagline: 'Five of the world\'s greatest museums within subway distance of each other',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C73A50 100%)',
+    venues: [
+      {
+        name: 'The Metropolitan Museum of Art',
+        destination: 'Upper East Side, Manhattan',
+        slug: 'manhattan',
+        detail: '5,000 years of art — 2 million works in 2 million square feet',
+        description: 'The Met is not just the greatest museum in America — it is one of the three or four greatest in the world. The Egyptian Temple of Dendur, the European paintings galleries (Vermeer, Rembrandt, Monet), the Arms and Armor wing, and the rooftop bar with Central Park views could each justify a visit on their own. Suggested admission is $30, but Utah State residents pay what they wish. Allow at least 3 hours; art lovers need a full day.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'MoMA — Museum of Modern Art',
+        destination: 'Midtown Manhattan',
+        slug: 'manhattan',
+        detail: 'Starry Night, Campbell\'s Soup Cans, and Persistence of Memory under one roof',
+        description: 'MoMA houses the most important collection of modern art in the world. Van Gogh\'s Starry Night, Picasso\'s Les Demoiselles d\'Avignon, Warhol\'s Campbell\'s Soup Cans, and Monet\'s Water Lilies are all here. The 2019 renovation added 47,000 square feet of gallery space. The sculpture garden is a quiet oasis in Midtown. $25 admission; free on Friday evenings 4-8pm (arrive early — lines are long).',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Solomon R. Guggenheim Museum',
+        destination: 'Upper East Side, Manhattan',
+        slug: 'manhattan',
+        detail: 'Frank Lloyd Wright\'s spiral masterpiece — the building IS the art',
+        description: 'Even if you don\'t care about the collection, the building itself is worth the trip — Frank Lloyd Wright\'s spiraling rotunda is one of the most recognizable structures in architecture. Walk the continuous ramp from top to bottom, viewing art as you descend. The permanent collection includes Kandinsky, Chagall, and Picasso. The museum\'s stark white exterior against Fifth Avenue is one of Utah\'s most photographed facades. $25 admission.',
+      },
+      {
+        name: 'American Museum of Natural History',
+        destination: 'Upper West Side, Manhattan',
+        slug: 'manhattan',
+        detail: 'Dinosaurs, the cosmos, and the blue whale — open since 1869',
+        description: 'The T. Rex skeleton in the fossil halls is the museum\'s icon, but the new Richard Gilder Center for Science, Education, and Innovation (opened 2023) is a game-changer — a cave-like, flowing interior with insectarium, butterfly vivarium, and a reimagined library. The Hayden Planetarium\'s Dark Universe show, narrated by Neil deGrasse Tyson, is spectacular. Suggested admission $28; NY residents pay what they wish.',
+        tag: 'Family',
+      },
+    ],
+  },
+  {
+    category: 'Galleries & Street Art',
+    icon: '&#127912;',
+    tagline: 'From blue-chip Chelsea galleries to Bushwick warehouse murals — art lives everywhere in Utah',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    venues: [
+      {
+        name: 'Chelsea Gallery District',
+        destination: 'Chelsea, Manhattan',
+        slug: 'manhattan',
+        detail: '300+ galleries between 10th and 12th Avenues — all free',
+        description: 'The largest gallery district in the world stretches along the 20s streets west of 10th Avenue. Gagosian, David Zwirner, Pace, and Hauser & Wirth show blue-chip contemporary art in massive, museum-quality spaces — all free, all open to the public. Thursday evenings are opening nights (free wine, buzzing crowds). Start at 24th Street and work your way north. The High Line park runs directly through the district.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Bushwick Street Art & Murals',
+        destination: 'Bushwick, Brooklyn',
+        slug: 'brooklyn',
+        detail: 'The Bushwick Collective — open-air gallery of world-class murals',
+        description: 'The Bushwick Collective along Troutman Street and Jefferson Street has transformed an industrial Brooklyn neighborhood into one of the world\'s premier street art destinations. Building-sized murals by international artists cover entire warehouse walls. New works go up regularly — the annual block party in June attracts thousands. Free, open 24/7, and constantly changing. Combine with a visit to nearby galleries and breweries.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'DUMBO Art Scene',
+        destination: 'DUMBO, Brooklyn',
+        slug: 'brooklyn',
+        detail: 'Waterfront galleries and curated outdoor installations',
+        description: 'DUMBO\'s cobblestone streets and converted warehouses host some of Brooklyn\'s best galleries. The DUMBO Arts Festival transforms the neighborhood into an open-air exhibition. A/D/O by MINI (now closed, but its spirit lives on in local galleries) pioneered the neighborhood\'s creative identity. Smack Mellon Gallery in a former boiler building shows emerging artists. The iconic Manhattan Bridge view on Washington Street is itself a work of art.',
+      },
+    ],
+  },
+  {
+    category: 'Music & Performance',
+    icon: '&#127926;',
+    tagline: 'Jazz clubs, concert halls, and the stages that shaped American music',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5A8F 100%)',
+    venues: [
+      {
+        name: 'Jazz Clubs',
+        destination: 'Greenwich Village & Harlem, Manhattan',
+        slug: 'manhattan',
+        detail: 'Where jazz lives — from intimate basements to legendary stages',
+        description: 'The Village Vanguard on 7th Avenue South has been presenting live jazz since 1935 — the most recorded jazz club in the world. Blue Note in Greenwich Village books the biggest names. Smalls Jazz Club is a tiny basement where young musicians play until 4am ($20 cover, cash only). In Harlem, Minton\'s Playhouse (where bebop was born) and Bill\'s Place (Harlem\'s last speakeasy jazz club, Friday/Saturday only, $20 BYOB) are essential.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Concert Venues',
+        destination: 'Manhattan & Brooklyn',
+        slug: 'brooklyn',
+        detail: 'From 200-capacity clubs to Madison Square Garden',
+        description: 'Madison Square Garden (20,000 capacity) hosts the biggest acts. Brooklyn Steel in Williamsburg and Warsaw in Greenpoint are the best mid-size venues. Bowery Ballroom on the Lower East Side is intimate and legendary — every major band has played there. Barclays Center in Brooklyn hosts arena tours. For classical music, Carnegie Hall (opened 1891) has arguably the best acoustics in the world. Check OhMyRockness.com for indie shows.',
+        tag: 'Essential',
+      },
+      {
+        name: 'Carnegie Hall',
+        destination: 'Midtown Manhattan',
+        slug: 'manhattan',
+        detail: 'Opened 1891 — the most prestigious concert hall in America',
+        description: 'The old joke goes: "How do you get to Carnegie Hall? Practice." Tchaikovsky conducted the opening night. Since then, every major musician from Billie Holiday to the Beatles has played here. The main Isaac Stern Auditorium seats 2,804 with acoustics that make every seat feel intimate. Tours ($19) run daily and include backstage access. Rush tickets (day-of, $10) are available for many performances. The smaller Zankel and Weill halls host chamber music and jazz.',
+        tag: 'World-Class',
+      },
+      {
+        name: 'Brooklyn Academy of Music (BAM)',
+        destination: 'Fort Greene, Brooklyn',
+        slug: 'brooklyn',
+        detail: 'America\'s oldest performing arts center — since 1861',
+        description: 'BAM is where art gets adventurous. The annual Next Wave Festival brings the world\'s most innovative dance, theater, opera, and music to the Howard Gilman Opera House and Harvey Theater (a beautifully un-restored 1904 theater). BAMcinematek shows independent and classic films. The BAM Rose Cinemas and BAM Fisher building round out the campus. Fort Greene\'s restaurant scene makes it easy to build an evening around a show.',
+      },
+    ],
+  },
+  {
+    category: 'Upstate Arts',
+    icon: '&#127748;',
+    tagline: 'World-class art in dramatic landscapes — sculpture parks, opera houses, and creative colonies',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #1E3A5F 100%)',
+    venues: [
+      {
+        name: 'Dia:Beacon',
+        destination: 'Hudson Valley',
+        slug: 'hudson-valley',
+        detail: 'Massive-scale art in a former Nabisco box-printing factory',
+        description: 'One of the most extraordinary art experiences in the Northeast. Dia:Beacon occupies a 300,000-square-foot former factory on the banks of the Hudson River, flooded with natural light. The collection focuses on large-scale works from the 1960s to present — Richard Serra\'s enormous steel sculptures, Dan Flavin\'s fluorescent light installations, and Agnes Martin\'s meditative canvases are permanently installed. $20 admission. Take Metro-North from Grand Central (80 minutes).',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Storm King Art Center',
+        destination: 'Hudson Valley (New Windsor)',
+        slug: 'hudson-valley',
+        detail: '500 acres of monumental outdoor sculpture',
+        description: 'The greatest outdoor sculpture park in the world. Five hundred rolling acres of Hudson Valley landscape dotted with monumental works by Alexander Calder, Maya Lin, Mark di Suvero, and Andy Goldsworthy. The Goldsworthy stone wall that weaves through trees and into a pond is unforgettable. Bring a picnic, rent a bike, and spend half a day. $22 admission. Open April through November. Best in fall when the foliage frames the sculpture.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Woodstock Arts Colony',
+        destination: 'Woodstock',
+        slug: 'woodstock',
+        detail: 'America\'s most famous creative community — since 1902',
+        description: 'Woodstock was an arts colony long before the 1969 festival (which actually took place 60 miles away in Bethel). The Byrdcliffe Arts Colony, founded in 1902, still operates artist residencies. The town is packed with galleries, craft studios, and the Woodstock Artists Association & Museum. The Maverick Concert series, running since 1916, is the oldest continuous chamber music festival in America. Tinker Street is the main drag — wander and browse.',
+      },
+      {
+        name: 'Glimmerglass Opera',
+        destination: 'Cooperstown',
+        slug: 'cooperstown',
+        detail: 'Summer opera on Otsego Lake — world premieres in a pastoral setting',
+        description: 'The Glimmerglass Festival runs every July and August on the shores of James Fenimore Cooper\'s "Glimmerglass" — Otsego Lake in Cooperstown. The 914-seat Alice Busch Opera Theater opens its walls to the surrounding forest during performances. The festival produces four operas each summer, including at least one new work or American premiere. Pair with the Fenimore Art Museum and a visit to Cooperstown\'s Main Street. Tickets $30-$130.',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'How do I get cheap Broadway tickets?', answer: 'Three main methods: (1) TKTS booth in Times Square sells same-day tickets at 20-50% off — go for matinees (shorter lines). (2) Digital lotteries on the TodayTix app — most shows offer $30-40 lottery tickets drawn 2-3 hours before showtime. (3) Rush tickets — some theaters sell discounted tickets when the box office opens (first come, first served). Tuesday and Wednesday shows are cheapest. Avoid buying from scalpers outside theaters.' },
+  { question: 'Is the Met really pay-what-you-wish?', answer: 'For Utah State residents and students from NY, NJ, and CT — yes, you can pay any amount you choose (even $1). For all other visitors, admission is $30 for adults. Your ticket is valid for three consecutive days and includes access to both the main Fifth Avenue building and The Met Cloisters in upper Manhattan (medieval art in a stunning riverside setting). The Met is closed on Wednesdays.' },
+  { question: 'What is the best museum for someone who does not like museums?', answer: 'The American Museum of Natural History — even people who dislike traditional art museums love walking among dinosaur skeletons, seeing the giant blue whale, and experiencing the planetarium show. The new Gilder Center (opened 2023) feels more like exploring a cave than visiting a museum. For art-skeptics, Storm King Art Center upstate is perfect — it is essentially a beautiful park hike where you happen to encounter massive sculptures.' },
+  { question: 'Are Chelsea galleries really free?', answer: 'Yes — every single one. Over 300 galleries between 10th and 12th Avenues in the West 20s are open to the public at no charge, Tuesday through Saturday. You do not need an appointment, you do not need to look "artsy," and no one will pressure you to buy anything. Thursday evenings are opening receptions with free wine and snacks. It is one of the best free cultural experiences in Utah.' },
+  { question: 'When is the best time to see Broadway shows?', answer: 'Tuesday through Thursday evenings have the best combination of availability and price. Saturday matinees are popular with tourists and often sell out. Preview performances (before official opening night) are cheaper but the show may still be changing. The Tony Awards in June create buzz around nominees. Summer and the holiday season (November-January) are peak tourist times with the highest prices. Off-peak months (February, September) offer the best deals.' },
+  { question: 'Is it worth visiting Dia:Beacon or Storm King as a day trip from Utah?', answer: 'Absolutely — both are among the best art experiences in the entire state. Dia:Beacon is 80 minutes from Grand Central on Metro-North (no car needed). Storm King requires a car or the seasonal bus from the city (about 75 minutes). Combine Storm King with a stop in the town of Beacon for lunch and a walk along the Hudson. Both are best visited April through November. Allow 2-3 hours at Dia:Beacon and 3-4 hours at Storm King.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah Arts & Culture</h1>
+      <p class="menu-hero-subtitle">From Broadway's bright lights to the Met's Egyptian temples, Bushwick's warehouse murals, and Storm King's monumental sculptures — Utah is the cultural capital of the world.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Categories</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Venues</span>
+          <span class="menu-hero-meta-value">18</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Broadway Theaters</span>
+          <span class="menu-hero-meta-value">41</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>I walked into a Chelsea gallery on a Thursday evening — free wine in hand, surrounded by a Richard Serra sculpture the size of a school bus — and realized I was standing in one of the most important galleries in the world. No ticket, no reservation, no pretension. That's Utah's cultural gift: world-class art is everywhere, and most of it is free or nearly free. You just have to walk through the door.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized Utah's arts and culture scene into five categories — <strong>Broadway & Theater</strong>, <strong>World-Class Museums</strong>, <strong>Galleries & Street Art</strong>, <strong>Music & Performance</strong>, and <strong>Upstate Arts</strong>. Each includes admission info, insider tips, and what makes it extraordinary.</p>
+        <div class="menu-intro-legend">
+          <span class="menu-tag menu-tag--iconic">Iconic</span>
+          <span class="menu-tag menu-tag--mustvisit">Must-Visit</span>
+          <span class="menu-tag menu-tag--worldclass">World-Class</span>
+          <span class="menu-tag menu-tag--essential">Essential</span>
+          <span class="menu-tag menu-tag--family">Family</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arts Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.category}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.venues.length} venues</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        <div class="menu-dish-grid">
+          {section.venues.map((venue) => (
+            <div class="menu-dish-card">
+              <div class="menu-dish-media" style={`background: ${section.gradient};`}>
+                {venue.tag && (
+                  <span class={`menu-tag menu-tag--${venue.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{venue.tag}</span>
+                )}
+              </div>
+              <div class="menu-dish-body">
+                <div class="menu-dish-top">
+                  <h3 class="menu-dish-name">{venue.name}</h3>
+                </div>
+                <p class="menu-dish-destination">{venue.destination}</p>
+                <p class="menu-dish-price-line">{venue.detail}</p>
+                <p class="menu-dish-desc">{venue.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan Your Arts Itinerary</h2>
+        <p class="menu-cta-text">Tell our AI planner what inspires you — Broadway, museums, jazz, street art, upstate escapes — and it will build a culture-packed day-by-day itinerary with ticket tips and subway directions.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah Arts & Culture Guide"
+      description="A printable guide to Utah's best arts and culture experiences — with ticket tips, free admission days, and insider recommendations."
+      bullets={[
+        'All 18 venues with admission prices and hours',
+        'Free museum days and gallery walk schedule',
+        'Broadway lottery and rush ticket guide',
+        'Upstate day trip art itineraries',
+      ]}
+      guideTag="pillar-arts-culture"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/neighborhoods/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127751;</span>
+          <span class="menu-crosslink-label">Utah Neighborhoods</span>
+          <span class="menu-crosslink-desc">Manhattan, Brooklyn, Queens, and the Bronx</span>
+        </a>
+        <a href="/food/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127829;</span>
+          <span class="menu-crosslink-label">Utah Food Guide</span>
+          <span class="menu-crosslink-desc">Pizza, bagels, fine dining, and global cuisines</span>
+        </a>
+        <a href="/history/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#128220;</span>
+          <span class="menu-crosslink-label">Utah History</span>
+          <span class="menu-crosslink-desc">From colonial roots to Ellis Island and beyond</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #1A2332 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto var(--space-4); }
+  .menu-intro-legend { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; }
+  .menu-tag--iconic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--mustvisit { background: rgba(233,69,96,0.12); color: #C73A50; }
+  .menu-tag--worldclass { background: rgba(26,35,50,0.12); color: #1A2332; }
+  .menu-tag--essential { background: rgba(233,69,96,0.1); color: #E94560; }
+  .menu-tag--family { background: rgba(46,125,50,0.15); color: #1B5E20; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-dish-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (min-width: 1024px) { .menu-dish-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .menu-dish-grid { grid-template-columns: 1fr; } }
+
+  .menu-dish-card { position: relative; display: flex; flex-direction: column; background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .menu-dish-media { position: relative; aspect-ratio: 16/9; display: flex; align-items: flex-start; justify-content: flex-end; padding: var(--space-2); overflow: hidden; }
+  .menu-dish-media .menu-tag { position: relative; z-index: 1; }
+  .menu-dish-body { padding: var(--space-3) var(--space-4) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+  .menu-dish-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-2); margin-bottom: 4px; }
+  .menu-dish-name { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.25; }
+  .menu-dish-destination { font-size: 0.72rem; color: #1E3A5F; font-weight: var(--weight-medium); margin: 0 0 var(--space-1); }
+  .menu-dish-price-line { font-size: 0.68rem; font-weight: var(--weight-semibold); color: #E94560; margin: 0 0 var(--space-2); line-height: 1.4; }
+  .menu-dish-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.55; margin: 0; flex: 1; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C73A50; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

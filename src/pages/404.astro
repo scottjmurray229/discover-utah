@@ -1,0 +1,124 @@
+---
+import '../styles/global.css';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Discover Utah</title>
+</head>
+<body class="error-page">
+  <div class="bg"></div>
+  <div class="lantern left">🏔️</div>
+  <div class="lantern right">🏔️</div>
+  <div class="content">
+    <div class="code">404</div>
+    <h1>This path leads nowhere</h1>
+    <p>The page you're looking for has vanished like a desert mirage. But there's a whole state to explore.</p>
+    <div class="links">
+      <a href="/" class="primary">Back to Utah</a>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+  .error-page {
+    font-family: var(--font-sans);
+    background: #0a1628;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #0a1628 0%, #0F1B2D 40%, #1E3A5F 70%, #E94560 100%);
+    z-index: 0;
+    opacity: 0.6;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  .code {
+    font-size: 8rem;
+    font-weight: 200;
+    letter-spacing: 1rem;
+    background: linear-gradient(135deg, #E94560, #1E3A5F, #1A2332);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: none;
+  }
+  .links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+  .links a.primary {
+    background: linear-gradient(135deg, #1E3A5F, #E94560);
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
+  }
+  .links a.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(30, 58, 95, 0.5);
+  }
+  .lantern {
+    position: fixed;
+    bottom: -20px;
+    font-size: 15rem;
+    opacity: 0.08;
+    z-index: 0;
+  }
+  .lantern.left {
+    left: -40px;
+    transform: rotate(-15deg);
+  }
+  .lantern.right {
+    right: -40px;
+    transform: rotate(15deg);
+  }
+  @media (max-width: 768px) {
+    .code { font-size: 5rem; }
+    h1 { font-size: 1.5rem; }
+    .links { flex-direction: column; align-items: center; }
+  }
+</style>

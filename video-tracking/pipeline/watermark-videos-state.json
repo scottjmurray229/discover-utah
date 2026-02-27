@@ -1,0 +1,1439 @@
+{
+  "watermarked": {
+    "destinations/bacolod-break-1.mp4": {
+      "timestamp": "2026-02-20T17:47:45.719Z",
+      "origSize": 515530,
+      "newSize": 618110
+    },
+    "destinations/bacolod-break-2.mp4": {
+      "timestamp": "2026-02-20T17:47:46.683Z",
+      "origSize": 813466,
+      "newSize": 968893
+    },
+    "destinations/bacolod-break-3.mp4": {
+      "timestamp": "2026-02-20T17:47:48.617Z",
+      "origSize": 864764,
+      "newSize": 1118726
+    },
+    "destinations/bacolod-break-4.mp4": {
+      "timestamp": "2026-02-20T17:47:50.039Z",
+      "origSize": 1663226,
+      "newSize": 1901732
+    },
+    "destinations/bacolod-hero.mp4": {
+      "timestamp": "2026-02-20T17:48:36.211Z",
+      "origSize": 24814185,
+      "newSize": 20341682
+    },
+    "destinations/bacolod-preview.mp4": {
+      "timestamp": "2026-02-20T17:48:37.793Z",
+      "origSize": 959455,
+      "newSize": 862917
+    },
+    "destinations/baguio-break-1.mp4": {
+      "timestamp": "2026-02-20T17:48:39.899Z",
+      "origSize": 740123,
+      "newSize": 1017304
+    },
+    "destinations/baguio-break-2.mp4": {
+      "timestamp": "2026-02-20T17:48:42.274Z",
+      "origSize": 2237996,
+      "newSize": 2581238
+    },
+    "destinations/baguio-break-3.mp4": {
+      "timestamp": "2026-02-20T17:48:44.926Z",
+      "origSize": 2317248,
+      "newSize": 2716815
+    },
+    "destinations/baguio-break-4.mp4": {
+      "timestamp": "2026-02-20T17:48:46.812Z",
+      "origSize": 745820,
+      "newSize": 920816
+    },
+    "destinations/baguio-hero.mp4": {
+      "timestamp": "2026-02-20T17:48:56.522Z",
+      "origSize": 20518068,
+      "newSize": 10798259
+    },
+    "destinations/baler-break-1.mp4": {
+      "timestamp": "2026-02-20T17:48:58.573Z",
+      "origSize": 2322660,
+      "newSize": 2616204
+    },
+    "destinations/baler-break-2.mp4": {
+      "timestamp": "2026-02-20T17:49:00.381Z",
+      "origSize": 774877,
+      "newSize": 866927
+    },
+    "destinations/baler-break-3.mp4": {
+      "timestamp": "2026-02-20T17:49:02.304Z",
+      "origSize": 593415,
+      "newSize": 672125
+    },
+    "destinations/baler-hero.mp4": {
+      "timestamp": "2026-02-20T17:49:09.550Z",
+      "origSize": 20867748,
+      "newSize": 9067852
+    },
+    "destinations/banaue-break-1.mp4": {
+      "timestamp": "2026-02-20T17:49:11.128Z",
+      "origSize": 1181210,
+      "newSize": 1341960
+    },
+    "destinations/banaue-break-2.mp4": {
+      "timestamp": "2026-02-20T17:49:12.784Z",
+      "origSize": 942650,
+      "newSize": 1088156
+    },
+    "destinations/banaue-break-3.mp4": {
+      "timestamp": "2026-02-20T17:49:14.196Z",
+      "origSize": 1011669,
+      "newSize": 1187564
+    },
+    "destinations/banaue-break-4.mp4": {
+      "timestamp": "2026-02-20T17:49:15.535Z",
+      "origSize": 549659,
+      "newSize": 657835
+    },
+    "destinations/banaue-hero.mp4": {
+      "timestamp": "2026-02-20T17:49:32.245Z",
+      "origSize": 12865713,
+      "newSize": 15633074
+    },
+    "destinations/bataan-break-1.mp4": {
+      "timestamp": "2026-02-20T17:49:33.490Z",
+      "origSize": 378562,
+      "newSize": 503608
+    },
+    "destinations/bataan-break-2.mp4": {
+      "timestamp": "2026-02-20T17:49:34.691Z",
+      "origSize": 422305,
+      "newSize": 489759
+    },
+    "destinations/bataan-break-3.mp4": {
+      "timestamp": "2026-02-20T17:49:36.018Z",
+      "origSize": 842698,
+      "newSize": 955207
+    },
+    "destinations/bataan-break-4.mp4": {
+      "timestamp": "2026-02-20T17:49:37.509Z",
+      "origSize": 952523,
+      "newSize": 1076075
+    },
+    "destinations/bataan-break-5.mp4": {
+      "timestamp": "2026-02-20T17:49:38.995Z",
+      "origSize": 576152,
+      "newSize": 648387
+    },
+    "destinations/bataan-hero.mp4": {
+      "timestamp": "2026-02-20T17:50:03.308Z",
+      "origSize": 10349867,
+      "newSize": 13053349
+    },
+    "destinations/batanes-break-1.mp4": {
+      "timestamp": "2026-02-20T17:50:04.268Z",
+      "origSize": 274336,
+      "newSize": 323787
+    },
+    "destinations/batanes-break-2.mp4": {
+      "timestamp": "2026-02-20T17:50:05.742Z",
+      "origSize": 884855,
+      "newSize": 1010967
+    },
+    "destinations/batanes-break-3.mp4": {
+      "timestamp": "2026-02-20T17:50:07.071Z",
+      "origSize": 640599,
+      "newSize": 723782
+    },
+    "destinations/batanes-break-4.mp4": {
+      "timestamp": "2026-02-20T17:50:08.729Z",
+      "origSize": 944079,
+      "newSize": 1125097
+    },
+    "destinations/batanes-hero.mp4": {
+      "timestamp": "2026-02-20T17:50:27.661Z",
+      "origSize": 11626553,
+      "newSize": 14607226
+    },
+    "destinations/batangas-break-1.mp4": {
+      "timestamp": "2026-02-20T17:50:28.863Z",
+      "origSize": 244175,
+      "newSize": 308274
+    },
+    "destinations/batangas-break-2.mp4": {
+      "timestamp": "2026-02-20T17:50:30.602Z",
+      "origSize": 334451,
+      "newSize": 382531
+    },
+    "destinations/batangas-break-3.mp4": {
+      "timestamp": "2026-02-20T17:50:32.393Z",
+      "origSize": 770050,
+      "newSize": 901390
+    },
+    "destinations/batangas-break-4.mp4": {
+      "timestamp": "2026-02-20T17:50:34.347Z",
+      "origSize": 598560,
+      "newSize": 688887
+    },
+    "destinations/batangas-hero.mp4": {
+      "timestamp": "2026-02-20T17:50:55.458Z",
+      "origSize": 20466666,
+      "newSize": 7723830
+    },
+    "destinations/biliran-break-1.mp4": {
+      "timestamp": "2026-02-20T17:50:56.597Z",
+      "origSize": 235526,
+      "newSize": 300500
+    },
+    "destinations/biliran-break-2.mp4": {
+      "timestamp": "2026-02-20T17:50:57.973Z",
+      "origSize": 517185,
+      "newSize": 598855
+    },
+    "destinations/biliran-break-3.mp4": {
+      "timestamp": "2026-02-20T17:51:01.160Z",
+      "origSize": 2486272,
+      "newSize": 2777098
+    },
+    "destinations/biliran-break-4.mp4": {
+      "timestamp": "2026-02-20T17:51:03.648Z",
+      "origSize": 685041,
+      "newSize": 820916
+    },
+    "destinations/biliran-hero.mp4": {
+      "timestamp": "2026-02-20T17:51:40.243Z",
+      "origSize": 20669356,
+      "newSize": 24741363
+    },
+    "destinations/bohol-break-1.mp4": {
+      "timestamp": "2026-02-20T17:51:42.068Z",
+      "origSize": 863405,
+      "newSize": 995371
+    },
+    "destinations/bohol-break-2.mp4": {
+      "timestamp": "2026-02-20T17:51:44.047Z",
+      "origSize": 1394164,
+      "newSize": 1574194
+    },
+    "destinations/bohol-break-3.mp4": {
+      "timestamp": "2026-02-20T17:51:45.896Z",
+      "origSize": 1543997,
+      "newSize": 1712180
+    },
+    "destinations/bohol-break-4.mp4": {
+      "timestamp": "2026-02-20T17:51:47.419Z",
+      "origSize": 421129,
+      "newSize": 490554
+    },
+    "destinations/bohol-break-5.mp4": {
+      "timestamp": "2026-02-20T17:51:48.713Z",
+      "origSize": 319092,
+      "newSize": 416502
+    },
+    "destinations/bohol-hero.mp4": {
+      "timestamp": "2026-02-20T17:52:05.889Z",
+      "origSize": 21081955,
+      "newSize": 13237897
+    },
+    "destinations/bohol-preview.mp4": {
+      "timestamp": "2026-02-20T17:52:08.014Z",
+      "origSize": 562206,
+      "newSize": 608373
+    },
+    "destinations/boracay-break-1.mp4": {
+      "timestamp": "2026-02-20T17:52:16.254Z",
+      "origSize": 6864673,
+      "newSize": 7872693
+    },
+    "destinations/boracay-break-2.mp4": {
+      "timestamp": "2026-02-20T17:52:28.471Z",
+      "origSize": 13819736,
+      "newSize": 15704349
+    },
+    "destinations/boracay-break-3.mp4": {
+      "timestamp": "2026-02-20T17:52:32.269Z",
+      "origSize": 1708326,
+      "newSize": 2232464
+    },
+    "destinations/boracay-break-4.mp4": {
+      "timestamp": "2026-02-20T17:52:36.523Z",
+      "origSize": 1254393,
+      "newSize": 1567533
+    },
+    "destinations/boracay-break-5.mp4": {
+      "timestamp": "2026-02-20T17:52:45.307Z",
+      "origSize": 4546958,
+      "newSize": 5611229
+    },
+    "destinations/boracay-break-6.mp4": {
+      "timestamp": "2026-02-20T17:52:58.695Z",
+      "origSize": 12241379,
+      "newSize": 15319503
+    },
+    "destinations/boracay-hero-full.mp4": {
+      "timestamp": "2026-02-20T17:53:11.335Z",
+      "origSize": 9021666,
+      "newSize": 7304678
+    },
+    "destinations/boracay-hero.mp4": {
+      "timestamp": "2026-02-20T17:53:33.577Z",
+      "origSize": 20713637,
+      "newSize": 9507043
+    },
+    "destinations/boracay-preview.mp4": {
+      "timestamp": "2026-02-20T17:53:35.448Z",
+      "origSize": 735369,
+      "newSize": 659162
+    },
+    "destinations/camiguin-break-1.mp4": {
+      "timestamp": "2026-02-20T17:53:41.320Z",
+      "origSize": 1487693,
+      "newSize": 1892236
+    },
+    "destinations/camiguin-break-2.mp4": {
+      "timestamp": "2026-02-20T17:53:54.087Z",
+      "origSize": 2900535,
+      "newSize": 3823489
+    },
+    "destinations/camiguin-break-3.mp4": {
+      "timestamp": "2026-02-20T17:54:04.997Z",
+      "origSize": 6448138,
+      "newSize": 7257372
+    },
+    "destinations/camiguin-hero.mp4": {
+      "timestamp": "2026-02-20T17:54:16.755Z",
+      "origSize": 21666907,
+      "newSize": 5414809
+    },
+    "destinations/camiguin-preview.mp4": {
+      "timestamp": "2026-02-20T17:54:18.641Z",
+      "origSize": 726778,
+      "newSize": 647000
+    },
+    "destinations/caramoan-break-1.mp4": {
+      "timestamp": "2026-02-20T17:54:27.665Z",
+      "origSize": 2996828,
+      "newSize": 3531202
+    },
+    "destinations/caramoan-break-2.mp4": {
+      "timestamp": "2026-02-20T17:54:36.388Z",
+      "origSize": 4112065,
+      "newSize": 4785063
+    },
+    "destinations/caramoan-break-3.mp4": {
+      "timestamp": "2026-02-20T17:54:47.781Z",
+      "origSize": 6114662,
+      "newSize": 7087172
+    },
+    "destinations/caramoan-break-4.mp4": {
+      "timestamp": "2026-02-20T17:54:54.603Z",
+      "origSize": 867303,
+      "newSize": 1276395
+    },
+    "destinations/caramoan-hero.mp4": {
+      "timestamp": "2026-02-20T17:55:10.655Z",
+      "origSize": 21572872,
+      "newSize": 17896168
+    },
+    "destinations/caramoan-preview.mp4": {
+      "timestamp": "2026-02-20T17:55:13.457Z",
+      "origSize": 2136071,
+      "newSize": 1863641
+    },
+    "destinations/cebu-break-1.mp4": {
+      "timestamp": "2026-02-20T17:55:20.808Z",
+      "origSize": 5883017,
+      "newSize": 7111034
+    },
+    "destinations/cebu-break-2.mp4": {
+      "timestamp": "2026-02-20T17:55:31.959Z",
+      "origSize": 4284964,
+      "newSize": 4960586
+    },
+    "destinations/cebu-break-3.mp4": {
+      "timestamp": "2026-02-20T17:55:39.553Z",
+      "origSize": 2300456,
+      "newSize": 2731520
+    },
+    "destinations/cebu-break-4.mp4": {
+      "timestamp": "2026-02-20T17:55:55.196Z",
+      "origSize": 12436313,
+      "newSize": 16573154
+    },
+    "destinations/cebu-break-5.mp4": {
+      "timestamp": "2026-02-20T17:56:07.185Z",
+      "origSize": 7024036,
+      "newSize": 8533627
+    },
+    "destinations/cebu-hero.mp4": {
+      "timestamp": "2026-02-20T17:56:21.739Z",
+      "origSize": 21046262,
+      "newSize": 9057797
+    },
+    "destinations/cebu-preview.mp4": {
+      "timestamp": "2026-02-20T17:56:25.935Z",
+      "origSize": 1953426,
+      "newSize": 2043485
+    },
+    "destinations/clark-break-1.mp4": {
+      "timestamp": "2026-02-20T17:56:33.725Z",
+      "origSize": 3788559,
+      "newSize": 4442584
+    },
+    "destinations/clark-break-2.mp4": {
+      "timestamp": "2026-02-20T17:56:44.096Z",
+      "origSize": 3651046,
+      "newSize": 4262596
+    },
+    "destinations/clark-break-3.mp4": {
+      "timestamp": "2026-02-20T17:56:59.515Z",
+      "origSize": 4511325,
+      "newSize": 5283831
+    },
+    "destinations/clark-break-4.mp4": {
+      "timestamp": "2026-02-20T17:57:08.318Z",
+      "origSize": 3600452,
+      "newSize": 4081626
+    },
+    "destinations/clark-hero.mp4": {
+      "timestamp": "2026-02-20T17:57:16.347Z",
+      "origSize": 3546382,
+      "newSize": 4208323
+    },
+    "destinations/coron-break-4.mp4": {
+      "timestamp": "2026-02-20T17:57:23.134Z",
+      "origSize": 5891362,
+      "newSize": 7311600
+    },
+    "destinations/coron-hero.mp4": {
+      "timestamp": "2026-02-20T17:57:36.740Z",
+      "origSize": 21502876,
+      "newSize": 21819358
+    },
+    "destinations/coron-preview.mp4": {
+      "timestamp": "2026-02-20T17:57:39.899Z",
+      "origSize": 4594606,
+      "newSize": 4209427
+    },
+    "destinations/cuyo-break-1.mp4": {
+      "timestamp": "2026-02-20T17:57:45.926Z",
+      "origSize": 2528292,
+      "newSize": 2907513
+    },
+    "destinations/cuyo-break-2.mp4": {
+      "timestamp": "2026-02-20T17:57:53.694Z",
+      "origSize": 3788559,
+      "newSize": 4442584
+    },
+    "destinations/cuyo-break-3.mp4": {
+      "timestamp": "2026-02-20T17:57:58.097Z",
+      "origSize": 568430,
+      "newSize": 810676
+    },
+    "destinations/cuyo-break-4.mp4": {
+      "timestamp": "2026-02-20T17:58:06.213Z",
+      "origSize": 2937875,
+      "newSize": 3402167
+    },
+    "destinations/cuyo-hero.mp4": {
+      "timestamp": "2026-02-20T17:58:12.268Z",
+      "origSize": 2534793,
+      "newSize": 3075802
+    },
+    "destinations/davao-break-1.mp4": {
+      "timestamp": "2026-02-20T17:58:20.544Z",
+      "origSize": 3509051,
+      "newSize": 3916462
+    },
+    "destinations/davao-break-2.mp4": {
+      "timestamp": "2026-02-20T17:58:34.532Z",
+      "origSize": 4464351,
+      "newSize": 5266278
+    },
+    "destinations/davao-break-3.mp4": {
+      "timestamp": "2026-02-20T17:58:53.472Z",
+      "origSize": 8107626,
+      "newSize": 9079584
+    },
+    "destinations/davao-break-4.mp4": {
+      "timestamp": "2026-02-20T17:59:02.633Z",
+      "origSize": 2629704,
+      "newSize": 3025699
+    },
+    "destinations/davao-hero.mp4": {
+      "timestamp": "2026-02-20T17:59:20.854Z",
+      "origSize": 20707308,
+      "newSize": 6855445
+    },
+    "destinations/davao-preview.mp4": {
+      "timestamp": "2026-02-20T17:59:24.124Z",
+      "origSize": 1296286,
+      "newSize": 1176400
+    },
+    "destinations/donsol-break-1.mp4": {
+      "timestamp": "2026-02-20T17:59:38.542Z",
+      "origSize": 8058742,
+      "newSize": 9347500
+    },
+    "destinations/donsol-break-2.mp4": {
+      "timestamp": "2026-02-20T17:59:54.047Z",
+      "origSize": 8058742,
+      "newSize": 9347500
+    },
+    "destinations/donsol-break-3.mp4": {
+      "timestamp": "2026-02-20T18:00:07.982Z",
+      "origSize": 4269718,
+      "newSize": 5451437
+    },
+    "destinations/donsol-break-4.mp4": {
+      "timestamp": "2026-02-20T18:00:22.870Z",
+      "origSize": 4269718,
+      "newSize": 5451437
+    },
+    "destinations/donsol-hero.mp4": {
+      "timestamp": "2026-02-20T18:00:35.195Z",
+      "origSize": 20972630,
+      "newSize": 8953330
+    },
+    "destinations/donsol-preview.mp4": {
+      "timestamp": "2026-02-20T18:00:39.426Z",
+      "origSize": 3032199,
+      "newSize": 2573900
+    },
+    "destinations/dumaguete-break-1.mp4": {
+      "timestamp": "2026-02-20T18:00:49.876Z",
+      "origSize": 3115062,
+      "newSize": 3650527
+    },
+    "destinations/dumaguete-break-2.mp4": {
+      "timestamp": "2026-02-20T18:00:58.742Z",
+      "origSize": 1720140,
+      "newSize": 2131759
+    },
+    "destinations/dumaguete-break-3.mp4": {
+      "timestamp": "2026-02-20T18:01:05.186Z",
+      "origSize": 3683038,
+      "newSize": 4280950
+    },
+    "destinations/dumaguete-break-4.mp4": {
+      "timestamp": "2026-02-20T18:01:15.375Z",
+      "origSize": 4281134,
+      "newSize": 4897791
+    },
+    "destinations/dumaguete-hero.mp4": {
+      "timestamp": "2026-02-20T18:02:22.950Z",
+      "origSize": 21365677,
+      "newSize": 17703137
+    },
+    "destinations/dumaguete-preview.mp4": {
+      "timestamp": "2026-02-20T18:02:26.623Z",
+      "origSize": 1014807,
+      "newSize": 1049436
+    },
+    "destinations/el-nido-break-1.mp4": {
+      "timestamp": "2026-02-20T18:02:35.183Z",
+      "origSize": 3656883,
+      "newSize": 4192657
+    },
+    "destinations/el-nido-break-2.mp4": {
+      "timestamp": "2026-02-20T18:02:45.189Z",
+      "origSize": 2029847,
+      "newSize": 2449282
+    },
+    "destinations/el-nido-break-3.mp4": {
+      "timestamp": "2026-02-20T18:02:58.026Z",
+      "origSize": 1836960,
+      "newSize": 2279434
+    },
+    "destinations/el-nido-break-4.mp4": {
+      "timestamp": "2026-02-20T18:03:08.317Z",
+      "origSize": 1613647,
+      "newSize": 2123919
+    },
+    "destinations/el-nido-hero.mp4": {
+      "timestamp": "2026-02-20T18:03:26.495Z",
+      "origSize": 21130710,
+      "newSize": 16657211
+    },
+    "destinations/el-nido-preview.mp4": {
+      "timestamp": "2026-02-20T18:03:29.010Z",
+      "origSize": 1791037,
+      "newSize": 1609538
+    },
+    "destinations/guimaras-break-1.mp4": {
+      "timestamp": "2026-02-20T18:03:36.036Z",
+      "origSize": 1761915,
+      "newSize": 2125000
+    },
+    "destinations/guimaras-break-2.mp4": {
+      "timestamp": "2026-02-20T18:03:40.046Z",
+      "origSize": 482133,
+      "newSize": 699055
+    },
+    "destinations/guimaras-break-3.mp4": {
+      "timestamp": "2026-02-20T18:04:03.893Z",
+      "origSize": 6648077,
+      "newSize": 7508529
+    },
+    "destinations/guimaras-hero.mp4": {
+      "timestamp": "2026-02-20T18:04:49.680Z",
+      "origSize": 20317376,
+      "newSize": 25331030
+    },
+    "destinations/iloilo-break-1.mp4": {
+      "timestamp": "2026-02-20T18:05:02.600Z",
+      "origSize": 7283286,
+      "newSize": 9292795
+    },
+    "destinations/iloilo-break-2.mp4": {
+      "timestamp": "2026-02-20T18:05:11.694Z",
+      "origSize": 1965929,
+      "newSize": 2527364
+    },
+    "destinations/iloilo-break-3.mp4": {
+      "timestamp": "2026-02-20T18:05:20.605Z",
+      "origSize": 1881280,
+      "newSize": 2227071
+    },
+    "destinations/iloilo-break-4.mp4": {
+      "timestamp": "2026-02-20T18:05:28.654Z",
+      "origSize": 1648525,
+      "newSize": 2013875
+    },
+    "destinations/iloilo-hero.mp4": {
+      "timestamp": "2026-02-20T18:06:04.839Z",
+      "origSize": 8712508,
+      "newSize": 11333372
+    },
+    "destinations/iloilo-preview.mp4": {
+      "timestamp": "2026-02-20T18:06:07.461Z",
+      "origSize": 838497,
+      "newSize": 752439
+    },
+    "destinations/la-union-break-1.mp4": {
+      "timestamp": "2026-02-20T18:06:21.675Z",
+      "origSize": 9701232,
+      "newSize": 11413332
+    },
+    "destinations/la-union-break-2.mp4": {
+      "timestamp": "2026-02-20T18:06:34.911Z",
+      "origSize": 6380114,
+      "newSize": 7269609
+    },
+    "destinations/la-union-break-3.mp4": {
+      "timestamp": "2026-02-20T18:06:44.839Z",
+      "origSize": 7213353,
+      "newSize": 8197651
+    },
+    "destinations/la-union-break-4.mp4": {
+      "timestamp": "2026-02-20T18:06:56.422Z",
+      "origSize": 5001297,
+      "newSize": 5796569
+    },
+    "destinations/la-union-hero.mp4": {
+      "timestamp": "2026-02-20T18:07:13.992Z",
+      "origSize": 21087355,
+      "newSize": 11848449
+    },
+    "destinations/laguna-break-1.mp4": {
+      "timestamp": "2026-02-20T18:07:26.830Z",
+      "origSize": 3417762,
+      "newSize": 3999155
+    },
+    "destinations/laguna-break-2.mp4": {
+      "timestamp": "2026-02-20T18:07:41.003Z",
+      "origSize": 7875625,
+      "newSize": 9764479
+    },
+    "destinations/laguna-break-3.mp4": {
+      "timestamp": "2026-02-20T18:07:53.556Z",
+      "origSize": 4632139,
+      "newSize": 5237431
+    },
+    "destinations/laguna-break-4.mp4": {
+      "timestamp": "2026-02-20T18:08:03.283Z",
+      "origSize": 5345033,
+      "newSize": 6257110
+    },
+    "destinations/laguna-hero.mp4": {
+      "timestamp": "2026-02-20T18:08:22.149Z",
+      "origSize": 19671029,
+      "newSize": 16109904
+    },
+    "destinations/laguna-preview.mp4": {
+      "timestamp": "2026-02-20T18:08:24.756Z",
+      "origSize": 652796,
+      "newSize": 794122
+    },
+    "destinations/laoag-break-1.mp4": {
+      "timestamp": "2026-02-20T18:08:27.551Z",
+      "origSize": 800707,
+      "newSize": 721975
+    },
+    "destinations/laoag-break-2.mp4": {
+      "timestamp": "2026-02-20T18:08:30.148Z",
+      "origSize": 900031,
+      "newSize": 804206
+    },
+    "destinations/laoag-break-3.mp4": {
+      "timestamp": "2026-02-20T18:08:32.628Z",
+      "origSize": 1148842,
+      "newSize": 947815
+    },
+    "destinations/laoag-hero.mp4": {
+      "timestamp": "2026-02-20T18:08:47.690Z",
+      "origSize": 6982021,
+      "newSize": 6478693
+    },
+    "destinations/laoag-preview.mp4": {
+      "timestamp": "2026-02-20T18:08:50.696Z",
+      "origSize": 1783616,
+      "newSize": 1271885
+    },
+    "destinations/legazpi-break-1.mp4": {
+      "timestamp": "2026-02-20T18:09:11.679Z",
+      "origSize": 15798069,
+      "newSize": 18257195
+    },
+    "destinations/legazpi-break-2.mp4": {
+      "timestamp": "2026-02-20T18:09:19.580Z",
+      "origSize": 1980903,
+      "newSize": 2467660
+    },
+    "destinations/legazpi-break-3.mp4": {
+      "timestamp": "2026-02-20T18:09:29.734Z",
+      "origSize": 2350695,
+      "newSize": 2928422
+    },
+    "destinations/legazpi-break-4.mp4": {
+      "timestamp": "2026-02-20T18:09:40.704Z",
+      "origSize": 3305990,
+      "newSize": 3945521
+    },
+    "destinations/legazpi-hero.mp4": {
+      "timestamp": "2026-02-20T18:10:26.459Z",
+      "origSize": 18407972,
+      "newSize": 14702944
+    },
+    "destinations/legazpi-preview.mp4": {
+      "timestamp": "2026-02-20T18:10:28.615Z",
+      "origSize": 650035,
+      "newSize": 606786
+    },
+    "destinations/malapascua-break-1.mp4": {
+      "timestamp": "2026-02-20T18:10:41.973Z",
+      "origSize": 7532119,
+      "newSize": 8762300
+    },
+    "destinations/malapascua-break-2.mp4": {
+      "timestamp": "2026-02-20T18:10:51.960Z",
+      "origSize": 5609118,
+      "newSize": 6535810
+    },
+    "destinations/malapascua-break-3.mp4": {
+      "timestamp": "2026-02-20T18:11:04.290Z",
+      "origSize": 1899911,
+      "newSize": 3150327
+    },
+    "destinations/malapascua-break-4.mp4": {
+      "timestamp": "2026-02-20T18:11:13.421Z",
+      "origSize": 2876344,
+      "newSize": 3400458
+    },
+    "destinations/malapascua-hero.mp4": {
+      "timestamp": "2026-02-20T18:11:34.783Z",
+      "origSize": 20574322,
+      "newSize": 12905106
+    },
+    "destinations/malapascua-preview.mp4": {
+      "timestamp": "2026-02-20T18:11:37.407Z",
+      "origSize": 1370307,
+      "newSize": 1203085
+    },
+    "destinations/manila-break-1.mp4": {
+      "timestamp": "2026-02-20T18:12:00.271Z",
+      "origSize": 7033517,
+      "newSize": 8519007
+    },
+    "destinations/manila-break-2.mp4": {
+      "timestamp": "2026-02-20T18:12:13.475Z",
+      "origSize": 5274309,
+      "newSize": 6242960
+    },
+    "destinations/manila-break-3.mp4": {
+      "timestamp": "2026-02-20T18:12:26.571Z",
+      "origSize": 2215618,
+      "newSize": 2865259
+    },
+    "destinations/manila-break-4.mp4": {
+      "timestamp": "2026-02-20T18:12:38.633Z",
+      "origSize": 5655956,
+      "newSize": 6469666
+    },
+    "destinations/manila-break-5.mp4": {
+      "timestamp": "2026-02-20T18:13:03.428Z",
+      "origSize": 7044609,
+      "newSize": 8150794
+    },
+    "destinations/manila-break-6.mp4": {
+      "timestamp": "2026-02-20T18:13:16.832Z",
+      "origSize": 3424311,
+      "newSize": 3860537
+    },
+    "destinations/manila-hero.mp4": {
+      "timestamp": "2026-02-20T18:13:40.824Z",
+      "origSize": 21077557,
+      "newSize": 12976168
+    },
+    "destinations/manila-preview.mp4": {
+      "timestamp": "2026-02-20T18:13:43.572Z",
+      "origSize": 1457920,
+      "newSize": 1323195
+    },
+    "destinations/marinduque-break-1.mp4": {
+      "timestamp": "2026-02-20T18:13:47.174Z",
+      "origSize": 1455368,
+      "newSize": 1726593
+    },
+    "destinations/marinduque-break-2.mp4": {
+      "timestamp": "2026-02-20T18:13:50.632Z",
+      "origSize": 1403225,
+      "newSize": 1665117
+    },
+    "destinations/marinduque-break-3.mp4": {
+      "timestamp": "2026-02-20T18:13:54.293Z",
+      "origSize": 1352114,
+      "newSize": 1606430
+    },
+    "destinations/marinduque-break-4.mp4": {
+      "timestamp": "2026-02-20T18:13:57.501Z",
+      "origSize": 1238481,
+      "newSize": 1475506
+    },
+    "destinations/marinduque-hero.mp4": {
+      "timestamp": "2026-02-20T18:14:04.472Z",
+      "origSize": 2714917,
+      "newSize": 3372191
+    },
+    "destinations/marinduque-preview.mp4": {
+      "timestamp": "2026-02-20T18:14:06.954Z",
+      "origSize": 662582,
+      "newSize": 848961
+    },
+    "destinations/mt-pulag-break-1.mp4": {
+      "timestamp": "2026-02-20T18:14:14.010Z",
+      "origSize": 670341,
+      "newSize": 1011052
+    },
+    "destinations/mt-pulag-break-2.mp4": {
+      "timestamp": "2026-02-20T18:14:24.367Z",
+      "origSize": 1842925,
+      "newSize": 2450156
+    },
+    "destinations/mt-pulag-break-3.mp4": {
+      "timestamp": "2026-02-20T18:14:31.820Z",
+      "origSize": 2799149,
+      "newSize": 3333110
+    },
+    "destinations/mt-pulag-break-4.mp4": {
+      "timestamp": "2026-02-20T18:14:44.391Z",
+      "origSize": 2300639,
+      "newSize": 3013586
+    },
+    "destinations/mt-pulag-hero.mp4": {
+      "timestamp": "2026-02-20T18:14:50.778Z",
+      "origSize": 20885009,
+      "newSize": 3989295
+    },
+    "destinations/mt-pulag-preview.mp4": {
+      "timestamp": "2026-02-20T18:14:52.604Z",
+      "origSize": 137243,
+      "newSize": 194821
+    },
+    "destinations/pagudpud-break-1.mp4": {
+      "timestamp": "2026-02-20T18:15:03.735Z",
+      "origSize": 4749687,
+      "newSize": 5401412
+    },
+    "destinations/pagudpud-break-2.mp4": {
+      "timestamp": "2026-02-20T18:15:14.467Z",
+      "origSize": 6398240,
+      "newSize": 7190372
+    },
+    "destinations/pagudpud-break-3.mp4": {
+      "timestamp": "2026-02-20T18:15:22.859Z",
+      "origSize": 1338083,
+      "newSize": 1727781
+    },
+    "destinations/pagudpud-break-4.mp4": {
+      "timestamp": "2026-02-20T18:15:34.931Z",
+      "origSize": 11677931,
+      "newSize": 15645273
+    },
+    "destinations/pagudpud-hero.mp4": {
+      "timestamp": "2026-02-20T18:16:14.049Z",
+      "origSize": 17765495,
+      "newSize": 13832044
+    },
+    "destinations/pagudpud-preview.mp4": {
+      "timestamp": "2026-02-20T18:16:16.261Z",
+      "origSize": 826735,
+      "newSize": 1006534
+    },
+    "destinations/puerto-galera-break-1.mp4": {
+      "timestamp": "2026-02-20T18:16:26.287Z",
+      "origSize": 11428484,
+      "newSize": 13837140
+    },
+    "destinations/puerto-galera-break-2.mp4": {
+      "timestamp": "2026-02-20T18:16:42.427Z",
+      "origSize": 9712568,
+      "newSize": 10987148
+    },
+    "destinations/puerto-galera-break-3.mp4": {
+      "timestamp": "2026-02-20T18:16:58.655Z",
+      "origSize": 6773895,
+      "newSize": 7826901
+    },
+    "destinations/puerto-galera-break-4.mp4": {
+      "timestamp": "2026-02-20T18:17:06.578Z",
+      "origSize": 2839346,
+      "newSize": 3356460
+    },
+    "destinations/puerto-galera-hero.mp4": {
+      "timestamp": "2026-02-20T18:17:45.057Z",
+      "origSize": 20790433,
+      "newSize": 19427872
+    },
+    "destinations/puerto-galera-preview.mp4": {
+      "timestamp": "2026-02-20T18:17:48.761Z",
+      "origSize": 2875266,
+      "newSize": 3439479
+    },
+    "destinations/puerto-princesa-break-1.mp4": {
+      "timestamp": "2026-02-20T18:17:54.087Z",
+      "origSize": 3139058,
+      "newSize": 3588154
+    },
+    "destinations/puerto-princesa-break-2.mp4": {
+      "timestamp": "2026-02-20T18:17:58.859Z",
+      "origSize": 1586606,
+      "newSize": 1856910
+    },
+    "destinations/puerto-princesa-break-3.mp4": {
+      "timestamp": "2026-02-20T18:18:05.889Z",
+      "origSize": 1718280,
+      "newSize": 2295094
+    },
+    "destinations/puerto-princesa-break-4.mp4": {
+      "timestamp": "2026-02-20T18:18:19.631Z",
+      "origSize": 1651413,
+      "newSize": 1968717
+    },
+    "destinations/puerto-princesa-hero.mp4": {
+      "timestamp": "2026-02-20T18:18:38.391Z",
+      "origSize": 21389398,
+      "newSize": 7028144
+    },
+    "destinations/puerto-princesa-preview.mp4": {
+      "timestamp": "2026-02-20T18:18:40.606Z",
+      "origSize": 1278119,
+      "newSize": 1573821
+    },
+    "destinations/sagada-break-1.mp4": {
+      "timestamp": "2026-02-20T18:18:45.588Z",
+      "origSize": 1462857,
+      "newSize": 1666070
+    },
+    "destinations/sagada-break-2.mp4": {
+      "timestamp": "2026-02-20T18:18:55.099Z",
+      "origSize": 2587874,
+      "newSize": 3156294
+    },
+    "destinations/sagada-break-3.mp4": {
+      "timestamp": "2026-02-20T18:19:06.481Z",
+      "origSize": 3514732,
+      "newSize": 4165794
+    },
+    "destinations/sagada-break-4.mp4": {
+      "timestamp": "2026-02-20T18:19:17.060Z",
+      "origSize": 2334545,
+      "newSize": 3048865
+    },
+    "destinations/sagada-hero.mp4": {
+      "timestamp": "2026-02-20T18:19:43.473Z",
+      "origSize": 20951059,
+      "newSize": 11176475
+    },
+    "destinations/sagada-preview.mp4": {
+      "timestamp": "2026-02-20T18:19:46.604Z",
+      "origSize": 1186855,
+      "newSize": 1062702
+    },
+    "destinations/samar-break-1.mp4": {
+      "timestamp": "2026-02-20T18:19:59.994Z",
+      "origSize": 4887073,
+      "newSize": 5581278
+    },
+    "destinations/samar-break-2.mp4": {
+      "timestamp": "2026-02-20T18:20:15.472Z",
+      "origSize": 8621103,
+      "newSize": 9688891
+    },
+    "destinations/samar-break-3.mp4": {
+      "timestamp": "2026-02-20T18:20:30.793Z",
+      "origSize": 9287183,
+      "newSize": 10545811
+    },
+    "destinations/samar-break-4.mp4": {
+      "timestamp": "2026-02-20T18:20:41.043Z",
+      "origSize": 3411035,
+      "newSize": 3963707
+    },
+    "destinations/samar-hero.mp4": {
+      "timestamp": "2026-02-20T18:20:59.490Z",
+      "origSize": 20972394,
+      "newSize": 14380181
+    },
+    "destinations/samar-preview.mp4": {
+      "timestamp": "2026-02-20T18:21:03.948Z",
+      "origSize": 1490851,
+      "newSize": 1792828
+    },
+    "destinations/siargao-break-1.mp4": {
+      "timestamp": "2026-02-20T18:21:13.704Z",
+      "origSize": 7051646,
+      "newSize": 9053165
+    },
+    "destinations/siargao-break-2.mp4": {
+      "timestamp": "2026-02-20T18:21:23.403Z",
+      "origSize": 5946646,
+      "newSize": 6754759
+    },
+    "destinations/siargao-break-3.mp4": {
+      "timestamp": "2026-02-20T18:21:33.313Z",
+      "origSize": 4117226,
+      "newSize": 4846791
+    },
+    "destinations/siargao-break-4.mp4": {
+      "timestamp": "2026-02-20T18:21:43.675Z",
+      "origSize": 4653764,
+      "newSize": 5848378
+    },
+    "destinations/siargao-hero.mp4": {
+      "timestamp": "2026-02-20T18:21:59.269Z",
+      "origSize": 21546395,
+      "newSize": 10473111
+    },
+    "destinations/siargao-preview.mp4": {
+      "timestamp": "2026-02-20T18:22:02.221Z",
+      "origSize": 2403601,
+      "newSize": 2141842
+    },
+    "destinations/sipalay-break-1.mp4": {
+      "timestamp": "2026-02-20T18:22:12.705Z",
+      "origSize": 4038793,
+      "newSize": 5104123
+    },
+    "destinations/sipalay-break-2.mp4": {
+      "timestamp": "2026-02-20T18:22:22.827Z",
+      "origSize": 3567648,
+      "newSize": 4036071
+    },
+    "destinations/sipalay-break-3.mp4": {
+      "timestamp": "2026-02-20T18:22:34.710Z",
+      "origSize": 2036238,
+      "newSize": 2466049
+    },
+    "destinations/sipalay-break-4.mp4": {
+      "timestamp": "2026-02-20T18:22:45.529Z",
+      "origSize": 2040786,
+      "newSize": 2474390
+    },
+    "destinations/sipalay-hero.mp4": {
+      "timestamp": "2026-02-20T18:24:00.661Z",
+      "origSize": 20919728,
+      "newSize": 17745829
+    },
+    "destinations/sipalay-preview.mp4": {
+      "timestamp": "2026-02-20T18:24:02.560Z",
+      "origSize": 514259,
+      "newSize": 662666
+    },
+    "destinations/siquijor-break-1.mp4": {
+      "timestamp": "2026-02-20T18:24:19.086Z",
+      "origSize": 8986099,
+      "newSize": 10531680
+    },
+    "destinations/siquijor-break-2.mp4": {
+      "timestamp": "2026-02-20T18:24:27.547Z",
+      "origSize": 2249053,
+      "newSize": 2610847
+    },
+    "destinations/siquijor-break-3.mp4": {
+      "timestamp": "2026-02-20T18:24:40.112Z",
+      "origSize": 5325731,
+      "newSize": 6241419
+    },
+    "destinations/siquijor-break-4.mp4": {
+      "timestamp": "2026-02-20T18:24:55.543Z",
+      "origSize": 9962674,
+      "newSize": 11463805
+    },
+    "destinations/siquijor-break-5.mp4": {
+      "timestamp": "2026-02-20T18:25:04.670Z",
+      "origSize": 4009973,
+      "newSize": 4866195
+    },
+    "destinations/siquijor-break-6.mp4": {
+      "timestamp": "2026-02-20T18:25:21.725Z",
+      "origSize": 6729731,
+      "newSize": 7930529
+    },
+    "destinations/siquijor-break-7.mp4": {
+      "timestamp": "2026-02-20T18:25:35.991Z",
+      "origSize": 4653764,
+      "newSize": 5848378
+    },
+    "destinations/siquijor-break-8.mp4": {
+      "timestamp": "2026-02-20T18:25:53.518Z",
+      "origSize": 6547719,
+      "newSize": 7363352
+    },
+    "destinations/siquijor-hero.mp4": {
+      "timestamp": "2026-02-20T18:26:15.751Z",
+      "origSize": 8122365,
+      "newSize": 9910643
+    },
+    "destinations/siquijor-preview.mp4": {
+      "timestamp": "2026-02-20T18:26:18.609Z",
+      "origSize": 1643723,
+      "newSize": 1445896
+    },
+    "destinations/subic-break-1.mp4": {
+      "timestamp": "2026-02-20T18:26:23.466Z",
+      "origSize": 1074827,
+      "newSize": 1342429
+    },
+    "destinations/subic-break-2.mp4": {
+      "timestamp": "2026-02-20T18:26:36.954Z",
+      "origSize": 6504909,
+      "newSize": 7560439
+    },
+    "destinations/subic-break-3.mp4": {
+      "timestamp": "2026-02-20T18:26:46.532Z",
+      "origSize": 2248410,
+      "newSize": 2599905
+    },
+    "destinations/subic-break-4.mp4": {
+      "timestamp": "2026-02-20T18:26:56.719Z",
+      "origSize": 1602982,
+      "newSize": 2008171
+    },
+    "destinations/subic-hero.mp4": {
+      "timestamp": "2026-02-20T18:27:12.233Z",
+      "origSize": 21396039,
+      "newSize": 6279287
+    },
+    "destinations/subic-preview.mp4": {
+      "timestamp": "2026-02-20T18:27:14.569Z",
+      "origSize": 417751,
+      "newSize": 574851
+    },
+    "destinations/tacloban-break-1.mp4": {
+      "timestamp": "2026-02-20T18:27:24.013Z",
+      "origSize": 1931338,
+      "newSize": 2513402
+    },
+    "destinations/tacloban-break-2.mp4": {
+      "timestamp": "2026-02-20T18:27:46.549Z",
+      "origSize": 9561557,
+      "newSize": 12206028
+    },
+    "destinations/tacloban-break-3.mp4": {
+      "timestamp": "2026-02-20T18:27:59.425Z",
+      "origSize": 3339833,
+      "newSize": 4207033
+    },
+    "destinations/tacloban-break-4.mp4": {
+      "timestamp": "2026-02-20T18:28:02.672Z",
+      "origSize": 711496,
+      "newSize": 837885
+    },
+    "destinations/tacloban-hero.mp4": {
+      "timestamp": "2026-02-20T18:28:20.608Z",
+      "origSize": 21434545,
+      "newSize": 9889465
+    },
+    "destinations/tacloban-preview.mp4": {
+      "timestamp": "2026-02-20T18:28:22.573Z",
+      "origSize": 378935,
+      "newSize": 542284
+    },
+    "destinations/tagaytay-break-1.mp4": {
+      "timestamp": "2026-02-20T18:28:36.226Z",
+      "origSize": 5132306,
+      "newSize": 5777881
+    },
+    "destinations/tagaytay-break-2.mp4": {
+      "timestamp": "2026-02-20T18:28:47.881Z",
+      "origSize": 7138616,
+      "newSize": 8126348
+    },
+    "destinations/tagaytay-break-3.mp4": {
+      "timestamp": "2026-02-20T18:29:03.131Z",
+      "origSize": 11055811,
+      "newSize": 12757424
+    },
+    "destinations/tagaytay-break-4.mp4": {
+      "timestamp": "2026-02-20T18:29:09.735Z",
+      "origSize": 3506782,
+      "newSize": 4078904
+    },
+    "destinations/tagaytay-hero.mp4": {
+      "timestamp": "2026-02-20T18:29:26.613Z",
+      "origSize": 21083770,
+      "newSize": 6260246
+    },
+    "destinations/tagaytay-preview.mp4": {
+      "timestamp": "2026-02-20T18:29:31.575Z",
+      "origSize": 1150303,
+      "newSize": 1395959
+    },
+    "destinations/vigan-break-1.mp4": {
+      "timestamp": "2026-02-20T18:29:40.955Z",
+      "origSize": 2905966,
+      "newSize": 3316875
+    },
+    "destinations/vigan-hero.mp4": {
+      "timestamp": "2026-02-20T18:29:57.648Z",
+      "origSize": 20286185,
+      "newSize": 9817810
+    },
+    "destinations/vigan-preview.mp4": {
+      "timestamp": "2026-02-20T18:29:59.976Z",
+      "origSize": 1773643,
+      "newSize": 1659588
+    },
+    "destinations/zambales-break-1.mp4": {
+      "timestamp": "2026-02-20T18:30:13.115Z",
+      "origSize": 4117226,
+      "newSize": 4846791
+    },
+    "destinations/zambales-break-2.mp4": {
+      "timestamp": "2026-02-20T18:30:18.725Z",
+      "origSize": 3506782,
+      "newSize": 4078904
+    },
+    "destinations/zambales-break-3.mp4": {
+      "timestamp": "2026-02-20T18:30:28.969Z",
+      "origSize": 2624785,
+      "newSize": 3101260
+    },
+    "destinations/zambales-break-4.mp4": {
+      "timestamp": "2026-02-20T18:30:38.179Z",
+      "origSize": 1338083,
+      "newSize": 1727781
+    },
+    "destinations/zambales-hero.mp4": {
+      "timestamp": "2026-02-20T18:30:59.466Z",
+      "origSize": 9576593,
+      "newSize": 11778883
+    },
+    "pillar/about-hero.mp4": {
+      "timestamp": "2026-02-20T18:31:16.154Z",
+      "origSize": 4745739,
+      "newSize": 6742562
+    },
+    "pillar/about-jenice-hero.mp4": {
+      "timestamp": "2026-02-20T18:31:27.067Z",
+      "origSize": 2125201,
+      "newSize": 2947056
+    },
+    "pillar/about-scott-hero.mp4": {
+      "timestamp": "2026-02-20T18:31:40.560Z",
+      "origSize": 8763960,
+      "newSize": 11290452
+    },
+    "pillar/cuisine-hero.mp4": {
+      "timestamp": "2026-02-20T18:31:52.515Z",
+      "origSize": 3878399,
+      "newSize": 3770632
+    },
+    "pillar/festival-card-1.mp4": {
+      "timestamp": "2026-02-20T18:31:56.849Z",
+      "origSize": 1881291,
+      "newSize": 2494697
+    },
+    "pillar/festival-card-10.mp4": {
+      "timestamp": "2026-02-20T18:32:02.144Z",
+      "origSize": 2937691,
+      "newSize": 4062342
+    },
+    "pillar/festival-card-2.mp4": {
+      "timestamp": "2026-02-20T18:32:07.489Z",
+      "origSize": 1895896,
+      "newSize": 2543106
+    },
+    "pillar/festival-card-3.mp4": {
+      "timestamp": "2026-02-20T18:32:10.366Z",
+      "origSize": 1225920,
+      "newSize": 1530038
+    },
+    "pillar/festival-card-4.mp4": {
+      "timestamp": "2026-02-20T18:32:14.722Z",
+      "origSize": 2816422,
+      "newSize": 3692074
+    },
+    "pillar/festival-card-5.mp4": {
+      "timestamp": "2026-02-20T18:32:18.684Z",
+      "origSize": 2256015,
+      "newSize": 3430552
+    },
+    "pillar/festival-card-6.mp4": {
+      "timestamp": "2026-02-20T18:32:23.230Z",
+      "origSize": 4361296,
+      "newSize": 5529861
+    },
+    "pillar/festival-card-7.mp4": {
+      "timestamp": "2026-02-20T18:32:27.484Z",
+      "origSize": 3063524,
+      "newSize": 3864296
+    },
+    "pillar/festival-card-8.mp4": {
+      "timestamp": "2026-02-20T18:32:32.190Z",
+      "origSize": 2425109,
+      "newSize": 2973655
+    },
+    "pillar/festival-card-9.mp4": {
+      "timestamp": "2026-02-20T18:32:35.217Z",
+      "origSize": 1699309,
+      "newSize": 2125212
+    },
+    "pillar/festivals-hero.mp4": {
+      "timestamp": "2026-02-20T18:32:50.954Z",
+      "origSize": 9855316,
+      "newSize": 9081695
+    },
+    "pillar/history-hero.mp4": {
+      "timestamp": "2026-02-20T18:33:09.503Z",
+      "origSize": 13839710,
+      "newSize": 11310084
+    },
+    "pillar/plan-hero.mp4": {
+      "timestamp": "2026-02-20T18:33:24.137Z",
+      "origSize": 2425793,
+      "newSize": 2854106
+    },
+    "pillar/practical-break-checklist.mp4": {
+      "timestamp": "2026-02-20T18:33:33.348Z",
+      "origSize": 981229,
+      "newSize": 1261585
+    },
+    "pillar/practical-break-connectivity.mp4": {
+      "timestamp": "2026-02-20T18:33:48.167Z",
+      "origSize": 1849828,
+      "newSize": 2607646
+    },
+    "pillar/practical-break-culture.mp4": {
+      "timestamp": "2026-02-20T18:33:52.272Z",
+      "origSize": 879194,
+      "newSize": 1101040
+    },
+    "pillar/practical-break-money.mp4": {
+      "timestamp": "2026-02-20T18:34:13.661Z",
+      "origSize": 6164327,
+      "newSize": 7118178
+    },
+    "pillar/practical-break-packing.mp4": {
+      "timestamp": "2026-02-20T18:34:22.961Z",
+      "origSize": 1500423,
+      "newSize": 1834273
+    },
+    "pillar/practical-break-safety.mp4": {
+      "timestamp": "2026-02-20T18:34:37.389Z",
+      "origSize": 6151253,
+      "newSize": 7111645
+    },
+    "pillar/practical-break-transport.mp4": {
+      "timestamp": "2026-02-20T18:34:46.507Z",
+      "origSize": 3421434,
+      "newSize": 4229557
+    },
+    "pillar/practical-break-visa.mp4": {
+      "timestamp": "2026-02-20T18:35:02.489Z",
+      "origSize": 4212843,
+      "newSize": 4895303
+    },
+    "pillar/practical-hero.mp4": {
+      "timestamp": "2026-02-20T18:35:16.867Z",
+      "origSize": 6283955,
+      "newSize": 7255877
+    },
+    "pillar/snorkeling-break-comparison.mp4": {
+      "timestamp": "2026-02-20T18:35:39.081Z",
+      "origSize": 8430629,
+      "newSize": 12135950
+    },
+    "pillar/snorkeling-break-visayas.mp4": {
+      "timestamp": "2026-02-20T18:35:51.293Z",
+      "origSize": 2678101,
+      "newSize": 3102984
+    },
+    "pillar/snorkeling-hero.mp4": {
+      "timestamp": "2026-02-20T18:36:13.572Z",
+      "origSize": 10448589,
+      "newSize": 14486690
+    },
+    "pillar/ww2-card-1.mp4": {
+      "timestamp": "2026-02-20T18:36:16.575Z",
+      "origSize": 259092,
+      "newSize": 690508
+    },
+    "pillar/ww2-card-2.mp4": {
+      "timestamp": "2026-02-20T18:36:19.793Z",
+      "origSize": 631774,
+      "newSize": 1010398
+    },
+    "pillar/ww2-card-3.mp4": {
+      "timestamp": "2026-02-20T18:36:23.042Z",
+      "origSize": 823018,
+      "newSize": 1089824
+    },
+    "pillar/ww2-card-4.mp4": {
+      "timestamp": "2026-02-20T18:36:26.242Z",
+      "origSize": 725753,
+      "newSize": 1147018
+    },
+    "pillar/ww2-card-5.mp4": {
+      "timestamp": "2026-02-20T18:36:30.466Z",
+      "origSize": 777205,
+      "newSize": 1206308
+    },
+    "pillar/ww2-card-6.mp4": {
+      "timestamp": "2026-02-20T18:36:33.755Z",
+      "origSize": 1073795,
+      "newSize": 1321103
+    },
+    "pillar/ww2-card-7.mp4": {
+      "timestamp": "2026-02-20T18:36:36.970Z",
+      "origSize": 1184025,
+      "newSize": 1717696
+    },
+    "blog/archipelago-effect-hero.mp4": {
+      "timestamp": "2026-02-20T18:36:48.230Z",
+      "origSize": 10779512,
+      "newSize": 9672003
+    },
+    "blog/blog-hero.mp4": {
+      "timestamp": "2026-02-20T18:37:06.096Z",
+      "origSize": 10779237,
+      "newSize": 11631844
+    },
+    "blog/filipino-food-hero.mp4": {
+      "timestamp": "2026-02-20T18:37:23.922Z",
+      "origSize": 10779237,
+      "newSize": 11631844
+    }
+  }
+}

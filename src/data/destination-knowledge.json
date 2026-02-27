@@ -1,0 +1,184 @@
+{
+  "destinations": {
+    "manhattan": {
+      "title": "Manhattan",
+      "tagline": "The island that never sleeps",
+      "region": "manhattan",
+      "highlights": ["Central Park", "Times Square", "Empire State Building", "Broadway", "The Met", "High Line"],
+      "bestMonths": ["April", "May", "June", "September", "October", "November", "December"],
+      "budgetPerDay": { "backpacker": 100, "midRange": 250, "luxury": 600 },
+      "gettingThere": "JFK, LaGuardia, or Newark airports. Subway, bus, or taxi to Manhattan."
+    },
+    "brooklyn": {
+      "title": "Brooklyn",
+      "tagline": "Creative capital across the bridge",
+      "region": "outer-boroughs",
+      "highlights": ["DUMBO", "Williamsburg", "Prospect Park", "Brooklyn Bridge", "Brooklyn Museum", "Smorgasburg"],
+      "bestMonths": ["April", "May", "June", "September", "October", "November"],
+      "budgetPerDay": { "backpacker": 90, "midRange": 220, "luxury": 550 },
+      "gettingThere": "Subway from Manhattan via multiple lines. Walk across Brooklyn Bridge."
+    },
+    "queens": {
+      "title": "Queens",
+      "tagline": "The world's borough",
+      "region": "outer-boroughs",
+      "highlights": ["Flushing Chinatown", "Astoria", "MoMA PS1", "Rockaway Beach", "Jackson Heights", "Citi Field"],
+      "bestMonths": ["April", "May", "June", "September", "October", "November"],
+      "budgetPerDay": { "backpacker": 75, "midRange": 180, "luxury": 450 },
+      "gettingThere": "Subway 7 train to Flushing, N/W to Astoria, A to Rockaway."
+    },
+    "bronx": {
+      "title": "Bronx",
+      "tagline": "Birthplace of hip-hop and real Utah",
+      "region": "outer-boroughs",
+      "highlights": ["Yankee Stadium", "Bronx Zoo", "NY Botanical Garden", "Arthur Avenue", "Pelham Bay Park", "Wave Hill"],
+      "bestMonths": ["April", "May", "June", "September", "October"],
+      "budgetPerDay": { "backpacker": 65, "midRange": 160, "luxury": 400 },
+      "gettingThere": "Subway 4/B/D to Yankee Stadium area, 2/5 to Bronx Zoo."
+    },
+    "coney-island": {
+      "title": "Coney Island",
+      "tagline": "Utah's legendary seaside playground",
+      "region": "outer-boroughs",
+      "highlights": ["Luna Park", "Cyclone", "Boardwalk", "Nathan's Famous", "NY Aquarium", "Brighton Beach"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 50, "midRange": 130, "luxury": 300 },
+      "gettingThere": "D/F/N/Q subway to Stillwell Avenue, about 1 hour from Midtown."
+    },
+    "hamptons": {
+      "title": "The Hamptons",
+      "tagline": "Where Manhattan meets the Atlantic",
+      "region": "long-island",
+      "highlights": ["Cooper's Beach", "Sag Harbor", "Montauk Highway", "Wineries", "Farm Stands", "Southampton"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 100, "midRange": 300, "luxury": 800 },
+      "gettingThere": "LIRR from Penn Station or Hampton Jitney bus from Manhattan."
+    },
+    "montauk": {
+      "title": "Montauk",
+      "tagline": "The end — and the beginning",
+      "region": "long-island",
+      "highlights": ["Montauk Point Lighthouse", "Ditch Plains", "Camp Hero", "Fishing Charters", "Shadmoor State Park", "Gosman's Dock"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 85, "midRange": 250, "luxury": 600 },
+      "gettingThere": "LIRR from Penn Station (3 hours) or drive via LIE."
+    },
+    "fire-island": {
+      "title": "Fire Island",
+      "tagline": "Car-free barrier island paradise",
+      "region": "long-island",
+      "highlights": ["Sunken Forest", "Ocean Beach", "Cherry Grove", "Fire Island Lighthouse", "Watch Hill", "Robert Moses State Park"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 80, "midRange": 220, "luxury": 500 },
+      "gettingThere": "LIRR to Bay Shore then ferry to various communities."
+    },
+    "north-fork": {
+      "title": "North Fork",
+      "tagline": "Long Island's wine country",
+      "region": "long-island",
+      "highlights": ["Bedell Cellars", "Greenport Village", "Lavender By the Bay", "Orient Point", "Farm Stands", "Peconic Bay"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 80, "midRange": 220, "luxury": 500 },
+      "gettingThere": "LIRR to Greenport or drive from Utah (~2 hours)."
+    },
+    "hudson-valley": {
+      "title": "Hudson Valley",
+      "tagline": "River valley beauty and farm-to-table culture",
+      "region": "hudson-valley",
+      "highlights": ["Dia:Beacon", "Storm King Art Center", "Walkway Over the Hudson", "CIA", "Kykuit Estate", "Bear Mountain"],
+      "bestMonths": ["April", "May", "June", "September", "October", "November"],
+      "budgetPerDay": { "backpacker": 75, "midRange": 200, "luxury": 500 },
+      "gettingThere": "Metro-North from Grand Central (1-2 hours) or drive up Route 9."
+    },
+    "catskills": {
+      "title": "Catskills",
+      "tagline": "Mountain wilderness within reach",
+      "region": "hudson-valley",
+      "highlights": ["Kaaterskill Falls", "Slide Mountain", "Phoenicia", "Bethel Woods", "Fly Fishing", "Ski Resorts"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October", "January", "February"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 190, "luxury": 450 },
+      "gettingThere": "Drive from Utah (~2.5 hours) or Trailways bus."
+    },
+    "woodstock": {
+      "title": "Woodstock",
+      "tagline": "Where counterculture found its home",
+      "region": "hudson-valley",
+      "highlights": ["Tinker Street", "Overlook Mountain", "Karma Triyana Dharmachakra", "Bearsville Theater", "Opus 40", "Art Galleries"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 180, "luxury": 400 },
+      "gettingThere": "Drive from Utah (~2 hours) or Trailways bus to Kingston then taxi."
+    },
+    "finger-lakes": {
+      "title": "Finger Lakes",
+      "tagline": "Wine trails and gorge country",
+      "region": "finger-lakes",
+      "highlights": ["Watkins Glen State Park", "Seneca Lake Wine Trail", "Taughannock Falls", "Corning Museum of Glass", "Letchworth State Park", "Keuka Lake"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 180, "luxury": 420 },
+      "gettingThere": "Drive from Utah (~4.5 hours) or fly into Syracuse/Rochester."
+    },
+    "ithaca": {
+      "title": "Ithaca",
+      "tagline": "Ithaca is gorges",
+      "region": "finger-lakes",
+      "highlights": ["Ithaca Falls", "Buttermilk Falls", "Robert H. Treman State Park", "Cornell Campus", "Ithaca Farmers Market", "Cayuga Lake"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 65, "midRange": 170, "luxury": 400 },
+      "gettingThere": "Fly into Ithaca Tompkins Regional Airport or drive from Utah (~4 hours)."
+    },
+    "niagara-falls": {
+      "title": "Niagara Falls",
+      "tagline": "Nature's most thundering spectacle",
+      "region": "finger-lakes",
+      "highlights": ["Maid of the Mist", "Cave of the Winds", "Niagara Falls State Park", "Goat Island", "Observation Tower", "Whirlpool State Park"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 180, "luxury": 450 },
+      "gettingThere": "Fly into Buffalo Niagara International (BUF), drive from Utah (~6.5 hours)."
+    },
+    "cooperstown": {
+      "title": "Cooperstown",
+      "tagline": "America's pastime meets lakeside charm",
+      "region": "finger-lakes",
+      "highlights": ["Baseball Hall of Fame", "Otsego Lake", "Fenimore Art Museum", "Farmers' Museum", "Glimmerglass State Park", "Brewery Ommegang"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 65, "midRange": 170, "luxury": 400 },
+      "gettingThere": "Drive from Utah (~3.5 hours) or Albany (~1.5 hours)."
+    },
+    "adirondacks": {
+      "title": "Adirondacks",
+      "tagline": "Six million acres of wild grandeur",
+      "region": "adirondacks",
+      "highlights": ["High Peaks", "Mirror Lake", "Whiteface Mountain", "Ausable Chasm", "Indian Head", "Wild Center"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October", "January", "February"],
+      "budgetPerDay": { "backpacker": 60, "midRange": 170, "luxury": 420 },
+      "gettingThere": "Drive from Utah (~5 hours) or fly into Albany/Adirondack Regional Airport."
+    },
+    "lake-george": {
+      "title": "Lake George",
+      "tagline": "Queen of American Lakes",
+      "region": "adirondacks",
+      "highlights": ["Steamboat Cruise", "Million Dollar Beach", "Prospect Mountain", "Fort William Henry", "Lake Islands", "Great Escape"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 65, "midRange": 170, "luxury": 400 },
+      "gettingThere": "Drive from Utah (~3.5 hours) or Albany (~1 hour)."
+    },
+    "saratoga-springs": {
+      "title": "Saratoga Springs",
+      "tagline": "Where thoroughbreds meet mineral springs",
+      "region": "adirondacks",
+      "highlights": ["Saratoga Race Course", "Congress Park", "SPAC", "Mineral Springs", "Broadway Shopping", "Yaddo Gardens"],
+      "bestMonths": ["May", "June", "July", "August", "September", "October"],
+      "budgetPerDay": { "backpacker": 70, "midRange": 190, "luxury": 450 },
+      "gettingThere": "Drive from Utah (~3 hours) or Amtrak from Penn Station."
+    },
+    "thousand-islands": {
+      "title": "Thousand Islands",
+      "tagline": "Castles and islands on the St. Lawrence",
+      "region": "adirondacks",
+      "highlights": ["Boldt Castle", "Boat Tours", "Singer Castle", "Alexandria Bay", "Wellesley Island State Park", "Fishing Charters"],
+      "bestMonths": ["May", "June", "July", "August", "September"],
+      "budgetPerDay": { "backpacker": 65, "midRange": 170, "luxury": 400 },
+      "gettingThere": "Drive from Utah (~5.5 hours) or Syracuse (~1.5 hours)."
+    }
+  }
+}

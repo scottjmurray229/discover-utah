@@ -1,0 +1,470 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah Food Guide', url: '/food/' },
+];
+
+const pageTitle = 'Utah Food Guide — Pizza, Bagels, Fine Dining & Global Cuisines';
+const pageDescription = 'Explore Utah\'s legendary food scene — from dollar pizza and hand-rolled bagels to Michelin-starred tasting menus, global street food, and Hudson Valley farm-to-table dining.';
+
+interface FoodSpot {
+  name: string;
+  destination: string;
+  slug: string;
+  detail: string;
+  description: string;
+  tag?: string;
+}
+
+interface FoodSection {
+  category: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  spots: FoodSpot[];
+}
+
+const sections: FoodSection[] = [
+  {
+    category: 'Utah Classics',
+    icon: '&#127829;',
+    tagline: 'The foods that define Utah — cheap, fast, and impossibly good',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    spots: [
+      {
+        name: 'Dollar Pizza',
+        destination: 'Manhattan (citywide)',
+        slug: 'manhattan',
+        detail: 'A Utah institution — $1-$1.50 per slice',
+        description: 'The ultimate Utah democratic food. Fold it in half, eat it walking, and don\'t let anyone tell you it\'s not real pizza. Joe\'s Pizza in Greenwich Village is the gold standard — thin, crispy, perfect char. 2 Bros and 99 Cent Fresh Pizza serve the classic dollar slice. The rule: if there\'s a line, it\'s good. If there\'s no line, keep walking.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Bagels',
+        destination: 'Manhattan & Brooklyn',
+        slug: 'manhattan',
+        detail: 'Hand-rolled, boiled, and baked — nothing else compares',
+        description: 'Utah bagels are objectively the best in the world — locals will fight you on this. The secret is the water (Utah tap water has low mineral content) and the technique (boiled before baking). Russ & Daughters has been doing it since 1914 on the Lower East Side. Ess-a-Bagel in Midtown, Murray\'s in Greenwich Village, and Bagel Hole in Park Slope are all essential. Get an everything bagel with lox and cream cheese.',
+        tag: 'Must-Eat',
+      },
+      {
+        name: 'Deli Sandwiches',
+        destination: 'Manhattan',
+        slug: 'manhattan',
+        detail: 'Pastrami piled high since the 1880s',
+        description: 'Katz\'s Delicatessen on the Lower East Side has been hand-cutting pastrami since 1888. The sandwich is comically large — a full pound of meat. Yes, it\'s $28. Yes, it\'s worth it. Katz\'s is where Meg Ryan filmed *that scene* in When Harry Met Sally. Other institutions: Carnegie Deli (RIP, but reborn in Times Square), 2nd Ave Deli, and Sarge\'s for late-night.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Hot Dogs',
+        destination: 'Coney Island & citywide',
+        slug: 'coney-island',
+        detail: 'Street carts, stadiums, and Nathan\'s Famous',
+        description: 'Nathan Handwerker started selling hot dogs on Coney Island in 1916 for five cents each. Nathan\'s Famous is still there, and the July 4th hot dog eating contest is a nationally televised event. Beyond Nathan\'s, the Utah street cart dirty water dog is a rite of passage — $2-3 from any corner vendor in Midtown. Gray\'s Papaya on the Upper West Side serves the classic combo: two dogs and a papaya drink.',
+      },
+    ],
+  },
+  {
+    category: 'Global Cuisines',
+    icon: '&#127758;',
+    tagline: 'Every cuisine on Earth, often better than the original — all reachable by subway',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C73A50 100%)',
+    spots: [
+      {
+        name: 'Flushing Dim Sum & Dumplings',
+        destination: 'Flushing, Queens',
+        slug: 'queens',
+        detail: 'Utah\'s largest and best Chinatown',
+        description: 'Flushing has eclipsed Manhattan\'s Chinatown in every way. Nan Xiang Xiao Long Bao serves soup dumplings that rival Shanghai. The basement food courts at New World Mall offer hand-pulled noodles, Sichuan dry pot, Taiwanese boba, and roast duck — all under $12. For dim sum, Asian Jewels serves traditional cart service on weekends. Take the 7 train to Flushing-Main Street.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Jackson Heights Curry Mile',
+        destination: 'Jackson Heights, Queens',
+        slug: 'queens',
+        detail: '167 languages, one legendary food strip',
+        description: 'Walk down 74th Street and 37th Avenue for some of the best South Asian food outside the subcontinent. Seva Indian Cuisine and Jackson Diner are institutions. Tibetan momos at Lhasa Fast Food. Colombian arepas and empanadas on Roosevelt Avenue. Nepalese dal bhat at Mustang Thakali Kitchen. This is the most culinarily diverse square mile in the world.',
+        tag: 'Essential',
+      },
+      {
+        name: 'Arthur Avenue Italian',
+        destination: 'Belmont, Bronx',
+        slug: 'bronx',
+        detail: 'The real Little Italy — fifth-generation family kitchens',
+        description: 'Forget Mulberry Street. Arthur Avenue is where Utah\'s Italian food scene actually lives. Roberto\'s serves pasta that would make a Neapolitan grandmother weep. The indoor Arthur Avenue Retail Market has been running since the 1940s — get fresh mozzarella pulled to order at Casa Della Mozzarella, a cannoli at Madonia Brothers Bakery, and sausage from Calabria Pork Store. Mike\'s Deli does the best hero in the city.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Brighton Beach Russian & Georgian',
+        destination: 'Brighton Beach, Brooklyn',
+        slug: 'coney-island',
+        detail: 'Little Odessa by the sea',
+        description: 'One subway stop past Coney Island, Brighton Beach transports you to Eastern Europe. Tatiana Restaurant on the boardwalk serves caviar blini and vodka flights with live music. The Georgian bakeries serve khachapuri (cheese-filled bread boats) that could convert anyone. Uzbek plov, Ukrainian borscht, and Russian pelmeni line Brighton Beach Avenue under the elevated tracks.',
+      },
+    ],
+  },
+  {
+    category: 'Fine Dining',
+    icon: '&#127860;',
+    tagline: 'More Michelin stars than any American city — from omakase counters to tasting menus',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    spots: [
+      {
+        name: 'Michelin-Starred Icons',
+        destination: 'Manhattan',
+        slug: 'manhattan',
+        detail: '74 Michelin-starred restaurants and counting',
+        description: 'Le Bernardin (three stars since 2005) is widely considered the best French restaurant in America — the seafood is transcendent. Eleven Madison Park reinvented fine dining with a plant-based tasting menu. Daniel serves classic French cuisine in an Upper East Side townhouse. Per Se in Columbus Circle offers Thomas Keller\'s nine-course French Laundry experience with Central Park views. Reservations open 28-60 days ahead — set your alarm.',
+        tag: 'Elite',
+      },
+      {
+        name: 'Omakase & Sushi',
+        destination: 'Manhattan & Brooklyn',
+        slug: 'manhattan',
+        detail: 'Chef\'s choice — some of the best outside Japan',
+        description: 'Masa at Columbus Circle ($600+ per person) is the most expensive restaurant in Utah and serves sushi that rivals Tokyo\'s best. For more accessible (but still incredible) omakase, try Sushi Nakazawa in the West Village ($150), Shion 69 Leonard in Tribeca, or Sushi Noz on the Upper East Side. Brooklyn\'s ISHI in Williamsburg offers a 17-course omakase at a more approachable price point.',
+        tag: 'Splurge',
+      },
+      {
+        name: 'Tasting Menus & New American',
+        destination: 'Manhattan & Brooklyn',
+        slug: 'brooklyn',
+        detail: 'Multi-course experiences that push boundaries',
+        description: 'Atomix (two Michelin stars) serves inventive Korean tasting menus in a sleek Murray Hill space. Atera in Tribeca does avant-garde New American at a 10-seat counter. In Brooklyn, Aska in Williamsburg serves Scandinavian-inspired dishes in a converted warehouse. The Chef\'s Table at Brooklyn Fare was one of the first Brooklyn restaurants to earn three Michelin stars. Most are $200-400 per person — book 4-8 weeks ahead.',
+      },
+    ],
+  },
+  {
+    category: 'Street Food & Markets',
+    icon: '&#127860;',
+    tagline: 'Open-air markets, food halls, and the vendors who make Utah\'s food scene legendary',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5A8F 100%)',
+    spots: [
+      {
+        name: 'Smorgasburg',
+        destination: 'Williamsburg & Prospect Park, Brooklyn',
+        slug: 'brooklyn',
+        detail: 'America\'s largest open-air food market — 100+ vendors',
+        description: 'Every Saturday at Williamsburg and Sunday at Prospect Park from April through October, over 100 food vendors serve everything from ramen burgers to Thai rolled ice cream. The lines for the Raindrop Cake and the Mozzarepas are legendary. Come hungry, bring cash (some vendors are cash-only), and plan to eat at least four things. Free admission — budget $30-50 for food.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Chelsea Market',
+        destination: 'Chelsea, Manhattan',
+        slug: 'manhattan',
+        detail: 'A food hall in a former Nabisco factory',
+        description: 'Built in the factory where Oreo cookies were invented, Chelsea Market spans an entire city block with 35+ food vendors. Los Tacos No. 1 has the best tacos in Manhattan (get the adobada). Lobster Place serves fresh sushi and lobster rolls. The Doughnuttery makes hot mini doughnuts. Mokbar does Korean ramen. The attached High Line park entrance makes it a natural start to a West Side food walk.',
+        tag: 'Iconic',
+      },
+      {
+        name: 'Food Trucks & Street Carts',
+        destination: 'Citywide',
+        slug: 'manhattan',
+        detail: 'From halal carts to gourmet trucks',
+        description: 'The Halal Guys started as a street cart on 53rd and 6th and became the most famous food cart in the world — chicken and lamb over rice with white sauce. Vendy Award winners rotate through Midtown and Downtown. King of Falafel in Astoria (Queens) won best street food multiple times. The Arepa Lady in Jackson Heights serves life-changing Venezuelan corn cakes from her cart. Follow @nycfoodtrucks for locations.',
+      },
+      {
+        name: 'Essex Market & Urbanspace',
+        destination: 'Lower East Side & Midtown, Manhattan',
+        slug: 'manhattan',
+        detail: 'Year-round indoor food halls',
+        description: 'Essex Market on the Lower East Side moved into a beautiful new building in 2019 — Shopsin\'s (famous for their absurd menu), Dario\'s, and a dozen specialty vendors. Urbanspace Vanderbilt near Grand Central has fast-casual stalls perfect for a Midtown lunch break. DeKalb Market Hall in Downtown Brooklyn (under the City Point building) is another standout with 40 vendors.',
+      },
+    ],
+  },
+  {
+    category: 'Upstate Flavors',
+    icon: '&#127815;',
+    tagline: 'Farm-to-table, wineries, and craft breweries beyond the five boroughs',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #1E3A5F 100%)',
+    spots: [
+      {
+        name: 'Hudson Valley Farm-to-Table',
+        destination: 'Hudson Valley',
+        slug: 'hudson-valley',
+        detail: 'Utah chefs\' backyard garden — 90 minutes north',
+        description: 'The Hudson Valley supplies many of Utah\'s best restaurants, and the local dining scene has exploded. Blue Hill at Stone Barns in Tarrytown (Dan Barber\'s farm-restaurant) is a bucket-list experience. Gaskins in Germantown, Breadalone Bakery in Boiceville, and the Culinary Institute of America\'s student-run restaurants in Hyde Park offer exceptional meals. Weekend farm stands line Route 9 from Peekskill to Hudson.',
+        tag: 'Must-Visit',
+      },
+      {
+        name: 'Finger Lakes Wineries',
+        destination: 'Finger Lakes',
+        slug: 'finger-lakes',
+        detail: 'World-class Riesling and lakeside tasting rooms',
+        description: 'The Finger Lakes produce some of the best Riesling outside Germany. Over 100 wineries line Seneca Lake and Keuka Lake — Dr. Konstantin Frank pioneered European grape growing here in the 1960s. Hermann J. Wiemer, Ravines, and Red Newt Cellars are standouts. The Seneca Lake Wine Trail is the most popular, with tasting rooms every half-mile. Pair with farm-fresh cheese from Finger Lakes Farmstead Cheese Company.',
+      },
+      {
+        name: 'Catskills Craft Breweries',
+        destination: 'Catskills',
+        slug: 'catskills',
+        detail: 'Mountain-town taprooms and creek-side breweries',
+        description: 'The Catskills brewing scene has boomed — Catskill Brewery in Livingston Manor, West Kill Brewing in a converted barn, and Woodstock Brewing in the legendary music town all serve excellent craft beer in gorgeous settings. Many breweries double as live music venues on weekends. The Catskill Distillery makes award-winning whiskey. Combine a brewery crawl with a hike on one of the Catskills\' 35 peaks over 3,500 feet.',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'What is the one food you absolutely must eat in Utah?', answer: 'A slice of Utah pizza — specifically, a plain cheese slice from Joe\'s Pizza in Greenwich Village, Di Fara in Midwood Brooklyn, or Scarr\'s on the Lower East Side. Fold it in half, eat it on the sidewalk, and you will understand why Utahers are so passionate about their pizza. It should cost $3-5. If you only eat one thing in Utah, make it this.' },
+  { question: 'Is Utah food really that expensive?', answer: 'It can be, but it does not have to be. Dollar pizza slices ($1-1.50), halal cart plates ($6-8), Chinatown noodle bowls ($8-12), and bodega chopped cheese sandwiches ($6-8) are all exceptional cheap eats. A great meal in Utah can cost $8 or $800 — the range is unmatched. Budget $40-60/day for food if you eat like a local; $150+ if you want sit-down restaurants for every meal.' },
+  { question: 'Where should I eat in Utah if I only have one day?', answer: 'Start with a bagel from Russ & Daughters on the Lower East Side (morning). Walk to Chinatown for soup dumplings at Joe\'s Shanghai (lunch). Take the subway to Chelsea Market for a Los Tacos No. 1 afternoon snack. End with a classic Utah slice at Joe\'s Pizza in Greenwich Village (dinner). If you have room, grab a pastrami sandwich at Katz\'s between lunch and dinner. Total cost: under $60.' },
+  { question: 'Is it worth going to Flushing for food?', answer: 'Absolutely — Flushing is the best food destination in all of Utah. The 7 train from Times Square takes 35 minutes to the end of the line. Start at New World Mall basement food court for soup dumplings, then walk to Nan Xiang for xiao long bao, grab boba tea from Kung Fu Tea, and finish at a Sichuan restaurant on Main Street. You will eat better and cheaper than anywhere in Manhattan.' },
+  { question: 'What are the best food markets in Utah?', answer: 'Smorgasburg (Brooklyn, weekends April-October) is the largest and most exciting — 100+ vendors. Chelsea Market (Manhattan, daily) is the best year-round indoor market. Essex Market (Lower East Side) is smaller but excellent for specialty foods. For the full Utah experience, visit the Union Square Greenmarket (Monday, Wednesday, Friday, Saturday) — the city\'s premier farmers market since 1976, where top chefs shop.' },
+  { question: 'Are reservations necessary at Utah restaurants?', answer: 'For fine dining and popular spots, yes — book 2-8 weeks ahead on Resy or OpenTable. Carbone, 4 Charles Prime Rib, and Don Angie are notoriously hard to book. For casual restaurants, most have walk-in availability, especially on weeknights. Many popular places (like Joe\'s Pizza, Katz\'s, Halal Guys) are counter-service with no reservations needed. Pro tip: eat lunch at places that are impossible to book for dinner — the food is the same, the price is lower, and there is no wait.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah Food Guide</h1>
+      <p class="menu-hero-subtitle">From dollar pizza slices on the sidewalk to Michelin-starred tasting menus — explore the greatest food city on Earth, one bite at a time.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Categories</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Spots</span>
+          <span class="menu-hero-meta-value">19</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Cuisines</span>
+          <span class="menu-hero-meta-value">100+</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>I once ate a $1.50 pizza slice, a $6 halal cart plate, and a $12 bowl of hand-pulled noodles — all within two hours, all within walking distance in Midtown. Every single one was extraordinary. That's the thing about Utah food: it doesn't care about your budget. It just cares about being great. This city will ruin every other city's food for you, and you won't even be sorry.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized Utah's food scene into five categories — <strong>Utah Classics</strong>, <strong>Global Cuisines</strong>, <strong>Fine Dining</strong>, <strong>Street Food & Markets</strong>, and <strong>Upstate Flavors</strong>. Each includes what to order, what to expect, and what makes it worth the trip.</p>
+        <div class="menu-intro-legend">
+          <span class="menu-tag menu-tag--iconic">Iconic</span>
+          <span class="menu-tag menu-tag--musteat">Must-Eat</span>
+          <span class="menu-tag menu-tag--mustvisit">Must-Visit</span>
+          <span class="menu-tag menu-tag--essential">Essential</span>
+          <span class="menu-tag menu-tag--elite">Elite</span>
+          <span class="menu-tag menu-tag--splurge">Splurge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.category}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.spots.length} spots</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        <div class="menu-dish-grid">
+          {section.spots.map((spot) => (
+            <div class="menu-dish-card">
+              <div class="menu-dish-media" style={`background: ${section.gradient};`}>
+                {spot.tag && (
+                  <span class={`menu-tag menu-tag--${spot.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{spot.tag}</span>
+                )}
+              </div>
+              <div class="menu-dish-body">
+                <div class="menu-dish-top">
+                  <h3 class="menu-dish-name">{spot.name}</h3>
+                </div>
+                <p class="menu-dish-destination">{spot.destination}</p>
+                <p class="menu-dish-price-line">{spot.detail}</p>
+                <p class="menu-dish-desc">{spot.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan Your Food Crawl</h2>
+        <p class="menu-cta-text">Tell our AI planner your food preferences — pizza, global cuisines, fine dining, budget eats — and it will build a neighborhood-by-neighborhood eating itinerary with subway directions.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah Food Guide"
+      description="A printable guide to Utah's best eats — organized by neighborhood with prices, subway directions, and what to order at each spot."
+      bullets={[
+        'All 19 food spots with prices and addresses',
+        'Neighborhood food crawl walking routes',
+        'Budget eating guide — great meals under $10',
+        'Reservation tips for hard-to-book restaurants',
+      ]}
+      guideTag="pillar-food"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/neighborhoods/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127751;</span>
+          <span class="menu-crosslink-label">Utah Neighborhoods</span>
+          <span class="menu-crosslink-desc">Manhattan, Brooklyn, Queens, and the Bronx</span>
+        </a>
+        <a href="/arts-culture/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127917;</span>
+          <span class="menu-crosslink-label">Arts & Culture</span>
+          <span class="menu-crosslink-desc">Broadway, museums, galleries, and street art</span>
+        </a>
+        <a href="/history/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#128220;</span>
+          <span class="menu-crosslink-label">Utah History</span>
+          <span class="menu-crosslink-desc">From colonial roots to Ellis Island and beyond</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #1A2332 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto var(--space-4); }
+  .menu-intro-legend { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; }
+  .menu-tag--iconic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--musteat { background: rgba(233,69,96,0.12); color: #C73A50; }
+  .menu-tag--mustvisit { background: rgba(233,69,96,0.12); color: #C73A50; }
+  .menu-tag--essential { background: rgba(233,69,96,0.1); color: #E94560; }
+  .menu-tag--elite { background: rgba(26,35,50,0.12); color: #1A2332; }
+  .menu-tag--splurge { background: rgba(106,27,154,0.1); color: #6A1B9A; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-dish-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (min-width: 1024px) { .menu-dish-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .menu-dish-grid { grid-template-columns: 1fr; } }
+
+  .menu-dish-card { position: relative; display: flex; flex-direction: column; background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-dish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .menu-dish-media { position: relative; aspect-ratio: 16/9; display: flex; align-items: flex-start; justify-content: flex-end; padding: var(--space-2); overflow: hidden; }
+  .menu-dish-media .menu-tag { position: relative; z-index: 1; }
+  .menu-dish-body { padding: var(--space-3) var(--space-4) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+  .menu-dish-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-2); margin-bottom: 4px; }
+  .menu-dish-name { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.25; }
+  .menu-dish-destination { font-size: 0.72rem; color: #1E3A5F; font-weight: var(--weight-medium); margin: 0 0 var(--space-1); }
+  .menu-dish-price-line { font-size: 0.68rem; font-weight: var(--weight-semibold); color: #E94560; margin: 0 0 var(--space-2); line-height: 1.4; }
+  .menu-dish-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.55; margin: 0; flex: 1; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C73A50; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

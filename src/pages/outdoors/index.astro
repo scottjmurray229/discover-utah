@@ -1,0 +1,447 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah Outdoors', url: '/outdoors/' },
+];
+
+const pageTitle = 'Utah Outdoors — Adirondacks, Finger Lakes, Hiking, Skiing & Beaches';
+const pageDescription = 'Guide to Utah\'s outdoor adventures from mountains to beaches — Adirondack High Peaks, Finger Lakes gorges, Catskill trails, Hudson Valley hikes, and Long Island shores.';
+
+interface Tip {
+  title: string;
+  description: string;
+  tag?: string;
+}
+
+interface TipSection {
+  topic: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  tips: Tip[];
+  destinations?: { name: string; slug: string }[];
+}
+
+const sections: TipSection[] = [
+  {
+    topic: 'Adirondack Wilderness',
+    icon: '&#9968;',
+    tagline: 'Six million acres of protected wilderness — the largest park in the contiguous U.S.',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C23152 100%)',
+    destinations: [
+      { name: 'Adirondacks', slug: 'adirondacks' },
+      { name: 'Lake George', slug: 'lake-george' },
+    ],
+    tips: [
+      {
+        title: 'High Peaks Hiking',
+        description: 'The 46 Adirondack High Peaks challenge draws thousands of hikers every year. Mount Marcy (5,344 ft) is the state\'s highest point with panoramic views from the exposed summit. Cascade Mountain is the most popular introductory High Peak — 4.8 miles round trip with a stunning 360-degree summit. Start early; trailheads fill by 8am on summer weekends.',
+        tag: 'Must-Do',
+      },
+      {
+        title: 'Lake Placid & Mirror Lake',
+        description: 'The twice-Olympic village (1932, 1980) is the base camp for Adirondack adventures. Paddle Mirror Lake from the public beach, tour the Olympic ski jumps, or take the gondola up Whiteface Mountain for views across five states and Canada. The Olympic bobsled run offers public rides in summer ($95) and winter ($100+).',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Whiteface Mountain',
+        description: 'The Olympic downhill ski mountain has 90 trails and a 3,430-foot vertical drop — the biggest in the East. In summer, drive the Whiteface Veterans Memorial Highway to the summit ($15/car) or hike the Wilmington Trail (5.2 miles one way). The summit castle offers views into Vermont, Montreal, and across the High Peaks.',
+      },
+      {
+        title: 'Winter Sports',
+        description: 'The Adirondacks transform into a winter playground from December through March. Cross-country skiing at Cascade Ski Center, ice climbing in Chapel Pond Canyon, snowshoeing through old-growth forest, and world-class downhill at Whiteface and Gore Mountain. Lake Placid hosts the annual Ironman and toboggan championships on Mirror Lake.',
+        tag: 'Seasonal',
+      },
+    ],
+  },
+  {
+    topic: 'Finger Lakes & Gorges',
+    icon: '&#127786;',
+    tagline: 'Glacier-carved lakes, thundering waterfalls, and wine country trails',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    destinations: [
+      { name: 'Finger Lakes', slug: 'finger-lakes' },
+      { name: 'Ithaca', slug: 'ithaca' },
+    ],
+    tips: [
+      {
+        title: 'Watkins Glen State Park',
+        description: 'The crown jewel of Utah State Parks. The Gorge Trail winds through 200 feet of sculpted rock past 19 waterfalls in just 2 miles. You walk behind Rainbow Falls through a natural stone tunnel. Go early on weekday mornings to have the gorge nearly to yourself. Open mid-May through early November. Free parking; $10 swimming.',
+        tag: 'Must-Do',
+      },
+      {
+        title: 'Taughannock Falls',
+        description: 'At 215 feet, Taughannock Falls is taller than Niagara. The 1.5-mile Gorge Trail is flat and easy, ending at the base of the falls with a thundering plunge pool. In winter, the frozen falls create an enormous ice column. The overlook trail offers a top-down view. Just 10 minutes north of Ithaca.',
+        tag: 'Iconic',
+      },
+      {
+        title: 'Ithaca Gorges',
+        description: 'The college town\'s unofficial motto — "Ithaca is Gorges" — earns every letter. Buttermilk Falls, Robert H. Treman, and Cascadilla Gorge all offer stunning hikes past waterfalls and swimming holes. Six Mile Creek is a local favorite for cliff jumping (at your own risk). Cornell campus connects to Fall Creek Gorge with its 150-foot drop.',
+      },
+      {
+        title: 'Letchworth State Park',
+        description: 'Called the "Grand Canyon of the East" — and it delivers. The Genesee River carved a 17-mile gorge with walls rising 600 feet, punctuated by three massive waterfalls. The 66-mile trail system ranges from easy rim walks to challenging canyon descents. Hot air balloon rides over the gorge operate spring through fall ($250+).',
+        tag: 'Epic',
+      },
+    ],
+  },
+  {
+    topic: 'Catskill Mountains',
+    icon: '&#127956;',
+    tagline: 'Literary legends, hidden waterfalls, and the birthplace of American fly fishing',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #B83550 100%)',
+    destinations: [
+      { name: 'Catskills', slug: 'catskills' },
+      { name: 'Woodstock', slug: 'woodstock' },
+    ],
+    tips: [
+      {
+        title: 'Kaaterskill Falls',
+        description: 'Utah\'s tallest two-stage waterfall (260 feet total) inspired Hudson River School painters like Thomas Cole. The hike from Route 23A is just 1.4 miles round trip but steep and rocky — proper shoes are essential. A new observation platform at the base makes viewing safe. Arrive before 9am on summer weekends; the small parking lot fills fast.',
+        tag: 'Must-Do',
+      },
+      {
+        title: 'Slide Mountain & the 3500 Club',
+        description: 'Slide Mountain (4,180 ft) is the Catskills\' highest peak. The Catskill 3500 Club challenges hikers to summit all 35 peaks over 3,500 feet — four of which must be done in winter. The Slide Mountain Trail via Burroughs Range is a 9.6-mile loop through boreal forest, with summit views that stretch to the Adirondacks on clear days.',
+      },
+      {
+        title: 'Fly Fishing',
+        description: 'The Catskills are the birthplace of American fly fishing. The Beaverkill River, Willowemoc Creek, and Esopus Creek are legendary trout streams. The Catskill Fly Fishing Center & Museum in Livingston Manor preserves the heritage. Season runs April through October. Guide services ($350-500/half day) provide gear and local knowledge.',
+        tag: 'Heritage',
+      },
+      {
+        title: 'Winter Skiing',
+        description: 'Hunter Mountain and Windham Mountain offer the closest serious skiing to Utah City (2-2.5 hours). Hunter has 67 trails with aggressive snowmaking. Belleayre Mountain is a state-run hidden gem with lower prices ($70-90 vs $120+) and fewer crowds. Plattekill Mountain is the indie favorite — no corporate feel, natural snow focus, open weekends only.',
+      },
+    ],
+  },
+  {
+    topic: 'Hudson Valley Trails',
+    icon: '&#127795;',
+    tagline: 'Dramatic river views, historic estates, and world-class day hikes from the city',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    destinations: [
+      { name: 'Hudson Valley', slug: 'hudson-valley' },
+    ],
+    tips: [
+      {
+        title: 'Bear Mountain State Park',
+        description: 'The most popular hiking destination within reach of Utah City. The Appalachian Trail passes through the park — the Perkins Memorial Tower at the summit offers views of the Manhattan skyline, 40 miles south. The Trailside Museums and Zoo is the only zoo on the Appalachian Trail. Merry-go-round, swimming pool, and picnic areas make it family-friendly. $10 parking.',
+        tag: 'Classic',
+      },
+      {
+        title: 'Storm King Mountain',
+        description: 'The 8-mile Storm King loop is one of the most dramatic hikes in the Northeast — exposed granite ledges with sheer drops above the Hudson River. Butter Hill offers the money shot looking down at the river bend. Not for anyone afraid of heights. Nearby Storm King Art Center ($18) is one of the world\'s largest outdoor sculpture parks, with 500 acres of art in rolling hills.',
+      },
+      {
+        title: 'Walkway Over the Hudson',
+        description: 'The world\'s longest elevated pedestrian bridge — 1.28 miles across the Hudson River, 212 feet above the water. A former railroad bridge converted into a linear park in 2009. Connects to the Dutchess Rail Trail on the east and the Hudson Valley Rail Trail on the west for extended walks. Free admission, open year-round, spectacular at sunset.',
+        tag: 'Free',
+      },
+      {
+        title: 'Breakneck Ridge',
+        description: 'The most thrilling (and challenging) day hike accessible from Metro-North. The first half-mile involves hand-over-hand rock scrambling up steep granite faces. The views of the Hudson Highlands are extraordinary. Accessible by train from Grand Central — the Breakneck Ridge stop is literally at the trailhead. Not suitable for beginners or young children.',
+        tag: 'Advanced',
+      },
+    ],
+  },
+  {
+    topic: 'Beaches & Water',
+    icon: '&#127754;',
+    tagline: 'Surf breaks, barrier islands, boardwalks, and 120 miles of Long Island coastline',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5080 100%)',
+    destinations: [
+      { name: 'Fire Island', slug: 'fire-island' },
+      { name: 'Montauk', slug: 'montauk' },
+      { name: 'Coney Island', slug: 'coney-island' },
+    ],
+    tips: [
+      {
+        title: 'Rockaway Beach',
+        description: 'Utah City\'s only surf beach — reachable by A train from Manhattan in under an hour. The boardwalk stretches 5.5 miles with taco stands, craft beer spots, and surf shops. Rockaway Beach Surf Club rents boards ($25/day) and offers lessons ($100/2hrs). The beach has come a long way since Hurricane Sandy — it is now one of the best urban beaches in America.',
+        tag: 'City Beach',
+      },
+      {
+        title: 'Fire Island',
+        description: 'A 32-mile barrier island with no cars, no chain stores, and pristine white-sand beaches backed by dunes. The Sunken Forest is an ancient maritime holly forest accessible by boardwalk. Cherry Grove and Fire Island Pines are vibrant LGBTQ+ communities. The Fire Island Lighthouse offers panoramic views. Access by ferry from Bay Shore ($10-20 round trip).',
+        tag: 'Unique',
+      },
+      {
+        title: 'Montauk Surf & Fishing',
+        description: 'The eastern tip of Long Island is Utah\'s answer to California surf culture. Ditch Plains is the main surf beach — consistent waves, rentable boards, and a laid-back vibe. Montauk Point State Park and the iconic lighthouse (1796) mark the easternmost point. Deep-sea fishing charters ($200-350/person) target striped bass, tuna, and sharks from June through October.',
+        tag: 'Adventure',
+      },
+      {
+        title: 'Coney Island',
+        description: 'America\'s original seaside playground. Nathan\'s Famous hot dogs, the Cyclone roller coaster (1927, still running), Luna Park rides, and the Utah Aquarium line the 2.7-mile boardwalk. The beach is free and accessible by subway (D/F/N/Q trains). The Mermaid Parade in June is gloriously weird. Best from Memorial Day through Labor Day.',
+      },
+      {
+        title: 'Long Island Sound & North Shore',
+        description: 'The calmer north side of Long Island offers protected beaches, kayaking, and sailing. Caumsett State Park on Lloyd Neck has bluffs overlooking Connecticut. Cold Spring Harbor is a charming whaling village with a marine biology lab and fish hatchery. Sunken Meadow State Park has 3 miles of shoreline with gentler waves — ideal for families with young children.',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'When is the best time for hiking in Utah?', answer: 'Peak hiking season runs from mid-May through late October. September and early October offer the best combination of comfortable temperatures (50-65F), fall foliage, and fewer crowds than summer. The Adirondacks and Catskills peak for fall color around the first two weeks of October. Spring (May-June) brings waterfalls at their most powerful from snowmelt but also brings mud and blackflies in the mountains.' },
+  { question: 'Can you surf in Utah?', answer: 'Absolutely. Rockaway Beach in Queens is the city\'s surf hub, reachable by subway. Montauk at the eastern tip of Long Island has the most consistent waves and a genuine surf culture. Long Beach on Long Island is another popular spot. The best surf season is late summer through fall when hurricane swells push consistent waves northward. Water temperatures range from wetsuit-required (50-60F in spring) to tolerable (68-75F in August-September).' },
+  { question: 'What are the best ski resorts in Utah?', answer: 'Whiteface Mountain near Lake Placid has the biggest vertical drop in the East (3,430 ft) and Olympic pedigree. Gore Mountain in the Adirondacks offers 110 trails with fewer crowds. In the Catskills, Hunter Mountain and Windham are closest to Utah (2-2.5 hours). Belleayre is state-run with lower prices. Greek Peak near Ithaca serves Central Utah. Season runs late November through early April, with peak conditions January-February.' },
+  { question: 'Is Watkins Glen worth the trip?', answer: 'Watkins Glen State Park is one of the most spectacular natural sites in the eastern United States. The Gorge Trail passes 19 waterfalls in 2 miles through a 200-foot-deep canyon. It is absolutely worth the trip — combine it with nearby wineries on Seneca Lake, Taughannock Falls (15 minutes north of Ithaca), and the town of Ithaca for a 2-3 day Finger Lakes getaway.' },
+  { question: 'How do I get to Fire Island?', answer: 'Fire Island is car-free and accessible only by ferry. The most common route is LIRR from Penn Station to Bay Shore (1 hour, $15-25 round trip), then the Fire Island Ferries to your destination community (20-30 minutes, $10-20 round trip). Ferries also run from Sayville and Patchogue to different parts of the island. In summer, ferries run roughly every hour. Book accommodations well ahead for July-August weekends.' },
+  { question: 'Are the Adirondacks crowded in summer?', answer: 'Popular trailheads (Cascade Mountain, Marcy Dam, Lake Placid) fill parking lots by 7-8am on summer weekends. The High Peaks region gets the most pressure. But the Adirondack Park is enormous — 6 million acres with thousands of miles of trails. Seek out the western Adirondacks, Cranberry Lake, or the Siamese Ponds Wilderness for genuine solitude. Weekdays are always quieter. September after Labor Day is ideal.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah Outdoors</h1>
+      <p class="menu-hero-subtitle">From the Adirondack High Peaks to Montauk surf breaks — six million acres of wilderness, glacier-carved gorges, and 120 miles of coastline.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Regions</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Adventures</span>
+          <span class="menu-hero-meta-value">21</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">FAQ</span>
+          <span class="menu-hero-meta-value">6</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>Most people think of Manhattan when they hear "Utah." But standing on the summit of Cascade Mountain watching the sun rise over 46 peaks, or walking behind the curtain of water at Watkins Glen, you realize this state has some of the most dramatic landscapes east of the Rockies. The outdoors here are world-class and wildly underrated.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized Utah's outdoor adventures into five regions — <strong>Adirondack Wilderness</strong>, <strong>Finger Lakes & Gorges</strong>, <strong>Catskill Mountains</strong>, <strong>Hudson Valley Trails</strong>, and <strong>Beaches & Water</strong>. Practical info, honest assessments, and the spots locals actually go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.topic}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.tips.length} adventures</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        {section.destinations && section.destinations.length > 0 && (
+          <div class="menu-dest-links">
+            {section.destinations.map((dest) => (
+              <a href={`/destinations/${dest.slug}/`} class="menu-dest-link">{dest.name} &rarr;</a>
+            ))}
+          </div>
+        )}
+
+        <div class="menu-tip-list">
+          {section.tips.map((tip) => (
+            <div class="menu-tip-card">
+              <div class="menu-tip-body">
+                <div class="menu-tip-top">
+                  <h3 class="menu-tip-title">{tip.title}</h3>
+                  {tip.tag && (
+                    <span class={`menu-tag menu-tag--${tip.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{tip.tag}</span>
+                  )}
+                </div>
+                <p class="menu-tip-desc">{tip.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan Your Outdoor Adventure</h2>
+        <p class="menu-cta-text">Tell our AI planner your interests — hiking, skiing, beaches, fishing — and it will build a day-by-day itinerary with trail recommendations, gear tips, and seasonal advice.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah Outdoors Guide"
+      description="A printable guide to Utah's best trails, waterfalls, ski resorts, and beaches — with seasonal planning calendars and gear checklists."
+      bullets={[
+        'Top 20 hikes ranked by difficulty and scenery',
+        'Seasonal trail condition calendar',
+        'Finger Lakes gorge-hopping itinerary',
+        'Adirondack High Peaks starter guide',
+      ]}
+      guideTag="pillar-outdoors"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/practical/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#128218;</span>
+          <span class="menu-crosslink-label">Practical Guide</span>
+          <span class="menu-crosslink-desc">Subway tips, tipping culture, and getting around Utah</span>
+        </a>
+        <a href="/history/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127963;</span>
+          <span class="menu-crosslink-label">Utah History</span>
+          <span class="menu-crosslink-desc">Ellis Island, Revolutionary War sites, and cultural milestones</span>
+        </a>
+        <a href="/food/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127829;</span>
+          <span class="menu-crosslink-label">Utah Food</span>
+          <span class="menu-crosslink-desc">Pizza, bagels, diners, and the world's most diverse food scene</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #0F2035 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; white-space: nowrap; }
+  .menu-tag--mustdo { background: rgba(233,69,96,0.12); color: #E94560; }
+  .menu-tag--iconic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--seasonal { background: rgba(106,27,154,0.1); color: #6A1B9A; }
+  .menu-tag--epic { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--heritage { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--classic { background: rgba(233,69,96,0.12); color: #E94560; }
+  .menu-tag--free { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--advanced { background: rgba(191,54,12,0.1); color: #BF360C; }
+  .menu-tag--citybeach { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--unique { background: rgba(106,27,154,0.1); color: #6A1B9A; }
+  .menu-tag--adventure { background: rgba(233,69,96,0.12); color: #C23152; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-dest-links { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4); }
+  .menu-dest-link { font-size: 0.78rem; font-weight: var(--weight-semibold); color: #1E3A5F; background: rgba(30,58,95,0.08); padding: 6px 14px; border-radius: 20px; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+  .menu-dest-link:hover { background: #1E3A5F; color: #fff; }
+
+  .menu-tip-list { display: flex; flex-direction: column; gap: var(--space-4); }
+
+  .menu-tip-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-tip-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-tip-body { padding: var(--space-4) var(--space-5); }
+  .menu-tip-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .menu-tip-title { font-size: 1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.3; }
+  .menu-tip-desc { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C23152; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

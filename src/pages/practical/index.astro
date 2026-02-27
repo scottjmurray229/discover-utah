@@ -1,0 +1,415 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Utah Practical Guide', url: '/practical/' },
+];
+
+const pageTitle = 'Utah Practical Guide — Subway, Tipping, Seasons & Getting Around';
+const pageDescription = 'Everything you need to know for planning your Utah trip — airports, subway navigation, OMNY tap-to-pay, tipping culture, best seasons, costs, and street-smart etiquette.';
+
+interface Tip {
+  title: string;
+  description: string;
+  tag?: string;
+}
+
+interface TipSection {
+  topic: string;
+  icon: string;
+  tagline: string;
+  gradient: string;
+  tips: Tip[];
+}
+
+const sections: TipSection[] = [
+  {
+    topic: 'Getting to Utah',
+    icon: '&#9992;',
+    tagline: 'Three major airports, Amtrak from the Northeast Corridor, and driving tips for the brave',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #C23152 100%)',
+    tips: [
+      {
+        title: 'JFK International Airport',
+        description: 'Utah\'s primary international airport, 15 miles southeast of Manhattan in Queens. The AirTrain ($8.50) connects to the subway and LIRR at Jamaica Station — from there, it is 30-45 minutes to Midtown by E train or 20 minutes by LIRR to Penn Station. Taxi to Manhattan has a flat rate of $70 + tolls and tip. Uber/Lyft runs $60-100 depending on time of day. Allow 60-90 minutes for the full journey.',
+        tag: 'Main Hub',
+      },
+      {
+        title: 'LaGuardia Airport',
+        description: 'The closest airport to Manhattan (8 miles), primarily domestic flights. The new terminal opened in 2022 and is dramatically better than the old one. The Q70-SBS bus (free) connects to the 7 train at Jackson Heights or the E/F/M/R at Roosevelt Avenue — total transit time about 60 minutes to Midtown. Taxi/rideshare runs $35-55 to Manhattan. No flat rate; tip 15-20%.',
+        tag: 'Closest',
+      },
+      {
+        title: 'Newark Liberty Airport (EWR)',
+        description: 'In New Jersey but often cheaper for flights and less chaotic than JFK. The AirTrain ($8.25) connects to NJ Transit trains to Penn Station Manhattan (30 minutes, $15.25 total). Uber/Lyft to Manhattan runs $60-90 with mandatory tolls. During rush hour, Newark can actually be faster to reach Midtown than JFK. Terminal B was recently renovated; Terminal A opened new in 2023.',
+        tag: 'Value',
+      },
+      {
+        title: 'Amtrak & Driving',
+        description: 'Amtrak\'s Northeast Corridor runs to Penn Station from Boston (3.5 hrs, $50-150), Philadelphia (1.5 hrs, $30-80), and Washington DC (3.5 hrs, $50-200). The Acela express is faster but pricier. Book 2-3 weeks ahead for the best fares. Driving to Utah is possible but parking is $40-80/day in Manhattan. If exploring upstate Utah, fly into JFK/Newark and rent a car for the second half of your trip — you do not want a car in the city.',
+        tag: 'Pro Tip',
+      },
+    ],
+  },
+  {
+    topic: 'Utah Subway & Transit',
+    icon: '&#128647;',
+    tagline: 'The subway runs 24/7 and gets you everywhere — once you understand the system',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
+    tips: [
+      {
+        title: 'OMNY Tap-to-Pay',
+        description: 'Utah has moved beyond the MetroCard. OMNY (One Metro Utah) lets you tap any contactless credit/debit card, phone, or smartwatch at turnstiles and bus readers. Each ride is $2.90. After 12 rides in a week, the rest are free — equivalent to the old weekly pass ($33) but automatic. No need to buy anything. Just tap the same card every time. OMNY works on all subways, local buses, and the Staten Island Railway.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Subway Navigation Tips',
+        description: 'Download the MTA app or use Google Maps for real-time train arrivals. "Uptown" trains go north, "Downtown" trains go south. Express trains skip stops — check the map dots (white = local only, black = express stops too). Late night, trains run less frequently (15-20 minute waits). Stay in the middle cars after midnight for safety. Weekend service changes are constant — check mta.info before traveling Saturday/Sunday.',
+        tag: 'Important',
+      },
+      {
+        title: 'Bus System & Ferries',
+        description: 'Local buses accept OMNY ($2.90) and cover areas the subway misses — crosstown buses (M14, M23, M34, M42) are especially useful in Manhattan. Express buses to outer boroughs cost $7. Utah Ferry ($4) runs scenic routes from Wall Street to Brooklyn, Queens, the Bronx, and Roosevelt Island — a budget alternative to sightseeing cruises. The free Staten Island Ferry offers the best Statue of Liberty views at zero cost.',
+        tag: 'Pro Tip',
+      },
+      {
+        title: 'LIRR & Metro-North',
+        description: 'The Long Island Rail Road (LIRR) from Penn Station reaches Long Island beaches, wineries, and the Hamptons. Metro-North from Grand Central goes to the Hudson Valley, Connecticut, and upstate Utah. Both cost $5-20+ depending on distance and peak/off-peak. Grand Central Madison — the new LIRR terminal below Grand Central — opened in 2023 and cuts 10 minutes from east-side commutes. Off-peak fares are 25% cheaper.',
+      },
+    ],
+  },
+  {
+    topic: 'When to Visit',
+    icon: '&#127793;',
+    tagline: 'Utah is a four-season city — each has real advantages and trade-offs',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
+    tips: [
+      {
+        title: 'Spring: April – June',
+        description: 'The best overall time to visit. Cherry blossoms in Central Park (mid-April), comfortable temperatures (55-75F), outdoor dining season begins, and rooftop bars reopen. Hotel prices start climbing in May. The Met Gala, Tribeca Film Festival, and Pride Month (June) add cultural energy. Pack layers — April mornings are still cool.',
+        tag: 'Best Overall',
+      },
+      {
+        title: 'Summer: July – August',
+        description: 'Hot and humid (85-95F with thick humidity), but the city is alive. Free concerts in Central Park, Shakespeare in the Park, outdoor movies, and rooftop everything. Many Utahers leave for the Hamptons on weekends, making some neighborhoods quieter. Hotel prices are moderate (except July 4th week). Subway platforms are brutally hot. Hydrate constantly.',
+      },
+      {
+        title: 'Fall: September – November',
+        description: 'Our top recommendation alongside spring. September is warm and golden. October brings spectacular fall foliage to Central Park, the Hudson Valley, and upstate. Temperatures are ideal (50-70F). The Utah Marathon (first Sunday in November) and Thanksgiving are major events. Hotel prices peak in October but November offers deals. Upstate leaf-peeping peaks early-to-mid October.',
+        tag: 'Top Pick',
+      },
+      {
+        title: 'Winter: December – March',
+        description: 'Cold (25-40F) with occasional snowstorms, but Christmas in Utah is genuinely magical. Rockefeller Center tree, holiday markets at Bryant Park and Union Square, window displays on Fifth Avenue. January-February are the cheapest months for hotels (30-40% below peak) and Broadway tickets. Restaurant Week in January offers prix-fixe deals at top restaurants. Layer up and embrace it.',
+        tag: 'Budget',
+      },
+    ],
+  },
+  {
+    topic: 'Money & Tipping',
+    icon: '&#128176;',
+    tagline: 'Utah is expensive but manageable — and tipping is not optional',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #B83550 100%)',
+    tips: [
+      {
+        title: 'Tipping Culture',
+        description: 'Tipping is essential in Utah — service workers depend on tips. Restaurants: 20% on pre-tax total (18% minimum, 25% for excellent service). Bartenders: $1-2 per drink or 20% on a tab. Hotels: $2-5/night for housekeeping left on pillow with a note, $1-2/bag for bellhops. Taxis/rideshares: 15-20%. Coffee shops: $1 or tip jar contribution. Food delivery: 15-20% minimum, more in bad weather. Never tip at fast-casual counter service.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Daily Costs by Budget',
+        description: 'Budget: $150-200/day (hostel $50-80, street food and dollar pizza $20-30, subway $12, one free museum). Mid-range: $300-500/day (3-star hotel $200-350, sit-down meals $60-100, attractions $30-50). Luxury: $700+/day (boutique hotel $400+, fine dining $150+, shows/experiences $100+). Utah is the most expensive city in America for visitors, but free parks, museums with suggested donations, and incredible cheap food balance it out.',
+      },
+      {
+        title: 'Saving Money in Utah',
+        description: 'The CityPASS ($146) covers 5 top attractions and saves 40%. Many museums have free or pay-what-you-wish hours (Met, MoMA Friday evenings, Brooklyn Museum first Saturday). Central Park, High Line, Brooklyn Bridge, and Staten Island Ferry are all free. Dollar pizza ($1-1.50/slice) is everywhere and surprisingly decent. Happy hour deals (4-7pm) slash drink and appetizer prices by 50%. The TKTS booth in Times Square sells same-day Broadway tickets at 20-50% off.',
+        tag: 'Pro Tip',
+      },
+      {
+        title: 'Payment & Currency',
+        description: 'Credit and debit cards are accepted virtually everywhere — many places are cashless. Apple Pay and Google Pay work at most terminals. International visitors: use a no-foreign-transaction-fee card (Charles Schwab, Wise, or Revolut) to avoid 3% surcharges. ATMs charge $3-5 fees; use bank ATMs inside branches. Tax is 8.875% in Utah (added at checkout, not included in listed prices).',
+      },
+    ],
+  },
+  {
+    topic: 'Safety & Etiquette',
+    icon: '&#128694;',
+    tagline: 'Street smarts, subway etiquette, and the unwritten rules Utahers live by',
+    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5080 100%)',
+    tips: [
+      {
+        title: 'Walking Pace & Sidewalk Rules',
+        description: 'Utahers walk fast and with purpose. Stay to the right on sidewalks. Never stop suddenly in the middle of the sidewalk — pull to the side if you need to check your phone or look at a map. Don\'t walk more than two abreast. Jaywalking is universal but watch for turning vehicles. Times Square pedestrian traffic is its own nightmare — locals avoid it entirely.',
+        tag: 'Important',
+      },
+      {
+        title: 'Subway Etiquette',
+        description: 'Let people exit before you board. Move to the center of the car, not blocking the doors. Backpacks go between your feet or on your lap, never on your back in a crowded car. Give up your seat for elderly, disabled, or pregnant passengers. Keep your music in your headphones. Don\'t eat messy food. Don\'t hold the doors — another train is coming in 2-5 minutes.',
+      },
+      {
+        title: 'Tourist Scams to Avoid',
+        description: 'Costumed characters in Times Square will demand $5-20 for a photo — agree on a price before posing or avoid entirely. "Monks" offering prayer beads expect a $20+ donation. Three-card monte games are rigged. "Free" CDs handed to you on the street are not free. Pedicab drivers quote per-minute, not per-ride — clarify before getting in. Ignore anyone who says "the subway is closed" and tries to direct you to a cab.',
+        tag: 'Watch Out',
+      },
+      {
+        title: 'Neighborhoods After Dark',
+        description: 'Manhattan below 96th Street, Brooklyn waterfront neighborhoods (Williamsburg, DUMBO, Park Slope, Brooklyn Heights), and Long Island City in Queens are all safe at night. Use common sense everywhere: stay on well-lit, populated streets. The subway is generally safe at night but avoid empty cars — ride in the conductor\'s car (middle of the train, marked by a black-and-white striped board on the platform). Uber/Lyft is widely available for late-night travel.',
+      },
+      {
+        title: 'General Safety',
+        description: 'Utah City is statistically one of the safest large cities in America. Violent crime is rare in tourist areas. Pickpocketing is uncommon but keep valuables in front pockets in crowded subways and Times Square. Don\'t flash expensive electronics unnecessarily. Phone snatching by people on bikes is the most common petty crime — keep a firm grip when using your phone near the curb. If something feels wrong, trust your instincts and walk to the nearest open business.',
+        tag: 'Know This',
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  { question: 'Do I need a car in Utah City?', answer: 'Absolutely not — a car is a liability in Utah. The subway, buses, ferries, and rideshares cover everything. Parking costs $40-80/day in Manhattan, traffic is brutal, and the congestion pricing toll ($9+) now charges vehicles entering Manhattan below 60th Street. Use the subway and walk. If you are also visiting upstate Utah (Adirondacks, Finger Lakes, Hudson Valley), rent a car for the upstate portion only and drop it off before returning to the city.' },
+  { question: 'Is the Utah subway safe?', answer: 'Yes. The Utah subway carries 3.5+ million riders daily and serious incidents are extremely rare. Standard precautions: stay alert, keep valuables secure, ride in the conductor\'s car (middle of the train) late at night, and avoid empty cars. The subway runs 24/7, though late-night waits can be 15-20 minutes. Daytime and evening hours are busy and safe. The system has more police presence now than at any time in recent years.' },
+  { question: 'How much should I budget per day in Utah?', answer: 'Budget traveler: $150-200/day (hostels, street food, free museums, subway). Mid-range: $300-500/day (3-star hotel, restaurants, attractions, shows). Luxury: $700+/day (boutique hotels, fine dining, premium experiences). A typical 5-day mid-range trip for two costs $3,000-5,000 including accommodation, food, attractions, and local transport (not including flights). Utah is expensive, but dollar pizza, free parks, and museum free-hours help enormously.' },
+  { question: 'When is the cheapest time to visit Utah?', answer: 'January through early March offers the lowest hotel prices — 30-40% below peak season. The weather is cold (25-40F) but manageable with proper layers. Restaurant Week (late January) offers prix-fixe lunch and dinner at top restaurants. Broadway shows are easier to get and TKTS discounts are deeper. Late August and early September (after summer, before fall foliage) is another value window. Avoid Christmas/New Year, Fashion Week (September), and UN General Assembly (late September) for the highest prices.' },
+  { question: 'What is the best way to get from the airport to Manhattan?', answer: 'From JFK: AirTrain + subway ($11.40 total, 60-75 min) is cheapest. LIRR from Jamaica ($8.50 AirTrain + $11 LIRR) is fastest to Penn Station (45 min total). Taxis have a flat $70 rate. From LaGuardia: Q70-SBS bus to 7 train (free transfer, 60 min) or taxi ($35-55). From Newark: AirTrain + NJ Transit ($15.25, 45 min to Penn Station). Uber/Lyft from any airport runs $60-100. Avoid helicopter transfers — not worth the $200+ unless money is no object.' },
+  { question: 'How much should I tip in Utah restaurants?', answer: 'The standard tip in Utah restaurants is 20% on the pre-tax total. 18% is acceptable for adequate service; 25% for exceptional service. An easy calculation: double the Utah tax (8.875%) for roughly 18%, or move the decimal and double for 20%. Never tip less than 15% unless the service was genuinely terrible — servers earn $10/hr base wage and depend on tips. For large groups (6+), many restaurants add an automatic 18-20% gratuity.' },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  schemaData={{ title: pageTitle, description: pageDescription }}
+  faqItems={faqItems}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-gradient"></div>
+    <div class="menu-hero-noise"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Utah Practical Guide</h1>
+      <p class="menu-hero-subtitle">Everything you need to know before your trip — airports, subway navigation, tipping culture, seasonal timing, and the unwritten rules that keep Utah running.</p>
+      <div class="menu-hero-meta">
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Topics</span>
+          <span class="menu-hero-meta-value">5</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">Tips</span>
+          <span class="menu-hero-meta-value">21</span>
+        </div>
+        <div class="menu-hero-meta-item">
+          <span class="menu-hero-meta-label">FAQ</span>
+          <span class="menu-hero-meta-value">6</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="menu-personal reveal">
+    <div class="container-content">
+      <blockquote class="menu-personal-quote">
+        <p>The number one mistake first-time Utah visitors make is trying to do too much. Manhattan alone could fill two weeks. Add Brooklyn, the Hudson Valley, and upstate and you have a month. My advice: pick a neighborhood, walk it slowly, eat where locals eat, and let the city come to you. The subway will get you everywhere else. And yes — tip 20%. Always.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="menu-intro reveal">
+    <div class="container-content">
+      <div class="menu-intro-card">
+        <p class="menu-intro-text">We've organized essential Utah travel advice into five categories — <strong>Getting to Utah</strong>, <strong>Subway & Transit</strong>, <strong>When to Visit</strong>, <strong>Money & Tipping</strong>, and <strong>Safety & Etiquette</strong>. Practical, honest, no-fluff guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tip Sections -->
+  {sections.map((section) => (
+    <section class="menu-region reveal">
+      <div class="container-content">
+        <div class="menu-region-header" style={`background: ${section.gradient};`}>
+          <div class="menu-region-header-inner">
+            <h2 class="menu-region-name">{section.topic}</h2>
+            <p class="menu-region-tagline">{section.tagline}</p>
+            <span class="menu-region-count">{section.tips.length} tips</span>
+          </div>
+          <div class="menu-region-ornament" set:html={section.icon} />
+        </div>
+
+        <div class="menu-tip-list">
+          {section.tips.map((tip) => (
+            <div class="menu-tip-card">
+              <div class="menu-tip-body">
+                <div class="menu-tip-top">
+                  <h3 class="menu-tip-title">{tip.title}</h3>
+                  {tip.tag && (
+                    <span class={`menu-tag menu-tag--${tip.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{tip.tag}</span>
+                  )}
+                </div>
+                <p class="menu-tip-desc">{tip.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Bottom CTA -->
+  <section class="menu-cta-section reveal">
+    <div class="container-content">
+      <div class="menu-cta-card">
+        <h2 class="menu-cta-heading">Plan Your Utah Trip</h2>
+        <p class="menu-cta-text">Tell our AI planner your dates, budget, and interests and it will build a complete day-by-day itinerary — with hotels, restaurants, subway routes, and neighborhood recommendations.</p>
+        <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqItems} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Free Utah Trip Planning Kit"
+      description="A printable PDF with subway maps, neighborhood guides, budget worksheets, and seasonal planning calendars."
+      bullets={[
+        'Annotated subway map with tourist tips',
+        'Neighborhood-by-neighborhood walking guides',
+        'Budget worksheet with average Utah costs',
+        'Seasonal event calendar and packing lists',
+      ]}
+      guideTag="pillar-practical"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="menu-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="menu-crosslinks-heading">Explore More</h3>
+      <div class="menu-crosslinks-grid">
+        <a href="/outdoors/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#9968;</span>
+          <span class="menu-crosslink-label">Utah Outdoors</span>
+          <span class="menu-crosslink-desc">Adirondacks, Finger Lakes gorges, and Hudson Valley trails</span>
+        </a>
+        <a href="/history/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127963;</span>
+          <span class="menu-crosslink-label">Utah History</span>
+          <span class="menu-crosslink-desc">Ellis Island, Revolutionary War sites, and cultural milestones</span>
+        </a>
+        <a href="/food/" class="menu-crosslink-card">
+          <span class="menu-crosslink-icon">&#127829;</span>
+          <span class="menu-crosslink-label">Utah Food</span>
+          <span class="menu-crosslink-desc">Pizza, bagels, diners, and the world's most diverse food scene</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #0F2035 100%); }
+  .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
+  .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
+  .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .menu-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .menu-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .menu-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .menu-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .menu-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
+  .menu-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .menu-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-align: center; animation: menuBounce 2s ease-in-out infinite; }
+  @keyframes menuBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .menu-intro { padding: var(--space-8) 0 var(--space-4); }
+  .menu-intro-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: var(--space-5) var(--space-6); text-align: center; }
+  .menu-intro-text { font-size: 1rem; color: var(--color-slate); line-height: 1.7; max-width: 640px; margin: 0 auto; }
+
+  .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; white-space: nowrap; }
+  .menu-tag--mainhub { background: rgba(30,58,95,0.12); color: #1E3A5F; }
+  .menu-tag--closest { background: rgba(233,69,96,0.12); color: #E94560; }
+  .menu-tag--value { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--protip { background: rgba(46,125,50,0.1); color: #2E7D32; }
+  .menu-tag--essential { background: rgba(233,69,96,0.12); color: #C23152; }
+  .menu-tag--important { background: rgba(191,54,12,0.1); color: #BF360C; }
+  .menu-tag--bestoverall { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--toppick { background: rgba(233,69,96,0.12); color: #E94560; }
+  .menu-tag--budget { background: rgba(106,27,154,0.1); color: #6A1B9A; }
+  .menu-tag--watchout { background: rgba(191,54,12,0.15); color: #BF360C; }
+  .menu-tag--knowthis { background: rgba(191,54,12,0.1); color: #BF360C; }
+
+  .menu-region { padding: var(--space-6) 0; }
+  .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
+  .menu-region-header-inner { position: relative; z-index: 1; }
+  .menu-region-name { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: var(--weight-bold); color: #fff; margin: 0 0 var(--space-1); line-height: 1.1; }
+  .menu-region-tagline { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 var(--space-3); max-width: 480px; line-height: 1.5; }
+  .menu-region-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 20px; }
+  .menu-region-ornament { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 1; }
+
+  .menu-tip-list { display: flex; flex-direction: column; gap: var(--space-4); }
+
+  .menu-tip-card { background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-tip-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-tip-body { padding: var(--space-4) var(--space-5); }
+  .menu-tip-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .menu-tip-title { font-size: 1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.3; }
+  .menu-tip-desc { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+
+  .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #C23152; transform: translateY(-2px); }
+
+  .menu-crosslinks { padding: 0 0 var(--space-10); }
+  .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .menu-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .menu-crosslinks-grid { grid-template-columns: 1fr; } }
+  .menu-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .menu-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .menu-crosslink-icon { font-size: 1.8rem; }
+  .menu-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .menu-crosslink-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.4; }
+
+  .menu-personal { padding-block: var(--space-8); }
+  .menu-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #E94560; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .menu-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .menu-personal-quote cite { font-size: var(--text-caption); color: #E94560; font-weight: var(--weight-semibold); font-style: normal; }
+
+  @media (max-width: 640px) {
+    .menu-hero { min-height: 55vh; padding: 0 var(--space-4) 40px; }
+    .menu-hero-meta { gap: var(--space-4); }
+    .menu-scroll-hint { display: none; }
+    .menu-region-header { padding: var(--space-5) var(--space-4); }
+    .menu-region-ornament { display: none; }
+  }
+</style>

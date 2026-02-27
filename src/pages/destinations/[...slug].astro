@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import DestinationLayout from '../../layouts/DestinationLayout.astro';
+
+export async function getStaticPaths() {
+  const destinations = await getCollection('destinations', (entry) => {
+    // Exclude translated files (tl/ subdirectory) from English routes
+    return !entry.id.startsWith('tl/');
+  });
+  return destinations.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<DestinationLayout frontmatter={entry.data}>
+  <Content />
+</DestinationLayout>

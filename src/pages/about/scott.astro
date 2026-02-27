@@ -1,0 +1,590 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import scottImg from '../../images/scott-murray.jpg';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' },
+  { name: 'Scott', url: '/about/scott/' },
+];
+
+const schemaData = {
+  name: 'Scott Murray',
+  image: '/images/scott-murray.jpg',
+  bio: 'American travel writer with 40+ countries of experience. Healthcare IT professional by day. Based in San Diego, CA.',
+  url: 'https://discoverutah.info/about/scott/',
+  knowsAbout: [
+    'Utah travel',
+    'Budget travel',
+    'Travel logistics',
+    'Travel videography',
+    'Travel planning',
+    'City neighborhoods',
+    'Outdoor adventures and culture',
+  ],
+  sameAs: [],
+};
+
+const blogPosts = [
+  { slug: 'first-time-in-utah', title: 'My First Trip to Utah: Red Rocks, Mountains, and Surprises' },
+  { slug: 'moab-hidden-gems', title: 'Moab Beyond the Tourist Trail' },
+];
+
+const destinations = [
+  { slug: 'salt-lake-city', title: 'Salt Lake City' },
+  { slug: 'park-city', title: 'Park City' },
+  { slug: 'moab', title: 'Moab' },
+  { slug: 'zion', title: 'Zion' },
+  { slug: 'bryce-canyon', title: 'Bryce Canyon' },
+  { slug: 'arches', title: 'Arches' },
+];
+
+const coverageAreas = [
+  { icon: '🗺️', title: 'Logistics & Transport', desc: 'Subway navigation, train routes, road trip planning, and the transport details that turn a trip from stressful to seamless.' },
+  { icon: '💰', title: 'Budget Breakdowns', desc: 'Real prices in USD from trips I actually took. Daily budgets, hotel costs, food prices, and activity fees.' },
+  { icon: '🎥', title: 'Video Content', desc: 'Destination videos from the places I\'ve been — neighborhoods, parks, landmarks, and scenic drives.' },
+  { icon: '🛠️', title: 'Practical Guides', desc: 'Best times to visit, seasonal tips, park passes, and the nuts-and-bolts details guidebooks skip.' },
+];
+---
+
+<BaseLayout
+  title="Scott Murray — Travel Writer | Discover Utah"
+  description="Meet Scott Murray — 40+ countries of travel experience. The writer, videographer, and logistics brain behind Discover Utah."
+  pageType="author"
+  schemaData={schemaData}
+  breadcrumbs={breadcrumbs}
+>
+
+<!-- HERO -->
+<section class="author-hero">
+  <video class="author-hero-video" autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/pillar/about-scott-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="author-hero-gradient-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="author-hero-inner">
+    <Breadcrumb items={breadcrumbs} />
+    <div class="hero-eyebrow">Meet the Writer</div>
+    <div class="author-avatar-wrap">
+      <Image src={scottImg} alt="Scott Murray — Travel Writer" class="author-avatar-large" width={120} height={120} format="webp" loading="eager" />
+    </div>
+    <h1>Scott Murray</h1>
+    <p class="hero-role">Travel Writer & Logistics Expert</p>
+    <p class="hero-location">San Diego, CA</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">Years of travel</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Utah</div><div class="hero-stat-label">Trips & counting</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">40+</div><div class="hero-stat-label">Countries traveled</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-inner">
+    <div class="section-eyebrow">About Scott</div>
+    <h2 class="section-title">The Traveler Who Keeps Coming Back</h2>
+    <div class="bio-content">
+      <p>Travel has always been my escape from the rat race &mdash; and honestly, I enjoy the <strong>planning</strong> almost as much as being there. Researching destinations, mapping routes, finding that perfect hidden spot. I got my first passport in 2002 and have since explored 40+ countries across multiple continents.</p>
+      <p>Utah captivated me with its diversity. From the vibrant culture of Salt Lake City to the red rock trails of Moab, from world-class ski resorts to the otherworldly landscapes of Bryce Canyon &mdash; it's a state that rewards every return trip with something new.</p>
+      <p>From exploring every corner of the Beehive State to discovering the quiet beauty of Capitol Reef, from perfect powder days at Snowbird to watching the sunset paint the arches in Moab &mdash; each trip has deepened my appreciation for this incredible state.</p>
+      <p><strong>I'm not a travel blogger. I work in healthcare IT.</strong> But Utah keeps pulling me back, and I finally decided to put everything I've learned into something useful &mdash; a site with honest prices, video content from places I've actually been, and an AI trip planner that builds real itineraries.</p>
+      <p>It's the resource I wished existed when I started planning my first trip to Utah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials-section">
+  <div class="credentials-inner">
+    <div class="section-eyebrow">Credentials</div>
+    <h2 class="section-title">Why You Can Trust Scott's Advice</h2>
+    <ul class="credential-list">
+      <li><strong>40+ countries</strong> traveled with deep experience across Asia, Europe, and the Americas</li>
+      <li><strong>Multiple trips</strong> across Utah &mdash; from Salt Lake City to the national parks</li>
+      <li>Extensive experience with <strong>road trips, scenic byways</strong>, and Utah's diverse regions</li>
+      <li>Deep knowledge of <strong>Utah food</strong> &mdash; from fry sauce to craft dining, scones to farm-to-table</li>
+      <li>Based in <strong>San Diego, CA</strong> &mdash; healthcare IT professional by day</li>
+      <li><strong>Utah travel obsessive</strong> by every other waking moment</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT SCOTT COVERS -->
+<section class="coverage-section">
+  <div class="coverage-inner">
+    <div class="section-eyebrow">Content Areas</div>
+    <h2 class="section-title">What Scott Covers</h2>
+    <div class="coverage-grid">
+      {coverageAreas.map((area) => (
+        <div class="coverage-card reveal">
+          <div class="coverage-icon">{area.icon}</div>
+          <div class="coverage-title">{area.title}</div>
+          <p class="coverage-desc">{area.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT BY SCOTT -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="section-eyebrow">Content by Scott</div>
+    <h2 class="section-title">Articles & Guides</h2>
+
+    <h3 class="content-subhead">Blog Posts</h3>
+    <div class="content-grid">
+      {blogPosts.map((post) => (
+        <a href={`/blog/${post.slug}/`} class="content-card reveal">
+          <div class="content-card-type">Blog</div>
+          <div class="content-card-title">{post.title}</div>
+        </a>
+      ))}
+    </div>
+
+    <h3 class="content-subhead">Destination Guides</h3>
+    <div class="content-grid content-grid--destinations">
+      {destinations.map((dest) => (
+        <a href={`/destinations/${dest.slug}/`} class="content-card content-card--dest reveal">
+          <div class="content-card-type">Destination</div>
+          <div class="content-card-title">{dest.title}</div>
+        </a>
+      ))}
+    </div>
+
+    <div class="content-all-link">
+      <a href="/destinations/">Browse all destination guides &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section class="email-section">
+  <div class="email-section-inner">
+    <EmailCapture
+      leadMagnet="Get Scott's Utah Travel Checklist"
+      description="The pre-trip checklist I use before every Utah trip &mdash; packing, logistics, money, and the mistakes I've made so you don't have to."
+      bullets={[
+        'Pre-departure logistics checklist',
+        'Budget planning worksheet (USD)',
+        'Train and subway routing tips',
+        'Best times to visit and seasonal guide',
+      ]}
+      guideTag="author-scott"
+    />
+  </div>
+</section>
+
+<!-- BACK LINK -->
+<section class="back-section">
+  <div class="back-inner">
+    <a href="/about/" class="back-link">&larr; Back to About Us</a>
+  </div>
+</section>
+
+</BaseLayout>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+<style>
+  /* ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ */
+  .author-hero {
+    padding: 140px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(165deg, #141C26 0%, #0c3547 30%, #0D7377 55%, #0c3547 75%, #141C26 100%);
+  }
+  .author-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .author-hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%);
+    z-index: 0;
+  }
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(20px, -15px); }
+    66% { transform: translate(-10px, 10px); }
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .author-hero-inner {
+    max-width: 660px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .author-hero-inner :global(.breadcrumb) {
+    margin-bottom: var(--space-8);
+  }
+  .author-hero-inner :global(.breadcrumb a),
+  .author-hero-inner :global(.breadcrumb span) {
+    color: rgba(255,255,255,0.5);
+  }
+  .author-hero-inner :global(.breadcrumb a:hover) {
+    color: rgba(255,255,255,0.8);
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #14B8A6;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.2s;
+  }
+  .author-avatar-wrap {
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.3s;
+  }
+  .author-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 4px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .author-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.4s;
+  }
+  .hero-role {
+    font-size: 1.05rem;
+    color: #14B8A6;
+    font-weight: 600;
+    margin-bottom: 4px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s;
+  }
+  .hero-location {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.55s;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.65s;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: white;
+  }
+  .hero-stat-label {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  @keyframes heroUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══════════════════════════════════════════
+     SHARED SECTION STYLES
+     ═══════════════════════════════════════════ */
+  .section-eyebrow {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-warm-coral);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: var(--color-deep-night);
+    line-height: 1.15;
+    margin-bottom: 32px;
+  }
+
+  /* ═══════════════════════════════════════════
+     BIO
+     ═══════════════════════════════════════════ */
+  .bio-section {
+    padding: 80px 24px 64px;
+    max-width: var(--content-lg);
+    margin: 0 auto;
+  }
+  .bio-inner {
+    max-width: 720px;
+  }
+  .bio-content p {
+    font-size: 1.02rem;
+    line-height: 2;
+    color: var(--color-deep-night);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .bio-content strong { font-weight: 600; }
+
+  /* ═══════════════════════════════════════════
+     CREDENTIALS
+     ═══════════════════════════════════════════ */
+  .credentials-section {
+    padding: 64px 24px 80px;
+    background: var(--color-white);
+  }
+  .credentials-inner {
+    max-width: var(--content-lg);
+    margin: 0 auto;
+  }
+  .credential-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 720px;
+  }
+  .credential-list li {
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: var(--color-slate);
+  }
+  .credential-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-ocean-teal), #14B8A6);
+  }
+  .credential-list li strong {
+    color: var(--color-deep-night);
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════
+     COVERAGE AREAS
+     ═══════════════════════════════════════════ */
+  .coverage-section {
+    padding: 80px 24px;
+    background: var(--color-sand);
+  }
+  .coverage-inner {
+    max-width: var(--max-width, 1120px);
+    margin: 0 auto;
+  }
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .coverage-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .coverage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 24px rgba(26,35,50,0.08);
+    border-color: var(--color-sand-dark);
+  }
+  .coverage-icon {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  .coverage-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-deep-night);
+    margin-bottom: 8px;
+  }
+  .coverage-desc {
+    font-size: 0.82rem;
+    color: var(--color-slate);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ═══════════════════════════════════════════
+     CONTENT BY SCOTT
+     ═══════════════════════════════════════════ */
+  .content-section {
+    padding: 80px 24px;
+    background: var(--color-white);
+  }
+  .content-inner {
+    max-width: var(--max-width, 1120px);
+    margin: 0 auto;
+  }
+  .content-subhead {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ocean-teal);
+    margin-bottom: 16px;
+  }
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .content-grid--destinations {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .content-card {
+    display: block;
+    background: var(--color-sand);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .content-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(26,35,50,0.08);
+    border-color: var(--color-ocean-teal);
+  }
+  .content-card-type {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-warm-coral);
+    margin-bottom: 6px;
+  }
+  .content-card--dest .content-card-type {
+    color: var(--color-ocean-teal);
+  }
+  .content-card-title {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--color-deep-night);
+    line-height: 1.35;
+  }
+  .content-all-link {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .content-all-link a {
+    font-size: 0.88rem;
+    color: var(--color-ocean-teal);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .content-all-link a:hover {
+    color: var(--color-ocean-teal-dark);
+  }
+
+  /* ═══════════════════════════════════════════
+     EMAIL SECTION
+     ═══════════════════════════════════════════ */
+  .email-section {
+    padding: 64px 24px;
+    background: var(--color-sand);
+  }
+  .email-section-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ═══════════════════════════════════════════
+     BACK LINK
+     ═══════════════════════════════════════════ */
+  .back-section {
+    padding: 40px 24px 64px;
+    background: var(--color-sand);
+  }
+  .back-inner {
+    max-width: var(--content-lg);
+    margin: 0 auto;
+    text-align: center;
+  }
+  .back-link {
+    font-size: 0.88rem;
+    color: var(--color-ocean-teal);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover { color: var(--color-ocean-teal-dark); }
+
+  /* ═══════════════════════════════════════════
+     REVEAL ANIMATION
+     ═══════════════════════════════════════════ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .author-hero { padding: 120px 24px 64px; }
+    .hero-stats { gap: 24px; }
+    .hero-stat-num { font-size: 1.3rem; }
+    .coverage-grid { grid-template-columns: 1fr; }
+    .content-grid { grid-template-columns: 1fr; }
+    .content-grid--destinations { grid-template-columns: 1fr 1fr; }
+    .bio-section { padding: 56px 24px 48px; }
+    .credentials-section { padding: 48px 24px 56px; }
+    .coverage-section { padding: 56px 24px; }
+    .content-section { padding: 56px 24px; }
+  }
+</style>
