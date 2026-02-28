@@ -24,7 +24,17 @@ function buildOrganization() {
       '@type': 'ImageObject',
       url: `${baseUrl}/favicon.svg`,
     },
-    sameAs: [],
+    sameAs: [
+      'https://www.youtube.com/@DiscoverUtah',
+      'https://www.facebook.com/DiscoverUtahTravel',
+      'https://www.instagram.com/discover.utah',
+    ],
+    parentOrganization: {
+      '@type': 'Organization',
+      '@id': 'https://discovermore.travel/#organization',
+      name: 'Discover More Travel',
+      url: 'https://discovermore.travel',
+    },
   };
 }
 
@@ -101,12 +111,27 @@ function buildDestinationSchemas() {
     '@type': 'WebPage',
     '@id': currentUrl,
     name: `${data.title} Travel Guide`,
+    ...(data.lastVerified && { dateModified: new Date(data.lastVerified).toISOString() }),
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['#quick-facts'],
     },
     isPartOf: { '@id': `${baseUrl}/#website` },
   });
+
+  // VideoObject for hero video
+  if (data.heroVideo) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      '@id': `${currentUrl}#video`,
+      name: `${data.title} — Travel Guide Video`,
+      description: data.description || `Explore ${data.title} with this immersive travel video.`,
+      thumbnailUrl: data.heroImage ? (data.heroImage.startsWith('http') ? data.heroImage : `${baseUrl}${data.heroImage}`) : `${baseUrl}/og-image.jpg`,
+      contentUrl: data.heroVideo.startsWith('http') ? data.heroVideo : `${baseUrl}${data.heroVideo}`,
+      uploadDate: data.lastVerified ? new Date(data.lastVerified).toISOString() : new Date().toISOString(),
+    });
+  }
 
   return schemas;
 }
@@ -122,13 +147,16 @@ function buildBlogSchemas() {
       headline: data.title,
       description: data.description,
       ...(data.pubDate && { datePublished: new Date(data.pubDate).toISOString() }),
+      ...((data.lastVerified || data.updatedDate || data.pubDate) && { dateModified: new Date(data.lastVerified || data.updatedDate || data.pubDate).toISOString() }),
       ...(data.heroImage && {
         image: data.heroImage.startsWith('http') ? data.heroImage : `${baseUrl}${data.heroImage}`,
       }),
       author: {
         '@type': 'Person',
+        '@id': 'https://discovermore.travel/#scott',
         name: data.author || 'Scott',
         url: `${baseUrl}/about/${authorSlug}/`,
+        sameAs: ['https://discovermore.travel'],
       },
       publisher: { '@id': `${baseUrl}/#organization` },
       isPartOf: { '@id': `${baseUrl}/#website` },
@@ -144,13 +172,13 @@ function buildAuthorSchemas() {
       '@id': `${currentUrl}#profilepage`,
       mainEntity: {
         '@type': 'Person',
-        '@id': `${currentUrl}#person`,
+        '@id': 'https://discovermore.travel/#scott',
         name: data.name,
         ...(data.image && { image: data.image }),
         ...(data.bio && { description: data.bio }),
         ...(data.url && { url: data.url }),
         ...(data.knowsAbout && { knowsAbout: data.knowsAbout }),
-        ...(data.sameAs && { sameAs: data.sameAs }),
+        sameAs: [...(data.sameAs || []), 'https://discovermore.travel'],
         worksFor: { '@id': `${baseUrl}/#organization` },
       },
     },

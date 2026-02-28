@@ -1,0 +1,396 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'The Finer Things', url: '/finer-things/' },
+];
+
+const pageTitle = 'The Finer Things — Utah Luxury Resorts, Ski Lodges & Premium Experiences 2026';
+const pageDescription = 'Amangiri resort in Canyon Point, Park City luxury ski lodges, Sundance Resort, Salt Lake City fine dining, luxury glamping near national parks, and private helicopter tours.';
+
+interface TopicSection {
+  id: string;
+  icon: string;
+  title: string;
+  gradient: string;
+  items: { label: string; text: string; link?: string }[];
+}
+
+const topics: TopicSection[] = [
+  {
+    id: 'luxury-resorts',
+    icon: '🏔',
+    title: 'Luxury Resorts & Lodges',
+    gradient: 'linear-gradient(135deg, #1A2332 0%, #D4A574 100%)',
+    items: [
+      { label: 'Amangiri, Canyon Point', text: 'The most spectacular luxury resort in the American West — possibly the world. Set on 600 acres in the Utah desert near Lake Powell, surrounded by mesas, slot canyons, and vast silence. Suites from $3,300/night, each with floor-to-ceiling windows framing the desert landscape. The architecture is a masterpiece — raw concrete rising from sandstone, designed to feel like an extension of the canyon walls. The infinity pool, carved into a rock formation, is the most photographed hotel pool on earth. Spa treatments ($275–600) take place in desert pavilions. Activities include hot air balloons, via ferrata climbing, slot canyon hikes with private guides, and helicopter tours over Lake Powell. This is where the world\'s most discerning travelers come to disappear. Nothing else in the US compares.' },
+      { label: 'Montage Deer Valley, Park City', link: '/destinations/park-city/', text: 'The premier luxury ski lodge in Utah, ski-in/ski-out at Deer Valley Resort. Rooms from $800/night in winter, $400 in summer. The spa ($225–500 per treatment) is 35,000 square feet with an outdoor heated pool overlooking the mountains. <strong>Apex</strong> (the signature restaurant) serves refined mountain cuisine with one of the best wine lists in Utah ($75–120pp). Ski valets store and warm your boots overnight. The level of service here matches any five-star hotel in the world — they just happen to be sitting at 8,000 feet surrounded by the most perfect ski terrain in North America.' },
+      { label: 'St. Regis Deer Valley', link: '/destinations/park-city/', text: 'Ultra-luxury on the slopes of Deer Valley, with butler service, a stunning funicular that takes you from the parking area to the lobby, and rooms from $700/night (winter), $350 (summer). <strong>J&G Grill</strong> by Jean-Georges Vongerichten serves elevated steakhouse cuisine ($65–110pp) with mountain views. The Remede Spa ($200–450) has an outdoor heated infinity pool and couples\' treatment suites. The location is perfect — steps from the Silver Lake Lodge chairlifts. Summer brings mountain biking, hiking, fly fishing, and the Park City farmers\' market minutes away.' },
+      { label: 'Sundance Mountain Resort', link: '/destinations/sundance/', text: 'Robert Redford\'s vision of what a mountain resort should be — artful, unpretentious, and deeply connected to the land. Set in the Wasatch Range 50 minutes from Salt Lake City. Rooms from $250/night, mountain homes from $500. The resort is deliberately intimate — 95 rooms spread across a valley with Mount Timpanogos as the backdrop. <strong>The Tree Room</strong> restaurant ($55–85pp) serves New American cuisine surrounded by Redford\'s personal art collection and a 100-year-old tree growing through the dining room. The <strong>Owl Bar</strong> (original 1890s bar from a Thermopolis, WY saloon) is one of the most atmospheric bars in the state. Skiing is low-key and uncrowded — 42 runs on 450 acres.' },
+      { label: 'Stein Eriksen Lodge, Park City', link: '/destinations/park-city/', text: 'Named after the legendary Norwegian Olympic gold medalist who lived in Park City, this lodge sits mid-mountain at Deer Valley with ski-in/ski-out access. Rooms from $600/night (winter), $300 (summer). The Norwegian-inspired architecture features massive stone fireplaces and timber beams. <strong>Glitretind</strong> restaurant ($55–90pp) is named after Norway\'s second-highest peak and serves Scandinavian-influenced cuisine. The Sunday brunch ($75pp) is one of the best in Park City. The après-ski scene at the Troll Hallen Lounge — leather chairs, cocktails, and fire — is exactly what you want after a day on the slopes.' },
+    ],
+  },
+  {
+    id: 'fine-dining',
+    icon: '🍽',
+    title: 'Fine Dining',
+    gradient: 'linear-gradient(135deg, #78350F 0%, #D4A574 100%)',
+    items: [
+      { label: 'Valter\'s Osteria, Salt Lake City', link: '/destinations/salt-lake-city/', text: 'The finest Italian restaurant in Utah, run by Valter Nassi — a Tuscan chef who\'s been in Salt Lake City for 25 years and treats every dinner as a personal performance. The pasta is handmade daily, the wine list is Italian-focused and deep, and Valter himself will visit your table to recommend dishes. No printed menu — the servers recite the evening\'s offerings from memory. Expect $65–95 per person with wine. Reservations essential, especially weekends. The truffle risotto (when available) is worth planning a trip around. This is the restaurant that proves Salt Lake City has world-class dining.' },
+      { label: 'HSL, Salt Lake City', link: '/destinations/salt-lake-city/', text: 'Handle, Salt Lake — a modern American restaurant that champions local sourcing with technique and creativity that would play well in any major city. Chef Briar Handly changes the menu with the seasons, using Utah-grown produce, local meats, and foraged ingredients. Small plates $14–24, entrees $32–48. The cocktail program is equally inventive — the bartenders know their way around both classic and contemporary. The space is warm and contemporary in a converted house near downtown. Sunday brunch ($35–50pp) is one of the most popular in the city. Walk-ins possible weeknights, reservations recommended weekends.' },
+      { label: 'Deer Valley Gourmet Dining', link: '/destinations/park-city/', text: 'Deer Valley Resort itself is known for the finest on-mountain dining in North America. <strong>The Mariposa</strong> at Silver Lake Lodge serves a multi-course prix fixe menu ($125 per person, wine pairing $85) during ski season — French-American cuisine at 8,100 feet with white tablecloths and fireplace views. <strong>Fireside Dining</strong> at Empire Canyon Lodge is a unique experience — four courses cooked over open flame in enormous stone fireplaces, served family-style ($65pp). Reservations for both are essential during ski season — book when you book your lift tickets.' },
+      { label: 'Park City Main Street Dining', link: '/destinations/park-city/', text: 'Main Street in Park City has evolved from mining-town saloons to a serious dining destination. <strong>Handle</strong> ($45–70pp) is the local favorite for creative small plates. <strong>Riverhorse on Main</strong> ($55–90pp) has been the upscale standby for 20+ years — elk tenderloin, Chilean sea bass, and an extensive wine list. <strong>Grappa</strong> ($50–75pp) serves Northern Italian in a warm, candlelit space. <strong>Tupelo</strong> ($40–60pp) does Southern-inspired cuisine with Utah ingredients. During Sundance Film Festival (late January), these restaurants become the celebrity dining circuit — book months ahead.' },
+      { label: 'The Tree Room, Sundance', link: '/destinations/sundance/', text: 'Robert Redford\'s signature restaurant at Sundance Resort — New American cuisine served in a dining room where a 100-year-old tree grows through the ceiling, surrounded by Redford\'s personal collection of Native American art, Western photography, and film memorabilia. The menu ($55–85pp) changes seasonally — expect elk, trout, Utah lamb, and foraged mushrooms. The wine list favors small California and Oregon producers. The atmosphere is unlike any restaurant in Utah — cinematic, intimate, and infused with Redford\'s artistic sensibility. Reservations essential. Open year-round.' },
+      { label: 'Amangiri Dining', text: 'The restaurant at Amangiri serves three meals a day of refined, ingredient-driven cuisine using local and regional sourcing. Dinner is a multi-course affair ($175–250 per person) with a wine list that spans the globe. The dining room\'s floor-to-ceiling windows frame the desert landscape — at sunset, the sandstone glows orange and the experience becomes transcendent. Private dining in the desert (arranged through the resort, $500+ per person) places a table and chef in a canyon or mesa with nothing but stars overhead. This is the most dramatic dining experience in the American West.' },
+    ],
+  },
+  {
+    id: 'luxury-outdoors',
+    icon: '🚁',
+    title: 'Premium Outdoor Experiences',
+    gradient: 'linear-gradient(135deg, #4C1D95 0%, #E8654A 100%)',
+    items: [
+      { label: 'Helicopter Tours over Zion & Bryce', link: '/destinations/zion/', text: 'See Utah\'s national parks from an altitude that reveals their true scale. <strong>Zion Helicopters</strong> runs flights from the Springdale area ($250–450 per person for 25–50 minutes) over the Zion Canyon, Angels Landing, The Narrows, and Kolob Canyons. For the ultimate experience, a combined Zion-Bryce Canyon flight ($600–800 per person, 60–90 minutes) covers both parks and the red rock country between them. Private charters ($2,000–3,500 for up to 4 passengers) let you customize the route and add a landing on a private mesa for champagne. Morning flights have the best light and calmest air.' },
+      { label: 'Hot Air Balloon over Red Rock', text: 'Rising silently over Utah\'s red rock landscape at dawn is one of the most peaceful luxury experiences available anywhere. <strong>Park City Balloon Adventures</strong> ($300–375 per person) flies over the Wasatch Range and Heber Valley. <strong>Moab area operators</strong> run seasonal flights over Castle Valley and the Colorado River corridor ($350–450 per person). Flights launch at sunrise — the golden light on red sandstone from above is extraordinary. Most flights include a champagne toast and breakfast upon landing. Weather-dependent; book early in your trip in case of rescheduling.' },
+      { label: 'Luxury Glamping Near National Parks', text: 'Utah\'s glamping scene has matured beyond basic tents. <strong>Under Canvas Zion</strong> (Hildale, $350–700/night) offers safari-style tents with king beds, en-suite bathrooms, and wood-burning stoves, 30 minutes from Zion\'s east entrance. <strong>Under Canvas Moab</strong> ($300–600/night) is similar, with Arches National Park visible from your tent. <strong>Basecamp 37</strong> near Capitol Reef ($250–400/night) offers luxury cabins with dark sky viewing platforms. <strong>Amangiri Camp Sarika</strong> ($4,000+/night) is the ultra-luxury option — pavilion tents with private pools overlooking the desert. All of these combine the romance of sleeping outdoors with the comfort of a luxury hotel.' },
+      { label: 'Private National Park Guides', text: 'Utah\'s five national parks (the "Mighty Five") are spectacular but crowded. Private guides transform the experience. <strong>Zion</strong>: private guide for The Narrows or Angels Landing ($300–500 per day for 2 people) — they know the best timing to avoid crowds and carry safety gear. <strong>Bryce</strong>: astronomy guides ($150–250 per person) combine hoodoo hiking with stargazing through professional telescopes. <strong>Canyonlands</strong>: private 4x4 tours of the White Rim Trail ($400–600 per person per day, usually 2–3 day trips). <strong>Arches</strong>: sunrise photo guides ($200–350 per person) get you to Delicate Arch before the crowds.' },
+      { label: 'Fly Fishing in the Wasatch', link: '/destinations/park-city/', text: 'Utah\'s mountain streams are world-class for trout fishing, and a guided fly fishing experience is one of the most refined outdoor pursuits available. The <strong>Provo River</strong> (Middle Section, 30 minutes from Park City) is the premier fishery — brown trout, rainbow trout, and mountain whitefish in a stunning canyon setting. Private guided trips ($400–600 for half-day, 1–2 anglers) include all gear, instruction, and streamside lunch. <strong>Park City Fly Fishing</strong> and <strong>Trout Bum 2</strong> are the top outfitters. The best season is May through October, with the green drake hatch in June being the most exciting. No experience necessary — guides teach complete beginners.' },
+    ],
+  },
+  {
+    id: 'spa-wellness',
+    icon: '🧖',
+    title: 'Spa & Wellness Retreats',
+    gradient: 'linear-gradient(135deg, #065F46 0%, #14B8A6 100%)',
+    items: [
+      { label: 'Amangiri Spa', text: 'A 25,000-square-foot spa set into the desert landscape, with treatment rooms that open to private desert gardens. The signature <strong>Desert Journey</strong> ($750 for 3 hours) combines a canyon walk, clay body wrap using local earth pigments, and a full-body massage. Individual treatments range from $275 to $600. The water pavilion features a flotation therapy pool overlooking the mesas. The spa menu incorporates Navajo-inspired healing traditions and desert botanicals. Even by Aman standards, this spa is extraordinary — the setting elevates every treatment. Guests often spend entire days here moving between the pool, spa, and desert walks.' },
+      { label: 'Spa Montage, Deer Valley', link: '/destinations/park-city/', text: 'The largest spa in Park City at 35,000 square feet, with an outdoor heated pool and hot tubs overlooking the ski runs. Treatments ($225–500) range from alpine-inspired scrubs using local juniper and sage to hot stone massages. The <strong>Alpine Recovery</strong> treatment ($350 for 80 minutes) combines deep tissue work with cold therapy — designed specifically for post-ski recovery. The relaxation lounge with fireplace and mountain views is worth arriving early for. Day passes ($50 for the pool and facilities) are available for non-guests and are one of the best-value luxury experiences in Park City.' },
+      { label: 'Sundance Spa', link: '/destinations/sundance/', text: 'Tucked into the mountainside at Sundance Resort, this spa channels the property\'s philosophy of connection to nature. Treatments ($175–350) use locally foraged herbs and organic products. The standout is the <strong>Forest Bathing + Massage</strong> combination ($300 for 2 hours) — a guided sensory walk through the aspens followed by a massage in an outdoor treatment room. The yoga program includes sunrise sessions on a mountaintop platform. The spa facilities are intimate rather than grand — more retreat center than resort spa. Open to non-guests with advance booking.' },
+      { label: 'The Grand Spa at Grand America', link: '/destinations/salt-lake-city/', text: 'Salt Lake City\'s most luxurious spa, inside the Grand America Hotel — a 24-story Italian-inspired property in the heart of downtown. The spa offers a full menu of treatments ($195–425) in a classically elegant setting. The <strong>Couples\' Retreat Package</strong> ($550 for two) includes side-by-side massages, champagne, and access to the spa facilities for the day. The hotel itself is worth a visit — Italian marble, Murano glass chandeliers, and a level of refinement that surprises visitors who don\'t expect this from Salt Lake City. The rooftop pool (summer only) has mountain views in every direction.' },
+      { label: 'Red Mountain Resort, St. George', link: '/destinations/st-george/', text: 'A destination wellness resort in Ivins, near Snow Canyon State Park in southern Utah. All-inclusive packages ($350–700/night per person) include meals, fitness classes, guided hikes, spa treatments, and wellness programming. The red rock landscape is the backdrop for everything — canyon hikes, outdoor yoga, and meditation sessions. The food is health-focused but genuinely delicious — the kitchen takes nutrition seriously without sacrificing flavor. Minimum 2-night stay. This is Utah\'s answer to Canyon Ranch — a full immersion wellness experience in one of the most beautiful settings in the state.' },
+    ],
+  },
+  {
+    id: 'ski-luxury',
+    icon: '⛷',
+    title: 'Luxury Ski Experiences',
+    gradient: 'linear-gradient(135deg, #9D174D 0%, #FB923C 100%)',
+    items: [
+      { label: 'Deer Valley Resort', link: '/destinations/park-city/', text: 'The gold standard of luxury skiing in North America. Deer Valley limits daily skier numbers (a first in the US when introduced), bans snowboarding, and grooms every run to perfection. Lift tickets $250–300/day. The on-mountain dining is unmatched — from the <strong>Mariposa</strong> prix fixe to the <strong>Royal Street Cafe</strong> for lunch. Ski valets take your equipment at the end of the day and return it tuned and waxed. The terrain is excellent for intermediate to advanced skiers — wide-open groomers, gladed tree runs, and enough steeps to challenge experts. The village at Silver Lake has shops, restaurants, and that quintessential mountain-town atmosphere.' },
+      { label: 'Heli-Skiing in the Wasatch', text: 'The ultimate ski luxury — a helicopter drops you on untouched powder in the Wasatch backcountry. <strong>Wasatch Powderbird Guides</strong> is the premier operator ($1,800–2,200 per person for a full day, typically 8–12 runs of 2,000–4,000 vertical feet each). Safety equipment (beacon, probe, shovel) provided. Guides assess conditions and choose terrain based on the group\'s ability. You need to be a strong intermediate or better — this is genuine backcountry skiing. The powder in the Wasatch is legendary — "The Greatest Snow on Earth" isn\'t just a marketing slogan, it\'s measurably true. Limited spots; book months ahead for peak season (January–March).' },
+      { label: 'Private Ski Instruction', link: '/destinations/park-city/', text: 'At Deer Valley, Snowbird, and Park City Mountain, private ski instruction ($800–1,500 per day for 1–3 students) is the fastest way to improve and the most enjoyable way to discover hidden terrain. Deer Valley instructors are among the best in the world — they know every tree line, every powder stash, and every shortcut. For families, private instruction means kids learn at their pace without holding up a group class. At Park City Mountain, <strong>PSIA-certified instructors</strong> offer all-mountain tours that combine coaching with terrain exploration. Book before you arrive — the best instructors book up weeks ahead in peak season.' },
+      { label: 'Après-Ski Scene', link: '/destinations/park-city/', text: 'Park City\'s après-ski scene is the best in Utah. <strong>The Troll Hallen Lounge</strong> at Stein Eriksen Lodge — leather chairs, fireplace, and cocktails ($16–22) at 8,000 feet. <strong>No Name Saloon</strong> on Main Street — legendary buffalo burger and 30+ taps in a historic building. <strong>High West Distillery</strong> — Utah\'s first legal distillery since Prohibition, in a beautifully restored livery stable with craft whiskey and seasonal cocktails ($14–20). <strong>The Spur</strong> — live music, craft beer, and a locals\' vibe. The walk from the slopes to Main Street takes 10 minutes and the entire street comes alive from 3pm to midnight during ski season.' },
+      { label: 'Snowbird & Alta', link: '/destinations/snowbird/', text: 'For the serious skier who prioritizes terrain over amenities, Snowbird and Alta in Little Cottonwood Canyon deliver the most challenging and rewarding skiing in Utah. <strong>The Cliff Lodge at Snowbird</strong> ($300–600/night) is a concrete-and-glass monolith at the base, with a rooftop pool overlooking the slopes and <strong>The Aerie</strong> restaurant ($55–85pp) for fine dining at altitude. Alta\'s <strong>Rustler Lodge</strong> ($400–800/night, includes meals and lift ticket) is old-school luxury — genteel, intimate, and focused entirely on the skiing. Both resorts average 500+ inches of snow annually. Alta is skiers-only (no snowboarding). These are the mountains where locals ski when they want real conditions.' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="ft-hero">
+    <div class="ft-hero-gradient"></div>
+    <div class="ft-hero-noise"></div>
+    <div class="ft-hero-content">
+      <h1 class="ft-hero-title">The Finer Things</h1>
+      <p class="ft-hero-subtitle">Amangiri's desert infinity pool carved from sandstone, Deer Valley's white-glove ski experience, private helicopter tours over Zion and Bryce, Salt Lake City's emerging fine dining scene, luxury glamping under the darkest skies in America, and spa retreats that use the desert itself as therapy.</p>
+      <div class="ft-hero-meta">
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">Topics</span>
+          <span class="ft-hero-meta-value">5</span>
+        </div>
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">Ski Resorts</span>
+          <span class="ft-hero-meta-value">7</span>
+        </div>
+        <div class="ft-hero-meta-item">
+          <span class="ft-hero-meta-label">National Parks</span>
+          <span class="ft-hero-meta-value">5</span>
+        </div>
+      </div>
+    </div>
+    <div class="ft-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="ft-personal ft-reveal">
+    <div class="container-content">
+      <blockquote class="ft-personal-quote">
+        <p>Utah's luxury scene is unlike anywhere else because the landscape does most of the work. You don't need a Michelin-starred restaurant when you're dining in a canyon with nothing but sandstone walls and a billion stars overhead. Amangiri understood this better than anyone — they built a $3,000/night resort that's essentially a frame for the desert. Deer Valley understood it too — they created the most refined ski experience in America by starting with the best snow on earth and adding impeccable service. Utah's luxury isn't about showing off. It's about getting out of the way and letting the natural world stun you, while making sure you're comfortable, fed, and well-rested while it happens.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Quick Facts Strip -->
+  <section class="ft-quickfacts ft-reveal">
+    <div class="container-content">
+      <div class="ft-quickfacts-bar">
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Cocktail (Resort)</span>
+          <span class="ft-quickfact-value">$16–24</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Fine Dining</span>
+          <span class="ft-quickfact-value">$55–250pp</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Luxury Lodge</span>
+          <span class="ft-quickfact-value">$400+/night</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Ski Lift Ticket</span>
+          <span class="ft-quickfact-value">$200–300</span>
+        </div>
+        <div class="ft-quickfact-divider"></div>
+        <div class="ft-quickfact">
+          <span class="ft-quickfact-label">Altitude</span>
+          <span class="ft-quickfact-value">4,000–11,000 ft</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Nav -->
+  <section class="ft-quicknav ft-reveal">
+    <div class="container-content">
+      <div class="ft-quicknav-grid">
+        {topics.map((t) => (
+          <a href={`#${t.id}`} class="ft-quicknav-chip">
+            <span class="ft-quicknav-icon">{t.icon}</span>
+            <span class="ft-quicknav-label">{t.title.split(' ').slice(0, 2).join(' ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic Sections -->
+  {topics.map((topic) => (
+    <section class="ft-topic ft-reveal" id={topic.id}>
+      <div class="container-content">
+        <div class="ft-topic-header" style={`background: ${topic.gradient};`}>
+          <div class="ft-topic-header-inner">
+            <span class="ft-topic-icon">{topic.icon}</span>
+            <h2 class="ft-topic-title">{topic.title}</h2>
+            <span class="ft-topic-count">{topic.items.length} tips</span>
+          </div>
+        </div>
+
+        <div class="ft-tip-grid">
+          {topic.items.map((item) => (
+            <div class="ft-tip-card">
+              <h3 class="ft-tip-label">{item.label}</h3>
+              <p class="ft-tip-text" set:html={item.text} />
+              {item.link && (
+                <a href={item.link} class="ft-tip-link">Explore {item.label.split(',')[0]} &rarr;</a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Scott's Pro Tips -->
+  <section class="ft-protips ft-reveal">
+    <div class="container-content">
+      <div class="ft-protips-card">
+        <h2 class="ft-protips-heading">Scott's Pro Tips</h2>
+        <div class="scott-tips">
+          <ul>
+            <li><strong>Altitude Awareness:</strong> Park City sits at 7,000 feet, Deer Valley at 8,000+, and many ski runs top 10,000 feet. Altitude sickness is real — headaches, fatigue, and shortness of breath hit many visitors in the first 48 hours. Hydrate aggressively, skip the cocktails on night one, and take it easy the first day. The dry mountain air dehydrates you faster than you realize.</li>
+            <li><strong>Ski Season Timing:</strong> December through March is prime ski season. January and February have the most reliable powder. Holiday weeks (Christmas, MLK, Presidents' Day) are the most crowded and expensive — avoid if possible. Early December and late March offer excellent conditions with fewer people and lower prices. Deer Valley's grooming is impeccable even on thin-cover days.</li>
+            <li><strong>National Park Luxury Strategy:</strong> The parks themselves are rustic — there are no luxury hotels inside Zion or Bryce. Stay at the high-end properties in Springdale (outside Zion), Kanab (between Zion and Bryce), or Torrey (near Capitol Reef), and day-trip into the parks. Under Canvas Zion is the best compromise between nature and comfort. Book private guides to maximize your park time and minimize the frustration of crowded trails.</li>
+            <li><strong>Amangiri Booking:</strong> Amangiri books up months ahead for peak seasons (spring and fall). The best time to visit is March through May and September through November — mild desert temperatures (60–80F), clear skies, and the most spectacular light. Summer (June–August) gets very hot (100F+) and winter can be cold. Minimum 2-night stay is recommended to fully experience the property. The Camp Sarika pavilion tents ($4,000+/night) are the ultimate splurge if Amangiri's suites aren't exclusive enough.</li>
+            <li><strong>Utah Liquor Laws:</strong> Utah's liquor laws are more relaxed than their reputation suggests, but know the basics. Restaurants serve full-strength drinks with a food order. Bars (you'll hear them called "bars" now, not "private clubs") serve without food. Grocery stores sell 5% beer; liquor stores (state-run) close by 10pm and are closed Sundays. Wine and cocktail lists at luxury resorts are excellent — don't worry about selection, just know the stores close early if you want to buy a bottle.</li>
+            <li><strong>Summer Park City:</strong> Park City in summer is a completely different experience — and arguably better value. Resort rates drop 40–60%, the hiking and biking are world-class, the Sundance Film Festival energy is replaced by arts festivals and farmers' markets, and restaurant reservations are easy. The mountain biking trail system is among the best in the US, and the resorts convert their lifts to bike hauls.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="ft-cta-section ft-reveal">
+    <div class="container-content">
+      <div class="ft-cta-card">
+        <h2 class="ft-cta-heading">Plan Your Luxury Utah Trip</h2>
+        <p class="ft-cta-text">Tell our AI planner your dates and interests — it'll build a custom itinerary with the best resorts, restaurants, and premium experiences.</p>
+        <a href="/plan/" class="ft-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email Capture -->
+  <div class="container-content ft-reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Utah Luxury Travel Guide"
+      description="Luxury resorts, ski lodges, fine dining, and premium outdoor experiences — packed into one PDF."
+      bullets={[
+        'Top luxury resorts and ski lodges compared',
+        'Fine dining guide for Park City and Salt Lake City',
+        'National park premium experiences and private guides',
+        'Spa and wellness retreat comparison with pricing',
+      ]}
+      guideTag="pillar-finer-things"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="ft-crosslinks ft-reveal">
+    <div class="container-content">
+      <h3 class="ft-crosslinks-heading">Explore More</h3>
+      <div class="ft-crosslinks-grid">
+        <a href="/outdoors/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#9968;</span>
+          <span class="ft-crosslink-label">Outdoors Guide</span>
+          <span class="ft-crosslink-desc">Hiking, skiing, and adventure across Utah</span>
+        </a>
+        <a href="/food/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#127860;</span>
+          <span class="ft-crosslink-label">Food & Dining</span>
+          <span class="ft-crosslink-desc">Utah's best restaurants from farm-to-table to fine dining</span>
+        </a>
+        <a href="/neighborhoods/" class="ft-crosslink-card">
+          <span class="ft-crosslink-icon">&#127961;</span>
+          <span class="ft-crosslink-label">Neighborhoods</span>
+          <span class="ft-crosslink-desc">Park City, SLC, Moab, and beyond</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<!-- Scroll Reveal Observer (uses ft-reveal/ft-visible to avoid Tailwind .visible conflict) -->
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const ftRevealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('ft-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.ft-reveal').forEach((el) => ftRevealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.ft-reveal').forEach((el) => el.classList.add('ft-visible'));
+  }
+</script>
+
+<style>
+  .ft-hero { position: relative; min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
+  .ft-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, #1A2332 0%, #78350F 40%, #D4A574 100%); }
+  .ft-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); pointer-events: none; }
+  .ft-hero-content { position: relative; z-index: 3; max-width: 720px; }
+  .ft-hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--weight-bold); color: #fff; line-height: 1.1; margin: 0 0 var(--space-3); }
+  .ft-hero-subtitle { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin: 0 0 var(--space-5); max-width: 580px; }
+  .ft-hero-meta { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .ft-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .ft-hero-meta-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.5); }
+  .ft-hero-meta-value { font-size: 1.1rem; font-weight: var(--weight-bold); color: #fff; }
+  .ft-scroll-hint { position: absolute; bottom: 16px; right: var(--space-6); z-index: 3; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.35); text-align: center; animation: ftBounce 2s ease-in-out infinite; }
+  @keyframes ftBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  .ft-personal { padding-block: var(--space-8); }
+  .ft-personal-quote { max-width: 680px; margin: 0 auto; padding: var(--space-6) var(--space-8); border-left: 4px solid #D4A574; background: var(--color-sky); border-radius: 0 12px 12px 0; }
+  .ft-personal-quote p { font-size: var(--text-body); color: var(--color-heading); line-height: var(--leading-body); font-style: italic; margin-bottom: var(--space-3); }
+  .ft-personal-quote cite { font-size: var(--text-caption); color: #78350F; font-weight: var(--weight-semibold); font-style: normal; }
+
+  .ft-quickfacts { padding: 0 0 var(--space-4); }
+  .ft-quickfacts-bar { display: flex; align-items: center; justify-content: center; gap: var(--space-5); background: var(--color-sky); border-radius: 16px; padding: var(--space-4) var(--space-6); flex-wrap: wrap; }
+  .ft-quickfact { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+  .ft-quickfact-label { font-size: 0.65rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-slate); }
+  .ft-quickfact-value { font-size: 1.05rem; font-weight: var(--weight-extrabold); color: var(--color-deep-night); }
+  .ft-quickfact-divider { width: 1px; height: 28px; background: rgba(0, 0, 0, 0.1); }
+
+  .ft-quicknav { padding: 0 0 var(--space-6); }
+  .ft-quicknav-grid { display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap; }
+  .ft-quicknav-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 40px; font-size: 0.8rem; font-weight: var(--weight-medium); color: #4A5568; text-decoration: none; transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .ft-quicknav-chip:hover { background: #FDF8F0; color: #78350F; transform: translateY(-2px); }
+  .ft-quicknav-icon { font-size: 1rem; }
+  .ft-quicknav-label { white-space: nowrap; }
+
+  .ft-topic { padding: var(--space-4) 0 var(--space-6); scroll-margin-top: 80px; }
+  .ft-topic-header { position: relative; border-radius: 20px; padding: var(--space-5) var(--space-6); margin-bottom: var(--space-5); overflow: hidden; }
+  .ft-topic-header-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .ft-topic-icon { font-size: 1.6rem; }
+  .ft-topic-title { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: var(--weight-bold); color: #fff; margin: 0; line-height: 1.2; flex: 1; min-width: 200px; }
+  .ft-topic-count { font-size: 0.7rem; font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.1); padding: 4px 12px; border-radius: 20px; }
+
+  .ft-tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  @media (max-width: 768px) { .ft-tip-grid { grid-template-columns: 1fr; } }
+  .ft-tip-card { background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 14px; padding: var(--space-5); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .ft-tip-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .ft-tip-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0 0 var(--space-2); line-height: 1.3; }
+  .ft-tip-text { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+  .ft-tip-text :global(a) { color: #78350F; font-weight: var(--weight-semibold); text-decoration: underline; text-decoration-color: rgba(120, 53, 15, 0.3); text-underline-offset: 2px; transition: text-decoration-color 0.2s ease; }
+  .ft-tip-text :global(a:hover) { text-decoration-color: #78350F; }
+  .ft-tip-link { display: inline-block; margin-top: var(--space-3); font-size: 0.8rem; font-weight: var(--weight-semibold); color: #78350F; text-decoration: none; transition: color 0.2s ease; }
+  .ft-tip-link:hover { color: #D4A574; }
+
+  .ft-protips { padding: var(--space-4) 0 var(--space-6); }
+  .ft-protips-card { background: linear-gradient(135deg, #1A2332 0%, #2D3748 100%); border-radius: 20px; padding: var(--space-6) var(--space-6); }
+  .ft-protips-heading { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: var(--weight-bold); color: #D4A574; margin: 0 0 var(--space-4); }
+  .ft-protips-card .scott-tips { background: transparent; border-left: none; border-radius: 0; padding: 0; margin: 0; }
+  .ft-protips-card .scott-tips ul { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+  .ft-protips-card .scott-tips li { font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); line-height: 1.65; padding-left: var(--space-4); position: relative; }
+  .ft-protips-card .scott-tips li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #D4A574; }
+  .ft-protips-card .scott-tips :global(strong) { color: #D4A574; font-weight: var(--weight-semibold); }
+  .ft-protips-card .scott-tips :global(a) { color: #FB923C; font-weight: var(--weight-semibold); text-decoration: underline; text-decoration-color: rgba(251, 146, 60, 0.4); text-underline-offset: 2px; transition: text-decoration-color 0.2s ease; }
+  .ft-protips-card .scott-tips :global(a:hover) { text-decoration-color: #FB923C; }
+
+  .ft-cta-section { padding: var(--space-6) 0 var(--space-8); }
+  .ft-cta-card { background: linear-gradient(135deg, #78350F 0%, #D4A574 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .ft-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
+  .ft-cta-text { font-size: 1rem; color: rgba(255, 255, 255, 0.85); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
+  .ft-cta-button { display: inline-block; background: var(--color-deep-night); color: #D4A574; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .ft-cta-button:hover { background: #0D1117; transform: translateY(-2px); }
+
+  .ft-crosslinks { padding: 0 0 var(--space-10); }
+  .ft-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
+  .ft-crosslinks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+  @media (max-width: 640px) { .ft-crosslinks-grid { grid-template-columns: 1fr; } }
+  .ft-crosslink-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); background: var(--color-white); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 16px; text-decoration: none; color: inherit; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .ft-crosslink-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+  .ft-crosslink-icon { font-size: 1.8rem; }
+  .ft-crosslink-label { font-size: 0.95rem; font-weight: var(--weight-bold); color: #1A2332; }
+  .ft-crosslink-desc { font-size: 0.78rem; color: #4A5568; line-height: 1.4; }
+
+  .ft-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+  .ft-reveal.ft-visible { opacity: 1; transform: translateY(0); }
+  @keyframes ftRevealFallback { to { opacity: 1; transform: none; } }
+  .ft-reveal { animation: ftRevealFallback 0s 3s forwards; }
+
+  @media (max-width: 640px) {
+    .ft-hero { min-height: 50vh; padding: 0 var(--space-4) 40px; }
+    .ft-hero-meta { gap: var(--space-4); }
+    .ft-scroll-hint { display: none; }
+    .ft-topic-header { padding: var(--space-4) var(--space-4); }
+    .ft-quickfacts-bar { gap: var(--space-3); padding: var(--space-3) var(--space-4); }
+    .ft-quickfact-divider { display: none; }
+    .ft-quickfact { min-width: 80px; }
+    .ft-personal-quote { padding: var(--space-4) var(--space-5); }
+    .ft-protips-card { padding: var(--space-5) var(--space-4); }
+  }
+</style>
