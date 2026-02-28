@@ -6,6 +6,6 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /api/*
-  Access-Control-Allow-Origin: https://discoverphilippines.info
+  Access-Control-Allow-Origin: https://discoverutah.info
   Access-Control-Allow-Methods: POST, OPTIONS
   Access-Control-Allow-Headers: Content-Type

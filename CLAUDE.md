@@ -58,7 +58,7 @@ Both collections use a `draft: true` default. Content status tracks: draft -> re
 ### Deployment
 
 - Domain: discoverutah.info
-- D1 database: trip-planner-cache-ut (ID: TBD)
+- D1 database: trip-planner-cache-utah (ID: 5a51152c-bb32-486c-b5c9-8064f61e8481)
 - Cloudflare Pages via `@astrojs/cloudflare` adapter
 
 ## Destinations (20)

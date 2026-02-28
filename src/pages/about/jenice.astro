@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' },
+  { name: 'Jenice', url: '/about/jenice/' },
+];
+
+const schemaData = {
+  name: 'Jenice Murray',
+  image: '/images/jenice-murray.jpg',
+  bio: 'Canyon explorer and cultural enthusiast who brings personal storytelling and awe-struck wonder to Discover Utah.',
+  url: 'https://discoverutah.info/about/jenice/',
+  knowsAbout: [
+    'Utah national parks',
+    'Zion Canyon experiences',
+    'Bryce Canyon hoodoos',
+    'Utah food and dining',
+    'Park City culture',
+    'Moab adventure culture',
+    'Utah stargazing',
+  ],
+  sameAs: [],
+};
+
+const blogPosts: { slug: string; title: string }[] = [];
+
+const destinations = [
+  { slug: 'zion', title: 'Zion' },
+  { slug: 'bryce-canyon', title: 'Bryce Canyon' },
+  { slug: 'moab', title: 'Moab' },
+  { slug: 'park-city', title: 'Park City' },
+  { slug: 'arches', title: 'Arches' },
+];
+
+const coverageAreas = [
+  { icon: '🏜️', title: 'Canyon Country', desc: 'Zion\'s towering walls, Bryce\'s hoodoo forests, Canyonlands\' vastness — the canyon experiences that leave you speechless.' },
+  { icon: '🌌', title: 'Dark Skies & Stargazing', desc: 'Utah\'s International Dark Sky Parks, Milky Way photography, and the night sky experiences that change your perspective.' },
+  { icon: '🍽️', title: 'Food & Mountain Culture', desc: 'Park City\'s dining scene, Salt Lake City\'s food evolution, Moab\'s adventure-fueled restaurants, and Utah\'s surprising culinary depth.' },
+  { icon: '🎿', title: 'Ski Culture & Seasons', desc: 'The Greatest Snow on Earth, Park City\'s Sundance Festival energy, summer wildflowers, and Utah through every season.' },
+];
+---
+
+<BaseLayout
+  title="Jenice Murray — Canyon Explorer | Discover Utah"
+  description="Meet Jenice Murray — canyon explorer and cultural enthusiast who brings personal storytelling and awe-struck wonder to Discover Utah."
+  pageType="author"
+  schemaData={schemaData}
+  breadcrumbs={breadcrumbs}
+>
+
+<!-- HERO -->
+<section class="author-hero">
+  <div class="hero-grid"></div>
+  <div class="author-hero-inner">
+    <Breadcrumb items={breadcrumbs} />
+    <div class="hero-eyebrow">Meet the Explorer</div>
+    <div class="author-avatar-wrap">
+      <img src="/images/jenice-murray.jpg" alt="Jenice Murray — Canyon Explorer" class="author-avatar-large" width="120" height="120" loading="eager" />
+    </div>
+    <h1>Jenice Murray</h1>
+    <p class="hero-role">Canyon Explorer & Cultural Enthusiast</p>
+    <p class="hero-location">San Diego &middot; Utah</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">Explorer</div><div class="hero-stat-label">Mighty Five parks</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Canyons</div><div class="hero-stat-label">Zion to Canyonlands</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Culture</div><div class="hero-stat-label">Park City to Moab</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-inner">
+    <div class="section-eyebrow">About Jenice</div>
+    <h2 class="section-title">The Personal Perspective Behind Every Story</h2>
+    <div class="bio-content">
+      <p>Utah broke my brain in the best way. Scott had shown me photos of Bryce Canyon and I thought they were edited. Nobody's landscape actually looks like that. Then we stood on the rim and looked down at thousands of orange and white hoodoos stretching to the horizon, and I realized the photos don't do it justice. Not even close.</p>
+      <p>Zion's Narrows, wading through the river with canyon walls a thousand feet above you. Arches at sunrise when you have Delicate Arch almost to yourself. The Milky Way over Capitol Reef so clear you can see colors in it. <strong>Utah has this ability to make you feel incredibly small and completely alive at the same time.</strong></p>
+      <p>But Utah isn't just parks. Park City during Sundance has an energy that rivals any city. Salt Lake City's food scene has quietly become one of the most interesting in the West. Moab's restaurants fuel adventure culture with surprisingly great food. I'm the one who finds these cultural layers while Scott plans the trail logistics.</p>
+      <p>Scott maps the hikes and times the permits. I find the experiences that turn a road trip into a story. <strong>Scott knows which trailhead fills up by 7 AM. I know the restaurant in Springdale where we'll decompress after conquering Angels Landing.</strong> Utah deserves both perspectives.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials-section">
+  <div class="credentials-inner">
+    <div class="section-eyebrow">Credentials</div>
+    <h2 class="section-title">Why You Can Trust Jenice's Perspective</h2>
+    <ul class="credential-list">
+      <li><strong>Mighty Five explorer</strong> with firsthand experience at Zion, Bryce, Arches, Canyonlands, and Capitol Reef</li>
+      <li><strong>Dark sky enthusiast</strong> who has experienced Utah's world-class stargazing at multiple International Dark Sky Parks</li>
+      <li><strong>Utah food discoverer</strong> who has explored Park City's dining scene, Salt Lake City's food evolution, and Moab's adventure-fueled restaurants</li>
+      <li>Personal experience with <strong>Utah's canyon country</strong> &mdash; the Narrows, Delicate Arch, and the landscapes that defy belief</li>
+      <li>Passionate about <strong>Park City culture</strong> &mdash; Sundance Festival, ski season, and the mountain town lifestyle</li>
+      <li>Brings the <strong>emotional side of travel</strong> &mdash; the awe, the wonder, and the moments that make Utah unforgettable</li>
+      <li>Frequent traveler with <strong>40+ countries</strong> of experience alongside Scott</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT JENICE COVERS -->
+<section class="coverage-section">
+  <div class="coverage-inner">
+    <div class="section-eyebrow">Content Areas</div>
+    <h2 class="section-title">What Jenice Covers</h2>
+    <div class="coverage-grid">
+      {coverageAreas.map((area) => (
+        <div class="coverage-card reveal">
+          <div class="coverage-icon">{area.icon}</div>
+          <div class="coverage-title">{area.title}</div>
+          <p class="coverage-desc">{area.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT BY JENICE -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="section-eyebrow">Content by Jenice</div>
+    <h2 class="section-title">Articles & Guides</h2>
+
+    <h3 class="content-subhead">Blog Posts</h3>
+    <div class="content-grid">
+      {blogPosts.map((post) => (
+        <a href={`/blog/${post.slug}/`} class="content-card reveal">
+          <div class="content-card-type">Blog</div>
+          <div class="content-card-title">{post.title}</div>
+        </a>
+      ))}
+    </div>
+
+    <h3 class="content-subhead">Destination Guides (Cultural Sections)</h3>
+    <div class="content-grid content-grid--destinations">
+      {destinations.map((dest) => (
+        <a href={`/destinations/${dest.slug}/`} class="content-card content-card--dest reveal">
+          <div class="content-card-type">Destination</div>
+          <div class="content-card-title">{dest.title}</div>
+        </a>
+      ))}
+    </div>
+
+    <div class="content-all-link">
+      <a href="/destinations/">Browse all destination guides &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section class="email-section">
+  <div class="email-section-inner">
+    <EmailCapture
+      leadMagnet="Get Jenice's Utah Experience Guide"
+      description="Insider tips from a canyon explorer who knows the best viewpoints, food spots, and stargazing locations across Utah."
+      bullets={[
+        'Best sunrise and sunset spots in each national park',
+        'Park City and Salt Lake City food and culture guide',
+        'Stargazing locations and dark sky park tips',
+        'Hidden gems and local favorites beyond the Mighty Five',
+      ]}
+      guideTag="author-jenice"
+    />
+  </div>
+</section>
+
+<!-- BACK LINK -->
+<section class="back-section">
+  <div class="back-inner">
+    <a href="/about/" class="back-link">&larr; Back to About Us</a>
+  </div>
+</section>
+
+</BaseLayout>
+
+<script>
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+
+<style>
+  .author-hero { padding: 140px 24px 80px; position: relative; overflow: hidden; text-align: center; background: linear-gradient(165deg, #141C26 0%, #5C2D0E 30%, #C2410C 55%, #5C2D0E 75%, #141C26 100%); }
+  .author-hero::before { content: ''; position: absolute; top: -20%; right: -8%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(212,165,116,0.12) 0%, transparent 55%); border-radius: 50%; pointer-events: none; animation: orbFloat 12s ease-in-out infinite; }
+  .author-hero::after { content: ''; position: absolute; bottom: -25%; left: -12%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(251,191,36,0.07) 0%, transparent 55%); border-radius: 50%; pointer-events: none; animation: orbFloat 15s ease-in-out infinite reverse; }
+  @keyframes orbFloat { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(20px, -15px); } 66% { transform: translate(-10px, 10px); } }
+  .hero-grid { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px); background-size: 60px 60px; }
+  .author-hero-inner { max-width: 660px; margin: 0 auto; position: relative; z-index: 2; }
+  .author-hero-inner :global(.breadcrumb) { margin-bottom: var(--space-8); }
+  .author-hero-inner :global(.breadcrumb a), .author-hero-inner :global(.breadcrumb span) { color: rgba(255,255,255,0.5); }
+  .author-hero-inner :global(.breadcrumb a:hover) { color: rgba(255,255,255,0.8); }
+  .hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-warm-gold); margin-bottom: 24px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.2s; }
+  .author-avatar-wrap { margin-bottom: 24px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.3s; }
+  .author-avatar-large { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+  .author-hero h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: white; line-height: 1.1; margin-bottom: 8px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.4s; }
+  .hero-role { font-size: 1.05rem; color: var(--color-warm-gold); font-weight: 600; margin-bottom: 4px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s; }
+  .hero-location { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 32px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.55s; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; opacity: 0; animation: heroUp 1s cubic-bezier(0.16,1,0.3,1) forwards 0.65s; }
+  .hero-stat { text-align: center; }
+  .hero-stat-num { font-family: var(--font-serif); font-size: 1.6rem; color: white; }
+  .hero-stat-label { font-size: 0.65rem; color: rgba(255,255,255,0.45); font-weight: 400; margin-top: 2px; }
+  @keyframes heroUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  .section-eyebrow { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-warm-coral); margin-bottom: 12px; }
+  .section-title { font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--color-deep-night); line-height: 1.15; margin-bottom: 32px; }
+  .bio-section { padding: 80px 24px 64px; max-width: var(--content-lg); margin: 0 auto; }
+  .bio-inner { max-width: 720px; }
+  .bio-content p { font-size: 1.02rem; line-height: 2; color: var(--color-deep-night); font-weight: 300; margin-bottom: 20px; }
+  .bio-content strong { font-weight: 600; }
+  .credentials-section { padding: 64px 24px 80px; background: var(--color-white); }
+  .credentials-inner { max-width: var(--content-lg); margin: 0 auto; }
+  .credential-list { list-style: none; display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+  .credential-list li { padding-left: 28px; position: relative; line-height: 1.7; font-size: 0.95rem; color: var(--color-slate); }
+  .credential-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--color-warm-gold), #FBBF24); }
+  .credential-list li strong { color: var(--color-deep-night); font-weight: 600; }
+  .coverage-section { padding: 80px 24px; background: var(--color-sand); }
+  .coverage-inner { max-width: var(--max-width, 1120px); margin: 0 auto; }
+  .coverage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .coverage-card { background: var(--color-white); border-radius: 16px; padding: 28px 24px; border: 1px solid transparent; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .coverage-card:hover { transform: translateY(-4px); box-shadow: 0 4px 24px rgba(26,35,50,0.08); border-color: var(--color-sand-dark); }
+  .coverage-icon { font-size: 1.5rem; margin-bottom: 12px; }
+  .coverage-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-deep-night); margin-bottom: 8px; }
+  .coverage-desc { font-size: 0.82rem; color: var(--color-slate); line-height: 1.7; font-weight: 300; }
+  .content-section { padding: 80px 24px; background: var(--color-white); }
+  .content-inner { max-width: var(--max-width, 1120px); margin: 0 auto; }
+  .content-subhead { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-warm-gold); margin-bottom: 16px; }
+  .content-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+  .content-grid--destinations { grid-template-columns: repeat(3, 1fr); }
+  .content-card { display: block; background: var(--color-sand); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; border: 1px solid transparent; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .content-card:hover { transform: translateY(-3px); box-shadow: 0 4px 20px rgba(26,35,50,0.08); border-color: var(--color-warm-gold); }
+  .content-card-type { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-warm-coral); margin-bottom: 6px; }
+  .content-card--dest .content-card-type { color: var(--color-warm-gold); }
+  .content-card-title { font-family: var(--font-serif); font-size: 0.95rem; color: var(--color-deep-night); line-height: 1.35; }
+  .content-all-link { text-align: center; margin-top: 8px; }
+  .content-all-link a { font-size: 0.88rem; color: var(--color-warm-gold); font-weight: 600; text-decoration: none; transition: color 0.2s ease; }
+  .content-all-link a:hover { color: #B8935F; }
+  .email-section { padding: 64px 24px; background: var(--color-sand); }
+  .email-section-inner { max-width: 640px; margin: 0 auto; }
+  .back-section { padding: 40px 24px 64px; background: var(--color-sand); }
+  .back-inner { max-width: var(--content-lg); margin: 0 auto; text-align: center; }
+  .back-link { font-size: 0.88rem; color: var(--color-warm-gold); font-weight: 600; text-decoration: none; transition: color 0.2s ease; }
+  .back-link:hover { color: #B8935F; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) {
+    .author-hero { padding: 120px 24px 64px; } .hero-stats { gap: 24px; } .hero-stat-num { font-size: 1.3rem; }
+    .coverage-grid { grid-template-columns: 1fr; } .content-grid { grid-template-columns: 1fr; }
+    .content-grid--destinations { grid-template-columns: 1fr 1fr; }
+    .bio-section { padding: 56px 24px 48px; } .credentials-section { padding: 48px 24px 56px; }
+    .coverage-section { padding: 56px 24px; } .content-section { padding: 56px 24px; }
+  }
+</style>

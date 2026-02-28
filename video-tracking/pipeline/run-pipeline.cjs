@@ -27,10 +27,10 @@ const PIPELINE_DIR = __dirname;
 const steps = [
   {
     num: 1,
-    name: 'Search & Download',
-    script: '1-search-download.cjs',
+    name: 'Sweep Downloads',
+    script: '1-sweep-downloads.cjs',
     interactive: true,
-    desc: 'Search Shutterstock, pick clips, auto-download & rename',
+    desc: 'Sweep ~/Downloads/ for new clips, rename & organize',
   },
   {
     num: 2,
@@ -64,7 +64,7 @@ const steps = [
 ];
 
 console.log('╔══════════════════════════════════════════════════════════╗');
-console.log('║   VIDEO PIPELINE — DISCOVER PHILIPPINES                  ║');
+console.log('║   VIDEO PIPELINE                                         ║');
 console.log('╚══════════════════════════════════════════════════════════╝\n');
 
 const maxStep = includeYT ? 4 : 3;
