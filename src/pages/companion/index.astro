@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+import '../../styles/companion.css';
+
+const faqItems = [
+  {
+    question: 'What exactly is the Trip Companion?',
+    answer: 'It\'s an offline-capable web app built from your specific itinerary. We enrich every Utah destination with real trailhead directions, permit requirements, slot canyon logistics, safety info, budget tracking, and insider tips from the Mighty Five and beyond.',
+  },
+  {
+    question: 'How does it work offline?',
+    answer: 'After setup, the companion downloads all content to your phone\'s browser cache. No app store needed — just add it to your home screen. Everything works without internet: trailhead directions, permit info, safety contacts, budget tracker. Essential for Utah\'s remote canyons where signal disappears completely.',
+  },
+  {
+    question: 'Can I share it with my travel group?',
+    answer: 'Yes! One purchase covers your entire group (up to 8 people). The host shares a link, companions join for free, and everyone gets the full companion with real-time sync when connected.',
+  },
+  {
+    question: 'What if I already have an itinerary from a travel agent?',
+    answer: 'Perfect — upload the PDF, paste the text, or snap a photo. Our AI reads your existing plan and enriches it with real trailhead directions, permit requirements, and practical Utah canyon country info.',
+  },
+  {
+    question: 'Is this a subscription?',
+    answer: 'No — and right now it\'s completely free through June 30, 2026. After that, it\'ll be a one-time purchase of $7.99. No monthly fees, no app store, no recurring charges.',
+  },
+  {
+    question: 'What Utah destinations do you cover?',
+    answer: 'We cover all five Mighty Five national parks (Zion, Bryce Canyon, Arches, Canyonlands, Capitol Reef), plus Goblin Valley, Bears Ears, Grand Staircase-Escalante, Antelope Canyon, Horseshoe Bend, Monument Valley, Moab, St. George, and more. Each has real trailhead logistics and permit info.',
+  },
+];
+
+const features = [
+  { icon: '🧭', title: 'Real Trailhead Directions', description: 'Not just GPS — actual directions like "the Angel\'s Landing trailhead fills before dawn, park at the Grotto" and "The Wave lottery requires a permit weeks in advance."' },
+  { icon: '🏜️', title: 'Slot Canyon & Park Logistics', description: 'Antelope Canyon tour times, Narrows flash flood warnings, Coyote Gulch water sources, and permit windows for every site on your route.' },
+  { icon: '💰', title: 'Budget Tracker', description: 'Log expenses in USD, track America the Beautiful pass savings vs. entrance fees, and see typical costs for your destinations — all offline.' },
+  { icon: '⛺', title: 'Camping & Permits', description: 'Campsite reservations by site, first-come sites with arrival time tips, backcountry permit requirements, and ranger station contacts for every park.' },
+  { icon: '👥', title: 'Group Sharing', description: 'One purchase, up to 8 travelers. Everyone gets the full companion with real-time sync when connected.' },
+  { icon: '💵', title: 'Expense Splitter', description: 'Track shared costs, split fuel and camping fees, and settle up at the end of the trip. No more spreadsheets.' },
+  { icon: '🎒', title: 'Smart Packing List', description: 'Auto-generated from your itinerary — canyoneering adds harness and helmet, slot canyons add dry bags and water shoes, desert camping adds extra water capacity.' },
+  { icon: '📞', title: 'Emergency Contacts', description: 'Search and rescue by county, ranger stations, helicopter evacuation info, and satellite communicator recommendations for remote areas.' },
+  { icon: '📶', title: 'Works Offline', description: 'Everything cached to your phone. Utah\'s canyon country has vast dead zones — this works where nothing else does.' },
+];
+
+const steps = [
+  { number: '1', title: 'Tell us your trip', description: 'Upload an itinerary, paste your plans, use our AI planner, or start from a proven Utah national parks template.' },
+  { number: '2', title: 'We enrich it', description: 'Our AI matches your destinations with trailhead logistics, permit windows, safety info, and camping availability.' },
+  { number: '3', title: 'Travel with confidence', description: 'Download to your phone. Works offline. Share with your group. Everything you need, always available.' },
+];
+
+const testimonials = [
+  {
+    quote: 'We had zero signal in the Canyonlands backcountry for 3 days. The companion had every water source, campsite GPS coordinate, and emergency contact. It was our lifeline.',
+    author: 'Mark & Sarah',
+    trip: '12-day Utah Mighty Five',
+  },
+  {
+    quote: 'The Angel\'s Landing permit info was exactly right — when to apply, what time the trailhead fills, and the alternate route when it was too crowded. Saved hours.',
+    author: 'Jason',
+    trip: '7-day Zion & Bryce Canyon',
+  },
+  {
+    quote: 'Six of us doing Canyonlands and Arches. The permit coordination and expense splitting for gas and camping made a complex trip feel effortless.',
+    author: 'The Outdoor Crew',
+    trip: '10-day Moab & canyon country',
+  },
+];
+
+const screenshots = [
+  { title: 'Day-by-Day Itinerary', description: 'Your complete trip with trailhead times, directions, and logistics for every stop.' },
+  { title: 'Trailhead & Permit Guide', description: 'Arrival time tips, permit windows, and backup options for every hike.' },
+  { title: 'Budget Tracker', description: 'Log expenses, track park pass savings, see typical costs — all offline.' },
+  { title: 'Camping & Safety', description: 'Campsite tips, water sources, emergency contacts, and rescue info.' },
+  { title: 'Group Sharing', description: 'Share with up to 8 travelers. Everyone syncs when connected.' },
+];
+---
+
+<BaseLayout
+  title="Trip Companion"
+  description="Turn any Utah itinerary into an offline trip companion with trailhead directions, permit info, and canyon country safety tips. Free through June 30, 2026."
+>
+  <section class="cp-hero">
+    <div class="cp-hero-gradient"></div>
+    <div class="container-content cp-hero-content">
+      <div class="cp-founders-bar">
+        <div class="cp-founder cp-founder--scott">
+          <div class="cp-founder-avatar">
+            <img src="/images/scott-headshot.jpg" alt="Scott — founder" width="52" height="52" />
+          </div>
+          <div class="cp-founder-bubble">
+            <p class="cp-founder-quote">"Utah's canyon country has no room for guesswork — permits, water, trailheads. This is the knowledge that keeps you safe."</p>
+            <p class="cp-founder-name">— Scott, <a href="/about/">founder</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-hero-text">
+        <p class="cp-hero-label">Discover Utah</p>
+        <h1 class="cp-hero-title">Your Utah Outdoor Guide.<br />Works Offline.</h1>
+        <p class="cp-hero-subtitle">
+          Turn any Utah itinerary into an offline trip companion with trailhead logistics, permit requirements, slot canyon safety, and insider tips for the Mighty Five and beyond.
+        </p>
+        <div class="cp-hero-ctas">
+          <a href="/companion/start/" class="cp-btn cp-btn--primary">Start Planning</a>
+          <a href="#features" class="cp-btn cp-btn--ghost">See What's Inside</a>
+        </div>
+      </div>
+      <div class="cp-hero-mockup">
+        <div class="cp-phone-frame">
+          <div class="cp-phone-screen">
+            <div class="cp-phone-header">
+              <span class="cp-phone-label">DISCOVER UTAH</span>
+              <span class="cp-phone-title">Mighty Five National Parks</span>
+              <span class="cp-phone-meta">10 days · 5 parks · 20 hikes</span>
+            </div>
+            <div class="cp-phone-items">
+              <div class="cp-phone-item">
+                <span class="cp-phone-item-icon">✈️</span>
+                <div>
+                  <span class="cp-phone-item-title">Arrive Las Vegas / SLC</span>
+                  <span class="cp-phone-item-tag">Drive route included</span>
+                </div>
+              </div>
+              <div class="cp-phone-item">
+                <span class="cp-phone-item-icon">🏜️</span>
+                <div>
+                  <span class="cp-phone-item-title">Angel's Landing Permit</span>
+                  <span class="cp-phone-item-tag">Trailhead tips + timing</span>
+                </div>
+              </div>
+              <div class="cp-phone-item">
+                <span class="cp-phone-item-icon">🌄</span>
+                <div>
+                  <span class="cp-phone-item-title">Delicate Arch Sunrise</span>
+                  <span class="cp-phone-item-tag">Logistics by Scott</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-screenshots section-padding">
+    <div class="container-content">
+      <h2 class="cp-section-title reveal">See It in Action</h2>
+      <div class="cp-carousel">
+        {screenshots.map((s, i) => (
+          <div class="cp-carousel-item reveal" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="cp-carousel-frame">
+              <div class="cp-carousel-placeholder">
+                <span class="cp-carousel-number">{i + 1}</span>
+              </div>
+            </div>
+            <h3 class="cp-carousel-title">{s.title}</h3>
+            <p class="cp-carousel-desc">{s.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="cp-features section-padding">
+    <div class="container-content">
+      <h2 class="cp-section-title reveal">Everything You Need, Offline</h2>
+      <p class="cp-section-subtitle reveal">Built for Utah's remoteness — where canyon walls block signal and the wilderness demands preparation.</p>
+      <div class="cp-features-grid">
+        {features.map((f, i) => (
+          <div class="cp-feature-card reveal" style={`animation-delay: ${i * 0.05}s`}>
+            <span class="cp-feature-icon">{f.icon}</span>
+            <h3 class="cp-feature-title">{f.title}</h3>
+            <p class="cp-feature-desc">{f.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-how section-padding">
+    <div class="container-content">
+      <h2 class="cp-section-title reveal">How It Works</h2>
+      <div class="cp-steps">
+        {steps.map((s, i) => (
+          <div class="cp-step reveal" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="cp-step-number">{s.number}</div>
+            <div class="cp-step-content">
+              <h3 class="cp-step-title">{s.title}</h3>
+              <p class="cp-step-desc">{s.description}</p>
+            </div>
+            {i < steps.length - 1 && <div class="cp-step-connector" aria-hidden="true"></div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-pricing section-padding">
+    <div class="container-content">
+      <div class="cp-pricing-card reveal">
+        <p class="cp-pricing-free-badge">Free Through June 30, 2026</p>
+        <h2 class="cp-pricing-price"><s style="opacity:0.4;font-size:0.6em">$7.99</s> Free</h2>
+        <p class="cp-pricing-tagline">One Trip, Yours Forever</p>
+        <ul class="cp-pricing-features">
+          <li>Full offline trip companion for your Utah itinerary</li>
+          <li>Trailhead logistics, permit info, slot canyon safety</li>
+          <li>Budget tracker and expense splitter</li>
+          <li>Smart packing list and emergency contacts</li>
+          <li>Share with up to 8 travel companions for free</li>
+          <li>Real-time sync when connected</li>
+        </ul>
+        <a href="/companion/start/" class="cp-btn cp-btn--coral cp-btn--full">Start Planning Your Trip</a>
+        <p class="cp-pricing-note">Free during launch. $7.99 starting July 1, 2026. No subscription.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-testimonials section-padding">
+    <div class="container-content">
+      <h2 class="cp-section-title reveal">Travelers Love It</h2>
+      <div class="cp-testimonials-grid">
+        {testimonials.map((t, i) => (
+          <div class="cp-testimonial reveal" style={`animation-delay: ${i * 0.1}s`}>
+            <p class="cp-testimonial-quote">"{t.quote}"</p>
+            <div class="cp-testimonial-author">
+              <strong>{t.author}</strong>
+              <span>{t.trip}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqItems} />
+
+  <section class="cp-final-cta">
+    <div class="cp-final-cta-gradient"></div>
+    <div class="container-content cp-final-cta-content">
+      <h2 class="cp-final-cta-title reveal">Ready to Conquer Utah's Canyon Country?</h2>
+      <p class="cp-final-cta-text reveal">Build your companion in minutes. Explore the Mighty Five with confidence, even in the deepest canyons.</p>
+      <a href="/companion/start/" class="cp-btn cp-btn--primary cp-btn--lg reveal">Start Planning Your Trip</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const o = new IntersectionObserver((e) => { e.forEach((x) => { if (x.isIntersecting) x.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => o.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach((a) => { a.addEventListener('click', (e) => { e.preventDefault(); const t = document.querySelector((a as HTMLAnchorElement).getAttribute('href')!); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+</script>
+
+<style>
+  .cp-hero { position: relative; min-height: 90vh; display: flex; align-items: center; overflow: hidden; }
+  .cp-hero-gradient { position: absolute; inset: 0; background: var(--gradient-companion-hero); z-index: 0; }
+  .cp-hero-content { position: relative; z-index: 1; display: grid; gap: var(--space-10); align-items: center; padding-top: var(--space-16); padding-bottom: var(--space-16); }
+  @media (min-width: 1024px) { .cp-hero-content { grid-template-columns: 1fr 1fr; padding-top: var(--space-20); padding-bottom: var(--space-20); } }
+  .cp-hero-text { color: white; }
+  .cp-hero-label { font-size: 0.6875rem; font-weight: var(--weight-bold); letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.6; margin-bottom: var(--space-3); max-width: none; }
+  .cp-hero-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: var(--weight-extrabold); line-height: 1.1; color: white; margin-bottom: var(--space-4); }
+  .cp-hero-subtitle { font-size: 1.0625rem; line-height: 1.6; opacity: 0.85; max-width: 48ch; margin-bottom: var(--space-8); }
+  .cp-hero-ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+  .cp-hero-mockup { display: flex; justify-content: center; }
+  .cp-phone-frame { width: 280px; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .cp-phone-screen { font-family: var(--font-sans); }
+  .cp-phone-header { background: var(--gradient-companion-hero); padding: 20px 18px 16px; color: white; display: flex; flex-direction: column; gap: 2px; }
+  .cp-phone-label { font-size: 0.625rem; font-weight: var(--weight-bold); letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.6; }
+  .cp-phone-title { font-size: 1.125rem; font-weight: var(--weight-extrabold); line-height: 1.2; }
+  .cp-phone-meta { font-size: 0.75rem; opacity: 0.7; margin-top: 2px; }
+  .cp-phone-items { padding: 12px 16px 16px; }
+  .cp-phone-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+  .cp-phone-item:last-child { border-bottom: none; }
+  .cp-phone-item-icon { font-size: 1.25rem; flex-shrink: 0; }
+  .cp-phone-item div { display: flex; flex-direction: column; gap: 1px; }
+  .cp-phone-item-title { font-size: 0.8125rem; font-weight: var(--weight-bold); color: var(--color-deep-night); }
+  .cp-phone-item-tag { font-size: 0.6875rem; font-weight: var(--weight-semibold); color: var(--color-ocean-teal); }
+  .cp-founders-bar { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6); }
+  @media (min-width: 640px) { .cp-founders-bar { flex-direction: row; gap: var(--space-4); } }
+  @media (min-width: 1024px) { .cp-founders-bar { grid-column: 1 / -1; } }
+  .cp-founder { display: flex; align-items: center; gap: var(--space-3); }
+  .cp-founder-avatar { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.15); padding: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); overflow: hidden; }
+  .cp-founder-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .cp-founder-bubble { position: relative; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 10px 14px; max-width: 280px; }
+  .cp-founder--scott .cp-founder-bubble::before { content: ''; position: absolute; left: -7px; top: 14px; width: 12px; height: 12px; background: rgba(255,255,255,0.12); border-left: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); transform: rotate(45deg); }
+  .cp-founder-quote { font-family: var(--font-serif); font-style: italic; font-size: 0.8125rem; line-height: 1.4; color: white; opacity: 0.95; margin-bottom: 4px; max-width: none; }
+  .cp-founder-name { font-size: 0.6875rem; font-weight: var(--weight-semibold); color: rgba(255,255,255,0.6); max-width: none; }
+  .cp-founder-name a { color: rgba(255,255,255,0.75); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); }
+  .cp-founder-name a:hover { color: white; text-decoration-color: white; }
+  @media (max-width: 480px) { .cp-founder-bubble { display: none; } .cp-founders-bar { flex-direction: row; gap: var(--space-3); } }
+  .cp-btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 14px; font-size: var(--text-button); font-weight: var(--weight-bold); text-decoration: none; transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; cursor: pointer; min-height: 48px; }
+  .cp-btn--primary { background: var(--color-ocean-teal); color: white; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+  .cp-btn--primary:hover { background: var(--color-primary); color: white; transform: translateY(-1px); }
+  .cp-btn--coral { background: var(--gradient-companion-cta); color: white; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+  .cp-btn--coral:hover { color: white; transform: translateY(-1px); }
+  .cp-btn--ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); }
+  .cp-btn--ghost:hover { background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.6); }
+  .cp-btn--full { width: 100%; }
+  .cp-btn--lg { padding: 16px 36px; font-size: 1.0625rem; }
+  .cp-section-title { text-align: center; margin-bottom: var(--space-4); }
+  .cp-section-subtitle { text-align: center; color: var(--color-slate); max-width: 56ch; margin-inline: auto; margin-bottom: var(--space-10); }
+  .cp-carousel { display: flex; gap: var(--space-4); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: var(--space-4); scrollbar-width: none; }
+  .cp-carousel::-webkit-scrollbar { display: none; }
+  .cp-carousel-item { flex: 0 0 220px; scroll-snap-align: start; text-align: center; }
+  @media (min-width: 768px) { .cp-carousel-item { flex: 0 0 240px; } }
+  .cp-carousel-frame { border-radius: 20px; overflow: hidden; margin-bottom: var(--space-3); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .cp-carousel-placeholder { aspect-ratio: 9/16; background: linear-gradient(135deg, #f5e6d0, #e8c9a0); display: flex; align-items: center; justify-content: center; }
+  .cp-carousel-number { width: 48px; height: 48px; border-radius: 50%; background: var(--color-ocean-teal); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: var(--weight-extrabold); }
+  .cp-carousel-title { font-size: 0.9375rem; margin-bottom: var(--space-1); }
+  .cp-carousel-desc { font-size: var(--text-caption); color: var(--color-slate); line-height: 1.4; }
+  .cp-features { background: var(--color-white); }
+  .cp-features-grid { display: grid; gap: var(--space-4); }
+  @media (min-width: 640px) { .cp-features-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .cp-features-grid { grid-template-columns: repeat(3, 1fr); } }
+  .cp-feature-card { background: var(--color-sand); border-radius: 16px; padding: var(--space-6); }
+  .cp-feature-icon { font-size: 1.75rem; display: block; margin-bottom: var(--space-3); }
+  .cp-feature-title { font-size: 1rem; margin-bottom: var(--space-2); }
+  .cp-feature-desc { font-size: var(--text-caption); color: var(--color-slate); line-height: 1.5; }
+  .cp-how { background: var(--color-sand); }
+  .cp-steps { max-width: 800px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-6); }
+  @media (min-width: 768px) { .cp-steps { flex-direction: row; gap: var(--space-8); } }
+  .cp-step { flex: 1; position: relative; text-align: center; }
+  .cp-step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--color-ocean-teal); color: white; font-size: 1.25rem; font-weight: var(--weight-extrabold); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); }
+  .cp-step-title { font-size: 1.125rem; margin-bottom: var(--space-2); }
+  .cp-step-desc { font-size: var(--text-caption); color: var(--color-slate); line-height: 1.5; max-width: 28ch; margin-inline: auto; }
+  .cp-step-connector { display: none; }
+  @media (min-width: 768px) { .cp-step-connector { display: block; position: absolute; top: 24px; left: calc(50% + 32px); width: calc(100% - 64px); height: 2px; background: var(--color-ocean-teal); opacity: 0.2; } }
+  .cp-pricing { background: var(--color-white); }
+  .cp-pricing-card { max-width: 480px; margin-inline: auto; text-align: center; background: var(--color-sand); border-radius: 24px; padding: var(--space-10) var(--space-8); }
+  .cp-pricing-free-badge { display: inline-block; background: #38A169; color: white; font-size: 0.75rem; font-weight: var(--weight-bold); letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; margin-bottom: var(--space-3); max-width: none; }
+  .cp-pricing-price { font-size: 3rem; font-weight: var(--weight-extrabold); color: var(--color-deep-night); margin-bottom: var(--space-1); }
+  .cp-pricing-tagline { font-size: 1.125rem; font-weight: var(--weight-semibold); color: var(--color-slate); margin-bottom: var(--space-8); max-width: none; }
+  .cp-pricing-features { list-style: none; text-align: left; display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-8); }
+  .cp-pricing-features li { font-size: var(--text-body); color: var(--color-slate); padding-left: var(--space-6); position: relative; line-height: 1.5; }
+  .cp-pricing-features li::before { content: '✓'; position: absolute; left: 0; color: var(--color-ocean-teal); font-weight: var(--weight-bold); }
+  .cp-pricing-note { font-size: var(--text-caption); color: var(--color-slate); margin-top: var(--space-4); max-width: none; }
+  .cp-testimonials { background: var(--color-sand); }
+  .cp-testimonials-grid { display: grid; gap: var(--space-4); }
+  @media (min-width: 768px) { .cp-testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+  .cp-testimonial { background: var(--color-white); border-radius: 16px; padding: var(--space-6); }
+  .cp-testimonial-quote { font-family: var(--font-serif); font-style: italic; font-size: var(--text-body); line-height: 1.6; color: var(--color-deep-night); margin-bottom: var(--space-4); }
+  .cp-testimonial-author { display: flex; flex-direction: column; gap: 2px; }
+  .cp-testimonial-author strong { font-size: var(--text-caption); color: var(--color-ocean-teal); }
+  .cp-testimonial-author span { font-size: 0.75rem; color: var(--color-slate); }
+  .cp-final-cta { position: relative; padding: var(--space-16) 0; overflow: hidden; }
+  .cp-final-cta-gradient { position: absolute; inset: 0; background: var(--gradient-companion-hero); }
+  .cp-final-cta-content { position: relative; z-index: 1; text-align: center; color: white; }
+  .cp-final-cta-title { font-size: clamp(1.5rem, 4vw, 2.25rem); color: white; margin-bottom: var(--space-4); }
+  .cp-final-cta-text { font-size: 1.0625rem; opacity: 0.85; max-width: 48ch; margin-inline: auto; margin-bottom: var(--space-8); }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
