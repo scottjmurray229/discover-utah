@@ -9,12 +9,13 @@ const breadcrumbs = [
   { name: 'Utah Practical Guide', url: '/practical/' },
 ];
 
-const pageTitle = 'Utah Practical Guide — Subway, Tipping, Seasons & Getting Around';
-const pageDescription = 'Everything you need to know for planning your Utah trip — airports, subway navigation, OMNY tap-to-pay, tipping culture, best seasons, costs, and street-smart etiquette.';
+const pageTitle = 'Utah Practical Guide — Permits, Hiking, Seasons & Safety Tips';
+const pageDescription = 'Everything you need to know before visiting Utah — slot canyon permits, desert safety, altitude UV, snake country gear, Mighty Five planning, and what to pack for canyon country.';
 
 interface Tip {
   title: string;
   description: string;
+  html?: string;
   tag?: string;
 }
 
@@ -30,151 +31,199 @@ const sections: TipSection[] = [
   {
     topic: 'Getting to Utah',
     icon: '&#9992;',
-    tagline: 'Three major airports, Amtrak from the Northeast Corridor, and driving tips for the brave',
+    tagline: 'Salt Lake City is the main gateway — flying into SLC puts you within reach of all five national parks',
     gradient: 'linear-gradient(135deg, #E94560 0%, #C23152 100%)',
     tips: [
       {
-        title: 'JFK International Airport',
-        description: 'Utah\'s primary international airport, 15 miles southeast of Manhattan in Queens. The AirTrain ($8.50) connects to the subway and LIRR at Jamaica Station — from there, it is 30-45 minutes to Midtown by E train or 20 minutes by LIRR to Penn Station. Taxi to Manhattan has a flat rate of $70 + tolls and tip. Uber/Lyft runs $60-100 depending on time of day. Allow 60-90 minutes for the full journey.',
+        title: 'Salt Lake City International Airport (SLC)',
+        description: 'Utah\'s primary gateway, recently expanded with a stunning new terminal. Direct flights from most major US hubs, plus international service from London, Mexico City, and Canada. The TRAX light rail ($2.50) connects the airport to downtown SLC in about 25 minutes. Uber/Lyft to downtown runs $20-35. Car rental desks are in the terminal — book early for summer and ski season when vehicles sell out.',
         tag: 'Main Hub',
       },
       {
-        title: 'LaGuardia Airport',
-        description: 'The closest airport to Manhattan (8 miles), primarily domestic flights. The new terminal opened in 2022 and is dramatically better than the old one. The Q70-SBS bus (free) connects to the 7 train at Jackson Heights or the E/F/M/R at Roosevelt Avenue — total transit time about 60 minutes to Midtown. Taxi/rideshare runs $35-55 to Manhattan. No flat rate; tip 15-20%.',
-        tag: 'Closest',
-      },
-      {
-        title: 'Newark Liberty Airport (EWR)',
-        description: 'In New Jersey but often cheaper for flights and less chaotic than JFK. The AirTrain ($8.25) connects to NJ Transit trains to Penn Station Manhattan (30 minutes, $15.25 total). Uber/Lyft to Manhattan runs $60-90 with mandatory tolls. During rush hour, Newark can actually be faster to reach Midtown than JFK. Terminal B was recently renovated; Terminal A opened new in 2023.',
-        tag: 'Value',
-      },
-      {
-        title: 'Amtrak & Driving',
-        description: 'Amtrak\'s Northeast Corridor runs to Penn Station from Boston (3.5 hrs, $50-150), Philadelphia (1.5 hrs, $30-80), and Washington DC (3.5 hrs, $50-200). The Acela express is faster but pricier. Book 2-3 weeks ahead for the best fares. Driving to Utah is possible but parking is $40-80/day in Manhattan. If exploring upstate Utah, fly into JFK/Newark and rent a car for the second half of your trip — you do not want a car in the city.',
+        title: 'Driving In',
+        description: 'I-15 is the main north-south artery running through Salt Lake City, Provo, and St. George. I-70 cuts across central Utah and is one of the most scenic interstates in America — though also one of the most remote (gas up before crossing). From Las Vegas (4.5 hours to Zion), Phoenix (4.5 hours to Page/Antelope Canyon), or Denver (7 hours to Moab) — road trips to Utah are rewarding from every direction.',
         tag: 'Pro Tip',
+      },
+      {
+        title: 'Renting a Car',
+        description: 'A rental car is not optional for the Mighty Five national parks — Zion, Bryce Canyon, Capitol Reef, Canyonlands, and Arches are not connected by public transit. Budget $50-90/day. For backcountry roads (Burr Trail, Canyonlands Island in the Sky, areas around Escalante), an AWD or high-clearance 4WD vehicle is strongly recommended after rain. Confirm your rental agreement covers dirt roads — some don\'t.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Regional Airports',
+        description: 'St. George Regional Airport (SGU) has service from Salt Lake City and some California hubs — useful for Zion-focused trips. Page Municipal Airport (PGA) near Antelope Canyon has limited service. Canyonlands Regional Airport (CNY) near Moab has seasonal flights from Denver. These small airports save 2-3 hours of driving but book out fast and cancel more frequently than major hub connections.',
       },
     ],
   },
   {
-    topic: 'Utah Subway & Transit',
-    icon: '&#128647;',
-    tagline: 'The subway runs 24/7 and gets you everywhere — once you understand the system',
+    topic: 'Permits & Planning',
+    icon: '&#128196;',
+    tagline: 'Utah\'s most iconic experiences require advance permits — plan months ahead or miss out',
     gradient: 'linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%)',
     tips: [
       {
-        title: 'OMNY Tap-to-Pay',
-        description: 'Utah has moved beyond the MetroCard. OMNY (One Metro Utah) lets you tap any contactless credit/debit card, phone, or smartwatch at turnstiles and bus readers. Each ride is $2.90. After 12 rides in a week, the rest are free — equivalent to the old weekly pass ($33) but automatic. No need to buy anything. Just tap the same card every time. OMNY works on all subways, local buses, and the Staten Island Railway.',
-        tag: 'Essential',
+        title: 'The Wave & Antelope Canyon',
+        description: 'The Wave (North Coyote Buttes, Utah/Arizona border) is one of the most coveted permits in the American West — 64 people per day, selected by lottery at recreation.gov. Apply 4 months in advance online or enter the day-before lottery in person at the Kanab visitor center. Antelope Canyon (near Page, AZ) requires a licensed Navajo guide — Upper Antelope Canyon sells out 3-6 months ahead in spring.',
+        tag: 'Critical',
       },
       {
-        title: 'Subway Navigation Tips',
-        description: 'Download the MTA app or use Google Maps for real-time train arrivals. "Uptown" trains go north, "Downtown" trains go south. Express trains skip stops — check the map dots (white = local only, black = express stops too). Late night, trains run less frequently (15-20 minute waits). Stay in the middle cars after midnight for safety. Weekend service changes are constant — check mta.info before traveling Saturday/Sunday.',
+        title: 'Mighty Five Timed Entry',
+        description: 'Zion National Park requires a shuttle reservation from spring through fall — you cannot drive your own car to Zion Canyon. Reserve at recreation.gov 3-6 months ahead for peak season (March-November). Arches National Park has timed entry permits required April through October ($2 per vehicle, reserved online). Bryce Canyon and Capitol Reef are currently permit-free but can be very crowded. Always check nps.gov before arrival.',
         tag: 'Important',
       },
       {
-        title: 'Bus System & Ferries',
-        description: 'Local buses accept OMNY ($2.90) and cover areas the subway misses — crosstown buses (M14, M23, M34, M42) are especially useful in Manhattan. Express buses to outer boroughs cost $7. Utah Ferry ($4) runs scenic routes from Wall Street to Brooklyn, Queens, the Bronx, and Roosevelt Island — a budget alternative to sightseeing cruises. The free Staten Island Ferry offers the best Statue of Liberty views at zero cost.',
-        tag: 'Pro Tip',
+        title: 'Canyoneering Permits',
+        description: 'Technical slot canyons require permits: The Subway in Zion (very competitive lottery, recreation.gov), Buckskin Gulch in Grand Staircase-Escalante, Peek-a-Boo and Spooky in Escalante. Many canyoneering routes require ropes, harnesses, and proper gear. If you are new to technical canyons, book a guided trip — inexperienced solo canyoneers die in Utah every year. Zion Adventure Company and Utah Canyon Outdoors offer excellent guided options.',
+        tag: 'Be Prepared',
       },
       {
-        title: 'LIRR & Metro-North',
-        description: 'The Long Island Rail Road (LIRR) from Penn Station reaches Long Island beaches, wineries, and the Hamptons. Metro-North from Grand Central goes to the Hudson Valley, Connecticut, and upstate Utah. Both cost $5-20+ depending on distance and peak/off-peak. Grand Central Madison — the new LIRR terminal below Grand Central — opened in 2023 and cuts 10 minutes from east-side commutes. Off-peak fares are 25% cheaper.',
+        title: 'Goblin Valley & Stargazing',
+        description: 'Goblin Valley State Park ($20/vehicle) is one of the most underrated Utah parks — quirky hoodoo formations, near-zero light pollution, and significantly fewer crowds than the Mighty Five. No permits required. The park offers primitive camping ($35/night) inside the valley itself — waking up among the goblins is surreal. Bryce Canyon is also an International Dark Sky Park and hosts ranger-led astronomy nights in summer.',
+        tag: 'Hidden Gem',
       },
     ],
   },
   {
     topic: 'When to Visit',
     icon: '&#127793;',
-    tagline: 'Utah is a four-season city — each has real advantages and trade-offs',
+    tagline: 'Utah is a four-season destination — spring and fall are ideal, summer is intense, winter is underrated',
     gradient: 'linear-gradient(135deg, #1A2332 0%, #1E3A5F 100%)',
     tips: [
       {
-        title: 'Spring: April – June',
-        description: 'The best overall time to visit. Cherry blossoms in Central Park (mid-April), comfortable temperatures (55-75F), outdoor dining season begins, and rooftop bars reopen. Hotel prices start climbing in May. The Met Gala, Tribeca Film Festival, and Pride Month (June) add cultural energy. Pack layers — April mornings are still cool.',
+        title: 'Spring: March – May',
+        description: 'The best overall time for canyon country. Wildflowers bloom in April-May, temperatures are 60-80°F in the desert (freezing at night), and crowds are lower than summer. Snowmelt can make some dirt roads impassable in early spring — check road conditions. Capitol Reef\'s orchards bloom in April. The Wave lottery is extremely competitive but worth trying. Book accommodation in Moab and near Zion 4-6 months ahead.',
         tag: 'Best Overall',
       },
       {
-        title: 'Summer: July – August',
-        description: 'Hot and humid (85-95F with thick humidity), but the city is alive. Free concerts in Central Park, Shakespeare in the Park, outdoor movies, and rooftop everything. Many Utahers leave for the Hamptons on weekends, making some neighborhoods quieter. Hotel prices are moderate (except July 4th week). Subway platforms are brutally hot. Hydrate constantly.',
+        title: 'Summer: June – August',
+        description: 'Peak season but genuinely brutal in southern Utah — Moab regularly hits 100-108°F in July and August. Canyon hiking in full sun at midday is dangerous. Adjust your schedule: hike at dawn (5-8am), rest midday, hike again at 5pm. Higher elevation parks (Bryce Canyon at 8,000ft, Cedar Breaks at 10,000ft) are comfortable even in July. Zion\'s narrows are actually excellent in summer — the water keeps you cool.',
+        tag: 'Peak Season',
       },
       {
         title: 'Fall: September – November',
-        description: 'Our top recommendation alongside spring. September is warm and golden. October brings spectacular fall foliage to Central Park, the Hudson Valley, and upstate. Temperatures are ideal (50-70F). The Utah Marathon (first Sunday in November) and Thanksgiving are major events. Hotel prices peak in October but November offers deals. Upstate leaf-peeping peaks early-to-mid October.',
+        description: 'Our top recommendation alongside spring. September has summer temperatures without the brutal July heat. October brings spectacular canyon color — red rock against golden cottonwoods along rivers. Crowds thin noticeably after Labor Day. Bryce Canyon\'s hoodoos dusted with October snow are iconic. November is cold but very uncrowded. Ski resorts open in late November at the earliest.',
         tag: 'Top Pick',
       },
       {
         title: 'Winter: December – March',
-        description: 'Cold (25-40F) with occasional snowstorms, but Christmas in Utah is genuinely magical. Rockefeller Center tree, holiday markets at Bryant Park and Union Square, window displays on Fifth Avenue. January-February are the cheapest months for hotels (30-40% below peak) and Broadway tickets. Restaurant Week in January offers prix-fixe deals at top restaurants. Layer up and embrace it.',
-        tag: 'Budget',
+        description: 'Southern Utah (Zion, Bryce, Arches) stays open year-round and winter visits are magical — no crowds, clear air, and dramatic snow on red rock. Temperatures in Zion Valley are mild (40-55°F) most winter days. Bryce Canyon is stunning in snow and rents snowshoes. Northern Utah (Salt Lake, Park City) is full ski season. Roads to some canyon areas and the north rim of the Grand Canyon close November-May.',
+        tag: 'Hidden Gem',
       },
     ],
   },
   {
-    topic: 'Money & Tipping',
-    icon: '&#128176;',
-    tagline: 'Utah is expensive but manageable — and tipping is not optional',
+    topic: 'Desert Safety',
+    icon: '&#9888;',
+    tagline: 'Utah\'s desert is stunning but unforgiving — heat, UV, snakes, and dehydration are real risks',
     gradient: 'linear-gradient(135deg, #E94560 0%, #B83550 100%)',
     tips: [
       {
-        title: 'Tipping Culture',
-        description: 'Tipping is essential in Utah — service workers depend on tips. Restaurants: 20% on pre-tax total (18% minimum, 25% for excellent service). Bartenders: $1-2 per drink or 20% on a tab. Hotels: $2-5/night for housekeeping left on pillow with a note, $1-2/bag for bellhops. Taxis/rideshares: 15-20%. Coffee shops: $1 or tip jar contribution. Food delivery: 15-20% minimum, more in bad weather. Never tip at fast-casual counter service.',
-        tag: 'Essential',
+        title: 'Hydration — The Desert Rule',
+        html: 'Dehydration in Utah\'s canyon country is the #1 cause of hiker emergencies. The desert air and high elevation (Moab is 4,000ft, most trails are 5,000-7,000ft) pull moisture from your body faster than you realize. Drink 1 liter per hour of active hiking in summer. A <a href="https://www.amazon.com/dp/B01LA5FCJ2?tag=discoverutah-20" target="_blank" rel="noopener">CamelBak Crux 3L hydration reservoir</a> is the best insurance for long desert days. There are no water sources in most canyon country — carry everything you need. Filter capability (<a href="https://www.amazon.com/dp/B09R8KRRDX?tag=discoverutah-20" target="_blank" rel="noopener">Hydro Flask 32oz</a> keeps water cold even at 100°F) matters on multi-day trips.',
+        description: 'Dehydration in Utah\'s canyon country is the #1 cause of hiker emergencies. Drink 1 liter per hour of active hiking in summer. There are no water sources in most canyon country — carry everything you need.',
+        tag: 'Critical',
       },
       {
-        title: 'Daily Costs by Budget',
-        description: 'Budget: $150-200/day (hostel $50-80, street food and dollar pizza $20-30, subway $12, one free museum). Mid-range: $300-500/day (3-star hotel $200-350, sit-down meals $60-100, attractions $30-50). Luxury: $700+/day (boutique hotel $400+, fine dining $150+, shows/experiences $100+). Utah is the most expensive city in America for visitors, but free parks, museums with suggested donations, and incredible cheap food balance it out.',
+        title: 'Extreme UV at Altitude',
+        html: 'Utah\'s canyon country sits at 4,000-8,000ft — UV intensity is 25-40% stronger than sea level, and red rock reflects it back at you from all directions. Apply SPF 50+ sunscreen every 2 hours, wear a <a href="https://www.amazon.com/dp/B07NPPJH21?tag=discoverutah-20" target="_blank" rel="noopener">Columbia Bora Bora Booney hat</a>, and wear a <a href="https://www.amazon.com/dp/B08FGX3G41?tag=discoverutah-20" target="_blank" rel="noopener">Columbia PFG long-sleeve sun shirt</a> — it\'s cooler than it sounds and prevents serious burns. <a href="https://www.amazon.com/dp/B0BHL23CDX?tag=discoverutah-20" target="_blank" rel="noopener">Polarized sunglasses</a> are not optional — sandstone glare causes real eye strain on long days.',
+        description: 'UV intensity is 25-40% stronger at Utah\'s elevation. Apply SPF 50+ every 2 hours, wear a wide-brim hat, sun shirt, and polarized sunglasses. Sandstone reflects UV from all directions.',
+        tag: 'Important',
       },
       {
-        title: 'Saving Money in Utah',
-        description: 'The CityPASS ($146) covers 5 top attractions and saves 40%. Many museums have free or pay-what-you-wish hours (Met, MoMA Friday evenings, Brooklyn Museum first Saturday). Central Park, High Line, Brooklyn Bridge, and Staten Island Ferry are all free. Dollar pizza ($1-1.50/slice) is everywhere and surprisingly decent. Happy hour deals (4-7pm) slash drink and appetizer prices by 50%. The TKTS booth in Times Square sells same-day Broadway tickets at 20-50% off.',
-        tag: 'Pro Tip',
+        title: 'Snakes in Red Rock Country',
+        html: 'Great Basin Rattlesnakes are common in southern Utah\'s red rock terrain — Zion, Canyonlands, Capitol Reef, and Grand Staircase-Escalante all have active populations. They are not aggressive but will strike if surprised or cornered. Watch where you step, especially around boulders and ledges, and never reach into cracks or under rocks you cannot see into. For serious slot canyon and off-trail hiking, <a href="https://www.amazon.com/dp/B00ITZDL90?tag=discoverutah-20" target="_blank" rel="noopener">TurtleSkin SnakeArmor Gaiters</a> provide genuine bite protection on the lower leg — the most common strike zone.',
+        description: 'Great Basin Rattlesnakes are common in southern Utah\'s red rock terrain. Watch where you step around boulders and ledges. Never reach into cracks or under rocks you cannot see. Snake gaiters provide bite protection for serious off-trail hiking.',
+        tag: 'Be Prepared',
       },
       {
-        title: 'Payment & Currency',
-        description: 'Credit and debit cards are accepted virtually everywhere — many places are cashless. Apple Pay and Google Pay work at most terminals. International visitors: use a no-foreign-transaction-fee card (Charles Schwab, Wise, or Revolut) to avoid 3% surcharges. ATMs charge $3-5 fees; use bank ATMs inside branches. Tax is 8.875% in Utah (added at checkout, not included in listed prices).',
+        title: 'Flash Flood & Slot Canyon Risk',
+        description: 'Flash floods are the deadliest hazard in Utah slot canyons — walls funnel water from storms that can be 20 miles away and invisible from the canyon floor. Before entering any slot canyon (The Narrows, Buckskin Gulch, Peek-a-Boo, Antelope Canyon), check the NWS forecast for the entire watershed, not just where you are standing. Never enter a slot canyon if there is any chance of rain upstream. Antelope Canyon flood deaths have occurred — always go with a licensed guide.',
+        tag: 'Critical',
       },
     ],
   },
   {
-    topic: 'Safety & Etiquette',
-    icon: '&#128694;',
-    tagline: 'Street smarts, subway etiquette, and the unwritten rules Utahers live by',
-    gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2A5080 100%)',
+    topic: 'What to Pack',
+    icon: '&#127890;',
+    tagline: 'Desert hiking demands different gear than most other environments — prepare for heat, cold nights, and technical terrain',
+    gradient: 'linear-gradient(135deg, #0D7377 0%, #14B8A6 100%)',
     tips: [
       {
-        title: 'Walking Pace & Sidewalk Rules',
-        description: 'Utahers walk fast and with purpose. Stay to the right on sidewalks. Never stop suddenly in the middle of the sidewalk — pull to the side if you need to check your phone or look at a map. Don\'t walk more than two abreast. Jaywalking is universal but watch for turning vehicles. Times Square pedestrian traffic is its own nightmare — locals avoid it entirely.',
+        title: 'Hiking Essentials',
+        html: '<a href="https://www.amazon.com/dp/B0C64B38Z8?tag=discoverutah-20" target="_blank" rel="noopener">Merrell Moab 3 Waterproof Boots</a> handle Utah\'s slickrock, sandy wash crossings, and technical terrain. Wear <a href="https://www.amazon.com/dp/B000XIEAH8?tag=discoverutah-20" target="_blank" rel="noopener">Darn Tough Hiker Socks</a> — blisters on a 3-day canyon trip are trip-ending. Carry an <a href="https://www.amazon.com/dp/B01I2P52WU?tag=discoverutah-20" target="_blank" rel="noopener">Osprey Daylite Plus 20L daypack</a> and trekking poles — <a href="https://www.amazon.com/dp/B077SQ17JV?tag=discoverutah-20" target="_blank" rel="noopener">Black Diamond Distance Carbon Z poles</a> are worth every dollar on steep descents in Bryce and Zion. For multi-day trips, <a href="https://www.amazon.com/dp/B082LPPKS8?tag=discoverutah-20" target="_blank" rel="noopener">Dr. Scholl\'s Moleskin Plus</a> treats blisters before they wreck a trip. Families with young children should look at the <a href="https://www.amazon.com/dp/B0DZ9J8THX?tag=discoverutah-20" target="_blank" rel="noopener">Osprey Poco Child Carrier</a>.',
+        description: 'Waterproof boots, quality socks, a 20L daypack, trekking poles, moleskin for blisters, and a headlamp are must-haves for Utah canyon hiking.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Navigation & Night Hiking',
+        html: 'A <a href="https://www.amazon.com/dp/B09NQK2581?tag=discoverutah-20" target="_blank" rel="noopener">Black Diamond Spot 400 Headlamp</a> is essential — many Utah desert hikes start before dawn to beat the heat. For Goblin Valley and Bryce Canyon stargazing nights, a <a href="https://www.amazon.com/dp/B09TND94HB?tag=discoverutah-20" target="_blank" rel="noopener">Black Diamond Cosmo Headlamp</a> with a red-light mode preserves night vision. Astrophotographers should bring a <a href="https://www.amazon.com/dp/B01K7M0JEM?tag=discoverutah-20" target="_blank" rel="noopener">phone mount for stargazing apps</a>. Download offline maps before leaving cell range — many canyon areas have no coverage.',
+        description: 'A headlamp with red-light mode is essential for pre-dawn starts and stargazing. Download offline maps before entering canyon country — cell coverage disappears fast.',
         tag: 'Important',
       },
       {
-        title: 'Subway Etiquette',
-        description: 'Let people exit before you board. Move to the center of the car, not blocking the doors. Backpacks go between your feet or on your lap, never on your back in a crowded car. Give up your seat for elderly, disabled, or pregnant passengers. Keep your music in your headphones. Don\'t eat messy food. Don\'t hold the doors — another train is coming in 2-5 minutes.',
+        title: 'Photography & Drone Gear',
+        html: 'Utah is one of the most photographed landscapes in the world for good reason. A <a href="https://www.amazon.com/dp/B0CFF1SJ3P?tag=discoverutah-20" target="_blank" rel="noopener">DJI Mini 4 Pro drone</a> is legal in state parks and most BLM land (not in national parks — check regulations). A <a href="https://www.amazon.com/dp/B085BQS6K4?tag=discoverutah-20" target="_blank" rel="noopener">Peak Design Travel Tripod</a> handles canyon and slot photography where golden hour light lasts only minutes. A <a href="https://www.amazon.com/dp/B08V1DPQ69?tag=discoverutah-20" target="_blank" rel="noopener">K&F Concept ND Filter Set</a> tames harsh desert light for video and long-exposure shots. Keep a <a href="https://www.amazon.com/dp/B005D2JE2A?tag=discoverutah-20" target="_blank" rel="noopener">Pelican memory card case</a> to protect cards from the omnipresent red sand.',
+        description: 'Utah rewards serious photographers. A drone (legal in state parks, not national parks), travel tripod, ND filters, and a protected memory card case are the core kit.',
       },
       {
-        title: 'Tourist Scams to Avoid',
-        description: 'Costumed characters in Times Square will demand $5-20 for a photo — agree on a price before posing or avoid entirely. "Monks" offering prayer beads expect a $20+ donation. Three-card monte games are rigged. "Free" CDs handed to you on the street are not free. Pedicab drivers quote per-minute, not per-ride — clarify before getting in. Ignore anyone who says "the subway is closed" and tries to direct you to a cab.',
-        tag: 'Watch Out',
+        title: 'Canyoneering Gear',
+        html: 'Technical slot canyons require proper rappelling gear — always go with a guide if you are new. For experienced canyoneers: a <a href="https://www.amazon.com/dp/B0BSBDZK44?tag=discoverutah-20" target="_blank" rel="noopener">Petzl BOREO Helmet</a> protects your head in tight passages, and <a href="https://www.amazon.com/dp/B00ACM4DRC?tag=discoverutah-20" target="_blank" rel="noopener">Petzl CORDEX Belay Gloves</a> protect your hands on rope descents. Wetsuits are required for The Subway and many water slots — rental is available in Springdale near Zion. Waterproof your pack contents — slot canyon pools can be chest-deep.',
+        description: 'Technical slot canyons require helmets, belay gloves, and wetsuits. Always hire a guide if you are not experienced — Zion canyon deaths occur every year.',
+        tag: 'Be Prepared',
       },
       {
-        title: 'Neighborhoods After Dark',
-        description: 'Manhattan below 96th Street, Brooklyn waterfront neighborhoods (Williamsburg, DUMBO, Park Slope, Brooklyn Heights), and Long Island City in Queens are all safe at night. Use common sense everywhere: stay on well-lit, populated streets. The subway is generally safe at night but avoid empty cars — ride in the conductor\'s car (middle of the train, marked by a black-and-white striped board on the platform). Uber/Lyft is widely available for late-night travel.',
+        title: 'MTB & Cycling Gear',
+        html: 'Moab is world-famous for mountain biking — Slickrock Trail, Porcupine Rim, and the Whole Enchilada are bucket-list rides. Always carry a <a href="https://www.amazon.com/dp/B09PZ98JXB?tag=discoverutah-20" target="_blank" rel="noopener">CamelBak M.U.L.E. 12 hydration pack</a> on desert rides — dehydration on technical trails is dangerous. <a href="https://www.amazon.com/dp/B0B8N8Z2RV?tag=discoverutah-20" target="_blank" rel="noopener">Fox Racing Ranger MTB Gloves</a> provide grip on rough Moab rock. <a href="https://www.amazon.com/dp/B0BZ958FTJ?tag=discoverutah-20" target="_blank" rel="noopener">G-Form Pro-X3 Knee Pads</a> are essential for technical descents — Moab trails will wreck unprotected knees.',
+        description: 'Moab is a world-class MTB destination. A hydration pack, MTB gloves, and knee pads are essential for technical desert trails.',
       },
       {
-        title: 'General Safety',
-        description: 'Utah City is statistically one of the safest large cities in America. Violent crime is rare in tourist areas. Pickpocketing is uncommon but keep valuables in front pockets in crowded subways and Times Square. Don\'t flash expensive electronics unnecessarily. Phone snatching by people on bikes is the most common petty crime — keep a firm grip when using your phone near the curb. If something feels wrong, trust your instincts and walk to the nearest open business.',
-        tag: 'Know This',
+        title: 'Road Trip & Camp Essentials',
+        html: 'Utah road trips cover serious distances with few services — an <a href="https://www.amazon.com/dp/B0C1HP8N5D?tag=discoverutah-20" target="_blank" rel="noopener">iOttie car mount</a> and <a href="https://www.amazon.com/dp/B0843SCLYH?tag=discoverutah-20" target="_blank" rel="noopener">Anker car charger</a> keep navigation running. An <a href="https://www.amazon.com/dp/B01KIFISX2?tag=discoverutah-20" target="_blank" rel="noopener">EcoNour car sun shade</a> is essential when parked in desert sun. The <a href="https://www.amazon.com/dp/B01M07GTOE?tag=discoverutah-20" target="_blank" rel="noopener">Helinox Chair Zero</a> packs tiny and turns any canyon overlook into a proper sunset seat. An <a href="https://www.amazon.com/dp/B001DDTE5A?tag=discoverutah-20" target="_blank" rel="noopener">ENO DoubleNest Hammock</a> hangs between cottonwoods along canyon rivers. Keep a <a href="https://www.amazon.com/dp/B0CQBX3JZ6?tag=discoverutah-20" target="_blank" rel="noopener">roadside emergency kit</a> in the trunk — cell service is nonexistent in much of canyon country. A <a href="https://www.amazon.com/dp/B0DWCPS2Y4?tag=discoverutah-20" target="_blank" rel="noopener">high-capacity Anker power bank</a> keeps devices alive between outlet access. A <a href="https://www.amazon.com/dp/B01N7ILPEL?tag=discoverutah-20" target="_blank" rel="noopener">TSA lock</a> secures your bag at trailhead parking areas where car break-ins are common.',
+        description: 'Car mount, charger, sun shade, camp chair, hammock, emergency kit, and power bank are the road trip toolkit for Utah\'s remote canyon country.',
+      },
+      {
+        title: 'Skiing & Winter Gear',
+        html: 'Utah gets an average of 500 inches of snow per year at Alta and Snowbird — "the Greatest Snow on Earth" is not marketing. For ski trips: a <a href="https://www.amazon.com/dp/B00DG2TNB6?tag=discoverutah-20" target="_blank" rel="noopener">retractable cable ski lock</a> secures equipment when you stop for lunch. Bring <a href="https://www.amazon.com/dp/B0B3JSRZFJ?tag=discoverutah-20" target="_blank" rel="noopener">binoculars</a> for spotting wildlife from the resort — moose and foxes are common near Alta. Gaiter-style pants stay clean in Utah\'s dry powder, and layers are critical — Snowbird summits hit -20°F in storms.',
+        description: 'Alta and Snowbird receive 500+ inches annually. A ski lock, quality goggles, and extra layers for summit temperatures are essential. Utah\'s dry powder is unlike anywhere else.',
+        tag: 'Pro Tip',
+      },
+    ],
+  },
+  {
+    topic: 'Money & Budget',
+    icon: '&#128176;',
+    tagline: 'Utah is far more affordable than coastal destinations — but national park fees and gear add up',
+    gradient: 'linear-gradient(135deg, #E94560 0%, #B83550 100%)',
+    tips: [
+      {
+        title: 'National Park Fees',
+        description: 'Each of the Mighty Five charges $35/vehicle for a 7-day pass. The America the Beautiful Annual Pass ($80) covers all five parks plus every national monument, recreation area, and national forest in the US. It pays for itself after visiting just three parks and is the single best travel investment for a Utah trip. Available at any park entrance or at recreation.gov.',
+        tag: 'Essential',
+      },
+      {
+        title: 'Daily Budget Ranges',
+        description: 'Budget: $80-120/day — campground ($20-35/night), grocery store meals cooked at camp, free hiking. Mid-range: $150-250/day — motel or mid-tier lodging ($80-150/night), restaurant lunches, tours. Luxury: $350+/day — Amangiri ($2,000+/night), private guides, helicopter tours. A 7-day Utah road trip for two (mid-range) runs $2,500-3,500 all-in including flights, car rental, accommodation, food, and activities.',
+      },
+      {
+        title: 'Saving Money in Utah',
+        description: 'Camp instead of staying in Moab — campsite reservations at recreation.gov ($20-35/night) versus $150-300/night motels. Visit Goblin Valley, Kodachrome Basin, and Dead Horse Point State Park ($15-20/vehicle) instead of always paying national park fees. Cook meals — Moab has a City Market grocery store, and SLC has everything. Visit Bryce Canyon in winter for $0 crowds and stunning snow-dusted hoodoos.',
+        tag: 'Pro Tip',
+      },
+      {
+        title: 'Payment & Cell Coverage',
+        description: 'Credit cards are accepted in towns but carry cash for campsite host fees, roadside vendors, and Navajo Nation services near Monument Valley and Antelope Canyon. Cell coverage disappears completely between Escalante and Hanksville, and throughout Grand Staircase-Escalante. Download offline maps (Maps.me, Gaia GPS) and the Zion, Arches, and Bryce Canyon NPS apps before leaving cell range. Verizon has the best rural coverage in southern Utah.',
       },
     ],
   },
 ];
 
 const faqItems = [
-  { question: 'Do I need a car in Utah City?', answer: 'Absolutely not — a car is a liability in Utah. The subway, buses, ferries, and rideshares cover everything. Parking costs $40-80/day in Manhattan, traffic is brutal, and the congestion pricing toll ($9+) now charges vehicles entering Manhattan below 60th Street. Use the subway and walk. If you are also visiting upstate Utah (Adirondacks, Finger Lakes, Hudson Valley), rent a car for the upstate portion only and drop it off before returning to the city.' },
-  { question: 'Is the Utah subway safe?', answer: 'Yes. The Utah subway carries 3.5+ million riders daily and serious incidents are extremely rare. Standard precautions: stay alert, keep valuables secure, ride in the conductor\'s car (middle of the train) late at night, and avoid empty cars. The subway runs 24/7, though late-night waits can be 15-20 minutes. Daytime and evening hours are busy and safe. The system has more police presence now than at any time in recent years.' },
-  { question: 'How much should I budget per day in Utah?', answer: 'Budget traveler: $150-200/day (hostels, street food, free museums, subway). Mid-range: $300-500/day (3-star hotel, restaurants, attractions, shows). Luxury: $700+/day (boutique hotels, fine dining, premium experiences). A typical 5-day mid-range trip for two costs $3,000-5,000 including accommodation, food, attractions, and local transport (not including flights). Utah is expensive, but dollar pizza, free parks, and museum free-hours help enormously.' },
-  { question: 'When is the cheapest time to visit Utah?', answer: 'January through early March offers the lowest hotel prices — 30-40% below peak season. The weather is cold (25-40F) but manageable with proper layers. Restaurant Week (late January) offers prix-fixe lunch and dinner at top restaurants. Broadway shows are easier to get and TKTS discounts are deeper. Late August and early September (after summer, before fall foliage) is another value window. Avoid Christmas/New Year, Fashion Week (September), and UN General Assembly (late September) for the highest prices.' },
-  { question: 'What is the best way to get from the airport to Manhattan?', answer: 'From JFK: AirTrain + subway ($11.40 total, 60-75 min) is cheapest. LIRR from Jamaica ($8.50 AirTrain + $11 LIRR) is fastest to Penn Station (45 min total). Taxis have a flat $70 rate. From LaGuardia: Q70-SBS bus to 7 train (free transfer, 60 min) or taxi ($35-55). From Newark: AirTrain + NJ Transit ($15.25, 45 min to Penn Station). Uber/Lyft from any airport runs $60-100. Avoid helicopter transfers — not worth the $200+ unless money is no object.' },
-  { question: 'How much should I tip in Utah restaurants?', answer: 'The standard tip in Utah restaurants is 20% on the pre-tax total. 18% is acceptable for adequate service; 25% for exceptional service. An easy calculation: double the Utah tax (8.875%) for roughly 18%, or move the decimal and double for 20%. Never tip less than 15% unless the service was genuinely terrible — servers earn $10/hr base wage and depend on tips. For large groups (6+), many restaurants add an automatic 18-20% gratuity.' },
+  { question: 'Do I need a car in Utah?', answer: 'Yes — there is no meaningful public transit connecting Utah\'s national parks. A rental car is essential. From Zion\'s shuttle system (required in the main canyon) to Canyonlands\' remote districts, you will need your own vehicle everywhere outside of central Salt Lake City. Book an AWD vehicle for spring or after any rain — many dirt roads become impassable for 2WD vehicles.' },
+  { question: 'When is the best time to visit Zion and Arches?', answer: 'Spring (March-May) and fall (September-November) are ideal for both — moderate temperatures, wildflowers or fall color, and manageable crowds. Summer is extremely hot in canyon country (Moab hits 100-108°F in July) but doable with early morning starts. Zion in winter is underrated — uncrowded, mild valley temperatures, and dramatic light. Arches requires timed entry permits April through October.' },
+  { question: 'How far in advance should I book Utah national park permits?', answer: 'The Wave lottery requires applying 4 months ahead at recreation.gov (limited day-before lottery also available). Zion shuttle reservations open 3 days before in summer. Arches timed entry opens 1-5 days before. The Subway in Zion requires a permit by lottery — apply 3+ months ahead. Antelope Canyon (Page, AZ) tours sell out 3-6 months ahead in spring. Book accommodation in Moab and Springdale 4-6 months ahead for summer and fall.' },
+  { question: 'Is Utah safe for beginner hikers?', answer: 'Yes, with caveats. Many Mighty Five trails are well-marked and manageable for beginners (Angel\'s Landing lower section, Bryce Canyon rim trail, Delicate Arch). But Utah\'s desert adds risks that East Coast or European hikers don\'t expect: extreme heat, limited water, UV radiation at altitude, and flash flood hazard in slot canyons. Carry more water than you think you need, start hikes before 8am in summer, and never enter a slot canyon if there is rain in the forecast.' },
+  { question: 'Are there rattlesnakes in Utah national parks?', answer: 'Yes. Great Basin Rattlesnakes are present in all of Utah\'s southern national parks and in Grand Staircase-Escalante. They are most active spring through fall. Bites are rare but serious — watch where you step, especially around boulders and ledges, and never reach into crevices without looking first. Do not approach or handle them. In the extremely unlikely event of a bite, keep the victim calm and still, and get to a hospital immediately.' },
+  { question: 'Can I fly a drone in Utah national parks?', answer: 'No — drone use is prohibited in all national parks (Zion, Arches, Canyonlands, Bryce Canyon, Capitol Reef). Drones are permitted on most BLM land (which surrounds the parks) and in most state parks including Goblin Valley and Dead Horse Point. Always check specific regulations before flying. The DJI Mini 4 Pro requires FAA Part 107 certification for commercial use and registration for recreational use.' },
 ];
 ---
 <BaseLayout
@@ -192,15 +241,15 @@ const faqItems = [
     <div class="menu-hero-noise"></div>
     <div class="menu-hero-content">
       <h1 class="menu-hero-title">Utah Practical Guide</h1>
-      <p class="menu-hero-subtitle">Everything you need to know before your trip — airports, subway navigation, tipping culture, seasonal timing, and the unwritten rules that keep Utah running.</p>
+      <p class="menu-hero-subtitle">Permits, desert safety, canyon hiking, and everything you need to know before setting foot in one of the most spectacular landscapes on Earth.</p>
       <div class="menu-hero-meta">
         <div class="menu-hero-meta-item">
           <span class="menu-hero-meta-label">Topics</span>
-          <span class="menu-hero-meta-value">5</span>
+          <span class="menu-hero-meta-value">6</span>
         </div>
         <div class="menu-hero-meta-item">
           <span class="menu-hero-meta-label">Tips</span>
-          <span class="menu-hero-meta-value">21</span>
+          <span class="menu-hero-meta-value">27</span>
         </div>
         <div class="menu-hero-meta-item">
           <span class="menu-hero-meta-label">FAQ</span>
@@ -220,7 +269,7 @@ const faqItems = [
   <section class="menu-personal reveal">
     <div class="container-content">
       <blockquote class="menu-personal-quote">
-        <p>The number one mistake first-time Utah visitors make is trying to do too much. Manhattan alone could fill two weeks. Add Brooklyn, the Hudson Valley, and upstate and you have a month. My advice: pick a neighborhood, walk it slowly, eat where locals eat, and let the city come to you. The subway will get you everywhere else. And yes — tip 20%. Always.</p>
+        <p>The number one mistake first-time Utah visitors make is underestimating the permit situation. You cannot just show up to The Wave, The Subway, or Antelope Canyon. Plan 4-6 months ahead for the iconic slots, buy your America the Beautiful pass before you arrive, and respect the desert heat — it will shut you down fast if you ignore it. The rewards are some of the most otherworldly landscapes on the planet.</p>
         <cite>— Scott</cite>
       </blockquote>
     </div>
@@ -230,7 +279,7 @@ const faqItems = [
   <section class="menu-intro reveal">
     <div class="container-content">
       <div class="menu-intro-card">
-        <p class="menu-intro-text">We've organized essential Utah travel advice into five categories — <strong>Getting to Utah</strong>, <strong>Subway & Transit</strong>, <strong>When to Visit</strong>, <strong>Money & Tipping</strong>, and <strong>Safety & Etiquette</strong>. Practical, honest, no-fluff guidance.</p>
+        <p class="menu-intro-text">We've organized essential Utah travel advice into six categories — <strong>Getting to Utah</strong>, <strong>Permits & Planning</strong>, <strong>When to Visit</strong>, <strong>Desert Safety</strong>, <strong>What to Pack</strong>, and <strong>Money & Budget</strong>. Practical, honest, no-fluff guidance for canyon country.</p>
       </div>
     </div>
   </section>
@@ -258,7 +307,7 @@ const faqItems = [
                     <span class={`menu-tag menu-tag--${tip.tag.toLowerCase().replace(/[^a-z]/g, '')}`}>{tip.tag}</span>
                   )}
                 </div>
-                <p class="menu-tip-desc">{tip.description}</p>
+                <p class="menu-tip-desc" set:html={tip.html ?? tip.description} />
               </div>
             </div>
           ))}
@@ -272,7 +321,7 @@ const faqItems = [
     <div class="container-content">
       <div class="menu-cta-card">
         <h2 class="menu-cta-heading">Plan Your Utah Trip</h2>
-        <p class="menu-cta-text">Tell our AI planner your dates, budget, and interests and it will build a complete day-by-day itinerary — with hotels, restaurants, subway routes, and neighborhood recommendations.</p>
+        <p class="menu-cta-text">Tell our AI planner your dates, budget, and interests and it will build a complete day-by-day itinerary — with lodging, permit deadlines, driving routes, and canyon recommendations.</p>
         <a href="/plan/" class="menu-cta-button">Start Planning &rarr;</a>
       </div>
     </div>
@@ -285,12 +334,12 @@ const faqItems = [
   <div class="container-content reveal" style="padding-bottom: var(--space-6);">
     <EmailCapture
       leadMagnet="Free Utah Trip Planning Kit"
-      description="A printable PDF with subway maps, neighborhood guides, budget worksheets, and seasonal planning calendars."
+      description="A printable PDF with permit deadlines, packing checklists, budget worksheets, and park-by-park planning guides."
       bullets={[
-        'Annotated subway map with tourist tips',
-        'Neighborhood-by-neighborhood walking guides',
-        'Budget worksheet with average Utah costs',
-        'Seasonal event calendar and packing lists',
+        'Permit deadlines and lottery entry guide for all major Utah slots',
+        'Canyon country packing checklist by season',
+        'Budget worksheet with average Utah costs by park',
+        'Flash flood safety quick-reference card',
       ]}
       guideTag="pillar-practical"
     />
@@ -304,17 +353,17 @@ const faqItems = [
         <a href="/outdoors/" class="menu-crosslink-card">
           <span class="menu-crosslink-icon">&#9968;</span>
           <span class="menu-crosslink-label">Utah Outdoors</span>
-          <span class="menu-crosslink-desc">Adirondacks, Finger Lakes gorges, and Hudson Valley trails</span>
+          <span class="menu-crosslink-desc">Zion, Arches, Canyonlands, and the Mighty Five in depth</span>
         </a>
         <a href="/history/" class="menu-crosslink-card">
           <span class="menu-crosslink-icon">&#127963;</span>
           <span class="menu-crosslink-label">Utah History</span>
-          <span class="menu-crosslink-desc">Ellis Island, Revolutionary War sites, and cultural milestones</span>
+          <span class="menu-crosslink-desc">Ancient ruins, pioneer trails, and Navajo Nation heritage</span>
         </a>
         <a href="/food/" class="menu-crosslink-card">
           <span class="menu-crosslink-icon">&#127829;</span>
           <span class="menu-crosslink-label">Utah Food</span>
-          <span class="menu-crosslink-desc">Pizza, bagels, diners, and the world's most diverse food scene</span>
+          <span class="menu-crosslink-desc">SLC dining scene, Moab restaurants, and canyon country fueling stops</span>
         </a>
       </div>
     </div>
@@ -336,7 +385,7 @@ const faqItems = [
 
 <style>
   .menu-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem var(--space-6) 60px; overflow: hidden; }
-  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 40%, #0F2035 100%); }
+  .menu-hero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #C23152 0%, #8B1A33 40%, #5C0E22 100%); }
   .menu-hero-gradient { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.4) 100%); }
   .menu-hero-noise { position: absolute; inset: 0; z-index: 2; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; }
   .menu-hero-content { position: relative; z-index: 3; max-width: 720px; }
@@ -355,16 +404,16 @@ const faqItems = [
 
   .menu-tag { display: inline-block; font-size: 0.6rem; font-weight: var(--weight-bold); text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 6px; line-height: 1.4; white-space: nowrap; }
   .menu-tag--mainhub { background: rgba(30,58,95,0.12); color: #1E3A5F; }
-  .menu-tag--closest { background: rgba(233,69,96,0.12); color: #E94560; }
-  .menu-tag--value { background: rgba(46,125,50,0.15); color: #1B5E20; }
-  .menu-tag--protip { background: rgba(46,125,50,0.1); color: #2E7D32; }
   .menu-tag--essential { background: rgba(233,69,96,0.12); color: #C23152; }
+  .menu-tag--protip { background: rgba(46,125,50,0.1); color: #2E7D32; }
+  .menu-tag--critical { background: rgba(191,54,12,0.15); color: #BF360C; }
   .menu-tag--important { background: rgba(191,54,12,0.1); color: #BF360C; }
+  .menu-tag--beprepared { background: rgba(255,107,53,0.12); color: #CC5529; }
+  .menu-tag--hiddengem { background: rgba(106,27,154,0.1); color: #6A1B9A; }
   .menu-tag--bestoverall { background: rgba(46,125,50,0.15); color: #1B5E20; }
+  .menu-tag--peakseason { background: rgba(233,69,96,0.12); color: #E94560; }
   .menu-tag--toppick { background: rgba(233,69,96,0.12); color: #E94560; }
   .menu-tag--budget { background: rgba(106,27,154,0.1); color: #6A1B9A; }
-  .menu-tag--watchout { background: rgba(191,54,12,0.15); color: #BF360C; }
-  .menu-tag--knowthis { background: rgba(191,54,12,0.1); color: #BF360C; }
 
   .menu-region { padding: var(--space-6) 0; }
   .menu-region-header { position: relative; border-radius: 20px; padding: var(--space-6); margin-bottom: var(--space-6); overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
@@ -382,13 +431,15 @@ const faqItems = [
   .menu-tip-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
   .menu-tip-title { font-size: 1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); margin: 0; line-height: 1.3; }
   .menu-tip-desc { font-size: 0.85rem; color: var(--color-slate); line-height: 1.65; margin: 0; }
+  .menu-tip-desc :global(a) { color: #0D7377; font-weight: var(--weight-semibold); text-decoration: underline; text-decoration-color: rgba(13,115,119,0.3); text-underline-offset: 2px; transition: text-decoration-color 0.2s ease; }
+  .menu-tip-desc :global(a:hover) { text-decoration-color: #0D7377; }
 
   .menu-cta-section { padding: var(--space-6) 0 var(--space-8); }
-  .menu-cta-card { background: linear-gradient(135deg, #1E3A5F 0%, #152D4A 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
+  .menu-cta-card { background: linear-gradient(135deg, #C23152 0%, #8B1A33 100%); border-radius: 20px; padding: var(--space-8) var(--space-6); text-align: center; color: #fff; }
   .menu-cta-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: var(--weight-bold); margin: 0 0 var(--space-3); color: #fff; }
   .menu-cta-text { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto var(--space-5); line-height: 1.6; }
-  .menu-cta-button { display: inline-block; background: #E94560; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
-  .menu-cta-button:hover { background: #C23152; transform: translateY(-2px); }
+  .menu-cta-button { display: inline-block; background: #E8654A; color: #fff; font-size: 0.9rem; font-weight: var(--weight-semibold); padding: 12px 28px; border-radius: 40px; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
+  .menu-cta-button:hover { background: #CC5529; transform: translateY(-2px); }
 
   .menu-crosslinks { padding: 0 0 var(--space-10); }
   .menu-crosslinks-heading { font-size: 1.1rem; font-weight: var(--weight-bold); color: var(--color-deep-night); text-align: center; margin: 0 0 var(--space-4); }
