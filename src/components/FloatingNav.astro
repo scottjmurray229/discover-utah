@@ -13,13 +13,14 @@ const guideLinks = [
   { href: '/food/', label: 'Food & Dining', icon: '🍽️' },
   { href: '/arts-culture/', label: 'Arts & Culture', icon: '🎨' },
   { href: '/history/', label: 'History', icon: '🏛️' },
+  { href: '/festivals/', label: 'Festivals', icon: '🎉' },
   { href: '/neighborhoods/', label: 'Neighborhoods', icon: '🏘️' },
   { href: '/practical/', label: 'Practical Guide', icon: '🗺️' },
   { href: '/packing-list/', label: 'Packing List', icon: '🎒' },
 ];
 
 const isGuidesActive = (p: string) =>
-  p.startsWith('/outdoors') || p.startsWith('/food') || p.startsWith('/arts-culture') || p.startsWith('/history') || p.startsWith('/neighborhoods') || p.startsWith('/practical') || p.startsWith('/packing-list');
+  p.startsWith('/outdoors') || p.startsWith('/food') || p.startsWith('/arts-culture') || p.startsWith('/history') || p.startsWith('/festivals') || p.startsWith('/neighborhoods') || p.startsWith('/practical') || p.startsWith('/packing-list');
 ---
 
 <!-- Desktop: top nav bar — transparent → solid on scroll -->

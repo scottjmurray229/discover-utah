@@ -1,0 +1,1259 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Festival Calendar', url: '/festivals/' },
+];
+
+const pageTitle = 'Utah Festival & Events Calendar 2026';
+const pageDescription = 'From Sundance Film Festival\'s star-studded Park City screenings to Moab\'s music in red rock canyons, Utah Shakespeare Festival under desert skies, and Bryce Canyon\'s stargazing astronomy festival — Utah\'s event calendar runs year-round.';
+
+const festivals = [
+  {
+    month: 'Jan',
+    monthIndex: 0,
+    name: 'Sundance Film Festival',
+    destination: 'Park City',
+    slug: 'park-city',
+    description: 'Sundance is the most important independent film festival in the world — and it happens every January in the ski town of Park City, Utah, which briefly becomes the center of the global film industry for ten days. The Eccles Theatre and dozens of venues across Park City and Salt Lake City fill with screenings of debut features, documentaries, and short films alongside panels, parties, and the kind of celebrity-spotting that happens nowhere else in the mountain west. Getting tickets requires planning: the lottery for festival passes opens months in advance, but day-of rush tickets and free outdoor screenings make Sundance partially accessible without a credential. We\'ve attended twice and each time left having seen three or four films that went on to wide release.',
+  },
+  {
+    month: 'Jan',
+    monthIndex: 0,
+    name: 'Ogden Ice Festival',
+    destination: 'Salt Lake City',
+    slug: 'salt-lake-city',
+    description: 'The Ogden Ice Festival — held in the city of Ogden, north of Salt Lake — transforms downtown into an open-air gallery of ice sculpture, with master carvers from across the country competing in timed events that produce astonishing works of ephemeral art. The festival runs over a long weekend with live music, warm food stalls, and the chance to watch sculptors wielding chainsaws and chisels with improbable precision against blocks of ice as the mountain air keeps the sculptures intact. January in northern Utah is cold enough that the sculptures last the full weekend — by day they gleam in alpine sunlight, by night they\'re backlit and glowing. An unexpectedly atmospheric event.',
+  },
+  {
+    month: 'Feb',
+    monthIndex: 1,
+    name: 'Snowbird Mardi Gras',
+    destination: 'Salt Lake City',
+    slug: 'salt-lake-city',
+    description: 'Snowbird Ski Resort in Little Cottonwood Canyon — one of the deepest powder skiing destinations in North America, receiving over 500 inches of snow annually — throws its own Mardi Gras celebration that combines the resort\'s world-class terrain with a mountain party atmosphere unlike anything else in Utah. Themed ski runs, costume competitions on the slopes, live music in the base village, and an outdoor Fat Tuesday party make this the most festive day of the ski season. The proximity to Salt Lake City (about 30 minutes up the canyon) means you can ski all day, attend the evening festivities, and be back in the city by midnight.',
+  },
+  {
+    month: 'Mar',
+    monthIndex: 2,
+    name: 'St. George Arts Festival',
+    destination: 'St. George',
+    slug: 'st-george',
+    description: 'The St. George Arts Festival is one of the premier fine arts events in the Southwest, drawing over 200 juried artists from across the country to display and sell original work in the outdoor Town Square of this desert city that sits at the gateway to Zion National Park. The March timing is perfect — St. George\'s red-rock landscape is at its most beautiful before summer heat arrives, and the outdoor festival setting against those canyon walls makes for an unusually dramatic art show backdrop. Sculpture, painting, photography, jewelry, ceramics, and glass are all represented at the highest level, and the festival has a genuine collector following among serious buyers.',
+  },
+  {
+    month: 'May',
+    monthIndex: 4,
+    name: 'Moab Skinny Tire Festival',
+    destination: 'Moab',
+    slug: 'moab',
+    description: 'The Moab Skinny Tire Festival is a road cycling event set against one of the most spectacular backdrops available to any cyclist anywhere on earth — the red rock canyon country of southeastern Utah, where routes run past Arches National Park, through Canyonlands terrain, and along the Colorado River on roads that feel like riding through a painting. The event attracts cyclists of all ability levels (it\'s a festival, not a race) across multiple route distances, with fully supported rides, rest stops, and the kind of community warmth that makes Utah\'s cycling culture genuinely welcoming. May weather in Moab is ideal: warm, clear, and before the heat of summer.',
+  },
+  {
+    month: 'May',
+    monthIndex: 4,
+    name: 'Zion Canyon Music Festival',
+    destination: 'Zion',
+    slug: 'zion',
+    description: 'The Zion Canyon Music Festival brings live music to the mouth of Zion National Park in Springdale, the tiny gateway town whose Main Street runs directly toward the canyon\'s vermillion walls. Held in late spring when the canyon is at its most photogenic and temperatures are ideal for outdoor listening, the festival programs folk, Americana, bluegrass, and acoustic music on stages that make the surrounding landscape the most dramatic backdrop any performer could ask for. The combination of world-class natural beauty and intimate festival scale — this is not a large event — creates the kind of music experience you remember for years. Many performers play multiple sets across the weekend.',
+  },
+  {
+    month: 'Jun',
+    monthIndex: 5,
+    name: 'Utah Arts Festival',
+    destination: 'Salt Lake City',
+    slug: 'salt-lake-city',
+    description: 'The Utah Arts Festival is the largest outdoor multi-arts festival in the Intermountain West, drawing over 80,000 attendees to Library Square in Salt Lake City over five days each June with juried visual art, live music across multiple stages, film screenings, literary events, craft demonstrations, and the kind of creative energy that Salt Lake\'s surprisingly robust arts community sustains year-round. The festival is the public expression of a city that gets underestimated culturally — Salt Lake has world-class opera, a respected symphony, serious theater, and an arts scene that\'s been quietly building for decades. The June weather is typically sunny and warm without the brutal heat of July and August.',
+  },
+  {
+    month: 'Jun',
+    monthIndex: 5,
+    name: 'Utah Shakespeare Festival (Opens)',
+    destination: 'St. George',
+    slug: 'st-george',
+    description: 'The Utah Shakespeare Festival in Cedar City (near St. George) is one of the finest regional Shakespeare festivals in North America, operating in stunning outdoor and indoor venues that draw audiences from across the West and beyond. The festival\'s outdoor Adams Memorial Shakespearean Theatre is modeled on the Elizabethan original, performing under the desert sky in a setting that makes the language feel newly alive. Productions run from late June through October with rotating repertory — typically seven or eight productions per season spanning Shakespeare, other classics, and new works. The surrounding red-rock landscape of Iron County provides an extraordinary backdrop for pre-show walks and intermission conversations.',
+  },
+  {
+    month: 'Jul',
+    monthIndex: 6,
+    name: 'Utah Shakespeare Festival Peak Season',
+    destination: 'St. George',
+    slug: 'st-george',
+    description: 'July is peak season for the Utah Shakespeare Festival, when the full rotating repertory is in operation and the evening temperatures in Cedar City cool enough after sunset to make outdoor performances ideal. The festival\'s dedication to classical production quality — with professional actors, elaborate period costumes, and full orchestral support for the musical productions — rivals regional Shakespeare festivals anywhere in the English-speaking world. Pre-show seminars where scholars discuss the plays, backstage tours, and the festival\'s commitment to accessibility (some performances offer audio description and open captioning) make this a genuinely world-class cultural institution that most people outside the West haven\'t heard of.',
+  },
+  {
+    month: 'Jul',
+    monthIndex: 6,
+    name: 'Days of \'47 Parade & Rodeo',
+    destination: 'Salt Lake City',
+    slug: 'salt-lake-city',
+    description: 'July 24 is Pioneer Day in Utah — the state\'s most important holiday, commemorating the arrival of Mormon pioneers in the Salt Lake Valley in 1847. The Days of \'47 celebration includes the largest parade west of the Mississippi River, with floats, marching bands, equestrian units, and community groups stretching for miles through downtown Salt Lake City. The accompanying rodeo at Vivint Arena is a serious professional competition with bull riding, barrel racing, and roping events that draw top-tier competitors from across the West. For visitors who happen to be in Salt Lake on July 24, the parade is one of those only-in-Utah experiences that sticks in memory.',
+  },
+  {
+    month: 'Aug',
+    monthIndex: 7,
+    name: 'Sundance Film Festival Mountain Series',
+    destination: 'Sundance',
+    slug: 'sundance',
+    description: 'The Sundance Institute\'s mountain resort in Provo Canyon — Robert Redford\'s original Sundance, distinct from the Park City film festival — hosts intimate summer programming including film screenings, artist residencies, and the Mountain Series of outdoor events that run through August. The resort\'s outdoor amphitheater is one of the most beautiful performance venues in Utah, with Timpanogos towering above as the backdrop for evening concerts and film nights under the stars. The programming is deliberately small-scale and curated — this is not a mass-market event but rather an extension of Sundance\'s mission to support independent artistic voices in an environment designed to inspire creativity.',
+  },
+  {
+    month: 'Aug',
+    monthIndex: 7,
+    name: 'Park City Kimball Arts Festival',
+    destination: 'Park City',
+    slug: 'park-city',
+    description: 'The Park City Kimball Arts Festival is one of the most prestigious fine arts festivals in the American West, held each August in historic Park City with 200 juried artists displaying and selling original work along the resort town\'s Victorian-era Main Street. The caliber of work is exceptional — this is a serious collector\'s event as much as a public festival — and the setting of Park City\'s walkable downtown against the backdrop of the Wasatch Mountains gives it an atmosphere that distinguishes it from flatland art festivals. The accompanying programming includes artist talks, live music at multiple outdoor stages, and food vendors sourcing from Utah\'s agricultural community.',
+  },
+  {
+    month: 'Sep',
+    monthIndex: 8,
+    name: 'Moab Music Festival',
+    destination: 'Moab',
+    slug: 'moab',
+    description: 'The Moab Music Festival is one of the most extraordinary musical events in America — a chamber music and jazz festival that performs in natural amphitheaters carved into the red rock canyon country of southeastern Utah, with the Colorado River as backdrop and canyon walls rising hundreds of feet on either side. The signature Grotto Concert takes place in an alcove in the canyon accessible only by raft, with musicians performing classical and chamber music to an audience that arrives by river — an experience completely unlike any other concert you will ever attend. September in Moab is golden-hour perfect: warm days, cool nights, and the canyon walls glowing amber at sunset.',
+  },
+  {
+    month: 'Sep',
+    monthIndex: 8,
+    name: 'Bryce Canyon Astronomy Festival',
+    destination: 'Bryce Canyon',
+    slug: 'bryce-canyon',
+    description: 'Bryce Canyon National Park has some of the darkest skies in North America — a Gold Tier International Dark Sky Park with virtually no light pollution within view of its hoodoo-studded amphitheaters — and the annual Astronomy Festival in September brings together professional astronomers, amateur stargazers, and park rangers for four nights of telescope viewing, laser-guided constellation tours, and discussions of cosmology against the most spectacular natural backdrop imaginable. Telescopes are set up among the hoodoos, shooting stars are visible with the naked eye, and on a moonless night the Milky Way arcs overhead like a visible structure rather than a faint suggestion. This might be the best reason to visit Bryce Canyon that doesn\'t involve hiking.',
+  },
+  {
+    month: 'Oct',
+    monthIndex: 9,
+    name: 'Red Rock Film Festival',
+    destination: 'St. George',
+    slug: 'st-george',
+    description: 'The Red Rock Film Festival in St. George is southern Utah\'s answer to Sundance — a curated independent film festival that programs features, documentaries, and shorts with an eye toward adventurous storytelling and the kind of work that doesn\'t easily find commercial distribution. The October timing catches St. George at its most temperate, and the surrounding landscape of red rock buttes and canyon country provides a setting that naturally attracts filmmakers drawn to the American West. Festival screenings happen in various venues around town, with Q&A sessions after most films and a closing night awards ceremony that has developed real credibility among the independent film community.',
+  },
+  {
+    month: 'Oct',
+    monthIndex: 9,
+    name: 'Park City Fall Fest',
+    destination: 'Park City',
+    slug: 'park-city',
+    description: 'Park City\'s Fall Festival in October catches the resort town in its most beautiful season — the aspen groves above town are turning gold and orange, the ski resort infrastructure sits quiet and peaceful before winter crowds arrive, and the town\'s Main Street runs its autumn programming of craft beer events, live music, art walks, and outdoor dining that make fall the best-kept secret of Park City\'s event calendar. The Oktoberfest programming at Deer Valley draws a separate crowd, and many visitors combine the Fall Fest with mountain biking on Park City\'s extraordinary trail system before the snow arrives. Hotel rates are lower than ski season and summer.',
+  },
+  {
+    month: 'Dec',
+    monthIndex: 11,
+    name: 'Temple Square Christmas Lights',
+    destination: 'Salt Lake City',
+    slug: 'salt-lake-city',
+    description: 'Temple Square\'s annual Christmas lighting is Utah\'s most attended winter event — roughly 100,000 LED lights illuminate the ten acres of grounds surrounding the Salt Lake Temple, creating a display that draws visitors from across the Intermountain West every evening from Thanksgiving through the new year. The Utah Tabernacle Choir (one of the finest choral ensembles in the world) performs free Christmas concerts that are broadcast nationally, and the surrounding Temple Square grounds are designed for contemplative winter walks between the lights and nativity scenes. Whether or not the religious context resonates, the sheer scale and quality of the display makes this one of the most impressive Christmas light installations in the country.',
+  },
+  {
+    month: 'Dec',
+    monthIndex: 11,
+    name: 'Sundance Preview Screenings',
+    destination: 'Park City',
+    slug: 'park-city',
+    description: 'In the weeks before the January Sundance Film Festival, Park City hosts preview programming and industry events that give film enthusiasts a taste of the festival atmosphere without January\'s peak crowds and prices. The Sundance Institute\'s satellite programming includes curated screenings of films selected for the upcoming festival, panel discussions with filmmakers and distributors, and the kind of insider access that the festival\'s official January run can\'t always provide amid the chaos of 40,000 attendees. December in Park City is cold, snowy, and strikingly beautiful — the combination of early-season skiing and festival previews makes it an attractive alternative for those who want the Sundance experience at a lower temperature of intensity.',
+  },
+];
+
+const months = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
+const monthGradients = [
+  'linear-gradient(135deg, #E8654A 0%, #D4A853 100%)',
+  'linear-gradient(135deg, #C05299 0%, #E8654A 100%)',
+  'linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)',
+  'linear-gradient(135deg, #FF9800 0%, #FFC107 100%)',
+  'linear-gradient(135deg, #9E9E9E 0%, #BDBDBD 100%)',
+  'linear-gradient(135deg, #0D7377 0%, #4DB6AC 100%)',
+  'linear-gradient(135deg, #1565C0 0%, #42A5F5 100%)',
+  'linear-gradient(135deg, #6A1B9A 0%, #AB47BC 100%)',
+  'linear-gradient(135deg, #9E9E9E 0%, #BDBDBD 100%)',
+  'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
+  'linear-gradient(135deg, #BF360C 0%, #E8654A 100%)',
+  'linear-gradient(135deg, #1A2332 0%, #C62828 0%, #FFD54F 100%)',
+];
+
+// Extract first color from each month gradient for map markers
+const monthColors = [
+  '#E8654A', '#C05299', '#4CAF50', '#FF9800', '#9E9E9E', '#0D7377',
+  '#1565C0', '#6A1B9A', '#9E9E9E', '#E65100', '#BF360C', '#C62828',
+];
+
+// Geo coordinates for festival map markers
+const geoLookup: Record<string, { lat: number; lng: number; label: string }> = {
+  'salt-lake-city': { lat: 40.7608, lng: -111.8910, label: 'Salt Lake City' },
+  'park-city': { lat: 40.6461, lng: -111.4980, label: 'Park City' },
+  'moab': { lat: 38.5733, lng: -109.5498, label: 'Moab' },
+  'st-george': { lat: 37.0965, lng: -113.5684, label: 'St. George' },
+  'provo': { lat: 40.2338, lng: -111.6585, label: 'Provo' },
+  'bryce-canyon': { lat: 37.5930, lng: -112.1871, label: 'Bryce Canyon' },
+  'zion': { lat: 37.2982, lng: -113.0263, label: 'Zion' },
+  'sundance': { lat: 40.5963, lng: -111.5888, label: 'Sundance' },
+};
+
+// Build map markers — group festivals by slug (one marker per location)
+const festBySlug = new Map<string, typeof festivals>();
+festivals.forEach(f => {
+  const arr = festBySlug.get(f.slug) || [];
+  arr.push(f);
+  festBySlug.set(f.slug, arr);
+});
+
+const festMapMarkers = Array.from(festBySlug.entries())
+  .map(([slug, fests]) => {
+    const geo = geoLookup[slug];
+    if (!geo) return null;
+    return {
+      lat: geo.lat,
+      lng: geo.lng,
+      label: geo.label,
+      slug,
+      color: monthColors[fests[0].monthIndex],
+      url: `/destinations/${slug}/`,
+      festivals: fests.map(f => ({
+        name: f.name,
+        month: f.month,
+        destination: f.destination,
+      })),
+    };
+  })
+  .filter(Boolean);
+
+// Video lookup for festival cards
+const festCardVideos: Record<string, string> = {};
+['salt-lake-city', 'park-city', 'moab', 'st-george', 'provo', 'bryce-canyon', 'zion', 'sundance']
+  .forEach(s => festCardVideos[s] = `/videos/destinations/${s}-preview.mp4`);
+
+// Fallback cycle for any slug not in lookup
+const fallbackVideos = Object.values(festCardVideos);
+
+// 10 generic festival clips — cycle across events
+const festGenericClips = Array.from({ length: 10 }, (_, i) => `/videos/pillar/festival-card-${i + 1}.mp4`);
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="destination"
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <header class="fest-hero">
+    <video class="fest-hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="/videos/pillar/festivals-hero.mp4" type="video/mp4" />
+    </video>
+    <div class="fest-hero-gradient"></div>
+    <div class="fest-hero-noise"></div>
+
+    <div class="fest-hero-content">
+      <h1 class="fest-hero-title">Utah Festival &amp; Events Calendar 2026</h1>
+      <p class="fest-hero-subtitle">From Sundance Film Festival's star-studded Park City screenings to Moab's music in red rock canyons, Utah Shakespeare Festival under desert skies, and Bryce Canyon's stargazing astronomy festival — Utah's event calendar runs year-round.</p>
+      <div class="fest-hero-meta">
+        <div class="fest-hero-meta-item">
+          <span class="fest-hero-meta-label">Festivals</span>
+          <span class="fest-hero-meta-value">18</span>
+        </div>
+        <div class="fest-hero-meta-item">
+          <span class="fest-hero-meta-label">Destinations</span>
+          <span class="fest-hero-meta-value">8</span>
+        </div>
+        <div class="fest-hero-meta-item">
+          <span class="fest-hero-meta-label">Season</span>
+          <span class="fest-hero-meta-value">Year-Round</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-scroll-hint">Scroll<br />&#8595;</div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container-content">
+    <Breadcrumb items={breadcrumbs} />
+  </div>
+
+  <!-- Personal intro -->
+  <section class="fest-personal reveal">
+    <div class="container-content">
+      <blockquote class="fest-personal-quote">
+        <p>Utah's event calendar sneaks up on you — you think it's just national parks until you're in Park City for Sundance trying to get into the same screenings as celebrities, or in Moab watching a string quartet perform in a canyon at golden hour. The Utah Shakespeare Festival in Cedar City is genuinely world-class. And Bryce Canyon's Astronomy Festival might be the most spectacular backdrop for any event in America.</p>
+        <cite>— Scott</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- View Toggle -->
+  <div class="container-content" style="padding-top: var(--space-2); padding-bottom: var(--space-4);">
+    <div class="fest-view-toggle">
+      <button class="fest-toggle-btn active" id="festBtnCalendar">Calendar</button>
+      <button class="fest-toggle-btn" id="festBtnMap">Map</button>
+    </div>
+  </div>
+
+  <!-- Calendar Grid -->
+  <div id="festCalendarView">
+  <section class="fest-calendar reveal">
+    <div class="container-content">
+      <h2 class="fest-section-heading">Festivals by Month</h2>
+      <p class="fest-section-sub">Click any festival to explore its destination. Hover for a preview.</p>
+
+      <div class="fest-month-grid">
+        {months.map((monthName, i) => {
+          const monthFestivals = festivals.filter(f => f.monthIndex === i);
+          return (
+            <div class="fest-month-card reveal">
+              <div class="fest-month-header">
+                <span class="fest-month-name">{monthName}</span>
+                {monthFestivals.length > 0 && (
+                  <span class="fest-month-count">{monthFestivals.length}</span>
+                )}
+              </div>
+              <div class="fest-month-body">
+                {monthFestivals.length > 0 ? (
+                  monthFestivals.map((fest) => {
+                    const idx = festivals.indexOf(fest);
+                    const destVideo = festCardVideos[fest.slug] || fallbackVideos[idx % fallbackVideos.length];
+                    const festVideo = festGenericClips[idx % festGenericClips.length];
+                    return (
+                    <a href={`/destinations/${fest.slug}/`} class="fest-entry">
+                      <div class="fest-entry-media" style={`background: ${monthGradients[i]};`}>
+                        <video class="fest-card-video fest-vid-dest" muted loop playsinline preload="none" data-src={destVideo}></video>
+                        <video class="fest-card-video fest-vid-fest" muted loop playsinline preload="none" data-src={festVideo} style="opacity:0;"></video>
+                        <div class="fest-card-scrim"></div>
+                        <div class="fest-entry-media-label">{fest.month}</div>
+                      </div>
+                      <div class="fest-entry-info">
+                        <div class="fest-entry-name">{fest.name}</div>
+                        <div class="fest-entry-destination">{fest.destination}</div>
+                      </div>
+                      <div class="fest-entry-overlay">
+                        <p class="fest-entry-desc">{fest.description}</p>
+                        <span class="fest-entry-cta">Explore {fest.destination} &rarr;</span>
+                      </div>
+                    </a>
+                  );})
+                ) : (
+                  <div class="fest-month-empty">No major festivals</div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /festCalendarView -->
+
+  <!-- Map View (hidden by default) -->
+  <div id="festMapView" style="display:none;">
+    <section style="padding: var(--space-4) 0 var(--space-8);">
+      <div class="container-content">
+        <div class="fest-map-container" id="festMapContainer">
+          <div class="fest-map-tooltip" id="festMapTooltip">
+            <div class="fest-map-tooltip-name" id="festTooltipName"></div>
+            <div class="fest-map-tooltip-fests" id="festTooltipFests"></div>
+          </div>
+          <div id="festLeafletMap"></div>
+          <div class="fest-map-legend">
+            <div class="fest-map-legend-item"><div class="fest-map-legend-dot" style="background:var(--color-warm-coral);"></div>Festival location</div>
+            <div class="fest-map-legend-note">Colored by month &middot; Click to explore destination</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom CTA -->
+  <section class="fest-cta-section reveal">
+    <div class="container-content">
+      <div class="fest-cta-card">
+        <h2 class="fest-cta-heading">Plan Your Utah Festival Trip</h2>
+        <p class="fest-cta-text">Let our AI travel planner build a custom itinerary around the festivals you want to see — with national park visits, lodging, and day-by-day schedules built for Utah.</p>
+        <a href="/plan/" class="fest-cta-button">Start Planning &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={[
+    { question: "What is Sundance Film Festival and how do I get tickets?", answer: "Sundance is the world's premier independent film festival, held every January in Park City, Utah. It screens debut features, documentaries, and short films from independent filmmakers before distribution. Tickets are sold through a lottery system that opens in early November — festival passes and individual tickets both go through sundance.org. Day-of rush tickets are available at venues for sold-out screenings. Free outdoor screenings and satellite venues in Salt Lake City provide some access without purchased tickets. The festival runs for 10 days in late January." },
+    { question: "When is Utah Shakespeare Festival?", answer: "The Utah Shakespeare Festival in Cedar City, Utah runs from late June through mid-October with a rotating repertory of seven to eight productions. The season opens in late June with preview performances and reaches full schedule in July. The outdoor Adams Memorial Shakespearean Theatre performs Wednesday through Sunday evenings during peak season. Tickets can be purchased at bard.org months in advance — popular productions sell out. The festival is approximately 3 hours from Salt Lake City and 1 hour from St. George." },
+    { question: "What is the Moab Music Festival?", answer: "The Moab Music Festival is a chamber music and jazz festival performed in natural concert venues within the red rock canyons of southeastern Utah, held each September. The festival's most famous event — the Grotto Concert — takes place in a sandstone alcove accessible only by raft along the Colorado River, with musicians performing classical chamber music to an audience that arrives by river. Other performances happen in outdoor venues within canyon country. Tickets sell out months in advance for the Grotto Concert; check moabmusicfest.org beginning in spring." },
+    { question: "Best Utah festivals for families?", answer: "Temple Square Christmas Lights (December, free) is the most family-friendly Utah event and accessible to all ages. The St. George Arts Festival (March) is excellent for families with older kids interested in visual art. Days of '47 Parade (July 24 in Salt Lake City) is a classic outdoor parade that works for all ages. The Ogden Ice Festival (January) delights younger kids. For outdoors-oriented families, the Zion Canyon Music Festival (May) combines great music with access to one of America's most spectacular national parks within walking distance." },
+    { question: "Do I need a car to attend Utah festivals?", answer: "Yes, a car is essentially required for most Utah festivals outside of Salt Lake City. Sundance provides shuttle service between Park City venues and Salt Lake City during the festival, and Park City has a free local bus system. But Moab, St. George, Cedar City (Utah Shakespeare), Bryce Canyon, and Zion all require a vehicle — these are remote locations without meaningful public transit. Salt Lake City events are accessible via TRAX light rail from the airport. Rent a car in Salt Lake City for any festival that requires travel outside the metro area." },
+    { question: "What are the best outdoor festivals in Utah?", answer: "Moab Music Festival (September) is the finest outdoor festival in Utah — chamber music performed in sandstone canyons is simply unmatched. Bryce Canyon Astronomy Festival (September) is the best stargazing event in America by setting alone. Zion Canyon Music Festival (May) combines great acoustic music with Zion National Park access. Utah Arts Festival (June, Salt Lake City) is the largest outdoor multi-arts event in the region. Park City Kimball Arts Festival (August) is the best outdoor fine arts event in the state, with the Wasatch Mountains as backdrop." },
+  ]} />
+
+  <!-- Email Capture -->
+  <div class="container-content reveal" style="padding-bottom: var(--space-6);">
+    <EmailCapture
+      leadMagnet="Get Our Free Utah Events Calendar"
+      description="A month-by-month PDF guide to Utah festivals — with travel logistics, ticket timing tips, and how to combine festivals with national park visits."
+      bullets={[
+        'All 18 festivals with exact dates and ticket information',
+        'How to combine Sundance with skiing, or Moab Music with hiking',
+        'Insider tips — how to get rush tickets, best viewpoints, what to bring',
+        'Suggested multi-festival itineraries covering the whole state',
+      ]}
+      guideTag="pillar-festivals"
+    />
+  </div>
+
+  <!-- Cross-links -->
+  <section class="fest-crosslinks reveal">
+    <div class="container-content">
+      <h3 class="fest-crosslinks-heading">Explore More</h3>
+      <div class="fest-crosslinks-grid">
+        <a href="/outdoors/" class="fest-crosslink-card">
+          <span class="fest-crosslink-icon">&#127956;</span>
+          <span class="fest-crosslink-label">Outdoors Guide</span>
+          <span class="fest-crosslink-desc">Zion, Bryce, Arches, Canyonlands — the parks that surround every festival</span>
+        </a>
+        <a href="/destinations/" class="fest-crosslink-card">
+          <span class="fest-crosslink-icon">&#127965;</span>
+          <span class="fest-crosslink-label">All Destinations</span>
+          <span class="fest-crosslink-desc">Every Utah city and town we've explored with honest reviews</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<!-- Scroll Reveal Observer -->
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }
+</script>
+
+<!-- Festival card video lazy-load + dual-video cycling -->
+<script>
+  const festMediaEls = document.querySelectorAll('.fest-entry-media');
+  const festSwapTimers = new Map<Element, number>();
+
+  function festLoadAndPlay(video: HTMLVideoElement) {
+    if (!video.src && video.dataset.src) {
+      video.src = video.dataset.src;
+    }
+    video.play().catch(() => {});
+  }
+
+  function festStartCycle(media: Element) {
+    const dest = media.querySelector<HTMLVideoElement>('.fest-vid-dest');
+    const fest = media.querySelector<HTMLVideoElement>('.fest-vid-fest');
+    if (!dest || !fest) return;
+
+    festLoadAndPlay(dest);
+    festLoadAndPlay(fest);
+
+    // Start with dest visible, swap every 6 seconds
+    let showingDest = true;
+    const timer = window.setInterval(() => {
+      showingDest = !showingDest;
+      dest.style.opacity = showingDest ? '1' : '0';
+      fest.style.opacity = showingDest ? '0' : '1';
+    }, 6000);
+
+    festSwapTimers.set(media, timer);
+  }
+
+  function festStopCycle(media: Element) {
+    const timer = festSwapTimers.get(media);
+    if (timer) {
+      clearInterval(timer);
+      festSwapTimers.delete(media);
+    }
+    media.querySelectorAll<HTMLVideoElement>('.fest-card-video').forEach(v => v.pause());
+  }
+
+  const festObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          festStartCycle(entry.target);
+        } else {
+          festStopCycle(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2, rootMargin: '100px' }
+  );
+  festMediaEls.forEach((el) => festObserver.observe(el));
+</script>
+
+<!-- View Toggle Logic -->
+<script>
+  const festBtnCalendar = document.getElementById('festBtnCalendar');
+  const festBtnMap = document.getElementById('festBtnMap');
+  const festCalendarView = document.getElementById('festCalendarView');
+  const festMapView = document.getElementById('festMapView');
+
+  function festShowCalendar() {
+    festCalendarView!.style.display = '';
+    festMapView!.style.display = 'none';
+    festBtnCalendar!.classList.add('active');
+    festBtnMap!.classList.remove('active');
+  }
+
+  function festShowMap() {
+    festCalendarView!.style.display = 'none';
+    festMapView!.style.display = '';
+    festBtnCalendar!.classList.remove('active');
+    festBtnMap!.classList.add('active');
+    if (window.festMap) {
+      window.festMap.invalidateSize();
+    }
+  }
+
+  festBtnCalendar?.addEventListener('click', festShowCalendar);
+  festBtnMap?.addEventListener('click', festShowMap);
+</script>
+
+<!-- Leaflet Map for Festivals -->
+<script is:inline define:vars={{ markers: festMapMarkers }}>
+  // Load Leaflet CSS
+  if (!document.getElementById('leaflet-css')) {
+    var lnk = document.createElement('link');
+    lnk.id = 'leaflet-css';
+    lnk.rel = 'stylesheet';
+    lnk.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+    document.head.appendChild(lnk);
+  }
+
+  function initFestMap() {
+    var mapEl = document.getElementById('festLeafletMap');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    var map = L.map(mapEl, {
+      center: [39.3210, -111.0937],
+      zoom: 6,
+      scrollWheelZoom: false,
+      minZoom: 5,
+      maxZoom: 14,
+      zoomControl: false,
+      attributionControl: false,
+    });
+
+    window.festMap = map;
+
+    L.control.attribution({ prefix: false }).addTo(map);
+    L.control.zoom({ position: 'topright' }).addTo(map);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OSM</a> \u00a9 <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 19,
+    }).addTo(map);
+
+    function makeCircle(color, size, stroke) {
+      return L.divIcon({
+        className: '',
+        html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:' + color + ';border:2px solid ' + stroke + ';box-shadow:0 0 6px rgba(0,0,0,0.3);cursor:pointer;"></div>',
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+      });
+    }
+
+    var tooltip = document.getElementById('festMapTooltip');
+    var tooltipName = document.getElementById('festTooltipName');
+    var tooltipFests = document.getElementById('festTooltipFests');
+    var container = document.getElementById('festMapContainer');
+
+    markers.forEach(function(m) {
+      var size = m.festivals.length > 1 ? 18 : 14;
+      var icon = makeCircle(m.color, size, '#ffffff');
+      var marker = L.marker([m.lat, m.lng], { icon: icon, title: m.label }).addTo(map);
+
+      marker.on('mouseover', function(e) {
+        if (tooltipName) tooltipName.textContent = m.label;
+        if (tooltipFests) {
+          tooltipFests.innerHTML = m.festivals.map(function(f) {
+            return '<div class="fest-map-tooltip-fest"><span class="fest-map-tooltip-month">' + f.month + '</span> ' + f.name + '</div>';
+          }).join('');
+        }
+        if (tooltip) tooltip.classList.add('fest-tooltip-visible');
+        if (container && tooltip) {
+          var pt = e.containerPoint;
+          tooltip.style.left = (pt.x + 12) + 'px';
+          tooltip.style.top = (pt.y - 10) + 'px';
+        }
+      });
+
+      marker.on('mouseout', function() {
+        if (tooltip) tooltip.classList.remove('fest-tooltip-visible');
+      });
+
+      marker.on('click', function() {
+        window.location.href = m.url;
+      });
+    });
+  }
+
+  // Load Leaflet JS
+  if (typeof L !== 'undefined') {
+    initFestMap();
+  } else {
+    var lscript = document.createElement('script');
+    lscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+    lscript.onload = initFestMap;
+    document.head.appendChild(lscript);
+  }
+</script>
+
+<style>
+  /* ================================================================
+     HERO — Festival gradient (warm coral → gold → deep night)
+     ================================================================ */
+  .fest-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem var(--space-6) 60px;
+    overflow: hidden;
+  }
+
+  .fest-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .fest-hero-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%);
+  }
+
+  .fest-hero-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .fest-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+  }
+
+  .fest-hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: var(--weight-bold);
+    color: #fff;
+    line-height: 1.1;
+    margin: 0 0 var(--space-3);
+  }
+
+  .fest-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 0 var(--space-5);
+    max-width: 580px;
+  }
+
+  .fest-hero-meta {
+    display: flex;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .fest-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fest-hero-meta-label {
+    font-size: 0.65rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .fest-hero-meta-value {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: #fff;
+  }
+
+  .fest-scroll-hint {
+    position: absolute;
+    bottom: 16px;
+    right: var(--space-6);
+    z-index: 3;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    animation: festBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes festBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ================================================================
+     CALENDAR GRID
+     ================================================================ */
+  .fest-calendar {
+    padding: var(--space-10) 0 var(--space-8);
+  }
+
+  .fest-section-heading {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    margin: 0 0 var(--space-2);
+    text-align: center;
+  }
+
+  .fest-section-sub {
+    font-size: 1rem;
+    color: var(--color-slate);
+    text-align: center;
+    margin: 0 0 var(--space-8);
+  }
+
+  .fest-month-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+  }
+
+  @media (max-width: 1024px) {
+    .fest-month-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fest-month-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ================================================================
+     MONTH CARD
+     ================================================================ */
+  .fest-month-card {
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .fest-month-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .fest-month-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-sky);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .fest-month-name {
+    font-size: 0.9rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .fest-month-count {
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    color: var(--color-warm-coral);
+    background: rgba(232, 101, 74, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  .fest-month-body {
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-height: 80px;
+  }
+
+  .fest-month-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  /* ================================================================
+     FESTIVAL ENTRY (within month card)
+     ================================================================ */
+  .fest-entry {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .fest-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .fest-entry-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: var(--space-2);
+    overflow: hidden;
+  }
+
+  .fest-card-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .fest-card-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.45) 100%);
+  }
+
+  .fest-entry-media-label {
+    position: relative;
+    z-index: 2;
+    font-size: 0.6rem;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+
+  .fest-entry-info {
+    padding: var(--space-2) var(--space-3) var(--space-3);
+    background: var(--color-white);
+  }
+
+  .fest-entry-name {
+    font-size: 0.85rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .fest-entry-destination {
+    font-size: 0.72rem;
+    color: var(--color-ocean-teal);
+    font-weight: var(--weight-medium);
+  }
+
+  /* Hover overlay */
+  .fest-entry-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 35, 50, 0.93);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .fest-entry:hover .fest-entry-overlay {
+    opacity: 1;
+  }
+
+  .fest-entry-desc {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.55;
+    margin: 0 0 var(--space-3);
+  }
+
+  .fest-entry-cta {
+    font-size: 0.72rem;
+    font-weight: var(--weight-semibold);
+    color: var(--color-warm-coral);
+    letter-spacing: 0.02em;
+  }
+
+  /* ================================================================
+     BOTTOM CTA
+     ================================================================ */
+  .fest-cta-section {
+    padding: var(--space-6) 0 var(--space-8);
+  }
+
+  .fest-cta-card {
+    background: linear-gradient(135deg, var(--color-deep-night) 0%, #2D3748 100%);
+    border-radius: 20px;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+    color: #fff;
+  }
+
+  .fest-cta-heading {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: var(--weight-bold);
+    margin: 0 0 var(--space-3);
+    color: #fff;
+  }
+
+  .fest-cta-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 520px;
+    margin: 0 auto var(--space-5);
+    line-height: 1.6;
+  }
+
+  .fest-cta-button {
+    display: inline-block;
+    background: var(--color-warm-coral);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: var(--weight-semibold);
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .fest-cta-button:hover {
+    background: #d4553b;
+    transform: translateY(-2px);
+  }
+
+  /* ================================================================
+     CROSS-LINKS
+     ================================================================ */
+  .fest-crosslinks {
+    padding: 0 0 var(--space-10);
+  }
+
+  .fest-crosslinks-heading {
+    font-size: 1.1rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+    text-align: center;
+    margin: 0 0 var(--space-4);
+  }
+
+  .fest-crosslinks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .fest-crosslinks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .fest-crosslink-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-4);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .fest-crosslink-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .fest-crosslink-icon {
+    font-size: 1.8rem;
+  }
+
+  .fest-crosslink-label {
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-night);
+  }
+
+  .fest-crosslink-desc {
+    font-size: 0.78rem;
+    color: var(--color-slate);
+    line-height: 1.4;
+  }
+
+  /* ================================================================
+     RESPONSIVE — Hero adjustments
+     ================================================================ */
+  @media (max-width: 640px) {
+    .fest-hero {
+      min-height: 55vh;
+      padding: 0 var(--space-4) 40px;
+    }
+
+    .fest-hero-meta {
+      gap: var(--space-4);
+    }
+
+    .fest-scroll-hint {
+      display: none;
+    }
+  }
+
+  /* ================================================================
+     VIEW TOGGLE
+     ================================================================ */
+  .fest-view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    background: var(--color-sand-dark);
+    border-radius: 40px;
+    padding: 4px;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .fest-toggle-btn {
+    flex: 1;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 36px;
+    font-size: 0.82rem;
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    background: transparent;
+    color: var(--color-slate);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .fest-toggle-btn.active {
+    background: var(--color-ocean-teal);
+    color: #fff;
+  }
+
+  .fest-toggle-btn:hover:not(.active) {
+    color: var(--color-deep-night);
+  }
+
+  /* ================================================================
+     MAP VIEW
+     ================================================================ */
+  .fest-map-container {
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 40% 30%, #0c3547 0%, #091e2f 40%, #060f1a 100%);
+    padding: 28px 20px 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .fest-map-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 600px 300px at 30% 70%, rgba(13, 115, 119, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 400px 200px at 70% 20%, rgba(13, 115, 119, 0.06) 0%, transparent 70%);
+    animation: festOceanShimmer 8s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  .fest-map-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 1px at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 100%),
+      radial-gradient(circle 1px at 60% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 100%),
+      radial-gradient(circle 1px at 40% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  @keyframes festOceanShimmer {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  #festLeafletMap {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fest-map-tooltip {
+    position: absolute;
+    background: rgba(26, 35, 50, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 50;
+    min-width: 180px;
+    max-width: 300px;
+  }
+
+  .fest-map-tooltip.fest-tooltip-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fest-map-tooltip-name {
+    font-size: 0.85rem;
+    font-weight: var(--weight-bold);
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  :global(.fest-map-tooltip-fest) {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+  }
+
+  :global(.fest-map-tooltip-month) {
+    font-size: 0.6rem;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-warm-coral);
+    margin-right: 4px;
+  }
+
+  .fest-map-legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fest-map-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .fest-map-legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(13, 115, 119, 0.5);
+  }
+
+  .fest-map-legend-note {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  @media (max-width: 640px) {
+    #festLeafletMap { height: 450px; }
+  }
+
+  /* Personal intro */
+  .fest-personal {
+    padding-block: var(--space-8);
+  }
+
+  .fest-personal-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-8);
+    border-left: 4px solid #D97706;
+    background: var(--color-sky);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .fest-personal-quote p {
+    font-size: var(--text-body);
+    color: var(--color-heading);
+    line-height: var(--leading-body);
+    font-style: italic;
+    margin-bottom: var(--space-3);
+  }
+
+  .fest-personal-quote cite {
+    font-size: var(--text-caption);
+    color: #D97706;
+    font-weight: var(--weight-semibold);
+    font-style: normal;
+  }
+</style>
