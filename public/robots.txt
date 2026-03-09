@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://discoverutah.info/sitemap-index.xml
+Sitemap: https://discoverutah.info/video-sitemap.xml
