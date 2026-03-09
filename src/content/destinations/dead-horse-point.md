@@ -3,6 +3,7 @@ title: "Dead Horse Point"
 description: "Dead Horse Point State Park travel guide 2026 — Utah's most dramatic overlook with 2,000-foot sheer drops to the Colorado River, mountain biking, and unforgettable sunsets."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Dead Horse Point Goosenecks overlook and Colorado River 2,000 feet below, Utah"
 tagline: "The overlook that stops you in your tracks"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]

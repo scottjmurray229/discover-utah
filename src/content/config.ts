@@ -11,6 +11,7 @@ const destinations = defineCollection({
     description: z.string().default(''),
     heroVideo: z.string().default(''),
     heroImage: z.string().default(''),
+    heroAlt: z.string().optional(),
     tagline: z.string().default(''),
     region: z.enum(['wasatch-front', 'southern-utah', 'northern-utah', 'eastern-utah', 'central-utah']),
     bestMonths: z.array(z.string()).default([]),

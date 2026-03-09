@@ -3,6 +3,7 @@ title: "Goblin Valley"
 description: "Goblin Valley State Park travel guide 2026 — mushroom-shaped hoodoos, Mars-like terrain, family-friendly exploring, and one of Utah's most alien landscapes."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Mushroom-shaped goblin hoodoos in Goblin Valley State Park, Utah"
 tagline: "Utah's strangest landscape — and that's saying something"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]

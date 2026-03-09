@@ -3,6 +3,7 @@ title: "Provo"
 description: "Provo travel guide 2026 — Utah's college town at the foot of the Wasatch Range, gateway to Provo Canyon, Sundance Resort, and Timpanogos Cave, with surprising dining for its size and strong Wasatch mountain access."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Mount Timpanogos above Utah Lake and Brigham Young University, Provo, Utah"
 tagline: "Canyon country at the edge of the valley"
 region: utah-valley
 bestMonths: [April, May, June, September, October, November]

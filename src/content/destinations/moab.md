@@ -3,6 +3,7 @@ title: "Moab"
 description: "Moab travel guide 2026 — adventure basecamp for Arches and Canyonlands with world-class mountain biking, river rafting, red rock jeep trails, and a thriving small-town culture."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Red canyon walls towering over the Colorado River near Moab, Utah"
 tagline: "Where the mountain biking is legendary, the Jeep trails require serious skill, Arches and Canyonlands are 30 minutes away, and the Colorado River runs red and cold through town"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]

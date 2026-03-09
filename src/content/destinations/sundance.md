@@ -3,6 +3,7 @@ title: "Sundance Mountain Resort"
 description: "Sundance Mountain Resort travel guide 2026 — Robert Redford's boutique ski resort in Provo Canyon with intimate skiing, artisan dining, film culture, and four-season mountain beauty."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Sundance Mountain Resort and Robert Redford's Sundance Film Festival, Utah"
 tagline: "Where art meets the mountain"
 region: wasatch-front
 bestMonths: [December, January, February, March, June, July, August, September, October]

@@ -3,6 +3,7 @@ title: "St. George"
 description: "St. George travel guide 2026 — year-round sunshine, gateway to Zion National Park, Snow Canyon State Park, world-class golf, and the warm heart of Utah's red rock country."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Red Cliffs Desert Reserve vermilion rock and historic Tabernacle, St. George, Utah"
 tagline: "Utah's sun-drenched red rock gateway"
 region: southern-utah
 bestMonths: [March, April, May, October, November, February]

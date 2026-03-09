@@ -3,6 +3,7 @@ title: "Antelope Island"
 description: "Antelope Island State Park travel guide 2026 — free-roaming bison, Great Salt Lake floating, rugged hiking, migratory birds, and dramatic sunsets on Utah's largest lake island."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Bison herd on Antelope Island's salt flats at sunset, Great Salt Lake, Utah"
 tagline: "Bison, salt water, and endless sky"
 region: northern-utah
 bestMonths: [April, May, June, September, October, November]

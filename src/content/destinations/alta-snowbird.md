@@ -3,6 +3,7 @@ title: "Alta & Snowbird"
 description: "Alta and Snowbird travel guide 2026 — legendary powder skiing in Little Cottonwood Canyon, combined 4,700 acres of terrain, summer wildflowers, and Utah's most iconic ski experience."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Alta ski resort powder run and Snowbird tram tower, Little Cottonwood Canyon, Utah"
 tagline: "The powder capital of the world"
 region: wasatch-front
 bestMonths: [December, January, February, March, April, July, August]

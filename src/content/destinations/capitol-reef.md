@@ -3,6 +3,7 @@ title: "Capitol Reef National Park"
 description: "Capitol Reef National Park travel guide 2026 — the Waterpocket Fold, pioneer orchards, scenic drives, petroglyphs, and Utah's most underrated national park."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Waterpocket Fold rock fins and Fruita pioneer orchard, Capitol Reef, Utah"
 tagline: "A 100-mile fold in the Earth's crust that blocked settlement so completely the settlers named it a reef — Fruita's orchards still produce free fruit for visitors in season"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]

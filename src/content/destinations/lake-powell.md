@@ -3,6 +3,7 @@ title: "Lake Powell"
 description: "Lake Powell travel guide 2026 — houseboating on blue desert waters, slot canyon exploration, Rainbow Bridge, Horseshoe Bend, and the Glen Canyon National Recreation Area."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Rainbow Bridge natural arch above Lake Powell blue water, Utah"
 tagline: "Blue water in red rock country"
 region: southern-utah
 bestMonths: [April, May, June, September, October]

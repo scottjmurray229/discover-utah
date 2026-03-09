@@ -3,6 +3,7 @@ title: "Salt Lake City"
 description: "Salt Lake City travel guide 2026 — mountain-ringed capital with world-class skiing, craft beer scene, Temple Square, and gateway to Utah's five national parks."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Salt Lake Temple spires and snow-capped Wasatch Range, Salt Lake City, Utah"
 tagline: "The unexpected gateway to the American West — world-class skiing 45 minutes away, a walkable downtown, a temple square that tells the story of one of America's most ambitious religious projects, and Bonneville Salt Flats an hour west"
 region: wasatch-front
 bestMonths: [March, April, May, June, September, October, December, January, February]

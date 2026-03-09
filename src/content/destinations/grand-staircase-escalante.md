@@ -3,6 +3,7 @@ title: "Grand Staircase-Escalante"
 description: "Grand Staircase-Escalante National Monument travel guide 2026 — 1.7 million acres of slot canyons, petrified wood forests, dinosaur fossil beds, and backcountry that requires serious navigation skills and rewards with solitude no other Utah destination can match."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Vermilion Cliffs Wave sandstone swirls, Grand Staircase–Escalante, Utah"
 tagline: "1.7 million acres of slot canyons, dinosaur fossils, and desert wilderness so remote that most visitors only see it from the highway — get a 4WD and go deeper"
 region: southern-utah
 bestMonths: [April, May, September, October]

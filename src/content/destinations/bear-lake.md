@@ -3,6 +3,7 @@ title: "Bear Lake"
 description: "Bear Lake travel guide 2026 — turquoise Caribbean-colored waters on the Utah-Idaho border, raspberry shakes, boating, and a family-friendly mountain lake escape."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Bear Lake turquoise water and raspberry-shake stands, Utah-Idaho border"
 tagline: "The Caribbean of the Rockies"
 region: northern-utah
 bestMonths: [June, July, August, September]

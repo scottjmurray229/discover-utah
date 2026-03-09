@@ -3,6 +3,7 @@ title: "Ogden"
 description: "Ogden travel guide 2026 — gritty mountain town with historic 25th Street, three ski resorts (Snowbasin, Powder Mountain, Nordic Valley), and legendary mountain bike trails near Salt Lake City."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Ben Lomond Peak above Ogden's historic 25th Street, Utah"
 tagline: "Utah's adventure capital"
 region: wasatch-front
 bestMonths: [December, January, February, March, June, July, August, September]

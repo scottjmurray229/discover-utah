@@ -3,6 +3,7 @@ title: "Great Salt Lake"
 description: "Great Salt Lake travel guide 2026 — North America's largest saltwater lake with surreal floating, migratory bird spectacles, Spiral Jetty, and otherworldly salt flats."
 heroVideo: ""
 heroImage: ""
+heroAlt: "Great Salt Lake brine shrimp pink reflection and Bonneville Salt Flats, Utah"
 tagline: "America's Dead Sea in the desert West"
 region: northern-utah
 bestMonths: [April, May, June, September, October]
