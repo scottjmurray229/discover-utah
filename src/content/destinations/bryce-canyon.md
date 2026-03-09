@@ -3,7 +3,7 @@ title: "Bryce Canyon"
 description: "Bryce Canyon National Park travel guide 2026 — otherworldly hoodoo formations, the Navajo Loop Trail, dark sky stargazing, and some of the most unique geology on Earth."
 heroVideo: ""
 heroImage: ""
-tagline: "An alien landscape carved in crimson"
+tagline: "Thousands of orange hoodoos rising from the plateau rim like a frozen army — and at 8,000 feet elevation, winter snow transforms this into the most surreal landscape in Utah"
 region: southern-utah
 bestMonths: [April, May, June, September, October]
 budgetPerDay:

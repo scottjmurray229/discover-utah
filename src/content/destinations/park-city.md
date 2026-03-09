@@ -3,7 +3,7 @@ title: "Park City"
 description: "Park City travel guide 2026 — world-class skiing at two resorts (now connected as PCMR), Sundance Film Festival, historic Main Street, and year-round mountain adventures just 35 miles from Salt Lake City."
 heroVideo: ""
 heroImage: ""
-tagline: "Where Hollywood meets the slopes"
+tagline: "Sundance Film Festival in January, skiing two world-class resorts on the same pass in winter, mountain biking on 400+ miles of trail in summer, and a Main Street that resisted the chain restaurant invasion"
 region: wasatch-front
 bestMonths: [December, January, February, March, June, July, August, September]
 budgetPerDay:

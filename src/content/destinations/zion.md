@@ -3,7 +3,7 @@ title: "Zion National Park"
 description: "Zion National Park travel guide 2026 — towering sandstone cliffs, the Narrows river hike, Angels Landing, and the most dramatic canyon scenery in the American Southwest."
 heroVideo: ""
 heroImage: ""
-tagline: "Temples of stone, carved by water"
+tagline: "Angels Landing's terrifying chain route, The Narrows where you wade up a river between 1,000-foot canyon walls, and scenery so overwhelming it makes first-time visitors go completely quiet"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]
 budgetPerDay:

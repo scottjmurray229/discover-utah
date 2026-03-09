@@ -3,7 +3,7 @@ title: "Monument Valley"
 description: "Monument Valley travel guide 2026 — iconic Navajo Nation buttes, guided tours through sacred landscapes, and the most recognizable Western scenery on Earth."
 heroVideo: ""
 heroImage: ""
-tagline: "The landscape that defined the American West"
+tagline: "The sandstone mittens that John Ford used in every Western ever made — Monument Valley Navajo Tribal Park is not a national park, it is Navajo Nation land with Navajo guides who know it better than any ranger"
 region: southern-utah
 bestMonths: [April, May, September, October, November]
 budgetPerDay:

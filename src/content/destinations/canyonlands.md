@@ -3,7 +3,7 @@ title: "Canyonlands National Park"
 description: "Canyonlands National Park travel guide 2026 — Utah's largest national park with vast canyon vistas, Mesa Arch, the White Rim Trail, and untamed backcountry solitude."
 heroVideo: ""
 heroImage: ""
-tagline: "Utah's wildest, most untamed landscape"
+tagline: "Utah's largest and least visited national park divides itself into three districts by the Colorado and Green Rivers — Island in the Sky is a flat mesa with 1,000-foot vertical views in every direction"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]
 budgetPerDay:

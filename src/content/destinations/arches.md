@@ -3,7 +3,7 @@ title: "Arches National Park"
 description: "Arches National Park travel guide 2026 — over 2,000 natural stone arches, iconic Delicate Arch, red rock desert landscapes, and world-class hiking near Moab, Utah."
 heroVideo: ""
 heroImage: ""
-tagline: "Nature's greatest sculpture garden"
+tagline: "More natural stone arches than anywhere on Earth — including the 306-foot span of Landscape Arch and Delicate Arch glowing orange at sunset above the Colorado River canyon"
 region: southern-utah
 bestMonths: [March, April, May, September, October, November]
 budgetPerDay:
