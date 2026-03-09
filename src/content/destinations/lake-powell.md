@@ -3,6 +3,14 @@ title: "Lake Powell"
 description: "Lake Powell travel guide 2026 — houseboating on blue desert waters, slot canyon exploration, Rainbow Bridge, Horseshoe Bend, and the Glen Canyon National Recreation Area."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Rainbow Bridge natural arch above Lake Powell blue water, Utah"
 tagline: "Blue water in red rock country"
 region: southern-utah
@@ -171,7 +179,7 @@ A free-access beach on the Utah side near Big Water, dominated by a massive sand
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Lake Powell?
 
 Lake Powell is fundamentally a water destination. The 185-mile-long lake is best explored by boat, and most of the scenic canyons and beaches are only accessible from the water.
 
@@ -185,7 +193,7 @@ Lake Powell is fundamentally a water destination. The 185-mile-long lake is best
 
 For land-based exploration, Page has the most services — restaurants, hotels, outfitters for Antelope Canyon and Horseshoe Bend. A car handles all land routes.
 
-## Where to Stay
+## Where Should I Stay in Lake Powell?
 
 **Page, Arizona** has the widest range of lodging — chain hotels, vacation rentals, and the Lake Powell Resort at Wahweap Marina. This is the most convenient base for combining the lake with Antelope Canyon and Horseshoe Bend.
 
@@ -199,7 +207,7 @@ For land-based exploration, Page has the most services — restaurants, hotels, 
 
 **Lone Rock Beach** allows primitive car camping right on the beach ($14/night, no reservations needed).
 
-## Best Time to Visit
+## When Is the Best Time to Visit Lake Powell?
 
 **Spring (April–May):** Water is still cold (50s–60s°F) but warming. Air temperatures are comfortable (70s–80s°F). Crowds are moderate. Good for kayaking and boating but swimming may require a wetsuit.
 

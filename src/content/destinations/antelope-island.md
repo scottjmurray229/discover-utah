@@ -3,6 +3,14 @@ title: "Antelope Island"
 description: "Antelope Island State Park travel guide 2026 — free-roaming bison, Great Salt Lake floating, rugged hiking, migratory birds, and dramatic sunsets on Utah's largest lake island."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Bison herd on Antelope Island's salt flats at sunset, Great Salt Lake, Utah"
 tagline: "Bison, salt water, and endless sky"
 region: northern-utah
@@ -171,7 +179,7 @@ Each fall, the state rounds up the bison herd for health checks, vaccinations, a
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Antelope Island?
 
 The island has one main paved road running north-south from the causeway entrance to the Fielding Garr Ranch, with a branch to Bridger Bay Beach and the campground. The total driving distance from one end to the other is about 16 miles.
 
@@ -179,7 +187,7 @@ Parking areas at major stops (beach, visitor center, trailheads, ranch) are well
 
 Biking the island is popular — the road is flat to rolling and traffic is light. The distance makes it a significant ride (30+ miles roundtrip from the causeway), but the scenery and wildlife encounters make it worthwhile.
 
-## Where to Stay
+## Where Should I Stay in Antelope Island?
 
 **Bridger Bay Campground** (26 sites) sits near the island's north end with lake views. Sites have fire pits and picnic tables. Reserve through the Utah State Parks website. The campground provides the best sunrise and sunset access.
 
@@ -191,7 +199,7 @@ Biking the island is popular — the road is flat to rolling and traffic is ligh
 
 **Salt Lake City** (40 min) has the full spectrum of lodging options. See the Salt Lake City destination page.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Antelope Island?
 
 **Spring (April–June):** Wildflowers, baby bison, migratory bird arrivals, and comfortable temperatures. The brine flies start becoming active in late May. May is the sweet spot.
 

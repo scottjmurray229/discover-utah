@@ -3,6 +3,14 @@ title: "Bear Lake"
 description: "Bear Lake travel guide 2026 — turquoise Caribbean-colored waters on the Utah-Idaho border, raspberry shakes, boating, and a family-friendly mountain lake escape."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Bear Lake turquoise water and raspberry-shake stands, Utah-Idaho border"
 tagline: "The Caribbean of the Rockies"
 region: northern-utah
@@ -165,7 +173,7 @@ A 48-mile road loop circles the entire lake on paved roads through four small to
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Bear Lake?
 
 Bear Lake's communities are small and spread along the shoreline. Garden City on the west side is the commercial center with restaurants, shops, and rental operations. Laketown sits on the south end. Fish Haven and St. Charles are on the Idaho side.
 
@@ -173,7 +181,7 @@ A car is necessary — there's no public transportation. US-89 is the main corri
 
 Boat launches are at Bear Lake State Park marina (west side), Rendezvous Beach (south end), Cisco Beach (north end, Idaho), and several smaller access points. Marina slips book up for busy summer weekends.
 
-## Where to Stay
+## Where Should I Stay in Bear Lake?
 
 **Bear Lake State Park** has two main areas: the marina on the west side (day use, boat launch, camping) and Rendezvous Beach on the south end (camping, swimming, group sites). Reservations are essential for summer weekends.
 
@@ -185,7 +193,7 @@ Boat launches are at Bear Lake State Park marina (west side), Rendezvous Beach (
 
 **Cabin rentals** dot the east and south shores. Many are family-owned and book year-to-year with repeat visitors.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Bear Lake?
 
 **Summer (June–August):** This is Bear Lake season. Water temperatures peak in July-August (65-68°F). Raspberries ripen in late July through August. All services and rentals are open. Weekends are busy; weekdays are quieter.
 

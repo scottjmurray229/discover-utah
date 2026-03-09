@@ -3,6 +3,14 @@ title: "Alta & Snowbird"
 description: "Alta and Snowbird travel guide 2026 — legendary powder skiing in Little Cottonwood Canyon, combined 4,700 acres of terrain, summer wildflowers, and Utah's most iconic ski experience."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Alta ski resort powder run and Snowbird tram tower, Little Cottonwood Canyon, Utah"
 tagline: "The powder capital of the world"
 region: wasatch-front
@@ -170,7 +178,7 @@ After a day of hard skiing, the rooftop pool and hot tubs at Snowbird's Cliff Lo
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Alta & Snowbird?
 
 Little Cottonwood Canyon has one road in and one road out — UT-210. Snowbird is at mile 7, Alta at mile 8. Traffic flows are manageable on most days but can back up on weekend powder mornings and during afternoon departures.
 
@@ -180,7 +188,7 @@ The **UTA ski bus** is the stress-free option. It runs from the park-and-ride lo
 
 In summer, the canyon road is open and easy. A free shuttle runs to Albion Basin during peak wildflower season when the road becomes congested.
 
-## Where to Stay
+## Where Should I Stay in Alta & Snowbird?
 
 **Slopeside at Alta:** The Alta Lodge, Goldminer's Daughter, Rustler Lodge, and several smaller lodges offer classic ski lodge experiences — many with breakfast and dinner included. Rates are high in peak winter but include a lot. The walk-to-the-lift convenience is real.
 
@@ -190,7 +198,7 @@ In summer, the canyon road is open and easy. A free shuttle runs to Albion Basin
 
 **Salt Lake City** (35 min): The widest range of lodging and dining options. See the Salt Lake City destination page.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Alta & Snowbird?
 
 **Winter (December–April):** This is what you come for. Average snowfall exceeds 500 inches. January–March are the prime powder months. April offers spring skiing with longer days and warmer temperatures. Christmas week and February holiday weekends are the most crowded.
 

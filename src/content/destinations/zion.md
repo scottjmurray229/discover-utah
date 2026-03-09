@@ -3,6 +3,14 @@ title: "Zion National Park"
 description: "Zion National Park travel guide 2026 — towering sandstone cliffs, the Narrows river hike, Angels Landing, and the most dramatic canyon scenery in the American Southwest."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Angels Landing panorama above the Narrows slot canyon, Zion National Park, Utah"
 tagline: "Angels Landing's terrifying chain route, The Narrows where you wade up a river between 1,000-foot canyon walls, and scenery so overwhelming it makes first-time visitors go completely quiet"
 region: southern-utah
@@ -171,7 +179,7 @@ The drive from Springdale through the 1.1-mile tunnel and over to the east entra
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Zion National Park?
 
 Zion Canyon operates on a mandatory shuttle system from March through late November. Private vehicles cannot drive the 6-mile Scenic Drive during this period. The shuttle is free with park admission and runs every 7 to 10 minutes from the visitor center, stopping at nine trailheads and viewpoints.
 
@@ -181,7 +189,7 @@ You can drive the Zion-Mt. Carmel Highway (Highway 9) through the east side of t
 
 In winter (December through February), the shuttle doesn't run and you can drive your own vehicle up the Scenic Drive. Winter is the only time you can experience the canyon at your own pace by car.
 
-## Where to Stay
+## Where Should I Stay in Zion National Park?
 
 **Springdale** is the gateway town, directly adjacent to the south entrance. It's walkable, with restaurants, gear shops, and hotels lining the main drag. Prices are highest here but the convenience is unbeatable — you can walk to the park entrance.
 
@@ -193,7 +201,7 @@ In winter (December through February), the shuttle doesn't run and you can drive
 
 **Kanab** (40 miles east) is another option, especially if you're combining Zion with the Grand Canyon North Rim or exploring the Vermilion Cliffs.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Zion National Park?
 
 **Spring (March–May):** Wildflowers, waterfalls at peak flow from snowmelt, and comfortable hiking temperatures (60s–80s°F). The Narrows may be closed in early spring due to high water. Crowds build through May but are lighter than summer.
 

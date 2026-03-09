@@ -3,6 +3,14 @@ title: "Moab"
 description: "Moab travel guide 2026 — adventure basecamp for Arches and Canyonlands with world-class mountain biking, river rafting, red rock jeep trails, and a thriving small-town culture."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Red canyon walls towering over the Colorado River near Moab, Utah"
 tagline: "Where the mountain biking is legendary, the Jeep trails require serious skill, Arches and Canyonlands are 30 minutes away, and the Colorado River runs red and cold through town"
 region: southern-utah
@@ -171,7 +179,7 @@ Drive the Colorado River Scenic Byway along Highway 128 from Moab to I-70 throug
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Moab?
 
 Moab's Main Street (US-191) is the central artery, lined with restaurants, gear shops, bike rentals, and outfitter offices. The town is small enough to walk or bike for most in-town needs.
 
@@ -181,7 +189,7 @@ Several outfitters run shuttle services for mountain biking (Whole Enchilada, Po
 
 Gas up in Moab before heading to any of the parks — there are no gas stations in the parks or on the access roads.
 
-## Where to Stay
+## Where Should I Stay in Moab?
 
 **Main Street Moab** has the widest range of options — from the budget Lazy Lizard Hostel to the upscale Hoodoo Moab and Gravity Haus. Walkable access to restaurants and bars is the main draw.
 
@@ -193,7 +201,7 @@ Gas up in Moab before heading to any of the parks — there are no gas stations 
 
 **Vacation rentals** through VRBO and Airbnb are plentiful but prices spike during peak weekends (Easter, spring break, Jeep Safari week, fall color season).
 
-## Best Time to Visit
+## When Is the Best Time to Visit Moab?
 
 **Spring (March–May):** The premier season. Temperatures climb from the 60s to 80s°F, wildflowers appear in April, and the river is running strong. Spring break (mid-March to early April) and Easter weekend are the busiest times all year — expect full campgrounds and park parking lots. Late April and May are perfect.
 

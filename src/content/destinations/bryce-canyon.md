@@ -3,6 +3,14 @@ title: "Bryce Canyon"
 description: "Bryce Canyon National Park travel guide 2026 — otherworldly hoodoo formations, the Navajo Loop Trail, dark sky stargazing, and some of the most unique geology on Earth."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Hoodoo orange spires glowing in winter snow, Bryce Canyon, Utah"
 tagline: "Thousands of orange hoodoos rising from the plateau rim like a frozen army — and at 8,000 feet elevation, winter snow transforms this into the most surreal landscape in Utah"
 region: southern-utah
@@ -168,7 +176,7 @@ Guided horseback rides descend into the amphitheater on trails not accessible to
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Bryce Canyon?
 
 Bryce Canyon's layout is linear and simple. One road enters from the north at the Highway 12 junction, passes the visitor center, and runs 18 miles south to Rainbow Point. Thirteen viewpoints and trailheads branch off this road.
 
@@ -178,7 +186,7 @@ Outside shuttle season, you can drive the full scenic road in your own vehicle. 
 
 For exploring beyond the park, you'll need a car. The nearest town with full services is Panguitch (25 miles west), and Highway 12 east toward Escalante is a must-drive scenic route.
 
-## Where to Stay
+## Where Should I Stay in Bryce Canyon?
 
 **The Lodge at Bryce Canyon** is the only in-park lodging — a historic 1920s lodge with cabins and motel-style rooms right on the rim. It books months in advance for summer. If you can get a reservation, the sunrise walk from your cabin to the rim is unbeatable.
 
@@ -188,7 +196,7 @@ For exploring beyond the park, you'll need a car. The nearest town with full ser
 
 **Campgrounds** inside the park (North Campground and Sunset Campground) have 200+ sites combined. Reserve through Recreation.gov — summer sites book out months ahead. Camping here puts you steps from the rim for sunrise.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Bryce Canyon?
 
 **Spring (April–May):** Temperatures range from 40s to 60s°F. Snow may linger into April at higher elevations. Wildflowers bloom in May. Crowds build through May but aren't as intense as summer yet.
 

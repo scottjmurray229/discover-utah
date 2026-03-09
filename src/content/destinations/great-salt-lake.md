@@ -3,6 +3,14 @@ title: "Great Salt Lake"
 description: "Great Salt Lake travel guide 2026 — North America's largest saltwater lake with surreal floating, migratory bird spectacles, Spiral Jetty, and otherworldly salt flats."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Great Salt Lake brine shrimp pink reflection and Bonneville Salt Flats, Utah"
 tagline: "America's Dead Sea in the desert West"
 region: northern-utah
@@ -162,7 +170,7 @@ In summer and fall, the lake's brine shrimp population peaks and microscopic alg
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Great Salt Lake?
 
 The Great Salt Lake is huge and access is fragmented — there's no single "visitor center" for the whole lake. Different sections offer different experiences:
 
@@ -174,7 +182,7 @@ The Great Salt Lake is huge and access is fragmented — there's no single "visi
 
 **Bear River Bird Refuge** (northeast shore) has a 12-mile auto tour loop. Located near Brigham City off I-15.
 
-## Where to Stay
+## Where Should I Stay in Great Salt Lake?
 
 There is no lodging directly on the lake shore outside of Antelope Island's campground. Most visitors base in nearby cities:
 
@@ -186,7 +194,7 @@ There is no lodging directly on the lake shore outside of Antelope Island's camp
 
 **Brigham City** (near Bear River Refuge and the closest town to Spiral Jetty) has basic motels and restaurants.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Great Salt Lake?
 
 **Spring (April–June):** Bird migration peaks in April and May. Temperatures are comfortable. Lake levels may be higher from snowmelt. Brine flies are minimal early in the season.
 

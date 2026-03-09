@@ -3,6 +3,14 @@ title: "Goblin Valley"
 description: "Goblin Valley State Park travel guide 2026 — mushroom-shaped hoodoos, Mars-like terrain, family-friendly exploring, and one of Utah's most alien landscapes."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Mushroom-shaped goblin hoodoos in Goblin Valley State Park, Utah"
 tagline: "Utah's strangest landscape — and that's saying something"
 region: southern-utah
@@ -164,7 +172,7 @@ The park's campground puts you right at the action. Wake up, walk to the valley 
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Goblin Valley?
 
 Goblin Valley is a small park with straightforward access. A paved road runs from the entrance station to the valley overlook parking area, about 7 miles. From there, you walk down into the valley floor.
 
@@ -174,7 +182,7 @@ Little Wild Horse Canyon trailhead is 6 miles south of the park entrance on a gr
 
 The nearest services (gas, food, lodging beyond the park) are in Hanksville (30 miles north) or Green River (50 miles northeast on I-70).
 
-## Where to Stay
+## Where Should I Stay in Goblin Valley?
 
 **Goblin Valley Campground** (25 sites plus 2 yurts) is the best option. Sites are set on a sandy mesa with views of the surrounding desert. Yurts come equipped with bunk beds, a futon, and a swamp cooler. Reserve through the Utah State Parks website — popular dates book months ahead.
 
@@ -184,7 +192,7 @@ The nearest services (gas, food, lodging beyond the park) are in Hanksville (30 
 
 **BLM dispersed camping** is available on the access roads and throughout the San Rafael Swell area. Free, no water, no services, but plentiful and scenic.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Goblin Valley?
 
 **Spring (March–May):** Perfect temperatures (60s–80s°F) for exploring. Wildflowers may appear in wetter years. Weekdays offer solitude.
 

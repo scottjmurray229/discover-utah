@@ -3,6 +3,14 @@ title: "Capitol Reef National Park"
 description: "Capitol Reef National Park travel guide 2026 — the Waterpocket Fold, pioneer orchards, scenic drives, petroglyphs, and Utah's most underrated national park."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Waterpocket Fold rock fins and Fruita pioneer orchard, Capitol Reef, Utah"
 tagline: "A 100-mile fold in the Earth's crust that blocked settlement so completely the settlers named it a reef — Fruita's orchards still produce free fruit for visitors in season"
 region: southern-utah
@@ -171,7 +179,7 @@ A short 0.3-mile walk to a viewpoint overlooking the Waterpocket Fold and the Fr
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Capitol Reef National Park?
 
 Capitol Reef has a straightforward layout centered on Highway 24, which runs east-west through the park for free. The Scenic Drive branches south from Fruita and requires a $20 vehicle fee (or America the Beautiful Pass).
 
@@ -181,7 +189,7 @@ For Cathedral Valley, you need high-clearance 4WD — the road includes the Frem
 
 The Notom-Bullfrog Road runs along the park's eastern boundary and provides access to southern Waterpocket Fold trailheads. It's unpaved but usually manageable in a passenger car when dry. Don't attempt it after rain.
 
-## Where to Stay
+## Where Should I Stay in Capitol Reef National Park?
 
 **Fruita Campground** (71 sites, reservable, $25/night) is one of the jewels of the national park system — sites are shaded by old-growth fruit and shade trees along the Fremont River, with deer wandering through at dusk. Reserve months ahead for spring and fall.
 
@@ -193,7 +201,7 @@ The Notom-Bullfrog Road runs along the park's eastern boundary and provides acce
 
 **BLM land** surrounds the park with dispersed camping opportunities, particularly along the Notom-Bullfrog Road and near the Burr Trail.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Capitol Reef National Park?
 
 **Spring (March–May):** Wildflowers, comfortable temperatures (50s–70s°F), and the Fremont River running from snowmelt. The orchards are blooming but not yet producing fruit. Some backcountry roads may be muddy.
 

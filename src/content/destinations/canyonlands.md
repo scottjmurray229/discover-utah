@@ -3,6 +3,14 @@ title: "Canyonlands National Park"
 description: "Canyonlands National Park travel guide 2026 — Utah's largest national park with vast canyon vistas, Mesa Arch, the White Rim Trail, and untamed backcountry solitude."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Island in the Sky mesa edge and labyrinthine canyon of Canyonlands, Utah"
 tagline: "Utah's largest and least visited national park divides itself into three districts by the Colorado and Green Rivers — Island in the Sky is a flat mesa with 1,000-foot vertical views in every direction"
 region: southern-utah
@@ -169,7 +177,7 @@ Multi-day flatwater trips on the Green River through Labyrinth and Stillwater Ca
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Canyonlands National Park?
 
 Canyonlands is a park where logistics matter. The three districts are separated by 2-3 hours of driving, so you need to choose which district to visit based on your time and interests.
 
@@ -181,7 +189,7 @@ Canyonlands is a park where logistics matter. The three districts are separated 
 
 Within the park, there are no shuttles, no services, and no gas stations. Fill up in Moab or Monticello before entering.
 
-## Where to Stay
+## Where Should I Stay in Canyonlands National Park?
 
 **Moab** is the primary base for Island in the Sky, with a full range of lodging from hostels to resorts. See the Moab destination page for details.
 
@@ -193,7 +201,7 @@ Within the park, there are no shuttles, no services, and no gas stations. Fill u
 
 **BLM land** around the park offers free dispersed camping. The areas along UT-313 (the road to Island in the Sky) and along UT-211 (the road to the Needles) have established pull-off sites.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Canyonlands National Park?
 
 **Spring (March–May):** Perfect. Temperatures in the 60s–80s°F, wildflowers in April, and long daylight hours for ambitious hikes. The White Rim Trail and Needles backcountry are at their best. Water sources in the backcountry may still be running from snowmelt.
 

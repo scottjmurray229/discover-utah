@@ -3,6 +3,14 @@ title: "Dead Horse Point"
 description: "Dead Horse Point State Park travel guide 2026 — Utah's most dramatic overlook with 2,000-foot sheer drops to the Colorado River, mountain biking, and unforgettable sunsets."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Dead Horse Point Goosenecks overlook and Colorado River 2,000 feet below, Utah"
 tagline: "The overlook that stops you in your tracks"
 region: southern-utah
@@ -162,7 +170,7 @@ The park's campground occupies the mesa top, with some sites offering canyon-rim
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Dead Horse Point?
 
 Dead Horse Point is a compact state park. The main road runs from the entrance station to the overlook parking lot, about 5 miles. A short spur road leads to the Intrepid Trail System trailhead and the campground.
 
@@ -170,7 +178,7 @@ Everything is easily accessible by car. The overlook is a short, paved walk from
 
 The park shares the UT-313 access road with Canyonlands Island in the Sky. The turnoff for Dead Horse Point branches right about 7 miles before the Canyonlands entrance. Plan to visit both in the same day — the logistics work perfectly.
 
-## Where to Stay
+## Where Should I Stay in Dead Horse Point?
 
 **Kayenta Campground** inside the park has 21 sites (electric hookups available) and several yurts. Some sites offer rim views. Reserve through the Utah State Parks website well in advance — spring and fall weekends sell out months ahead. At $35-40/night, it's a bargain for the location.
 
@@ -178,7 +186,7 @@ The park shares the UT-313 access road with Canyonlands Island in the Sky. The t
 
 **BLM camping** along UT-313 (the access road) offers free dispersed sites. Several pulloffs have established sites with fire rings. No water, no services, but free and convenient.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Dead Horse Point?
 
 **Spring (March–May):** Comfortable temperatures and long daylight hours. This is peak season for the Moab area. Weekends are busy. Wildflowers may appear in April.
 

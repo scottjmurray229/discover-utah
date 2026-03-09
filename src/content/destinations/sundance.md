@@ -3,6 +3,14 @@ title: "Sundance Mountain Resort"
 description: "Sundance Mountain Resort travel guide 2026 — Robert Redford's boutique ski resort in Provo Canyon with intimate skiing, artisan dining, film culture, and four-season mountain beauty."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Sundance Mountain Resort and Robert Redford's Sundance Film Festival, Utah"
 tagline: "Where art meets the mountain"
 region: wasatch-front
@@ -171,7 +179,7 @@ On select evenings, Sundance offers a full moon dinner experience — a scenic l
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Sundance Mountain Resort?
 
 Sundance is a compact, self-contained resort. Once you arrive, you can walk between the lodges, lifts, restaurants, art studios, and general store. The layout is human-scaled, which is part of the charm.
 
@@ -179,7 +187,7 @@ For exploring beyond the resort, a car is necessary. Provo Canyon (US-189) runs 
 
 Provo is 15 minutes west. Heber City and the Heber Valley are 20 minutes east. Park City is 45 minutes north via US-40.
 
-## Where to Stay
+## Where Should I Stay in Sundance Mountain Resort?
 
 **Sundance Resort lodging** ranges from cozy mountain homes to luxury suites, all designed with natural materials and an emphasis on fitting into the landscape. Rates are premium, especially during ski season and peak fall color. The on-mountain convenience and the Sundance atmosphere justify the cost for many visitors.
 
@@ -189,7 +197,7 @@ Provo is 15 minutes west. Heber City and the Heber Valley are 20 minutes east. P
 
 **Orem** (20 min west) has more chain hotel options at lower prices than Provo.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Sundance Mountain Resort?
 
 **Winter (December–March):** Skiing, snowshoeing, and the cozy lodge atmosphere. The resort averages 300+ inches of snowfall. January and February have the most reliable snow. The mountain is uncrowded even on weekends.
 

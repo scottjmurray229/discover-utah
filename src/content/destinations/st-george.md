@@ -3,6 +3,14 @@ title: "St. George"
 description: "St. George travel guide 2026 — year-round sunshine, gateway to Zion National Park, Snow Canyon State Park, world-class golf, and the warm heart of Utah's red rock country."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "Red Cliffs Desert Reserve vermilion rock and historic Tabernacle, St. George, Utah"
 tagline: "Utah's sun-drenched red rock gateway"
 region: southern-utah
@@ -168,7 +176,7 @@ St. George has rapidly developed as a mountain biking destination. The Zen Trail
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around St. George?
 
 St. George is a car-dependent city. The main commercial corridors run along St. George Boulevard and along I-15 exits. Snow Canyon State Park is 15 minutes northwest of downtown via UT-18. Zion National Park is 45 minutes northeast via I-15 and UT-9.
 
@@ -176,7 +184,7 @@ The city has invested in cycling infrastructure, and the paved bike path connect
 
 Ride-sharing (Uber/Lyft) is available but coverage is thin compared to larger cities. Enterprise, Hertz, and other rental agencies operate from the airport and in town.
 
-## Where to Stay
+## Where Should I Stay in St. George?
 
 **Downtown St. George** has boutique options and is walkable to Ancestor Square, the Tabernacle, and several restaurants. The Inn at Entrada and the Advenire Hotel are standout choices.
 
@@ -188,7 +196,7 @@ Ride-sharing (Uber/Lyft) is available but coverage is thin compared to larger ci
 
 **Camping** at Snow Canyon State Park (33 sites) is excellent — shaded sites against red rock walls. Also Quail Creek and Sand Hollow state parks have camping with reservoir access.
 
-## Best Time to Visit
+## When Is the Best Time to Visit St. George?
 
 **Winter (December–February):** Glorious. Highs in the 50s–60s°F, sunshine, and none of the desert heat. Peak golf season. Excellent hiking conditions. Snow Canyon and Red Cliffs trails are perfect.
 

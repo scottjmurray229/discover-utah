@@ -3,6 +3,14 @@ title: "Monument Valley"
 description: "Monument Valley travel guide 2026 — iconic Navajo Nation buttes, guided tours through sacred landscapes, and the most recognizable Western scenery on Earth."
 heroVideo: ""
 heroImage: ""
+aeoFacts:
+  currency: "USD (US Dollar)"
+  plugType: "A/B, 120V"
+  language: "English"
+  bestTime: "May to September (summer season)"
+  visaInfo: "US territory — no visa for US citizens"
+  timeZone: "UTC-7 (MST), UTC-6 summer"
+  emergencyNumber: "911"
 heroAlt: "West and East Mitten Buttes silhouette at Monument Valley, Utah–Arizona border"
 tagline: "The sandstone mittens that John Ford used in every Western ever made — Monument Valley Navajo Tribal Park is not a national park, it is Navajo Nation land with Navajo guides who know it better than any ranger"
 region: southern-utah
@@ -168,7 +176,7 @@ The only self-guided hiking trail in the tribal park — a 3.2-mile loop that ci
 
 </div>
 
-## Getting Around
+## What's the Best Way to Get Around Monument Valley?
 
 Monument Valley is accessed via US-163, which runs through the Utah-Arizona border area. The tribal park visitor center is on the Arizona side, with views directly at the classic butte formation.
 
@@ -178,7 +186,7 @@ Beyond the Valley Drive, all access requires a licensed Navajo guide. You cannot
 
 The nearest gas station is in Kayenta, AZ (25 miles south) or Mexican Hat, UT (22 miles north). Fill up before arriving.
 
-## Where to Stay
+## Where Should I Stay in Monument Valley?
 
 **The View Hotel** is the only hotel inside the tribal park, perched on the rim with every room facing the Mittens. Rooms are modern and comfortable but command a premium. The sunrise view from your room is worth the price.
 
@@ -190,7 +198,7 @@ The nearest gas station is in Kayenta, AZ (25 miles south) or Mexican Hat, UT (2
 
 **Camping** at the tribal park campground (near the visitor center) offers views of the buttes. Goulding's also has a campground with full hookups and amenities.
 
-## Best Time to Visit
+## When Is the Best Time to Visit Monument Valley?
 
 **Spring (April–May):** Ideal temperatures (70s–80s°F) and good light. The valley greens up slightly. Crowds are moderate. This is the sweet spot for comfortable touring.
 
