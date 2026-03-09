@@ -23,6 +23,20 @@ export const UTAH_CONFIG: PackingConfig = {
   plugType: 'Type A/B',
   plugVoltage: '120V',
   affiliateTag: 'discoverphili-20',
+  seasons: [
+    { value: 'spring', label: 'Spring (Mar–May)' },
+    { value: 'summer', label: 'Summer (Jun–Aug)' },
+    { value: 'fall', label: 'Autumn (Sep–Nov)' },
+    { value: 'winter', label: 'Winter (Dec–Feb)' },
+  ],
+  activities: [
+    { value: 'hiking', label: 'Hiking', icon: '🥾' },
+    { value: 'skiing', label: 'Skiing / Snowboarding', icon: '⛷️' },
+    { value: 'wildlife', label: 'Wildlife Viewing', icon: '🦅' },
+    { value: 'camping', label: 'Camping', icon: '⛺' },
+    { value: 'photography', label: 'Photography', icon: '📸' },
+    { value: 'city-walk', label: 'City Exploring', icon: '🚶' },
+  ],
   destinationEssentials: UTAH_ESSENTIALS,
   gearRecommendations: UTAH_GEAR_RECOMMENDATIONS,
 };
