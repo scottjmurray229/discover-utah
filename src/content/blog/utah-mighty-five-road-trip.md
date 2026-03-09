@@ -2,6 +2,7 @@
 title: "Utah Mighty Five Road Trip: The Complete 10-Day Itinerary"
 description: "The definitive guide to visiting all five Utah national parks — Zion, Bryce Canyon, Capitol Reef, Canyonlands, and Arches — in 10 days, with logistics, permit requirements, and what to prioritize."
 pubDate: 2026-03-08
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"

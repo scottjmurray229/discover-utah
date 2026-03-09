@@ -2,6 +2,7 @@
 title: "The Utah Mighty Five: Is Doing All Five Parks Worth It?"
 description: "Utah's five national parks are marketed as a single epic trip. We did all five in 10 days. Here's the honest verdict on which ones deliver, which felt rushed, and how to plan it."
 pubDate: 2026-03-01
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"

@@ -2,6 +2,7 @@
 title: "Antelope Canyon vs Horseshoe Bend: Should You Do Both?"
 description: "Honest comparison of Page, Arizona's two iconic landmarks — the logistics, the experience, the crowds, the cost, and whether visiting both in one day is worth it."
 pubDate: 2026-03-08
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"

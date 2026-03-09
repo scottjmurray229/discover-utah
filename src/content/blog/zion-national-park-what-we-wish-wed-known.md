@@ -2,6 +2,7 @@
 title: "Zion National Park: What We Wish We'd Known"
 description: "Zion exceeded our expectations and also punished some of our planning gaps. Here's the full honest account of what works, what doesn't, and what we'd do differently."
 pubDate: 2026-03-01
+dateModified: 2026-03-08
 heroImage: ""
 heroVideo: ""
 author: "Scott"
