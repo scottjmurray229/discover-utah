@@ -69,13 +69,50 @@ faqItems:
     answer: "Sundance is much smaller — 450 acres versus thousands at the big resorts. The trade-off is intimacy. No lift lines, uncrowded runs, and a mountain that feels personal. The terrain is varied (42 runs, 2,150 vertical feet) with good intermediate and beginner skiing and some challenging steeps. You come to Sundance for the experience, not the acreage."
   - question: "What's the best season to visit?"
     answer: "Each season has its appeal. Winter for skiing and the cozy lodge vibe. Summer for hiking, mountain biking, and the ZipTour. Fall (September–October) is arguably the most beautiful, with Provo Canyon's maple trees creating one of the best fall color displays in the West."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Sundance Mountain Resort Cottages"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Provo+Canyon+UT"
+    description: "Hand-crafted mountain cottages with wood-burning fireplaces and art throughout."
+    priceRange: "$$$"
+  - name: "Sundance Ski Lesson Package"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Sundance+Utah+skiing"
+    description: "Ski lesson packages at Sundance — excellent for intermediate skiers."
+    priceRange: "$$"
+  - name: "Sundance Art Studio Workshop"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Sundance+Resort+art"
+    description: "Art studio workshops offered at the resort — weaving, pottery, painting."
+    priceRange: "$$"
+scottTips:
+  logistics: "Sundance is 15 miles north of Provo and 50 miles from SLC. The Provo Canyon drive (US-189) is one of the most beautiful canyon drives in Utah — worth experiencing in any season. The resort is small by comparison to Park City or Snowbird."
+  bestTime: "December–March for skiing. Summer (June–September) for mountain activities, outdoor concerts, and hiking. The Sundance Film Festival (January) is centered in Park City, not the resort."
+  gettingAround: "Car essential from SLC or Provo. The resort is compact and walkable once there. No shuttle service from SLC."
+  money: "Sundance runs on the higher end — cottages start around $250/night. The Foundry Grill restaurant is excellent but pricey. Worth it for the atmosphere and experience."
+  safety: "Standard mountain skiing safety. Sundance has some challenging terrain but is primarily intermediate — good for families."
+  packing: "Layers for mountain conditions. The resort's art-focused environment rewards a camera. Casual mountain dress is the norm."
+  localCulture: "The Robert Redford environmental and artistic philosophy permeates every aspect of the resort. Locally sourced food at the Foundry Grill, native art throughout the buildings, low-impact design choices. It's a genuine vision rather than marketing."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Sundance Mountain Resort is Robert Redford's intimate mountain resort in Provo Canyon — a small, carefully curated ski resort and year-round destination centered on art, film, and environmental stewardship. It's the founding home of the Sundance Film Festival (which now runs in Park City) and one of the most distinctive resort experiences in the American West.
+
 
 ## Sundance: Robert Redford's Mountain Vision
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/sundance-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #166534, #1e40af, #92400e);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Sundance: Where Art Meets Mountain</div>
+    <p class="ib-text">Robert Redford's vision. A mountain resort unlike any other.</p>
+  </div>
+</div>
+
 
 Sundance Mountain Resort is not like other ski resorts. It doesn't try to be the biggest, the steepest, or the most Instagram-famous. Instead, it's something rarer — a place where the built environment serves the natural one, where art and wilderness coexist without either feeling diminished. Robert Redford purchased the property in 1969 with a vision of creating a place where creativity and nature could intersect, and 50+ years later, that vision is tangibly present in everything from the hand-crafted architecture to the film programs to the wildflower meadows beneath Mount Timpanogos.
 

@@ -69,13 +69,50 @@ faqItems:
     answer: "Yes, but your options are more limited. Horseshoe Bend and Antelope Canyon (near Page) are land-accessible. The Glen Canyon Dam and visitor center are free. Guided boat tours to Rainbow Bridge depart from Wahweap Marina. Lone Rock Beach is accessible by car for swimming. But the best of Lake Powell — the hidden canyons, the secluded beaches — requires a boat."
   - question: "Is Antelope Canyon on Lake Powell?"
     answer: "Lower Antelope Canyon and Upper Antelope Canyon are slot canyons near Page, AZ, about 5 miles from the lake. They're on Navajo land and require a guided tour. They're separate from the lake but nearly every Lake Powell visitor adds them to their itinerary. The photogenic light beams in Upper Antelope Canyon are most visible from March through October around midday."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Lake Powell Resort and Marina"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Page+AZ"
+    description: "The main resort at Wahweap Marina near Page, AZ. Best for houseboat access."
+    priceRange: "$$$"
+  - name: "Lake Powell Houseboat Rental"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Lake+Powell+houseboat"
+    description: "Multi-day houseboat rental for the full Lake Powell experience."
+    priceRange: "$$$$"
+  - name: "Antelope Canyon and Lake Powell Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Antelope+Canyon+Lake+Powell+tour"
+    description: "Combined Antelope Canyon (Navajo-guided) and Lake Powell boat tour from Page."
+    priceRange: "$$"
+scottTips:
+  logistics: "Page, Arizona is the gateway — Antelope Canyon, Horseshoe Bend, and Wahweap Marina are all within 10 miles. Antelope Canyon requires advance booking of a Navajo tour — fill up months in advance in spring and fall."
+  bestTime: "May–September for boating. The water is warm, days are long. Spring and fall for hiking around the lake. The lake level has dropped significantly due to drought — check current status before planning water activities."
+  gettingAround: "Boat or houseboat for the lake itself. Car to access Page, Antelope Canyon, and Horseshoe Bend. The canyon lands surrounding the lake are navigable by 4WD in many areas."
+  money: "Houseboat rentals start around $1,200/night — split among a group this is reasonable and the experience is exceptional. Hotel lodging in Page runs $150–250/night."
+  safety: "Boating safety on the open lake — life jackets required for children. Afternoon monsoon storms July–September can arrive fast on open water. Check forecasts before departing marina."
+  packing: "Sunscreen in industrial quantities — the water reflects UV. Boat-appropriate clothing that dries fast. Camera for the canyon reflections."
+  localCulture: "Antelope Canyon is Navajo Nation land — guides are mandatory. Book directly with Navajo tour operators (Ken's Tours, Antelope Canyon Navajo Tours) for authentic experience."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Lake Powell is a vast reservoir on the Colorado River straddling the Utah-Arizona border — 186 miles of blue water in a dramatic red rock canyon landscape, created by Glen Canyon Dam in 1966. It's a boating and houseboat destination unlike anything else in the Southwest. Antelope Canyon is just downstream at Page, Arizona.
+
 
 ## Lake Powell: Desert Meets Deep Blue
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/lake-powell-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #0369a1, #0ea5e9, #dc2626);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Lake Powell: Blue Water, Red Rock</div>
+    <p class="ib-text">A canyon flooded by a lake. Complicated, and spectacular.</p>
+  </div>
+</div>
+
 
 Lake Powell is the improbable marriage of the American desert and a 185-mile-long reservoir — blue water stretching through a labyrinth of red sandstone canyons that, until Glen Canyon Dam was built in 1963, were among the most remote and inaccessible landscapes in the Lower 48. Today, the lake fills these canyons to create a waterscape that is stunningly beautiful and endlessly explorable — 1,960 miles of shoreline (more than the entire Pacific coast of the continental US) with countless side canyons, hidden beaches, natural bridges, and alcoves that you could spend a lifetime discovering.
 

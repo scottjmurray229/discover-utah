@@ -69,13 +69,50 @@ faqItems:
     answer: "Yes. The Fruita district contains nearly 3,000 fruit trees planted by Mormon pioneers in the late 1800s. When orchards are open for harvest (roughly June through October depending on the fruit), you can pick and eat for free, or fill a bag to take home for a small per-bag fee. Check the visitor center for which orchards are currently open."
   - question: "Do I need a 4WD vehicle?"
     answer: "Not for the Scenic Drive or most day hikes. The main highway and Scenic Drive are paved. However, Cathedral Valley — one of the park's most spectacular areas — requires a high-clearance 4WD vehicle and includes a river ford. The Notom-Bullfrog Road along the east side is mostly unpaved but passable in a standard car in dry conditions."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Capitol Reef Resort"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Torrey+UT"
+    description: "Best lodging base near Capitol Reef. Torrey is the gateway town."
+    priceRange: "$$"
+  - name: "Capitol Reef Hiking Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Capitol+Reef+National+Park"
+    description: "Guided tour of Fruita orchards, petroglyphs, and canyon hikes."
+    priceRange: "$$"
+  - name: "National Parks Guide Utah"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=utah+national+parks+guide+book"
+    description: "Comprehensive Utah parks guide covering all five Mighty Five parks."
+    priceRange: "$"
+scottTips:
+  logistics: "Capitol Reef is often the middle stop on a Mighty Five road trip (Bryce → Capitol Reef → Canyonlands/Arches route). The Scenic Drive ($10, cash only) gives the best canyon access. The Fruita orchards produce free fruit in season — pick your own."
+  bestTime: "April–October. The park is driveable year-round but some roads wash out after heavy rain. Spring brings desert wildflowers in the orchards and canyon washes."
+  gettingAround: "Paved Scenic Drive accesses most highlights. Grand Wash and Capitol Gorge are narrows hikes reachable from paved roads. High Clearance Road south of Fruita needs 4WD — don't risk it in a standard rental."
+  money: "The entrance fee is $20/vehicle but only covers the Scenic Drive area. Free to enter for most trailheads along Highway 24. America the Beautiful covers everything."
+  safety: "Flash flooding risk in the slot canyons — check weather before entering Grand Wash or Capitol Gorge. The canyon narrows funnel water fast."
+  packing: "Cash for the Scenic Drive and orchard fruit. Sun protection — the Waterpocket Fold is exposed. Good boots for slickrock."
+  localCulture: "Torrey (7 miles from the park) has excellent dining at Café Diablo and Capitol Reef Resort restaurant. Tiny population but a surprisingly strong dining scene."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Capitol Reef National Park is the least-visited and most underrated of Utah's Mighty Five parks — a 100-mile wrinkle in the earth called the Waterpocket Fold, created by a monocline fault that pushed ancient rock layers into a dramatic reef-like ridge. The park preserves a historic Mormon pioneer settlement (Fruita), petroglyphs, slot canyons, and stunning erosional landscapes without the crowds of Zion or Bryce.
+
 
 ## Capitol Reef: The Park That Rewards Curiosity
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/capitol-reef-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #ea580c, #16a34a);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Capitol Reef: Utah's Hidden Giant</div>
+    <p class="ib-text">Orchards, petroglyphs, and hundred-mile folds of stone.</p>
+  </div>
+</div>
+
 
 Capitol Reef is the national park that people drive past on their way to somewhere else — and that's a gift to those who stop. While Zion, Arches, and Bryce Canyon draw millions, Capitol Reef quietly delivers some of the most diverse and rewarding experiences in the entire park system: free fruit from pioneer orchards, a 100-mile geological wrinkle in the earth, ancient petroglyphs visible from the road, and backcountry solitude that feels genuinely wild.
 

@@ -66,13 +66,50 @@ faqItems:
     answer: "One to two hours covers the main overlook and the Rim Walk trail. Half a day adds mountain biking on the Intrepid Trail System. Many visitors stop here on the way to or from Canyonlands Island in the Sky. For photographers, plan to be at the overlook for sunset — it's life-changing."
   - question: "Is this the place from the Breaking Bad finale?"
     answer: "Not quite, but close. The area's potash evaporation ponds visible from the overlook — bright blue rectangles on the desert floor — appear in Breaking Bad and Westworld. The overlook itself was used in the climax of the movie Thelma and Louise (though they used a stand-in for the actual jump)."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Moab Hotels — Arches Gateway"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Moab+UT"
+    description: "Dead Horse Point is 10 miles from Moab — easy day trip from any Moab base."
+    priceRange: "$$"
+  - name: "Dead Horse Point Sunrise Photography Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Dead+Horse+Point+photography"
+    description: "Guided sunrise photo tour at the overlook — best light of the day."
+    priceRange: "$$"
+  - name: "National Geographic Utah Map"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=utah+national+parks+map"
+    description: "Topo map covering the canyon country around Moab and Dead Horse Point."
+    priceRange: "$"
+scottTips:
+  logistics: "Dead Horse Point requires a $20/vehicle day use fee (or America the Beautiful pass doesn't cover it — it's a state park, not federal). It's on the way to Canyonlands Island in the Sky — combine both in one day."
+  bestTime: "Sunrise and sunset for the best canyon light. Midday views are still spectacular but less dramatic. Spring and fall for comfortable temperatures at the rim."
+  gettingAround: "10-mile paved road from the highway junction. Easy drive. The rim trail is 4.5 miles and flat — easy walking to multiple overlooks beyond the main viewpoint."
+  money: "$20/vehicle day use fee for the state park. The viewpoint is worth the price — arguably a better single view than anything in Arches National Park."
+  safety: "The cliff edges are unguarded and a genuine hazard — stay back from the rim. Wind can be strong and sudden on the exposed mesa."
+  packing: "Camera and wide-angle lens. Water and snacks — no services at the viewpoint. Tripod for sunrise/sunset photography."
+  localCulture: "The name comes from a story (possibly apocryphal) of horses being corralled on the mesa and dying of thirst — the Colorado River visible from above but inaccessible to them. The film 127 Hours (Aron Ralston's story) was filmed partially in this region."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Dead Horse Point is a narrow mesa promontory in southeastern Utah offering one of the most dramatic canyon overlooks in the American West — a 2,000-foot drop to the Colorado River gorge below, with Canyonlands National Park spreading to the horizon. It's 10 miles from Moab and receives far fewer visitors than Arches, making it one of the best bang-for-buck viewpoints in Utah.
+
 
 ## Dead Horse Point: The View That Redefines Scale
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/dead-horse-point-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #b45309, #ea580c);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Dead Horse Point: The Edge of Everything</div>
+    <p class="ib-text">2,000 feet down to the Colorado River. No guardrail needed.</p>
+  </div>
+</div>
+
 
 Dead Horse Point State Park delivers what might be the single most dramatic viewpoint in the American West. Standing at the railing, you look straight down — 2,000 feet of sheer cliff to the Colorado River making a lazy gooseneck turn through the canyon below. The potash evaporation ponds glow an unnatural blue. Canyonlands stretches to the horizon in every direction. The La Sal Mountains rise in the distance, snow-capped through spring. It's the kind of view that makes your brain recalibrate its sense of scale.
 

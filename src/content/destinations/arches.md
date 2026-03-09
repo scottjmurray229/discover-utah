@@ -69,13 +69,50 @@ faqItems:
     answer: "You can see the major highlights in one full day — Delicate Arch, the Windows Section, Balanced Rock, and a short walk in Devils Garden. But two days lets you add the full Devils Garden loop, the Fiery Furnace ranger-led tour, and time to enjoy the park without rushing."
   - question: "When is the best time to visit Arches?"
     answer: "Spring (March–May) and fall (September–November) are ideal with mild temperatures in the 60s–80s°F. Summer can exceed 105°F, making midday hiking dangerous. Winter is uncrowded and beautiful but some trails may be icy."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Moab Hotel at Arches"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Moab+UT"
+    description: "Moab is the gateway to both Arches and Canyonlands. Book early for spring peak."
+    priceRange: "$$"
+  - name: "Arches Guided Hike"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Arches+National+Park+tour"
+    description: "Guided half-day tour covering Delicate Arch and Landscape Arch."
+    priceRange: "$$"
+  - name: "Camelbak 2L Hydration Pack"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=camelbak+hydration+pack"
+    description: "Required for desert hiking — 2L minimum for Delicate Arch trail in summer."
+    priceRange: "$"
+scottTips:
+  logistics: "Timed entry required April 1–October 31, 7am–4pm entry window. Reserve on Recreation.gov — they sell out days in advance during spring peak. Enter before 7am or after 4pm to bypass timed entry."
+  bestTime: "March–May and September–November. March–April has desert wildflowers. Summer (June–August) is brutally hot — 100°F+, dangerous for midday hiking. Spring and fall are the target windows."
+  gettingAround: "One main road through the park with short hikes to major arches. Delicate Arch (3 miles RT, 480 ft gain) is the must-do. Landscape Arch (1.6 miles RT, easy) in Devils Garden area."
+  money: "$35 vehicle entry. America the Beautiful pass covers both Arches and Canyonlands — get it if you're doing both, which you should be."
+  safety: "Desert heat kills. Carry more water than you think you need — minimum 1 liter per person per hour in summer. Start hikes at dawn, be off exposed trails by 10am in summer. No shade on Delicate Arch trail."
+  packing: "Large water capacity (hydration pack), sun hat and sunscreen, trail runners or hiking boots. Trekking poles helpful on Delicate Arch's slickrock finale."
+  localCulture: "Moab has excellent restaurants and a fun outdoor-adventure culture. Moab Brewery is the social hub. Book restaurants for dinner — options fill up in spring peak."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Arches National Park contains the world's largest concentration of natural stone arches — over 2,000 of them within 76,000 acres of stunning Utah red rock country near Moab. Delicate Arch is the most iconic, recognizable from the Utah license plate. The park is compact and visually spectacular, but summer heat is extreme and the timed entry system requires advance planning.
+
 
 ## Arches National Park: A Landscape Like No Other
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/arches-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #ea580c, #dc2626, #b45309);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Arches: Windows in Stone</div>
+    <p class="ib-text">Two thousand arches. One extraordinary landscape.</p>
+  </div>
+</div>
+
 
 Arches National Park contains the highest density of natural stone arches on Earth — over 2,000 catalogued formations carved by millions of years of water, ice, and wind working through Entrada sandstone. The park sits on the Colorado Plateau just north of Moab, covering 76,519 acres of red rock desert that feels more like another planet than another national park.
 

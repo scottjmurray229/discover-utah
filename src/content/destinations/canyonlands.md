@@ -69,13 +69,50 @@ faqItems:
     answer: "Scale and solitude. Arches is compact and highly accessible — you can see the highlights in a day. Canyonlands is massive (337,598 acres), wild, and spread across three separate districts that aren't connected by road. It rewards those who are willing to invest time and effort, offering a more raw, adventurous experience."
   - question: "Can I visit both Island in the Sky and the Needles in one day?"
     answer: "Technically possible but not recommended. They're separated by a 2.5-hour drive via Moab. Each district deserves at least half a day. If you only have one day, choose Island in the Sky for its viewpoints or the Needles for its hiking."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Moab Gateway Hotels"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Moab+UT"
+    description: "Moab is the base for both Island in the Sky and Needles districts."
+    priceRange: "$$"
+  - name: "Canyonlands Jeep/4WD Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Canyonlands+jeep+tour"
+    description: "Access backcountry areas of Canyonlands only reachable by 4WD."
+    priceRange: "$$$"
+  - name: "REI Co-op Trail Running Shoes"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=trail+running+shoes+desert"
+    description: "Lightweight trail shoes for slickrock and canyon hiking."
+    priceRange: "$$"
+scottTips:
+  logistics: "Canyonlands has three separate districts — Island in the Sky (closest to Moab, 35 miles), Needles (75 miles), and The Maze (very remote, high-clearance 4WD only). Plan which district(s) to visit before you go."
+  bestTime: "March–May and September–October. Mesa Arch at Island in the Sky is famous for sunrise — arrive 45 minutes before sunrise and expect other photographers. Summer heat is extreme in canyon bottoms."
+  gettingAround: "Island in the Sky is the easiest: paved road to overlooks. Needles requires some 4WD for inner roads but 2WD reaches the main trailheads. The Maze is expedition territory — don't go without navigation skills and a permit."
+  money: "$35 vehicle entry covers the specific district you're entering. America the Beautiful covers all three. Canyonlands gets far fewer visitors than Arches despite being larger and arguably more dramatic."
+  safety: "Mesa Arch trail is easy but the clifftop is unguarded — stay back from the edge. Backcountry hiking requires a permit and should not be attempted without navigation skills. No water sources in most areas — carry all your water."
+  packing: "More water than Arches — longer distances and more exposure. Permit required for backcountry camping. Topo map and compass/GPS for Needles backcountry."
+  localCulture: "Canyonlands is quieter and more local than Arches. The Needles Outpost just outside the park is the only gas/supply option near that district — don't run low."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Canyonlands National Park is Utah's largest national park and its most dramatic from above — the Colorado and Green Rivers carve through a vast canyon system of mesas, buttes, and canyon walls dropping 1,500 feet to the rivers below. It's less visited than nearby Arches because it's bigger and harder to access, which makes it more rewarding. Island in the Sky mesa is spectacular and easy; the Needles district requires more effort but delivers deep canyon country.
+
 
 ## Canyonlands: The Big One
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/canyonlands-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #b45309, #dc2626, #ea580c);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Canyonlands: Rivers Meet Stone</div>
+    <p class="ib-text">The Colorado and Green Rivers carved this. Words can't complete the sentence.</p>
+  </div>
+</div>
+
 
 Canyonlands is the largest and wildest of Utah's national parks — 337,598 acres of canyons, mesas, buttes, and spires carved by the Colorado and Green Rivers. If Arches is Utah's greatest hits album, Canyonlands is the deep cut that rewards the committed listener. This is a park that doesn't reveal itself from a parking lot. It demands time, effort, and a willingness to be humbled by scale.
 

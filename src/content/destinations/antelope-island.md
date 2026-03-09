@@ -69,13 +69,50 @@ faqItems:
     answer: "Yes — Bridger Bay Beach is the most popular floating spot. The water is so salty you float effortlessly. Wear water shoes (the bottom is rocky), don't get the water in your eyes (it burns), and rinse off with fresh water afterward. There are outdoor showers at the beach. The floating experience is genuinely novel and fun."
   - question: "How much time do I need?"
     answer: "Half a day covers Bridger Bay beach, the bison viewing drive, and Fielding Garr Ranch. A full day adds the Frary Peak summit hike and more wildlife exploration. Overnight camping lets you catch sunset and sunrise — the most photogenic times on the island."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Salt Lake City Hotels"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Salt+Lake+City+UT"
+    description: "Day trip from SLC — no accommodation on the island itself."
+    priceRange: "$$"
+  - name: "Antelope Island Wildlife Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Antelope+Island+State+Park+tour"
+    description: "Guided wildlife and geology tour covering bison behavior and Great Salt Lake ecology."
+    priceRange: "$"
+  - name: "Waterproof Hiking Boots"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=waterproof+hiking+boots"
+    description: "Shore areas can be wet and salty — waterproof footwear is helpful."
+    priceRange: "$$"
+scottTips:
+  logistics: "Antelope Island is 30 miles north of Salt Lake City — an easy half-day or full-day trip. The causeway from Syracuse is paved and well-maintained. $15/vehicle entry. No overnight accommodation on the island."
+  bestTime: "Spring and fall for bison viewing and birdwatching (the Great Salt Lake is a major migratory bird stopover). Summer works for hiking but biting gnats (no-see-ums) can be intense in July–August."
+  gettingAround: "Drive the main road to Fielding Garr Ranch (southern tip) and major trailheads. The Buffalo Point area has the best bison viewing overlooks. Bike rentals available in peak season."
+  money: "$15/vehicle for day use. Worth every dollar — this is one of the best wildlife viewing opportunities in the Intermountain West and surprisingly uncrowded."
+  safety: "Bison are wild and dangerous — maintain 25-yard minimum distance. The island has rattlesnakes in rocky areas — watch where you step. Bring more water than you think you need (no services on most of the island)."
+  packing: "Bug spray if visiting July–August (gnats are relentless). Binoculars for bison and birdwatching. Sunscreen — the island is completely exposed."
+  localCulture: "The Great Salt Lake ecology is a legitimate scientific curiosity — read about brine shrimp and migratory birds before you go. The lake's shrinking is a major environmental story; you can see historical waterlines on the mountains."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Antelope Island is the largest island in the Great Salt Lake — a 42-square-mile chunk of desert mountains accessible by causeway, with a herd of 500–700 free-roaming bison, Great Salt Lake views, and a stark landscape unlike anything else in the region. It's one of Utah's most underrated destinations and only 30 miles from Salt Lake City.
+
 
 ## Antelope Island: Wild Utah on the Great Salt Lake
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/antelope-island-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #78716c, #a16207, #0369a1);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Antelope Island: Wild Utah</div>
+    <p class="ib-text">Bison, salt flats, and a lake three times saltier than the ocean.</p>
+  </div>
+</div>
+
 
 Antelope Island is the largest island in the Great Salt Lake — 15 miles long and 5 miles wide — and it feels like a world apart from the Wasatch Front cities visible from its shores. A herd of 700+ bison roams the grasslands. Pronghorn antelope graze beneath mountain peaks. The lake's saline water stretches to the horizon, turning pink and purple at sunset. Migratory birds mass in the shallows by the hundreds of thousands. It's a remarkably wild place 40 minutes from downtown Salt Lake City.
 

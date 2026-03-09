@@ -66,13 +66,50 @@ faqItems:
     answer: "The Great Salt Lake has been shrinking dramatically due to upstream water diversions for agriculture and urban use, combined with drought. At its lowest recent point, the lake lost roughly half its historical surface area. Conservation efforts and wetter years have helped somewhat, but the lake's future remains a major environmental concern."
   - question: "Is Spiral Jetty always visible?"
     answer: "Spiral Jetty's visibility depends on the lake level. When water is high, the jetty is submerged. At lower water levels (which have been common in recent years), the entire 1,500-foot coil is visible and walkable, encrusted with salt crystals. Check current conditions before making the long drive."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Salt Lake City Base Hotels"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Salt+Lake+City+UT"
+    description: "Salt Lake City is the base for Great Salt Lake exploration."
+    priceRange: "$$"
+  - name: "Great Salt Lake Ecology Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Great+Salt+Lake+tour"
+    description: "Guided ecology tour covering brine shrimp, migratory birds, and lake science."
+    priceRange: "$"
+  - name: "Binoculars for Birdwatching"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=binoculars+birdwatching"
+    description: "The lake hosts millions of migratory shorebirds — binoculars are essential."
+    priceRange: "$$"
+scottTips:
+  logistics: "Antelope Island State Park (see above) is the best access point. Saltair Pavilion on the south shore is historic and photographable. The Bear River Migratory Bird Refuge on the north shore is the premier birdwatching site."
+  bestTime: "April–May and August–October for peak migratory bird activity. Millions of phalaropes, avocets, stilts, and other shorebirds stop here. Summer is also good for the pink-water photography opportunities."
+  gettingAround: "Each access point (Antelope Island, Saltair, Bear River Refuge) is a separate destination requiring a car. Plan which areas you want to prioritize."
+  money: "Antelope Island is $15/vehicle. Bear River Migratory Bird Refuge is free (part of the National Wildlife Refuge system). Saltair Pavilion is free to drive by."
+  safety: "The extreme salinity means buoyancy but also skin and eye irritation if you swim. Rinse off immediately after any contact. Biting gnats in summer near shore — bring bug spray."
+  packing: "Bug spray, binoculars, camera with long lens for birds. Waterproof shoes if wading near shore."
+  localCulture: "The Great Salt Lake is currently experiencing a severe ecological crisis due to water diversion and drought — the lake has shrunk by 50% in recent decades. This context matters for understanding what you're seeing and why conservation matters."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+The Great Salt Lake is the largest natural lake west of the Mississippi River — a terminal salt lake three to five times saltier than the ocean, with no outlet, giving it a pink-tinted color in some areas from salt-loving microorganisms. It's ecologically significant (one of the top shorebird habitats in North America), scientifically fascinating, and increasingly threatened by drought and water diversion.
+
 
 ## Great Salt Lake: An Inland Sea Like No Other
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/great-salt-lake-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #0369a1, #7c3aed, #be185d);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Great Salt Lake: An Inland Sea</div>
+    <p class="ib-text">Pink water, migratory birds, and an ecological emergency.</p>
+  </div>
+</div>
+
 
 The Great Salt Lake is a contradiction — the largest saltwater lake in the Western Hemisphere, sitting in the middle of a desert, with no outlet to the ocean. It's a remnant of ancient Lake Bonneville, which once covered much of western Utah during the last ice age. Today the lake stretches up to 75 miles long and 35 miles wide, with salinity levels that can exceed those of the Dead Sea. It's one of the strangest, most fascinating, and most ecologically important bodies of water in North America.
 

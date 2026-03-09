@@ -69,13 +69,50 @@ faqItems:
     answer: "The road (UT-210) is well-maintained but steep, with switchbacks. In winter, traction devices (chains or snow tires) are required, and the road closes periodically for avalanche control. The UTA ski bus from the canyon base is a stress-free alternative — it runs frequently on ski days and is affordable."
   - question: "Is there anything to do in summer?"
     answer: "Yes — Snowbird's tram operates in summer for scenic rides and hiking access. The Peruvian Gulch and surrounding trails offer alpine wildflower meadows, and the resort hosts Oktoberfest from August through October. Alta has excellent backcountry hiking to Cecret Lake, Catherine Pass, and the Albion Basin wildflower fields (peak in late July)."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Snowbird Cliff Lodge"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Snowbird+UT"
+    description: "Ski-in/ski-out lodging at Snowbird with access to the full mountain."
+    priceRange: "$$$$"
+  - name: "Alta Ski Lift Tickets"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Alta+Snowbird+ski+pass"
+    description: "Lift passes for Alta/Snowbird — book in advance for best pricing."
+    priceRange: "$$$"
+  - name: "Ski Rental SLC"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Salt+Lake+City+ski+rental"
+    description: "Ski rental shop in SLC or canyon — cheaper than renting on the mountain."
+    priceRange: "$$"
+scottTips:
+  logistics: "Little Cottonwood Canyon road closes during storms and avalanche control — this is normal. Utah DOT provides real-time road status. Plan your canyon departure before major storms or you may be stuck. Canyon access is also restricted during weekends (alternating gate system)."
+  bestTime: "December–March for skiing. Alta historically gets the most snow in January–February. Snowbird stays open into May most years. The quality of light powder is exceptional even by Rocky Mountain standards."
+  gettingAround: "UTA buses run from SLC to the canyon resorts on weekends — a viable option. Driving in winter requires AWD or chains. Snowbird has an aerial tram that's worth the ride even for non-skiers."
+  money: "Alta is one of the last ski resorts still banning snowboarders (skiers only). Snowbird allows both. Combined lift tickets run $175–220/day. Stay slope-side to avoid canyon road issues."
+  safety: "Avalanche terrain exists in both resorts' expert areas — stay in bounds unless you're with a certified guide and have avalanche safety training. The canyon itself has avalanche risk that can close roads."
+  packing: "High-quality ski gear is worth renting properly. Base layers, mid-layers, waterproof ski pants/jacket, helmet, and goggles. Wrist guards for beginners. Hand/toe warmers."
+  localCulture: "Alta has a cult following among serious skiers who've been coming for decades. The vibe is old-school mountain skiing rather than resort luxury. Snowbird is more modern and high-energy."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Alta and Snowbird are two of the best ski resorts in North America, located in Little Cottonwood Canyon just 30 miles from Salt Lake City — and they now operate as a combined ski area called Wasatch Interconnect. Alta receives an average of 500 inches of light, dry powder per year. Snowbird adds vertical drop and terrain variety. Together, they're the premier ski destination in the American West.
+
 
 ## Alta & Snowbird: Where the Greatest Snow on Earth Falls
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/alta-snowbird-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #1e40af, #0369a1, #7c3aed);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Alta and Snowbird: Utah Powder</div>
+    <p class="ib-text">500 inches of average snowfall. Salt Lake City 30 miles away.</p>
+  </div>
+</div>
+
 
 Little Cottonwood Canyon is a cathedral of granite and snow, rising from the Salt Lake Valley floor to over 11,000 feet in just 8 miles. At its head sit two of the most legendary ski resorts in North America — Alta and Snowbird — positioned to intercept Pacific storm systems that dump an average of 500+ inches of dry, light powder annually. This is the snow that earned Utah its "Greatest Snow on Earth" trademark, and these two resorts are ground zero.
 

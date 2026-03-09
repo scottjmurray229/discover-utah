@@ -67,13 +67,50 @@ faqItems:
     answer: "Yes — Utah's liquor laws have loosened significantly. Craft breweries serve full-strength beer, restaurants pour wine and cocktails, and bars are open until 1 AM. You just can't order a double."
   - question: "How close are the ski resorts?"
     answer: "Remarkably close. Brighton and Solitude in Big Cottonwood Canyon are 30 minutes from downtown. Snowbird and Alta in Little Cottonwood are 35 minutes. Park City resorts are about 40 minutes via I-80."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Grand America Hotel"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Salt+Lake+City+UT"
+    description: "Salt Lake City's finest hotel — ornate, central, excellent service."
+    priceRange: "$$$$"
+  - name: "Temple Square and City History Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Salt+Lake+City+tour"
+    description: "Walking tour covering Temple Square, state capitol, and Pioneer history."
+    priceRange: "$"
+  - name: "Alta/Snowbird Lift Tickets"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Alta+Snowbird+skiing"
+    description: "Book ski passes for Alta or Snowbird for best pricing."
+    priceRange: "$$$"
+scottTips:
+  logistics: "SLC's airport is excellent — direct flights from most major US cities. The TRAX light rail runs from the airport to downtown and to the University of Utah. Rent a car for ski resorts and national park trips — you need one for most Utah exploration."
+  bestTime: "November–March for skiing. April–May and September–October for national park trips. Summer is good for city exploration and Wasatch hiking but hot in the valley."
+  gettingAround: "TRAX light rail handles airport and downtown. UTA bus system exists. Car essential for ski resorts and everything outside the city. Canyon roads to Alta/Snowbird are sometimes chain-required in winter."
+  money: "SLC hotels run $130–220/night for solid mid-range options. Ski resorts add significantly to the budget — budget $200+ per person per day skiing. The Great Salt Lake and Temple Square are free."
+  safety: "Winter driving on I-215 and canyon roads can be treacherous. The inversions (air quality) in winter valley are notoriously bad — check AQI before strenuous outdoor exercise in the city."
+  packing: "Full ski gear if renting is your plan (or rent in SLC). Layers for the dramatic temperature swings. Sunscreen year-round at elevation."
+  localCulture: "Utah liquor laws apply but are more relaxed than commonly perceived. Grocery stores sell 5% ABV beer. Full-strength spirits and wine at state liquor stores and restaurant bars. Temple Square is a major landmark regardless of faith — worth an hour."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Salt Lake City is Utah's capital and largest city — a surprisingly cosmopolitan mountain city of 200,000 set against the dramatic backdrop of the Wasatch Range, with quick access to some of the best skiing in North America (Alta, Snowbird, Park City are all within an hour) and serving as the gateway to Utah's national parks and outdoor adventures.
+
 
 ## Salt Lake City: Mountain Capital
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/salt-lake-city-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #1e40af, #1d4ed8, #b45309);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Salt Lake City: Mountain Meets Metro</div>
+    <p class="ib-text">World-class skiing, temple square, and the gateway to five national parks.</p>
+  </div>
+</div>
+
 
 Salt Lake City sits in a dramatic valley between the Wasatch Mountains to the east and the Great Salt Lake to the west, a geography that gives the city its identity — urban sophistication with wilderness literally at the doorstep. In under 30 minutes you can go from a downtown coffee shop to a 11,000-foot ski run or a desert canyon trail.
 

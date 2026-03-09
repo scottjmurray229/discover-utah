@@ -69,13 +69,50 @@ faqItems:
     answer: "They're different experiences. Zion is bigger, more dramatic, and more crowded. Snow Canyon is smaller, quieter, and more varied — it has red and white sandstone, black lava flows, sand dunes, and petrified dunes all in one compact area. Many locals prefer Snow Canyon for everyday hiking because you can always find solitude."
   - question: "Is St. George a retirement community?"
     answer: "St. George has a significant retiree population, but it's rapidly diversifying. A growing university (Utah Tech), a tech sector, and an influx of younger outdoor recreation enthusiasts have changed the demographics. The dining and culture scene has expanded significantly in recent years."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Red Mountain Resort"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=St+George+UT"
+    description: "Wellness resort in the red rock canyons near St. George. Hiking from the property."
+    priceRange: "$$$"
+  - name: "Snow Canyon State Park Guided Hike"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Snow+Canyon+State+Park"
+    description: "Guided hike through Snow Canyon's lava tubes and sandstone formations."
+    priceRange: "$"
+  - name: "St. George Shuttle to Zion"
+    type: transport
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=St+George+to+Zion+shuttle"
+    description: "Shuttle service from St. George to Zion National Park entrance."
+    priceRange: "$"
+scottTips:
+  logistics: "St. George is 46 miles from Zion, making it a viable and often cheaper base than Springdale. Snow Canyon State Park is 10 miles north — an underrated gem with lava tubes, red and white sandstone, and far fewer crowds than Zion."
+  bestTime: "October–April for pleasant weather. Summers are extremely hot (105°F+) — not ideal for hiking. Winter temperatures are mild (50s–60s°F days) compared to the rest of Utah."
+  gettingAround: "Car essential — St. George is spread out and doesn't have meaningful public transit. Drive or shuttle to Zion; don't try to shuttle from St. George."
+  money: "Significantly cheaper than Springdale for lodging ($100–180/night vs. $180–300+). A good budget option for Zion access."
+  safety: "Heat in summer is extreme — plan any outdoor activities before 10am. Snow Canyon's lava tubes can be dark and slippery — bring a headlamp."
+  packing: "Golf gear if you're inclined (St. George has world-class golf resorts). Hiking boots for Snow Canyon. Sun protection year-round."
+  localCulture: "St. George is a large and growing city with a strong LDS community. Restaurant options are good. The Dixie State University area has more evening activity than you'd expect."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+St. George is Utah's sunniest city — a fast-growing desert city in the state's southwest corner, an hour from Zion National Park, with red rock canyon scenery right in town, world-class golf, and genuinely warm winters that make it a popular snowbird destination. It's also the western gateway to Zion and an underrated destination in its own right.
+
 
 ## St. George: Where Utah Gets Warm
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/st-george-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #ea580c, #fbbf24);"></div>
+  <div class="ib-content">
+    <div class="ib-title">St. George: Sunny Desert City</div>
+    <p class="ib-text">Red rock canyons, warm winters, and the gateway to Zion.</p>
+  </div>
+</div>
+
 
 St. George is Utah's sun-soaked anomaly — a city of 100,000+ in the far southwest corner where the Mojave Desert meets the Colorado Plateau. While the rest of Utah shivers through winter, St. George basks in 300+ days of sunshine with winter highs in the 50s and 60s°F. This climate, combined with its position as the gateway to Zion National Park and its own remarkable red rock landscapes, has made it one of the fastest-growing cities in the United States.
 

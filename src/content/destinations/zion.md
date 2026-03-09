@@ -69,13 +69,50 @@ faqItems:
     answer: "Two to three days is ideal. Day one for Angels Landing and the Emerald Pools. Day two for the Narrows. Day three for Observation Point, Canyon Overlook, or Kolob Canyons. One day is possible but you'll only scratch the surface — pick either Angels Landing or the Narrows, not both."
   - question: "Is Zion too crowded to enjoy?"
     answer: "Zion is the most visited Utah national park (4.5+ million annually), so yes, peak summer weekends are intense. But the shuttle system manages the canyon efficiently, and the crowds thin dramatically once you're on the trails. Visit in spring or fall, arrive early, and explore Kolob Canyons (the park's quieter northwest section) to avoid the worst of it."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Zion Lodge"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Springdale+UT"
+    description: "The only in-park lodging. Book 6+ months out — demand is extreme."
+    priceRange: "$$$"
+  - name: "Zion Narrows Guided Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Zion+Narrows"
+    description: "Guided bottom-up Narrows hike with gear rental included."
+    priceRange: "$$"
+  - name: "Osprey Daylite 13 Pack"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=osprey+day+pack+hiking"
+    description: "Lightweight pack for canyon hikes in the heat."
+    priceRange: "$"
+scottTips:
+  logistics: "Angels Landing requires a permit lottery on Recreation.gov. Book well in advance for both spring seasonal and day-before lotteries. The mandatory shuttle runs March–November — you cannot drive the main canyon road during this period."
+  bestTime: "April–May and September–October for ideal temperatures and manageable crowds. Summer is intensely hot and crowded. Winter is beautiful and uncrowded but trails can be icy — bring microspikes."
+  gettingAround: "Shuttle is mandatory in canyon during peak season and is actually efficient. Rent waterproof boots and poles in Springdale for the Narrows — street shoes will destroy your ankles."
+  money: "$35 vehicle entry (7 days) or America the Beautiful pass ($80/year) covers Zion plus all national parks — worth it if you're doing the Mighty Five. Budget $160–220/night for Springdale lodging in peak season."
+  safety: "Flash flood risk in the Narrows — always check weather and flow conditions at the visitor center before entering. Never enter if thunderstorms are forecast anywhere in the watershed. The Virgin River rises fast."
+  packing: "Waterproof boots and neoprene socks for the Narrows, sun protection for canyon hiking, layers for temperature swings. Trekking poles on Angels Landing chains section."
+  localCulture: "Springdale is entirely oriented around the park. Most restaurants close relatively early. Book dinner reservations. The Zion Canyon Giant Screen Theatre shows a Zion film if you need evening entertainment."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Zion National Park is Utah's most visited national park and one of the most spectacular canyons in the American Southwest — towering sandstone cliffs over 2,000 feet tall rising directly from the Virgin River, with world-class hikes including Angels Landing and the Narrows river walk. It's simultaneously breathtaking and accessible, which is why over four million people visit each year.
+
 
 ## Zion National Park: The Crown Jewel of Utah
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/zion-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #ea580c, #b45309);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Zion: Temples of Stone</div>
+    <p class="ib-text">Sandstone towers, emerald pools, and the legendary Narrows.</p>
+  </div>
+</div>
+
 
 Zion is the park that leaves people speechless. Massive sandstone cliffs — some over 2,000 feet tall — rise straight from the valley floor in colors ranging from cream to deep vermilion. The Virgin River cuts through the heart of this canyon, creating a lush riparian oasis that feels impossibly green against the surrounding desert rock. It's a place of dramatic contrasts: water and stone, intimate canyon and vast sky, ancient geology and living ecosystem.
 

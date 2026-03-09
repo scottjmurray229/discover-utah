@@ -66,13 +66,50 @@ faqItems:
     answer: "Two to three hours is enough to explore the main valley floor and take photos. A full day adds Little Wild Horse Canyon (a spectacular slot canyon just south of the park), the Wild Horse Butte trail, and time for relaxed exploration. Overnighting in the campground adds stargazing."
   - question: "Is Little Wild Horse Canyon in Goblin Valley?"
     answer: "Not technically — it's on BLM land about 6 miles south of the park entrance. But it's one of the best slot canyons in Utah and nearly everyone visiting Goblin Valley should add it to their itinerary. The 8-mile loop through Little Wild Horse and Bell Canyons is a highlight of the region."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Goblin Valley State Park Campground"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Green+River+UT"
+    description: "Camping in the park is the best way to experience sunrise and sunset light on the goblins."
+    priceRange: "$"
+  - name: "Slot Canyon Hike Near Goblin Valley"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Little+Wild+Horse+Canyon+tour"
+    description: "Guided hike through Little Wild Horse Canyon — a spectacular slot canyon 5 miles away."
+    priceRange: "$"
+  - name: "National Geographic Utah Map"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=utah+national+geographic+map"
+    description: "Maps for the remote canyon country around Goblin Valley."
+    priceRange: "$"
+scottTips:
+  logistics: "Goblin Valley is in the middle of Utah canyon country — make it a stop between Capitol Reef and Moab on a road trip. Little Wild Horse Canyon (5 miles from the park) adds a slot canyon experience to the same day."
+  bestTime: "April–May and September–October. Summer is extremely hot. The goblins are best photographed in the low, golden light of early morning and late afternoon."
+  gettingAround: "20-mile paved road from Highway 24. Standard vehicles fine in dry conditions. The valley floor is open to free-roaming among the goblins — there are no marked trails in the main valley."
+  money: "$20/vehicle day use. Camping is $30–40/night for developed sites. Worth booking the campsite for sunrise light on the formations."
+  safety: "Summer heat is extreme and the valley is fully exposed — bring more water than you think you need. The remote location means cell service is nonexistent — download offline maps."
+  packing: "Camera and a playful attitude — the goblins invite climbing (permitted here, unlike national parks). Headlamp if camping."
+  localCulture: "Goblin Valley has a relatively small footprint of visitors compared to Utah's national parks. It was briefly famous for a viral video of Boy Scout leaders knocking over a goblin formation (they were prosecuted). Leave the formations intact."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Goblin Valley is Utah's strangest landscape — thousands of mushroom-shaped sandstone hoodoos called 'goblins' covering a flat desert valley floor in patterns that look genuinely alien. It's 4 hours from Salt Lake City and 2.5 hours from Moab, off the typical tourist circuit, which means you can walk among thousands of bizarre rock formations in relative solitude.
+
 
 ## Goblin Valley: Welcome to Another Planet
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/goblin-valley-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #92400e, #dc2626, #f97316);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Goblin Valley: Another Planet</div>
+    <p class="ib-text">Thousands of mushroom-shaped goblins. Completely, utterly strange.</p>
+  </div>
+</div>
+
 
 Goblin Valley State Park looks like it was designed by a science fiction set designer with an unlimited budget. Thousands of mushroom-shaped sandstone formations — some as small as a basketball, others as tall as a two-story building — populate a desert valley that could pass for the surface of Mars. In fact, the park was used as a filming location for Galaxy Quest and scenes set on alien worlds, because no CGI team could create something this convincingly otherworldly.
 

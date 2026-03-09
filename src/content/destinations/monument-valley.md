@@ -66,13 +66,50 @@ faqItems:
     answer: "A half-day covers the self-drive Valley Drive loop and the visitor center viewpoint. A full day adds a Navajo-guided backcountry tour and time for photography at different light. An overnight stay at The View Hotel or Goulding's lets you catch both sunset and sunrise — the two most spectacular times."
   - question: "What about the 'Forrest Gump' road?"
     answer: "The famous straight road stretching toward the buttes is on US-163, about 13 miles north of the visitor center. It's a real public highway — pull completely off the road for photos and watch for traffic. Early morning offers the best light and fewer cars. Mile marker 13 is the classic photo spot."
-affiliatePicks: []
+affiliatePicks:
+  - name: "The View Hotel"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Monument+Valley+AZ"
+    description: "The only hotel in Monument Valley, with direct Mittens views from every room."
+    priceRange: "$$$"
+  - name: "Navajo Guided Jeep Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Monument+Valley+jeep+tour"
+    description: "Navajo-guided interior valley tour to areas not accessible on the self-drive loop."
+    priceRange: "$$"
+  - name: "Sunrise Photo Workshop"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Monument+Valley+photography+tour"
+    description: "Photography-focused sunrise tour with positioning guidance for the Mittens shot."
+    priceRange: "$$"
+scottTips:
+  logistics: "Monument Valley is 5 hours from Zion, 2.5 hours from Page/Antelope Canyon, 3 hours from Moab. Plan it as part of a larger Utah/Arizona road trip — it's not worth a dedicated long-distance trip on its own, though the landscape is extraordinary."
+  bestTime: "April–May and September–October. Summer is brutally hot (100°F+) and the Valley Drive becomes deeply rutted. Sunrise and sunset are the peak times — The View Hotel is worth booking just to see the Mittens at dawn from your room."
+  gettingAround: "The 17-mile Valley Drive self-drive loop (4WD recommended, regular cars possible in dry conditions) accesses the main overlooks. Beyond the overlooks, Navajo guides are required — and worth it."
+  money: "$8 per person Tribal Park entry fee ($20 max per vehicle). Navajo-guided tours run $50–80 per person. The View Hotel runs $250–400/night in peak season — expensive but the view from the room is genuine."
+  safety: "Heat and dehydration risks are extreme in summer. Stay on designated roads and trails — wandering off-trail on Navajo land is not permitted without a guide."
+  packing: "Camera and wide-angle lens for the butte shots. Sunrise alarm — the Mittens at golden hour are significantly more photogenic than midday."
+  localCulture: "You are on Navajo Nation land — be respectful. Do not climb the buttes or enter restricted areas. Purchase Navajo art and food directly from local vendors; this is the economy. The scale of the valley is difficult to convey in photos — it's even bigger in person."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Monument Valley is the most recognizable landscape in the American West — the massive red sandstone buttes called the Mittens, Merrick Butte, and the Three Sisters rising from a vast flat desert floor on the Utah-Arizona border. It's Navajo Nation land, meaning the valley itself is administered by the Navajo Nation Tribal Park rather than the National Park Service, and guided Navajo tours are the best way to experience the interior.
+
 
 ## Monument Valley: The Landscape of Legend
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/monument-valley-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #ea580c, #92400e);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Monument Valley: The American West</div>
+    <p class="ib-text">The Mittens at sunrise. No further explanation needed.</p>
+  </div>
+</div>
+
 
 Monument Valley needs no introduction — but seeing it in person is an entirely different experience from seeing it in a John Ford Western, a car commercial, or on a postcard. The sheer scale of the buttes is what photographs cannot convey. The West Mitten Butte rises 1,000 feet from the valley floor. Merrick Butte is a mile wide at its base. These formations are not decorative features in a landscape — they ARE the landscape, and everything around them is empty desert stretching to every horizon.
 

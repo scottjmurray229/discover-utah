@@ -66,13 +66,50 @@ faqItems:
     answer: "Yes, though the water is cold — typically 60-68°F in summer. The shallow Rendezvous Beach on the south end warms up the most. Bear Lake State Park marina has a sandy beach area. The turquoise water is clean and clear. Peak swimming season is July and August."
   - question: "Can I visit Bear Lake in winter?"
     answer: "Bear Lake is primarily a summer destination, but winter brings ice fishing, snowmobiling, and cross-country skiing. Beaver Mountain ski resort is 30 minutes west in Logan Canyon. Most lakeside businesses close for winter, so plan accordingly."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Bear Lake Luxury Cabins"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Garden+City+UT"
+    description: "Waterfront cabin rental for the full Bear Lake experience."
+    priceRange: "$$$"
+  - name: "Bear Lake Boat Rental"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Bear+Lake+boat+rental"
+    description: "Pontoon boat rental for exploring the lake's turquoise waters."
+    priceRange: "$$"
+  - name: "Bear Lake State Park Marina"
+    type: activity
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Bear+Lake+Utah+activities"
+    description: "Boat launch, equipment rental, and lake access at the state park marina."
+    priceRange: "$"
+scottTips:
+  logistics: "Bear Lake is 2 hours from Salt Lake City via US-89 north. Garden City is the main town on the Utah side. The Idaho side (Montpelier) has additional lodging. Plan as a weekend trip from SLC — one night minimum."
+  bestTime: "June–August for swimming and boating. The Raspberry Festival in early August is a local institution. Fall is quieter with good hiking in the Bear River Range nearby."
+  gettingAround: "Car essential — the lake is in a mountain valley with no public transit. Drive the perimeter road for views or park at the state beach for swimming."
+  money: "$10–15/vehicle for state park beach access. Boat rentals are the big expense — $200–400/day for a pontoon. Raspberry shakes from local stands are a required purchase."
+  safety: "The lake gets cold despite the summer heat — hypothermia risk in early season. Afternoon thunderstorms are possible in July–August. Life jackets for any water activities."
+  packing: "Swimwear, towels, sunscreen. Layers for evenings — mountain altitude means cool nights even in August."
+  localCulture: "The raspberry shake at La Beau's Raspberry Stand in Garden City is iconic and genuinely delicious — a Bear Lake visit is incomplete without one. The town is small and very family-oriented."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Bear Lake is a natural glacial lake on the Utah-Idaho border with impossibly turquoise-blue water — the 'Caribbean of the Rockies.' The color comes from calcium carbonate particles suspended in the water, not algae. It's a summer recreation destination for boating, swimming, and the famous Bear Lake Raspberry Festival in August, located 2 hours from Salt Lake City.
+
 
 ## Bear Lake: Utah's Turquoise Jewel
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/bear-lake-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #0369a1, #0ea5e9, #16a34a);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Bear Lake: The Caribbean of the Rockies</div>
+    <p class="ib-text">Turquoise water, raspberry shakes, and summer Utah at its finest.</p>
+  </div>
+</div>
+
 
 Bear Lake sits astride the Utah-Idaho border in a high mountain valley, and when you first see it, you'll question whether you're still in Utah. The water is an almost electric turquoise — a color so vivid and tropical-looking that it's earned the nickname "Caribbean of the Rockies." This isn't marketing exaggeration. The unique mineral composition of the water produces a blue-green hue that genuinely resembles a Caribbean lagoon, framed by rolling green hills instead of palm trees.
 

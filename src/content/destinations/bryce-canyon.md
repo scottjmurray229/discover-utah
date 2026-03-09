@@ -66,13 +66,50 @@ faqItems:
     answer: "One full day covers the major viewpoints and the Navajo Loop/Queens Garden combination hike. Two days lets you explore the less-visited southern viewpoints, do the Peek-a-Boo Loop, catch both sunrise and a ranger-led night sky program, and enjoy the park at a relaxed pace."
   - question: "Is the altitude a problem at Bryce?"
     answer: "Bryce sits between 8,000 and 9,100 feet — significantly higher than the other Utah national parks. You'll feel it on the hikes, especially climbing back up from the amphitheater floor. Drink extra water, take breaks, and don't underestimate the elevation gain on the return trip."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Bryce Canyon Lodge"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Bryce+Canyon+UT"
+    description: "Historic in-park lodge surrounded by pines. Book 6+ months out."
+    priceRange: "$$$"
+  - name: "Bryce Canyon Guided Hoodoo Tour"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Bryce+Canyon+tour"
+    description: "Guided rim and below-rim hike explaining the hoodoo geology."
+    priceRange: "$$"
+  - name: "Microspikes for Hiking"
+    type: activity
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=microspikes+hiking"
+    description: "Essential for icy winter and early spring trails at 8,000 feet."
+    priceRange: "$"
+scottTips:
+  logistics: "Bryce Canyon is 83 miles from Zion — easy to combine in a multi-park trip. The park shuttle runs May–October. Sunrise Point and Sunset Point are the best rim viewpoints for golden hour."
+  bestTime: "May–June and September–October. Summer is ideal hiking weather (60s–70s°F) with afternoon storms. Winter brings snow that makes the hoodoos even more photogenic, but trails are icy."
+  gettingAround: "Rim Drive takes you to all major viewpoints. Park shuttle covers the main corridor. The Navajo Loop + Queens Garden combination (2.9 miles) is the essential hike — descend via Navajo, return via Queens Garden."
+  money: "$35 vehicle entry (7 days) or America the Beautiful pass. Ruby's Inn outside the park is the main budget alternative to Bryce Canyon Lodge."
+  safety: "The 8,000-foot elevation means altitude awareness. The hike out of the canyon is an uphill climb — start early and hydrate. Ice on trails October–May even when the rim seems clear."
+  packing: "Warm layers even in summer (cold mornings and evenings at altitude). Microspikes for spring/fall/winter. Headlamp for sunrise hikes from the rim."
+  localCulture: "Bryce City (near the park) is tiny — stock up on supplies in Panguitch 25 miles north. The park visitor center has excellent geology exhibits explaining how hoodoos form."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Bryce Canyon National Park is not actually a canyon — it's an amphitheater of thousands of otherworldly orange-red hoodoos (spire-shaped rock formations) carved by frost and erosion from the rim of the Paunsaugunt Plateau. At 8,000–9,000 feet elevation, it's dramatically different from Zion: cooler, quieter, and more other-worldly. The Navajo Loop and Queens Garden trails together form the best one-day hike in Utah.
+
 
 ## Bryce Canyon: Where Geology Gets Weird
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/bryce-canyon-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #dc2626, #f97316, #fbbf24);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Bryce Canyon: A Forest of Stone</div>
+    <p class="ib-text">Hoodoos, amphitheaters, and the most surreal landscape in Utah.</p>
+  </div>
+</div>
+
 
 Bryce Canyon is unlike any other landscape on Earth. Standing at the rim and looking down into the amphitheaters for the first time, your brain struggles to process what it's seeing — thousands of red, orange, pink, and white stone pillars called hoodoos, arranged in formations that look like a fantasy citadel carved by an alien civilization. It's simultaneously beautiful, eerie, and completely surreal.
 

@@ -69,13 +69,50 @@ faqItems:
     answer: "No. While the Slickrock Trail and Whole Enchilada are expert-level, Moab has trails for every ability. The Intrepid Trail System and Bar M Loop are great for beginners. Dead Horse Point has intermediate singletrack with incredible views. Outfitters in town offer guided rides and bike rentals for all levels."
   - question: "When does Moab get too hot?"
     answer: "June through August regularly exceeds 100°F and can hit 110°F. Most outdoor activities become uncomfortable to dangerous in midday heat. If you visit in summer, plan activities for dawn and dusk, float the river during the day, or head to the higher-elevation La Sal Mountains for relief."
-affiliatePicks: []
+affiliatePicks:
+  - name: "Moab Under Canvas"
+    type: hotel
+    url: "https://www.booking.com/region/us/utah.html?aid=2778866&ss=Moab+UT"
+    description: "Glamping just outside town with red rock views. Unique and photogenic."
+    priceRange: "$$$"
+  - name: "Colorado River Rafting Half-Day"
+    type: tour
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Moab+rafting"
+    description: "Half-day raft on the Colorado — suitable for families and beginners."
+    priceRange: "$$"
+  - name: "Jeep Wrangler Rental Moab"
+    type: transport
+    url: "https://www.getyourguide.com/?partner_id=IVN6IQ3&q=Moab+jeep+rental"
+    description: "Rent a Jeep to access backcountry trails in Canyonlands and beyond."
+    priceRange: "$$$"
+scottTips:
+  logistics: "Moab is the base for both Arches (5 miles north) and Canyonlands Island in the Sky (35 miles northwest). Book accommodation far in advance for spring and fall — the town fills completely. Timed entry for Arches requires Recreation.gov reservation."
+  bestTime: "March–May and September–November. Spring is the sweet spot: wildflowers, comfortable temps, and events like Jeep Safari (Easter week). Summer is brutally hot but the Colorado River becomes rafting paradise."
+  gettingAround: "Car essential. Moab's canyon topography means there are no alternatives for reaching either national park. Rent a Jeep if you want to access backcountry trails."
+  money: "$160–280/night for quality lodging in peak spring. America the Beautiful pass ($80/year) covers both Arches and Canyonlands entrance. Budget for one guided activity — rafting or a Jeep tour adds significantly to the experience."
+  safety: "Heat is the primary danger in summer. Flash floods in canyon washes after storms. Tell someone your backcountry itinerary if going off main roads."
+  packing: "Large water capacity for desert hiking. Layers for cool canyon mornings. Sunscreen is non-negotiable. Sandals for river activities."
+  localCulture: "Moab has excellent dining and a thriving craft beer scene for a small town. Moab Brewery is the social anchor. Wake up early — the best canyon light is at sunrise, and the cooler temperatures make dawn starts wise."
 lastVerified: 2026-02-27
 contentStatus: published
 draft: false
 ---
+Moab is Utah's adventure capital and the gateway to both Arches and Canyonlands National Parks — a small canyon town of 5,000 people surrounded by some of the most dramatic red rock landscape in North America. It's the base for mountain biking on the world-famous Slickrock Trail, off-road Jeep adventures, Colorado River rafting, and hiking in two of Utah's five national parks.
+
 
 ## Moab: Where the Trails Never End
+
+<div class="immersive-break-inline">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="/videos/destinations/moab-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="ib-gradient" style="background: linear-gradient(135deg, #ea580c, #dc2626, #b45309);"></div>
+  <div class="ib-content">
+    <div class="ib-title">Moab: Adventure on Red Rock</div>
+    <p class="ib-text">Two national parks, one river, and the world's best slickrock.</p>
+  </div>
+</div>
+
 
 Moab is the undisputed adventure capital of the American Southwest — a small town of 5,000 people set in a red rock valley along the Colorado River, serving as the gateway to Arches National Park, Canyonlands National Park, and Dead Horse Point State Park. But Moab is far more than a park gateway. It's a destination in its own right, with world-class mountain biking, river rafting, 4x4 trails, rock climbing, and a dining and arts scene that punches well above its size.
 
