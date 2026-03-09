@@ -79,7 +79,7 @@ affiliatePicks:
     priceRange: "$$"
   - name: "National Geographic Utah Map"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=utah+national+parks+map"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=utah+national+parks+map"
     description: "Topo map covering the canyon country around Moab and Dead Horse Point."
     priceRange: "$"
 scottTips:

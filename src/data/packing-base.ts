@@ -43,6 +43,8 @@ export interface PackingConfig {
   plugType: string;          // "Type A/B/C"
   plugVoltage: string;       // "220V"
   affiliateTag: string;      // Amazon Associates tag
+  seasons: Array<{ value: string; label: string }>;
+  activities: Array<{ value: string; label: string; icon: string }>;
   destinationEssentials: PackingItem[];
   gearRecommendations: GearRecommendation[];
 }

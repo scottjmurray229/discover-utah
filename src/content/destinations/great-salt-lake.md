@@ -79,7 +79,7 @@ affiliatePicks:
     priceRange: "$"
   - name: "Binoculars for Birdwatching"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=binoculars+birdwatching"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=binoculars+birdwatching"
     description: "The lake hosts millions of migratory shorebirds — binoculars are essential."
     priceRange: "$$"
 scottTips:

@@ -82,7 +82,7 @@ affiliatePicks:
     priceRange: "$$"
   - name: "Camelbak 2L Hydration Pack"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=camelbak+hydration+pack"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=camelbak+hydration+pack"
     description: "Required for desert hiking — 2L minimum for Delicate Arch trail in summer."
     priceRange: "$"
 scottTips:

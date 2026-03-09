@@ -82,7 +82,7 @@ affiliatePicks:
     priceRange: "$$"
   - name: "Osprey Daylite 13 Pack"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=osprey+day+pack+hiking"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=osprey+day+pack+hiking"
     description: "Lightweight pack for canyon hikes in the heat."
     priceRange: "$"
 scottTips:

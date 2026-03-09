@@ -82,7 +82,7 @@ affiliatePicks:
     priceRange: "$$$"
   - name: "REI Co-op Trail Running Shoes"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=trail+running+shoes+desert"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=trail+running+shoes+desert"
     description: "Lightweight trail shoes for slickrock and canyon hiking."
     priceRange: "$$"
 scottTips:

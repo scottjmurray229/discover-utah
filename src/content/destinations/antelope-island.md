@@ -82,7 +82,7 @@ affiliatePicks:
     priceRange: "$"
   - name: "Waterproof Hiking Boots"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=waterproof+hiking+boots"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=waterproof+hiking+boots"
     description: "Shore areas can be wet and salty — waterproof footwear is helpful."
     priceRange: "$$"
 scottTips:

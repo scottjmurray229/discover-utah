@@ -22,7 +22,7 @@ export const UTAH_CONFIG: PackingConfig = {
   currency: 'USD',
   plugType: 'Type A/B',
   plugVoltage: '120V',
-  affiliateTag: 'discoverutah-20',
+  affiliateTag: 'discoverphili-20',
   destinationEssentials: UTAH_ESSENTIALS,
   gearRecommendations: UTAH_GEAR_RECOMMENDATIONS,
 };

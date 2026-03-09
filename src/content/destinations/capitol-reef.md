@@ -82,7 +82,7 @@ affiliatePicks:
     priceRange: "$$"
   - name: "National Parks Guide Utah"
     type: activity
-    url: "https://www.amazon.com/s?k=utah+travel&tag=discovermore-20&k=utah+national+parks+guide+book"
+    url: "https://www.amazon.com/s?k=utah+travel&tag=discoverphili-20&k=utah+national+parks+guide+book"
     description: "Comprehensive Utah parks guide covering all five Mighty Five parks."
     priceRange: "$"
 scottTips:
