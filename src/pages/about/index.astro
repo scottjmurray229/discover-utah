@@ -6,6 +6,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import scottImg from '../../images/scott-murray.jpg';
+import jeniceImg from '../../images/jenice-murray.jpg';
 ---
 
 <BaseLayout
@@ -97,6 +98,23 @@ import scottImg from '../../images/scott-murray.jpg';
           <div class="profile-stat"><div class="profile-stat-num">20+</div><div class="profile-stat-label">Years of travel</div></div>
           <div class="profile-stat"><div class="profile-stat-num">San Diego</div><div class="profile-stat-label">Home base</div></div>
         </div>
+      </div>
+    </div>
+    <div class="profile-card reveal">
+      <div class="profile-banner jenice"><div class="profile-banner-bg"></div></div>
+      <Image src={jeniceImg} alt="Jenice Murray" class="profile-avatar jenice-av" width={96} height={96} format="webp" loading="lazy" />
+      <div class="profile-body">
+        <div class="profile-name">Jenice</div>
+        <div class="profile-role">Cultural Explorer · Food Enthusiast</div>
+        <p class="profile-bio">Born in the Philippines and based in San Diego. Cultural explorer who brings personal storytelling and sensory detail to Discover Utah. The one who finds the farm-to-table restaurant in Moab that Scott walked right past, understands the sacred significance of canyon country, and brings the emotional depth that makes Utah feel like more than just a national park checklist.</p>
+        <div class="profile-stats">
+          <div class="profile-stat"><div class="profile-stat-num">Parks</div><div class="profile-stat-label">All five Mighty Five</div></div>
+          <div class="profile-stat"><div class="profile-stat-num">40+</div><div class="profile-stat-label">Countries traveled</div></div>
+          <div class="profile-stat"><div class="profile-stat-num">Culture</div><div class="profile-stat-label">Local & Indigenous</div></div>
+        </div>
+      </div>
+      <div class="profile-cta">
+        <a href="/about/jenice/" class="profile-cta-link">Read Jenice's full bio &rarr;</a>
       </div>
     </div>
   </div>
