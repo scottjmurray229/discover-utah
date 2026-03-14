@@ -27,7 +27,7 @@ const singleId = args.includes('--id') ? args[args.indexOf('--id') + 1] : null;
 const suggestMode = args.includes('--suggest');
 const moveMode = args.includes('--move');
 
-// Philippines destination keywords for auto-matching
+// Destination keywords for auto-matching
 const DEST_KEYWORDS = {
   'boracay': ['boracay', 'white beach', 'aklan'],
   'cebu': ['cebu', 'mactan', 'oslob', 'kawasan', 'moalboal'],
@@ -86,7 +86,7 @@ function fetchVideoMetadata(videoId) {
       headers: {
         'Authorization': `Bearer ${SHUTTERSTOCK_TOKEN}`,
         'Accept': 'application/json',
-        'User-Agent': 'DiscoverPhilippines/1.0',
+        'User-Agent': 'DiscoverMore/1.0',
       },
     };
 

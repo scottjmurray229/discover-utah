@@ -18,7 +18,7 @@ Then restart your terminal.
 
 ### 3. YouTube API (optional, for Step 4)
 1. Go to https://console.cloud.google.com
-2. Create project "Discover Philippines"
+2. Create project "Discover More Travel"
 3. Enable **YouTube Data API v3**
 4. Create **OAuth 2.0 credentials** (Desktop app type)
 5. Download the JSON → save as `video-tracking/pipeline/client_secret.json`

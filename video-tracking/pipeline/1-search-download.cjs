@@ -268,7 +268,7 @@ async function downloadSelected(entry, video) {
 // Run
 async function main() {
   console.log('╔══════════════════════════════════════════════════════════╗');
-  console.log('║   SHUTTERSTOCK SEARCH & DOWNLOAD — DISCOVER PHILIPPINES  ║');
+  console.log('║   SHUTTERSTOCK SEARCH & DOWNLOAD — DISCOVER MORE TRAVEL    ║');
   console.log('╚══════════════════════════════════════════════════════════╝');
   console.log();
   console.log(`Clips to process: ${entries.length}`);

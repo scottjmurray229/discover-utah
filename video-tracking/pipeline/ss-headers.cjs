@@ -12,7 +12,7 @@ const options = {
   headers: {
     'Authorization': 'Bearer ' + TOKEN,
     'Accept': 'application/json',
-    'User-Agent': 'DiscoverPhilippines/1.0',
+    'User-Agent': 'DiscoverMore/1.0',
   },
 };
 

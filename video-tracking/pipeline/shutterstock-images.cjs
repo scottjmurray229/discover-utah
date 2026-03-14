@@ -39,7 +39,7 @@ function apiRequest(method, apiPath, body) {
     var headers = {
       'Authorization': 'Bearer ' + TOKEN,
       'Accept': 'application/json',
-      'User-Agent': 'DiscoverPhilippines/1.0',
+      'User-Agent': 'DiscoverMore/1.0',
     };
     if (bodyStr) {
       headers['Content-Type'] = 'application/json';
@@ -135,7 +135,7 @@ function downloadFile(url, destPath) {
         hostname: urlObj.hostname,
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
-        headers: { 'User-Agent': 'DiscoverPhilippines/1.0' },
+        headers: { 'User-Agent': 'DiscoverMore/1.0' },
       };
       var req = proto.request(options, function(res) {
         if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 307) {
