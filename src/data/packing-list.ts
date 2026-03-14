@@ -5,6 +5,26 @@ export const UTAH_ESSENTIALS: PackingItem[] = [
   { id: 'ut-sun', name: 'SPF 50+ Sunscreen + UV Sunglasses', category: 'destination', description: 'Utah is a high-altitude desert — Bryce Canyon sits at 8,000 ft where UV radiation is 25% more intense than at sea level. The red rock reflects UV. Reapply every 90 minutes on canyon hikes.', essential: true, amazonSearchFallback: 'sunscreen+spf+50+sport+water+resistant', affiliatePrice: '$15–30' },
   { id: 'ut-water', name: 'Large Hydration Pack or Water Bottles', category: 'destination', description: 'Dehydration is the #1 reason for park rescues in Utah. The Angels Landing and Havasupai trails have no water sources mid-route. Carry 3–4 liters minimum for desert day hikes in summer. A hydration bladder is more practical than bottles on technical terrain.', essential: true, amazonSearchFallback: 'hydration+pack+backpack+3+liter+hiking', affiliatePrice: '$35–75' },
   { id: 'ut-boots', name: 'Waterproof Hiking Boots', category: 'destination', description: 'Zion Narrows requires wading ankle-to-chest-deep water. Canyonlands and Arches have sharp sandstone scrambling. Waterproof boots protect against both — cheaper to buy before the trip than to ruin trail runners in the Virgin River.', essential: true, amazonSearchFallback: 'waterproof+hiking+boots+ankle+support', affiliatePrice: '$100–180' },
+  {
+    id: 'vpn-subscription',
+    name: 'VPN Subscription',
+    category: 'electronics',
+    description: 'Secure your data on public WiFi — essential for hotel, airport, and cafe networks abroad.',
+    essential: false,
+    affiliateUrl: 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=142311&url_id=902',
+    affiliatePrice: '~$3/month',
+    affiliatePartner: 'NordVPN',
+  },
+  {
+    id: 'phone-gimbal',
+    name: 'Phone Gimbal for Travel Vlogging',
+    category: 'electronics',
+    description: 'Stabilized video from your phone — no editing needed.',
+    essential: false,
+    affiliateUrl: 'https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRSG7H5RTR',
+    affiliatePrice: '~$149',
+    affiliatePartner: 'Insta360',
+  },
 ];
 
 export const UTAH_GEAR_RECOMMENDATIONS: GearRecommendation[] = [
